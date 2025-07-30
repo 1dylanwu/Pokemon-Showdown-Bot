@@ -1,7 +1,8 @@
 import asyncio
 from poke_env import RandomPlayer
 from poke_env import LocalhostServerConfiguration
-
+# tests connecting to local showdown server and using poke-env/async
+# by creating 2 bots that choose random moves and battling them against each other
 # config
 BATTLE_FORMAT = "gen9randombattle"
 N_BATTLES = 5
