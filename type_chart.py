@@ -18,5 +18,9 @@ TYPE_EFFECTIVENESS = {
     "Steel":      {"Ice": 2.0, "Rock": 2.0, "Fairy": 2.0, "Fire": 0.5, "Water": 0.5, "Electric": 0.5, "Steel": 0.5},
     "Fairy":      {"Fighting": 2.0, "Dragon": 2.0, "Dark": 2.0, "Fire": 0.5, "Poison": 0.5, "Steel": 0.5},
 }
-def get_effectiveness(attacking_type, defending_type):
-    
+def get_effectiveness(attacking_type, defending_types):
+    #will return the effectiveness of attacking type vs defending type(s)
+    mult = 1.0
+    for defending_type in defending_types:
+        mult *= TYPE_EFFECTIVENESS.get(attacking_type, {}).get(defending_type, 1.0)
+    return mult
