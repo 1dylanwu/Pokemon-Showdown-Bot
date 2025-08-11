@@ -5,8 +5,13 @@ from type_chart import get_effectiveness
 
 class RulesBot(Player):
     def choose_move(self, battle: Battle):
-
+        #if we can KO the opponent and we outspeed, use the move that can KO
+        #this does not account for priority moves
+        if self.can_ko(battle) and self.speed(battle.active_pokemon, battle) >= self.speed(battle.opponent_active_pokemon, battle):
+            return self.create_order(self.max_damage_move(battle))
+        
         #if we have bad defensive type matchup, switch out
+        #doesnt account for alternatively being able to terrastalize
         defensive_switch = False
         for enemy_type in battle.opponent_active_pokemon.types:
             #checks enemy STAB typing against our active pokemon
@@ -15,16 +20,18 @@ class RulesBot(Player):
 
         if defensive_switch:
             #find a pokemon to switch to with better matchup
+            #this does not account for coverage moves or pokemon bulk/current hp
             for pokemon in battle.available_switches:
                 if all(get_effectiveness(enemy_type, pokemon.types) <= 1.0 for enemy_type in battle.opponent_active_pokemon.types):
                     return pokemon.switch()
         
-        #if no defensive switch, choose a move with best damage
-        if battle.available_moves:
-            return self.create_order(max(battle.available_moves, key=lambda move: move.base_power * get_effectiveness(move.type, battle.opponent_active_pokemon.types), default=None))
-        #if no moves available, choose a random move
-        return self.choose_random_move(battle) 
-    
+        #if we have HP to spare, prioritize using available status/setup/hazard moves
+        if(battle.active_pokemon.current_hp_fraction > 0.6):
+            for move in battle.available_moves:
+                if move.side_condition and not battle.opponent_side_conditions:
+                    return self.create_order(move)
+
+
     def max_damage_move(self, battle: Battle):
         #function to find the move with maximum damage
         return max(
@@ -47,7 +54,7 @@ class RulesBot(Player):
                 defender=battle.opponent_active_pokemon,
                 battle=battle
             )
-            # Check if the average damage is enough to KO the opponent
+            #check if the average damage is enough to KO the opponent
             if (possible_damage[0] + possible_damage[1]) / 2 >= battle.opponent_active_pokemon.current_hp:
                 return True
         return False
