@@ -6,7 +6,7 @@ from rules_bot import RulesBot
 # by creating 2 bots that choose random moves and battling them against each other
 # config
 BATTLE_FORMAT = "gen9randombattle"
-N_BATTLES = 100
+N_BATTLES = 5
 
 # connect to server
 server_config = LocalhostServerConfiguration
@@ -20,8 +20,8 @@ async def main():
     )
     player2 = RulesBot(
     )
-    player1._username = "Bot_A"
-    player2._username = "Bot_B"
+    player1._username = "RandomBot"
+    player2._username = "RulesBot"
     await player1.battle_against(player2, n_battles=N_BATTLES)
 
     print(f"\nResults after {N_BATTLES} battles:")

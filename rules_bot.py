@@ -5,11 +5,13 @@ from type_chart import get_effectiveness
 
 class RulesBot(Player):
     def choose_move(self, battle: Battle):
+        
         #if we can KO the opponent and we outspeed, use the move that can KO
         #this does not account for priority moves
         if self.can_ko(battle) and self.speed(battle.active_pokemon, battle) >= self.speed(battle.opponent_active_pokemon, battle):
             return self.create_order(self.max_damage_move(battle))
-        
+        return self.choose_random_move(battle)
+        '''
         #if we have bad defensive type matchup, switch out
         #doesnt account for alternatively being able to terrastalize
         defensive_switch = False
@@ -41,6 +43,9 @@ class RulesBot(Player):
                 if move.heal:
                     return self.create_order(move)
                 
+        return self.choose_random_move(battle)
+        '''
+                
 
 
     def max_damage_move(self, battle: Battle):
@@ -48,10 +53,11 @@ class RulesBot(Player):
         return max(
             battle.available_moves,
             key=lambda move: calculate_damage(
-                move=move,
-                attacker=battle.active_pokemon,
-                defender=battle.opponent_active_pokemon,
-                battle=battle
+                battle.active_pokemon.identifier("p2"),
+                battle.opponent_active_pokemon.identifier("p1"),
+                move,
+                battle,
+                False
             )[0],
             default=None
         )
@@ -60,10 +66,11 @@ class RulesBot(Player):
         #function to check if we can KO the opponent with any move
         for move in battle.available_moves:
             possible_damage = calculate_damage(
-                move=move,
-                attacker=battle.active_pokemon,
-                defender=battle.opponent_active_pokemon,
-                battle=battle
+                battle.active_pokemon.identifier("p2"),
+                battle.opponent_active_pokemon.identifier("p1"),
+                move,
+                battle,
+                False
             )
             #check if the average damage is enough to KO the opponent
             if (possible_damage[0] + possible_damage[1]) / 2 >= battle.opponent_active_pokemon.current_hp:
@@ -80,7 +87,7 @@ class RulesBot(Player):
         elif boost < 0:
             speed *= 2 / (2 - boost)
         #apply paralysis
-        if "par" in pokemon.status:
+        if pokemon.status == "par":
             speed /= 2
         if pokemon.item == "choicescarf":
             speed *= 1.5
