@@ -28,8 +28,19 @@ class RulesBot(Player):
         #if we have HP to spare, prioritize using available status/setup/hazard moves
         if(battle.active_pokemon.current_hp_fraction > 0.6):
             for move in battle.available_moves:
-                if move.side_condition and not battle.opponent_side_conditions:
+                #prioritize setting hazards, then status moves, then setup moves
+                if self.can_set_hazard(move, battle):
                     return self.create_order(move)
+                if move.status and not battle.opponent_active_pokemon.status:
+                    return self.create_order(move)
+                if move.self_boost:
+                    return self.create_order(move)
+        else:
+            #if low hp check for healing moves
+            for move in battle.available_moves:
+                if move.heal:
+                    return self.create_order(move)
+                
 
 
     def max_damage_move(self, battle: Battle):
@@ -75,3 +86,17 @@ class RulesBot(Player):
             speed *= 1.5
         #doesnt account for abilities, terrain, weather, etc
         return speed
+
+    def can_set_hazard(move: Move, battle: Battle):
+        #checks if a move is hazard setting and if we should use it
+        #lists max number of stacks for each hazard
+        HAZARD_MOVES = {
+            "stea:lthrock":1,
+            "toxicspikes":2,
+            "spikes":3,
+            "stickyweb":1
+        }
+        if move.side_condition and battle.side_conditions.get(move.side_condition, 0) < HAZARD_MOVES.get(move.side_condition, 0):
+            #checks current side conditions to see if we should set it
+            return True
+        return False
