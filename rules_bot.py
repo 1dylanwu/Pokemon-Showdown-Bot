@@ -10,8 +10,7 @@ class RulesBot(Player):
         #this does not account for priority moves
         if self.can_ko(battle) and self.speed(battle.active_pokemon, battle) >= self.speed(battle.opponent_active_pokemon, battle):
             return self.create_order(self.max_damage_move(battle))
-        return self.choose_random_move(battle)
-        '''
+        
         #if we have bad defensive type matchup, switch out
         #doesnt account for alternatively being able to terrastalize
         defensive_switch = False
@@ -25,7 +24,7 @@ class RulesBot(Player):
             #this does not account for coverage moves or pokemon bulk/current hp
             for pokemon in battle.available_switches:
                 if all(get_effectiveness(enemy_type, pokemon.types) <= 1.0 for enemy_type in battle.opponent_active_pokemon.types):
-                    return pokemon.switch()
+                    return self.create_order(pokemon)
         
         #if we have HP to spare, prioritize using available status/setup/hazard moves
         if(battle.active_pokemon.current_hp_fraction > 0.6):
@@ -42,11 +41,10 @@ class RulesBot(Player):
             for move in battle.available_moves:
                 if move.heal:
                     return self.create_order(move)
-                
+        if battle.available_moves:
+            return self.create_order(self.max_damage_move(battle))
+        
         return self.choose_random_move(battle)
-        '''
-                
-
 
     def max_damage_move(self, battle: Battle):
         #function to find the move with maximum damage
@@ -94,11 +92,11 @@ class RulesBot(Player):
         #doesnt account for abilities, terrain, weather, etc
         return speed
 
-    def can_set_hazard(move: Move, battle: Battle):
+    def can_set_hazard(self, move: Move, battle: Battle):
         #checks if a move is hazard setting and if we should use it
         #lists max number of stacks for each hazard
         HAZARD_MOVES = {
-            "stea:lthrock":1,
+            "stealthrock":1,
             "toxicspikes":2,
             "spikes":3,
             "stickyweb":1

@@ -6,7 +6,7 @@ from rules_bot import RulesBot
 # by creating 2 bots that choose random moves and battling them against each other
 # config
 BATTLE_FORMAT = "gen9randombattle"
-N_BATTLES = 5
+N_BATTLES = 100
 
 # connect to server
 server_config = LocalhostServerConfiguration
