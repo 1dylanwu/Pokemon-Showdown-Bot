@@ -1,22 +1,83 @@
+
 TYPE_EFFECTIVENESS = {
-    "Normal":     {"Rock": 0.5, "Ghost": 0.0, "Steel": 0.5},
-    "Fire":       {"Grass": 2.0, "Ice": 2.0, "Bug": 2.0, "Steel": 2.0, "Fire": 0.5, "Water": 0.5, "Rock": 0.5, "Dragon": 0.5},
-    "Water":      {"Fire": 2.0, "Ground": 2.0, "Rock": 2.0, "Water": 0.5, "Grass": 0.5, "Dragon": 0.5},
-    "Electric":   {"Water": 2.0, "Flying": 2.0, "Electric": 0.5, "Grass": 0.5, "Dragon": 0.5, "Ground": 0.0},
-    "Grass":      {"Water": 2.0, "Ground": 2.0, "Rock": 2.0, "Fire": 0.5, "Grass": 0.5, "Poison": 0.5, "Flying": 0.5, "Bug": 0.5, "Dragon": 0.5, "Steel": 0.5},
-    "Ice":        {"Grass": 2.0, "Ground": 2.0, "Flying": 2.0, "Dragon": 2.0, "Fire": 0.5, "Water": 0.5, "Ice": 0.5, "Steel": 0.5},
-    "Fighting":   {"Normal": 2.0, "Ice": 2.0, "Rock": 2.0, "Dark": 2.0, "Steel": 2.0, "Poison": 0.5, "Flying": 0.5, "Psychic": 0.5, "Bug": 0.5, "Fairy": 0.5, "Ghost": 0.0},
-    "Poison":     {"Grass": 2.0, "Fairy": 2.0, "Poison": 0.5, "Ground": 0.5, "Rock": 0.5, "Ghost": 0.5, "Steel": 0.0},
-    "Ground":     {"Fire": 2.0, "Electric": 2.0, "Poison": 2.0, "Rock": 2.0, "Steel": 2.0, "Grass": 0.5, "Bug": 0.5, "Flying": 0.0},
-    "Flying":     {"Grass": 2.0, "Fighting": 2.0, "Bug": 2.0, "Electric": 0.5, "Rock": 0.5, "Steel": 0.5},
-    "Psychic":    {"Fighting": 2.0, "Poison": 2.0, "Psychic": 0.5, "Steel": 0.5, "Dark": 0.0},
-    "Bug":        {"Grass": 2.0, "Psychic": 2.0, "Dark": 2.0, "Fire": 0.5, "Fighting": 0.5, "Poison": 0.5, "Flying": 0.5, "Ghost": 0.5, "Steel": 0.5, "Fairy": 0.5},
-    "Rock":       {"Fire": 2.0, "Ice": 2.0, "Flying": 2.0, "Bug": 2.0, "Fighting": 0.5, "Ground": 0.5, "Steel": 0.5},
-    "Ghost":      {"Psychic": 2.0, "Ghost": 2.0, "Dark": 0.5, "Normal": 0.0},
-    "Dragon":     {"Dragon": 2.0, "Steel": 0.5, "Fairy": 0.0},
-    "Dark":       {"Psychic": 2.0, "Ghost": 2.0, "Fighting": 0.5, "Dark": 0.5, "Fairy": 0.5},
-    "Steel":      {"Ice": 2.0, "Rock": 2.0, "Fairy": 2.0, "Fire": 0.5, "Water": 0.5, "Electric": 0.5, "Steel": 0.5},
-    "Fairy":      {"Fighting": 2.0, "Dragon": 2.0, "Dark": 2.0, "Fire": 0.5, "Poison": 0.5, "Steel": 0.5},
+    "NORMAL": {
+        "ROCK": 0.5, "STEEL": 0.5, "GHOST": 0.0
+    },
+    "FIRE": {
+        "GRASS": 2.0, "ICE": 2.0, "BUG": 2.0, "STEEL": 2.0,
+        "FIRE": 0.5, "WATER": 0.5, "ROCK": 0.5, "DRAGON": 0.5
+    },
+    "WATER": {
+        "FIRE": 2.0, "GROUND": 2.0, "ROCK": 2.0,
+        "WATER": 0.5, "GRASS": 0.5, "DRAGON": 0.5
+    },
+    "ELECTRIC": {
+        "WATER": 2.0, "FLYING": 2.0,
+        "ELECTRIC": 0.5, "GRASS": 0.5, "DRAGON": 0.5,
+        "GROUND": 0.0
+    },
+    "GRASS": {
+        "WATER": 2.0, "GROUND": 2.0, "ROCK": 2.0,
+        "FIRE": 0.5, "GRASS": 0.5, "POISON": 0.5, "FLYING": 0.5,
+        "BUG": 0.5, "DRAGON": 0.5, "STEEL": 0.5
+    },
+    "ICE": {
+        "GRASS": 2.0, "GROUND": 2.0, "FLYING": 2.0, "DRAGON": 2.0,
+        "FIRE": 0.5, "WATER": 0.5, "ICE": 0.5, "STEEL": 0.5
+    },
+    "FIGHTING": {
+        "NORMAL": 2.0, "ICE": 2.0, "ROCK": 2.0, "DARK": 2.0, "STEEL": 2.0,
+        "POISON": 0.5, "FLYING": 0.5, "PSYCHIC": 0.5, "BUG": 0.5, "FAIRY": 0.5,
+        "GHOST": 0.0
+    },
+    "POISON": {
+        "GRASS": 2.0, "FAIRY": 2.0,
+        "POISON": 0.5, "GROUND": 0.5, "ROCK": 0.5, "GHOST": 0.5,
+        "STEEL": 0.0
+    },
+    "GROUND": {
+        "FIRE": 2.0, "ELECTRIC": 2.0, "POISON": 2.0, "ROCK": 2.0, "STEEL": 2.0,
+        "GRASS": 0.5, "BUG": 0.5,
+        "FLYING": 0.0
+    },
+    "FLYING": {
+        "GRASS": 2.0, "FIGHTING": 2.0, "BUG": 2.0,
+        "ELECTRIC": 0.5, "ROCK": 0.5, "STEEL": 0.5
+    },
+    "PSYCHIC": {
+        "FIGHTING": 2.0, "POISON": 2.0,
+        "PSYCHIC": 0.5, "STEEL": 0.5,
+        "DARK": 0.0
+    },
+    "BUG": {
+        "GRASS": 2.0, "PSYCHIC": 2.0, "DARK": 2.0,
+        "FIRE": 0.5, "FIGHTING": 0.5, "POISON": 0.5, "FLYING": 0.5,
+        "GHOST": 0.5, "STEEL": 0.5, "FAIRY": 0.5
+    },
+    "ROCK": {
+        "FIRE": 2.0, "ICE": 2.0, "FLYING": 2.0, "BUG": 2.0,
+        "FIGHTING": 0.5, "GROUND": 0.5, "STEEL": 0.5
+    },
+    "GHOST": {
+        "PSYCHIC": 2.0, "GHOST": 2.0,
+        "DARK": 0.5, "NORMAL": 0.0
+    },
+    "DRAGON": {
+        "DRAGON": 2.0,
+        "STEEL": 0.5, "FAIRY": 0.0
+    },
+    "DARK": {
+        "PSYCHIC": 2.0, "GHOST": 2.0,
+        "FIGHTING": 0.5, "DARK": 0.5, "FAIRY": 0.5
+    },
+    "STEEL": {
+        "ICE": 2.0, "ROCK": 2.0, "FAIRY": 2.0,
+        "FIRE": 0.5, "WATER": 0.5, "ELECTRIC": 0.5, "STEEL": 0.5
+    },
+    "FAIRY": {
+        "FIGHTING": 2.0, "DRAGON": 2.0, "DARK": 2.0,
+        "FIRE": 0.5, "POISON": 0.5, "STEEL": 0.5
+    }
 }
 def get_effectiveness(attacking_type, defending_types):
     #will return the effectiveness of attacking type vs defending type(s)
