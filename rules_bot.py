@@ -8,11 +8,20 @@ class RulesBot(Player):
         #if we can KO the opponent and we outspeed, use the move that can KO
         #this does not account for priority moves
         if self.can_ko(battle) and self.speed(battle.active_pokemon, battle) >= self.speed(battle.opponent_active_pokemon, battle):
+            print(f"Using max damage move {self.max_damage_move(battle)} to attempt KO on {battle.opponent_active_pokemon}")
+            print("imma do " + str(calculate_damage(
+                battle.active_pokemon.identifier("p2"),
+                battle.opponent_active_pokemon.identifier("p1"),
+                self.max_damage_move(battle),
+                battle,
+                False
+            )[0] / battle.opponent_active_pokemon.current_hp) + "damage")
             return self.create_order(self.max_damage_move(battle))
 
         #if we have bad type matchup, switch out
         #choose a pokemon with better matchup and higher hp
-        if self.should_switch(battle):
+        if self.should_switch(battle) and battle.available_switches:
+            print(f"Switching out {battle.active_pokemon} to {self.defensive_switch(battle)} due to bad type matchup")
             return self.create_order(self.defensive_switch(battle))
         
         #if we have HP to spare, prioritize using available status/setup/hazard moves
