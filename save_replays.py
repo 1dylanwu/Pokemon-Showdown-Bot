@@ -3,7 +3,7 @@ import time
 from tqdm import tqdm
 from replay_scraper import get_replays, download_log
 
-OUTPUT_DIR = "gen9randombattle_logs"
+OUTPUT_DIR = "data/logs/gen9randombattle_logs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 #create directory
 

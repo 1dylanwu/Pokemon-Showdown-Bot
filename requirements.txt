@@ -1,0 +1,17 @@
+poke-env
+requests
+tqdm
+asyncio
+
+#I edited poke-env's damage calculation for the rules bot to include the opponent's stats, since those are always known in random battles
+#I removed the assertion for the defender stats being defined and included 
+#STAT_KEYS = ["hp", "atk", "def", "spa", "spd", "spe"]
+#raw = stats.compute_raw_stats(
+#    species = defender.species,
+#    evs = [84, 84, 84, 84, 84, 84],
+#    ivs = [31, 31, 31, 31, 31, 31],
+#    level = defender.level,
+#    nature = "serious",
+#    data = defender.data
+#)
+#defender.stats = dict(zip(STAT_KEYS, raw))
