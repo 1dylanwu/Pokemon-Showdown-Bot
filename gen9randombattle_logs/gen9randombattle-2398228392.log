@@ -1,0 +1,311 @@
+|badge|p1|silver|gen9randombattle|30-6
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-6
+|badge|p2|silver|gen9ou|30-6
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Batram
+|j|☆Node
+|t:|1751856459
+|gametype|singles
+|player|p1|Batram|102|2499
+|player|p2|Node|#agplviblackpink|2456
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1751856459
+|teamsize|p1|6
+|teamsize|p2|6
+|start
+|switch|p1a: Iron Hands|Iron Hands, L79|373/373
+|switch|p2a: Samurott|Samurott-Hisui, L77, F|265/265
+|turn|1
+|
+|t:|1751856482
+|move|p2a: Samurott|Flip Turn|p1a: Iron Hands
+|-damage|p1a: Iron Hands|321/373
+|
+|t:|1751856490
+|switch|p2a: Grafaiai|Grafaiai, L86, M|249/249|[from] Flip Turn
+|move|p1a: Iron Hands|Swords Dance|p1a: Iron Hands
+|-boost|p1a: Iron Hands|atk|2
+|
+|-heal|p1a: Iron Hands|344/373|[from] item: Leftovers
+|upkeep
+|turn|2
+|
+|t:|1751856498
+|move|p2a: Grafaiai|U-turn|p1a: Iron Hands
+|-resisted|p1a: Iron Hands
+|-damage|p1a: Iron Hands|323/373
+|
+|t:|1751856500
+|switch|p2a: Gengar|Gengar, L81, M|230/230|[from] U-turn
+|move|p1a: Iron Hands|Drain Punch|p2a: Gengar
+|-immune|p2a: Gengar
+|
+|-heal|p1a: Iron Hands|346/373|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1751856509
+|move|p2a: Gengar|Sludge Wave|p1a: Iron Hands
+|-damage|p1a: Iron Hands|135/373
+|-damage|p2a: Gengar|207/230|[from] item: Life Orb
+|move|p1a: Iron Hands|Thunder Punch|p2a: Gengar
+|-damage|p2a: Gengar|0 fnt
+|faint|p2a: Gengar
+|
+|-heal|p1a: Iron Hands|158/373|[from] item: Leftovers
+|upkeep
+|
+|t:|1751856517
+|switch|p2a: Tauros|Tauros, L82, M|257/257
+|turn|4
+|
+|t:|1751856531
+|move|p2a: Tauros|Zen Headbutt|p1a: Iron Hands
+|-supereffective|p1a: Iron Hands
+|-damage|p1a: Iron Hands|0 fnt
+|faint|p1a: Iron Hands
+|-end|p1a: Iron Hands|Quark Drive|[silent]
+|
+|upkeep
+|
+|t:|1751856548
+|switch|p1a: Groudon|Groudon, L72|263/263
+|-weather|SunnyDay|[from] ability: Drought|[of] p1a: Groudon
+|turn|5
+|
+|t:|1751856561
+|switch|p2a: Basculegion|Basculegion-F, L83, F|335/335
+|move|p1a: Groudon|Thunder Wave|p2a: Basculegion
+|-status|p2a: Basculegion|par
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|turn|6
+|j| proud volcel
+|
+|t:|1751856586
+|switch|p1a: Oranguru|Oranguru, L92, F|315/315
+|move|p2a: Basculegion|Shadow Ball|p1a: Oranguru
+|-immune|p1a: Oranguru
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|turn|7
+|
+|t:|1751856592
+|move|p1a: Oranguru|Thunderbolt|p2a: Basculegion
+|-supereffective|p2a: Basculegion
+|-damage|p2a: Basculegion|177/335 par
+|move|p2a: Basculegion|Flip Turn|p1a: Oranguru
+|-damage|p1a: Oranguru|273/315
+|
+|t:|1751856596
+|switch|p2a: Samurott|Samurott-Hisui, L77, F|265/265|[from] Flip Turn
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|turn|8
+|
+|t:|1751856605
+|-terastallize|p2a: Samurott|Dark
+|move|p2a: Samurott|Ceaseless Edge|p1a: Oranguru
+|-supereffective|p1a: Oranguru
+|-damage|p1a: Oranguru|17/315
+|-sidestart|p1: Batram|Spikes
+|move|p1a: Oranguru|Thunderbolt|p2a: Samurott
+|-damage|p2a: Samurott|131/265
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|turn|9
+|
+|t:|1751856608
+|move|p2a: Samurott|Ceaseless Edge|p1a: Oranguru
+|-supereffective|p1a: Oranguru
+|-damage|p1a: Oranguru|0 fnt
+|-sidestart|p1: Batram|Spikes
+|faint|p1a: Oranguru
+|
+|-weather|none
+|upkeep
+|
+|t:|1751856617
+|switch|p1a: Groudon|Groudon, L72|263/263
+|-damage|p1a: Groudon|220/263|[from] Spikes
+|-weather|SunnyDay|[from] ability: Drought|[of] p1a: Groudon
+|turn|10
+|
+|t:|1751856624
+|switch|p2a: Basculegion|Basculegion-F, L83, F|177/335 par
+|move|p1a: Groudon|Thunder Wave|p2a: Basculegion|[miss]
+|-miss|p1a: Groudon|p2a: Basculegion
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|236/263|[from] item: Leftovers
+|upkeep
+|turn|11
+|
+|t:|1751856627
+|move|p1a: Groudon|Spikes|p2a: Basculegion
+|-sidestart|p2: Node|Spikes
+|move|p2a: Basculegion|Shadow Ball|p1a: Groudon
+|-damage|p1a: Groudon|116/263
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|132/263|[from] item: Leftovers
+|upkeep
+|turn|12
+|
+|t:|1751856632
+|move|p1a: Groudon|Spikes|p2a: Basculegion
+|-sidestart|p2: Node|Spikes
+|move|p2a: Basculegion|Flip Turn|p1a: Groudon
+|-supereffective|p1a: Groudon
+|-damage|p1a: Groudon|68/263
+|
+|t:|1751856634
+|switch|p2a: Samurott|Samurott-Hisui, L77, F, tera:Dark|131/265|[from] Flip Turn
+|-damage|p2a: Samurott|87/265|[from] Spikes
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|84/263|[from] item: Leftovers
+|upkeep
+|turn|13
+|
+|t:|1751856639
+|move|p2a: Samurott|Ceaseless Edge|p1a: Groudon
+|-damage|p1a: Groudon|0 fnt
+|-sidestart|p1: Batram|Spikes
+|faint|p1a: Groudon
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|
+|t:|1751856650
+|switch|p1a: Tatsugiri|Tatsugiri-Stretchy, L87, F|260/260
+|turn|14
+|
+|t:|1751856653
+|move|p2a: Samurott|Ceaseless Edge|p1a: Tatsugiri
+|-damage|p1a: Tatsugiri|92/260
+|move|p1a: Tatsugiri|Nasty Plot|p1a: Tatsugiri
+|-boost|p1a: Tatsugiri|spa|2
+|
+|-weather|none
+|upkeep
+|turn|15
+|
+|t:|1751856659
+|switch|p2a: Basculegion|Basculegion-F, L83, F|177/335 par
+|-damage|p2a: Basculegion|122/335 par|[from] Spikes
+|move|p1a: Tatsugiri|Draco Meteor|p2a: Basculegion
+|-damage|p2a: Basculegion|0 fnt
+|-unboost|p1a: Tatsugiri|spa|2
+|faint|p2a: Basculegion
+|
+|upkeep
+|
+|t:|1751856671
+|switch|p2a: Tauros|Tauros, L82, M|257/257
+|-damage|p2a: Tauros|215/257|[from] Spikes
+|turn|16
+|
+|t:|1751856683
+|move|p2a: Tauros|Body Slam|p1a: Tatsugiri
+|-crit|p1a: Tatsugiri
+|-damage|p1a: Tatsugiri|0 fnt
+|faint|p1a: Tatsugiri
+|
+|upkeep
+|
+|t:|1751856693
+|switch|p1a: Glalie|Glalie, L96, M|309/309
+|turn|17
+|
+|t:|1751856696
+|move|p2a: Tauros|Close Combat|p1a: Glalie
+|-supereffective|p1a: Glalie
+|-damage|p1a: Glalie|101/309
+|-unboost|p2a: Tauros|def|1
+|-unboost|p2a: Tauros|spd|1
+|-damage|p2a: Tauros|190/257|[from] item: Life Orb
+|move|p1a: Glalie|Freeze-Dry|p2a: Tauros
+|-damage|p2a: Tauros|43/257
+|
+|upkeep
+|turn|18
+|
+|t:|1751856701
+|move|p2a: Tauros|Body Slam|p1a: Glalie
+|-damage|p1a: Glalie|0 fnt
+|faint|p1a: Glalie
+|
+|upkeep
+|
+|t:|1751856702
+|switch|p1a: Terapagos|Terapagos, L77, F|265/265
+|-activate|p1a: Terapagos|ability: Tera Shift
+|detailschange|p1a: Terapagos|Terapagos-Terastal, L77, F
+|-heal|p1a: Terapagos|273/273|[silent]
+|-damage|p1a: Terapagos|205/273|[from] Spikes
+|turn|19
+|
+|t:|1751856706
+|move|p2a: Tauros|Close Combat|p1a: Terapagos
+|-supereffective|p1a: Terapagos
+|-damage|p1a: Terapagos|10/273
+|-unboost|p2a: Tauros|def|1
+|-unboost|p2a: Tauros|spd|1
+|-damage|p2a: Tauros|18/257|[from] item: Life Orb
+|move|p1a: Terapagos|Rest|p1a: Terapagos
+|-status|p1a: Terapagos|slp|[from] move: Rest
+|-heal|p1a: Terapagos|273/273 slp|[silent]
+|-enditem|p1a: Terapagos|Chesto Berry|[eat]
+|-curestatus|p1a: Terapagos|slp|[msg]
+|
+|upkeep
+|turn|20
+|
+|t:|1751856721
+|move|p2a: Tauros|Close Combat|p1a: Terapagos
+|-activate|p1a: Terapagos|ability: Tera Shell
+|-resisted|p1a: Terapagos
+|-damage|p1a: Terapagos|225/273
+|-unboost|p2a: Tauros|def|1
+|-unboost|p2a: Tauros|spd|1
+|-damage|p2a: Tauros|0 fnt|[from] item: Life Orb
+|faint|p2a: Tauros
+|move|p1a: Terapagos|Rest|p1a: Terapagos
+|-status|p1a: Terapagos|slp|[from] move: Rest
+|-heal|p1a: Terapagos|273/273 slp|[silent]
+|
+|upkeep
+|
+|t:|1751856746
+|switch|p2a: Grafaiai|Grafaiai, L86, M|249/249
+|-damage|p2a: Grafaiai|208/249|[from] Spikes
+|turn|21
+|
+|t:|1751856754
+|move|p2a: Grafaiai|Super Fang|p1a: Terapagos
+|-damage|p1a: Terapagos|137/273 slp
+|cant|p1a: Terapagos|slp
+|
+|upkeep
+|turn|22
+|-message|Batram forfeited.
+|
+|win|Node
+|raw|Batram's rating: 2499 &rarr; <strong>2477</strong><br />(-22 for losing)
+|raw|Node's rating: 2456 &rarr; <strong>2478</strong><br />(+22 for winning)
+|l|☆Batram
+|player|p1|
+|l| proud volcel

@@ -1,0 +1,516 @@
+|badge|p1|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Aqua
+|j|☆pokeblade☆101
+|t:|1750636707
+|gametype|singles
+|player|p1|Aqua|#rbtt7teamdarkraif|2485
+|player|p2|pokeblade☆101|#rbtt8teamzygarde2|2566
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1750636707
+|start
+|switch|p1a: Uxie|Uxie, L83|260/260
+|switch|p2a: Galvantula|Galvantula, L82, F|249/249
+|turn|1
+|c|☆Aqua|huh
+|c|☆pokeblade☆101|oh hi
+|c|☆Aqua|interesting and sus
+|c|☆pokeblade☆101|i was just gaming for fun but the faact u actually came back when i was searching so long
+|c|☆Aqua|gaming for fun hm
+|
+|t:|1750636745
+|switch|p1a: Regice|Regice, L88|284/284
+|move|p2a: Galvantula|Bug Buzz|p1a: Regice
+|-damage|p1a: Regice|238/284
+|
+|upkeep
+|turn|2
+|
+|t:|1750636752
+|switch|p2a: Gholdengo|Gholdengo, L77|261/261
+|move|p1a: Regice|Ice Beam|p2a: Gholdengo
+|-resisted|p2a: Gholdengo
+|-damage|p2a: Gholdengo|206/261
+|
+|-heal|p2a: Gholdengo|222/261|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1750636762
+|switch|p1a: Arceus|Arceus-Ground, L70|284/284
+|move|p2a: Gholdengo|Shadow Ball|p1a: Arceus
+|-damage|p1a: Arceus|197/284
+|
+|-heal|p2a: Gholdengo|238/261|[from] item: Leftovers
+|upkeep
+|turn|4
+|
+|t:|1750636772
+|switch|p2a: Mandibuzz|Mandibuzz, L85, F|326/326
+|move|p1a: Arceus|Fire Blast|p2a: Mandibuzz
+|-damage|p2a: Mandibuzz|260/326
+|-status|p2a: Mandibuzz|brn
+|
+|-damage|p2a: Mandibuzz|240/326 brn|[from] brn
+|upkeep
+|turn|5
+|
+|t:|1750636786
+|switch|p1a: Orthworm|Orthworm, L88, M|266/266
+|switch|p2a: Gholdengo|Gholdengo, L77|238/261
+|
+|-heal|p2a: Gholdengo|254/261|[from] item: Leftovers
+|upkeep
+|turn|6
+|
+|t:|1750636798
+|switch|p1a: Arceus|Arceus-Ground, L70|197/284
+|move|p2a: Gholdengo|Nasty Plot|p2a: Gholdengo
+|-boost|p2a: Gholdengo|spa|2
+|
+|-heal|p2a: Gholdengo|261/261|[from] item: Leftovers
+|upkeep
+|turn|7
+|
+|t:|1750636830
+|switch|p1a: Uxie|Uxie, L83|260/260
+|switch|p2a: Mismagius|Mismagius, L86, M|243/243
+|
+|upkeep
+|turn|8
+|
+|t:|1750636837
+|switch|p2a: Galvantula|Galvantula, L82, F|249/249
+|switch|p1a: Komala|Komala, L89, M|260/260
+|-ability|p1a: Komala|Comatose
+|
+|upkeep
+|turn|9
+|
+|t:|1750636842
+|move|p2a: Galvantula|Thunder|p1a: Komala
+|-damage|p1a: Komala|190/260
+|move|p1a: Komala|U-turn|p2a: Galvantula
+|-damage|p2a: Galvantula|159/249
+|
+|t:|1750636863
+|switch|p1a: Gengar|Gengar, L81, F|230/230|[from] U-turn
+|
+|upkeep
+|turn|10
+|
+|t:|1750636869
+|switch|p2a: Mismagius|Mismagius, L86, M|243/243
+|move|p1a: Gengar|Sludge Wave|p2a: Mismagius
+|-resisted|p2a: Mismagius
+|-damage|p2a: Mismagius|182/243
+|-damage|p1a: Gengar|207/230|[from] item: Life Orb
+|
+|upkeep
+|turn|11
+|
+|t:|1750636890
+|switch|p1a: Komala|Komala, L89, M|190/260
+|-ability|p1a: Komala|Comatose
+|move|p2a: Mismagius|Thunderbolt|p1a: Komala
+|-crit|p1a: Komala
+|-damage|p1a: Komala|100/260
+|
+|upkeep
+|turn|12
+|
+|t:|1750636905
+|switch|p2a: Mandibuzz|Mandibuzz, L85, F|240/326 brn
+|move|p1a: Komala|Knock Off|p2a: Mandibuzz
+|-resisted|p2a: Mandibuzz
+|-damage|p2a: Mandibuzz|201/326 brn
+|-enditem|p2a: Mandibuzz|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Komala
+|
+|-damage|p2a: Mandibuzz|181/326 brn|[from] brn
+|upkeep
+|turn|13
+|
+|t:|1750636914
+|move|p2a: Mandibuzz|Foul Play|p1a: Komala
+|-damage|p1a: Komala|22/260
+|move|p1a: Komala|Rapid Spin|p2a: Mandibuzz
+|-damage|p2a: Mandibuzz|118/326 brn
+|-boost|p1a: Komala|spe|1
+|
+|-damage|p2a: Mandibuzz|98/326 brn|[from] brn
+|upkeep
+|turn|14
+|
+|t:|1750636922
+|move|p1a: Komala|Body Slam|p2a: Mandibuzz
+|-damage|p2a: Mandibuzz|0 fnt
+|faint|p2a: Mandibuzz
+|
+|upkeep
+|
+|t:|1750636974
+|switch|p2a: Carbink|Carbink, L90|236/236
+|turn|15
+|
+|t:|1750636988
+|move|p1a: Komala|U-turn|p2a: Carbink
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|217/236
+|
+|t:|1750637016
+|switch|p1a: Uxie|Uxie, L83|260/260|[from] U-turn
+|move|p2a: Carbink|Moonblast|p1a: Uxie
+|-damage|p1a: Uxie|202/260
+|
+|-heal|p1a: Uxie|218/260|[from] item: Leftovers
+|-heal|p2a: Carbink|231/236|[from] item: Leftovers
+|upkeep
+|turn|16
+|
+|t:|1750637030
+|switch|p2a: Galvantula|Galvantula, L82, F|159/249
+|move|p1a: Uxie|Psychic Noise|p2a: Galvantula
+|-damage|p2a: Galvantula|71/249
+|-start|p2a: Galvantula|move: Heal Block
+|
+|-heal|p1a: Uxie|234/260|[from] item: Leftovers
+|upkeep
+|turn|17
+|
+|t:|1750637039
+|move|p2a: Galvantula|Sticky Web|p1a: Uxie
+|-sidestart|p1: Aqua|move: Sticky Web
+|move|p1a: Uxie|Psychic Noise|p2a: Galvantula
+|-damage|p2a: Galvantula|0 fnt
+|faint|p2a: Galvantula
+|
+|-heal|p1a: Uxie|250/260|[from] item: Leftovers
+|upkeep
+|
+|t:|1750637042
+|switch|p2a: Mismagius|Mismagius, L86, M|182/243
+|turn|18
+|
+|t:|1750637051
+|switch|p1a: Komala|Komala, L89, M|22/260
+|-activate|p1a: Komala|move: Sticky Web
+|-unboost|p1a: Komala|spe|1
+|-ability|p1a: Komala|Comatose
+|move|p2a: Mismagius|Shadow Ball|p1a: Komala
+|-immune|p1a: Komala
+|
+|upkeep
+|turn|19
+|
+|t:|1750637060
+|switch|p2a: Carbink|Carbink, L90|231/236
+|move|p1a: Komala|Rapid Spin|p2a: Carbink
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|212/236
+|-boost|p1a: Komala|spe|1
+|-sideend|p1: Aqua|Sticky Web|[from] move: Rapid Spin|[of] p1a: Komala
+|
+|-heal|p2a: Carbink|226/236|[from] item: Leftovers
+|upkeep
+|turn|20
+|
+|t:|1750637075
+|move|p1a: Komala|U-turn|p2a: Carbink
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|205/236
+|
+|t:|1750637078
+|switch|p1a: Uxie|Uxie, L83|250/260|[from] U-turn
+|move|p2a: Carbink|Moonblast|p1a: Uxie
+|-damage|p1a: Uxie|196/260
+|
+|-heal|p1a: Uxie|212/260|[from] item: Leftovers
+|-heal|p2a: Carbink|219/236|[from] item: Leftovers
+|upkeep
+|turn|21
+|
+|t:|1750637087
+|switch|p2a: Mismagius|Mismagius, L86, M|182/243
+|move|p1a: Uxie|U-turn|p2a: Mismagius
+|-resisted|p2a: Mismagius
+|-damage|p2a: Mismagius|154/243
+|
+|t:|1750637105
+|switch|p1a: Arceus|Arceus-Ground, L70|197/284|[from] U-turn
+|
+|upkeep
+|turn|22
+|
+|t:|1750637116
+|switch|p1a: Komala|Komala, L89, M|22/260
+|-ability|p1a: Komala|Comatose
+|move|p2a: Mismagius|Energy Ball|p1a: Komala
+|-damage|p1a: Komala|0 fnt
+|faint|p1a: Komala
+|
+|upkeep
+|
+|t:|1750637118
+|switch|p1a: Gengar|Gengar, L81, F|207/230
+|turn|23
+|
+|t:|1750637148
+|switch|p2a: Carbink|Carbink, L90|219/236
+|move|p1a: Gengar|Nasty Plot|p1a: Gengar
+|-boost|p1a: Gengar|spa|2
+|
+|-heal|p2a: Carbink|233/236|[from] item: Leftovers
+|upkeep
+|turn|24
+|
+|t:|1750637163
+|move|p1a: Gengar|Sludge Wave|p2a: Carbink
+|-damage|p2a: Carbink|34/236
+|-damage|p1a: Gengar|184/230|[from] item: Life Orb
+|move|p2a: Carbink|Moonblast|p1a: Gengar
+|-resisted|p1a: Gengar
+|-damage|p1a: Gengar|139/230
+|
+|-heal|p2a: Carbink|48/236|[from] item: Leftovers
+|upkeep
+|turn|25
+|
+|t:|1750637168
+|move|p1a: Gengar|Sludge Wave|p2a: Carbink
+|-damage|p2a: Carbink|0 fnt
+|faint|p2a: Carbink
+|-damage|p1a: Gengar|116/230|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1750637170
+|switch|p2a: Mismagius|Mismagius, L86, M|154/243
+|turn|26
+|
+|t:|1750637217
+|switch|p1a: Regice|Regice, L88|238/284
+|move|p2a: Mismagius|Shadow Ball|p1a: Regice
+|-damage|p1a: Regice|174/284
+|
+|upkeep
+|turn|27
+|
+|t:|1750637238
+|switch|p2a: Gholdengo|Gholdengo, L77|261/261
+|move|p1a: Regice|Ice Beam|p2a: Gholdengo
+|-resisted|p2a: Gholdengo
+|-damage|p2a: Gholdengo|206/261
+|
+|-heal|p2a: Gholdengo|222/261|[from] item: Leftovers
+|upkeep
+|turn|28
+|
+|t:|1750637246
+|switch|p2a: Mismagius|Mismagius, L86, M|154/243
+|switch|p1a: Arceus|Arceus-Ground, L70|197/284
+|
+|upkeep
+|turn|29
+|
+|t:|1750637252
+|switch|p1a: Regice|Regice, L88|174/284
+|move|p2a: Mismagius|Shadow Ball|p1a: Regice
+|-damage|p1a: Regice|101/284
+|
+|upkeep
+|turn|30
+|
+|t:|1750637259
+|switch|p2a: Gholdengo|Gholdengo, L77|222/261
+|move|p1a: Regice|Ice Beam|p2a: Gholdengo
+|-resisted|p2a: Gholdengo
+|-damage|p2a: Gholdengo|162/261
+|
+|-heal|p2a: Gholdengo|178/261|[from] item: Leftovers
+|upkeep
+|turn|31
+|
+|t:|1750637264
+|switch|p1a: Arceus|Arceus-Ground, L70|197/284
+|move|p2a: Gholdengo|Make It Rain|p1a: Arceus
+|-damage|p1a: Arceus|70/284
+|-unboost|p2a: Gholdengo|spa|1
+|
+|-heal|p2a: Gholdengo|194/261|[from] item: Leftovers
+|upkeep
+|turn|32
+|
+|t:|1750637269
+|switch|p2a: Mismagius|Mismagius, L86, M|154/243
+|move|p1a: Arceus|Recover|p1a: Arceus
+|-heal|p1a: Arceus|212/284
+|
+|upkeep
+|turn|33
+|
+|t:|1750637277
+|switch|p1a: Regice|Regice, L88|101/284
+|move|p2a: Mismagius|Shadow Ball|p1a: Regice
+|-damage|p1a: Regice|34/284
+|
+|upkeep
+|turn|34
+|
+|t:|1750637281
+|move|p2a: Mismagius|Shadow Ball|p1a: Regice
+|-damage|p1a: Regice|0 fnt
+|faint|p1a: Regice
+|
+|upkeep
+|
+|t:|1750637286
+|switch|p1a: Orthworm|Orthworm, L88, M|266/266
+|turn|35
+|
+|t:|1750637294
+|switch|p2a: Gholdengo|Gholdengo, L77|194/261
+|move|p1a: Orthworm|Heavy Slam|p2a: Gholdengo
+|-resisted|p2a: Gholdengo
+|-damage|p2a: Gholdengo|131/261
+|
+|-heal|p2a: Gholdengo|147/261|[from] item: Leftovers
+|upkeep
+|turn|36
+|
+|t:|1750637304
+|move|p2a: Gholdengo|Shadow Ball|p1a: Orthworm
+|-damage|p1a: Orthworm|151/266
+|move|p1a: Orthworm|Shed Tail|p1a: Orthworm
+|-start|p1a: Orthworm|Substitute|[from] move: Shed Tail
+|-damage|p1a: Orthworm|18/266
+|
+|t:|1750637307
+|switch|p1a: Arceus|Arceus-Ground, L70|212/284|[from] Shed Tail
+|
+|-heal|p2a: Gholdengo|163/261|[from] item: Leftovers
+|upkeep
+|turn|37
+|j| idk04132
+|
+|t:|1750637313
+|move|p1a: Arceus|Calm Mind|p1a: Arceus
+|-boost|p1a: Arceus|spa|1
+|-boost|p1a: Arceus|spd|1
+|move|p2a: Gholdengo|Shadow Ball|p1a: Arceus
+|-activate|p1a: Arceus|move: Substitute|[damage]
+|
+|-heal|p2a: Gholdengo|179/261|[from] item: Leftovers
+|upkeep
+|turn|38
+|
+|t:|1750637319
+|switch|p2a: Mismagius|Mismagius, L86, M|154/243
+|move|p1a: Arceus|Fire Blast|p2a: Mismagius
+|-damage|p2a: Mismagius|71/243
+|
+|upkeep
+|turn|39
+|
+|t:|1750637322
+|move|p2a: Mismagius|Energy Ball|p1a: Arceus
+|-supereffective|p1a: Arceus
+|-end|p1a: Arceus|Substitute
+|move|p1a: Arceus|Fire Blast|p2a: Mismagius
+|-damage|p2a: Mismagius|0 fnt
+|faint|p2a: Mismagius
+|
+|upkeep
+|
+|t:|1750637327
+|switch|p2a: Serperior|Serperior, L79, M|248/248
+|turn|40
+|j| dhathresh
+|
+|t:|1750637368
+|move|p2a: Serperior|Glare|p1a: Arceus
+|-status|p1a: Arceus|par
+|move|p1a: Arceus|Fire Blast|p2a: Serperior
+|-supereffective|p2a: Serperior
+|-damage|p2a: Serperior|64/248
+|
+|upkeep
+|turn|41
+|
+|t:|1750637377
+|switch|p1a: Orthworm|Orthworm, L88, M|18/266
+|move|p2a: Serperior|Synthesis|p2a: Serperior
+|-heal|p2a: Serperior|188/248
+|
+|-heal|p1a: Orthworm|34/266|[from] item: Leftovers
+|upkeep
+|turn|42
+|
+|t:|1750637386
+|move|p2a: Serperior|Glare|p1a: Orthworm
+|-status|p1a: Orthworm|par
+|move|p1a: Orthworm|Heavy Slam|p2a: Serperior
+|-damage|p2a: Serperior|88/248
+|
+|-heal|p1a: Orthworm|50/266 par|[from] item: Leftovers
+|upkeep
+|turn|43
+|
+|t:|1750637413
+|switch|p1a: Uxie|Uxie, L83|212/260
+|move|p2a: Serperior|Synthesis|p2a: Serperior
+|-heal|p2a: Serperior|212/248
+|
+|-heal|p1a: Uxie|228/260|[from] item: Leftovers
+|upkeep
+|turn|44
+|
+|t:|1750637418
+|move|p2a: Serperior|Glare|p1a: Uxie
+|-status|p1a: Uxie|par
+|move|p1a: Uxie|Yawn|p2a: Serperior
+|-start|p2a: Serperior|move: Yawn|[of] p1a: Uxie
+|
+|-heal|p1a: Uxie|244/260 par|[from] item: Leftovers
+|upkeep
+|turn|45
+|
+|t:|1750637428
+|switch|p2a: Gholdengo|Gholdengo, L77|179/261
+|move|p1a: Uxie|Knock Off|p2a: Gholdengo
+|-supereffective|p2a: Gholdengo
+|-damage|p2a: Gholdengo|55/261
+|-enditem|p2a: Gholdengo|Leftovers|[from] move: Knock Off|[of] p1a: Uxie
+|
+|-heal|p1a: Uxie|260/260 par|[from] item: Leftovers
+|upkeep
+|turn|46
+|
+|t:|1750637441
+|switch|p2a: Serperior|Serperior, L79, M|212/248
+|move|p1a: Uxie|U-turn|p2a: Serperior
+|-supereffective|p2a: Serperior
+|-damage|p2a: Serperior|122/248
+|
+|t:|1750637444
+|switch|p1a: Gengar|Gengar, L81, F|116/230|[from] U-turn
+|
+|upkeep
+|turn|47
+|-message|pokeblade☆101 forfeited.
+|
+|win|Aqua
+|raw|Aqua's rating: 2485 &rarr; <strong>2510</strong><br />(+25 for winning)
+|raw|pokeblade☆101's rating: 2566 &rarr; <strong>2541</strong><br />(-25 for losing)
+|l|☆pokeblade☆101
+|player|p2|

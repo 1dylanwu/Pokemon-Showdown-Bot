@@ -1,0 +1,235 @@
+|badge|p1|gold|gen9randombattle|3-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆pokeblade☆101
+|j|☆Lucius Artor
+|t:|1713917999
+|gametype|singles
+|player|p1|pokeblade☆101|#rbtt7teamchiyu|2529
+|player|p2|Lucius Artor|volo|2485
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1713917999
+|start
+|switch|p1a: Ninetales|Ninetales-Alola, L79, F|245/245
+|switch|p2a: Regieleki|Regieleki, L78|253/253
+|-weather|Snow|[from] ability: Snow Warning|[of] p1a: Ninetales
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Lucius Artor)
+|j|+Aqua
+|j| Boris Huang - YT
+|c| Boris Huang - YT|in
+|c|☆Lucius Artor|what
+|inactive|pokeblade☆101 has 120 seconds left.
+|c|+Aqua|in
+|
+|t:|1713918048
+|move|p2a: Regieleki|Volt Switch|p1a: Ninetales
+|-damage|p1a: Ninetales|148/245
+|
+|t:|1713918061
+|switch|p2a: Iron Hands|Iron Hands, L79|373/373|[from] Volt Switch
+|move|p1a: Ninetales|Aurora Veil|p1a: Ninetales
+|-sidestart|p1: pokeblade☆101|move: Aurora Veil
+|
+|-weather|Snow|[upkeep]
+|upkeep
+|turn|2
+|
+|t:|1713918071
+|switch|p1a: Tinkaton|Tinkaton, L82, F|274/274
+|-ability|p1a: Tinkaton|Mold Breaker
+|move|p2a: Iron Hands|Volt Switch|p1a: Tinkaton
+|-damage|p1a: Tinkaton|254/274
+|
+|t:|1713918080
+|-end|p2a: Iron Hands|Quark Drive|[silent]
+|switch|p2a: Dondozo|Dondozo, L78, F|362/362|[from] Volt Switch
+|
+|-weather|Snow|[upkeep]
+|-heal|p1a: Tinkaton|271/274|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1713918087
+|move|p1a: Tinkaton|Stealth Rock|p2a: Dondozo
+|-sidestart|p2: Lucius Artor|move: Stealth Rock
+|move|p2a: Dondozo|Wave Crash|p1a: Tinkaton
+|-damage|p1a: Tinkaton|210/274
+|-damage|p2a: Dondozo|342/362|[from] Recoil
+|
+|-weather|Snow|[upkeep]
+|-heal|p1a: Tinkaton|227/274|[from] item: Leftovers
+|-heal|p2a: Dondozo|362/362|[from] item: Leftovers
+|upkeep
+|turn|4
+|
+|t:|1713918099
+|switch|p1a: Empoleon|Empoleon, L84, M|278/278
+|move|p2a: Dondozo|Wave Crash|p1a: Empoleon
+|-resisted|p1a: Empoleon
+|-damage|p1a: Empoleon|249/278
+|-damage|p2a: Dondozo|352/362|[from] Recoil
+|
+|-weather|Snow|[upkeep]
+|-heal|p1a: Empoleon|266/278|[from] item: Leftovers
+|-heal|p2a: Dondozo|362/362|[from] item: Leftovers
+|upkeep
+|turn|5
+|
+|t:|1713918104
+|switch|p2a: Lumineon|Lumineon, L93, F|279/279
+|-damage|p2a: Lumineon|245/279|[from] Stealth Rock
+|move|p1a: Empoleon|Surf|p2a: Lumineon
+|-ability|p2a: Lumineon|Storm Drain|boost
+|-boost|p2a: Lumineon|spa|1
+|
+|-weather|none
+|-heal|p1a: Empoleon|278/278|[from] item: Leftovers
+|upkeep
+|turn|6
+|
+|t:|1713918112
+|move|p2a: Lumineon|Encore|p1a: Empoleon
+|-start|p1a: Empoleon|Encore
+|move|p1a: Empoleon|Surf|p2a: Lumineon
+|-ability|p2a: Lumineon|Storm Drain|boost
+|-boost|p2a: Lumineon|spa|1
+|
+|upkeep
+|turn|7
+|j| Shaky3
+|
+|t:|1713918124
+|switch|p1a: Tinkaton|Tinkaton, L82, F|227/274
+|-ability|p1a: Tinkaton|Mold Breaker
+|move|p2a: Lumineon|Hydro Pump|p1a: Tinkaton
+|-damage|p1a: Tinkaton|92/274
+|-damage|p2a: Lumineon|218/279|[from] item: Life Orb
+|
+|-heal|p1a: Tinkaton|109/274|[from] item: Leftovers
+|upkeep
+|turn|8
+|
+|t:|1713918144
+|-terastallize|p1a: Tinkaton|Water
+|move|p2a: Lumineon|Hydro Pump|p1a: Tinkaton
+|-resisted|p1a: Tinkaton
+|-damage|p1a: Tinkaton|45/274
+|-damage|p2a: Lumineon|191/279|[from] item: Life Orb
+|move|p1a: Tinkaton|Thunder Wave|p2a: Lumineon
+|-status|p2a: Lumineon|par
+|
+|-heal|p1a: Tinkaton|62/274|[from] item: Leftovers
+|-sideend|p1: pokeblade☆101|move: Aurora Veil
+|upkeep
+|turn|9
+|j| CutePokesOnly
+|
+|t:|1713918151
+|switch|p1a: Empoleon|Empoleon, L84, M|278/278
+|move|p2a: Lumineon|Ice Beam|p1a: Empoleon
+|-resisted|p1a: Empoleon
+|-damage|p1a: Empoleon|243/278
+|-damage|p2a: Lumineon|164/279 par|[from] item: Life Orb
+|
+|-heal|p1a: Empoleon|260/278|[from] item: Leftovers
+|upkeep
+|turn|10
+|
+|t:|1713918158
+|move|p1a: Empoleon|Ice Beam|p2a: Lumineon
+|-resisted|p2a: Lumineon
+|-damage|p2a: Lumineon|131/279 par
+|move|p2a: Lumineon|Hydro Pump|p1a: Empoleon|[miss]
+|-miss|p2a: Lumineon|p1a: Empoleon
+|
+|-heal|p1a: Empoleon|277/278|[from] item: Leftovers
+|upkeep
+|turn|11
+|
+|t:|1713918163
+|switch|p2a: Lucario|Lucario, L84, M|255/255
+|-damage|p2a: Lucario|248/255|[from] Stealth Rock
+|move|p1a: Empoleon|Ice Beam|p2a: Lucario
+|-resisted|p2a: Lucario
+|-damage|p2a: Lucario|204/255
+|
+|-heal|p1a: Empoleon|278/278|[from] item: Leftovers
+|upkeep
+|turn|12
+|
+|t:|1713918171
+|switch|p1a: Drifblim|Drifblim, L86, F|396/396
+|move|p2a: Lucario|Swords Dance|p2a: Lucario
+|-boost|p2a: Lucario|atk|2
+|
+|upkeep
+|turn|13
+|
+|t:|1713918183
+|switch|p1a: Empoleon|Empoleon, L84, M|278/278
+|move|p2a: Lucario|Meteor Mash|p1a: Empoleon
+|-resisted|p1a: Empoleon
+|-damage|p1a: Empoleon|207/278
+|-damage|p2a: Lucario|179/255|[from] item: Life Orb
+|
+|-heal|p1a: Empoleon|224/278|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1713918189
+|switch|p1a: Tinkaton|Tinkaton, L82, F, tera:Water|62/274
+|-ability|p1a: Tinkaton|Mold Breaker
+|move|p2a: Lucario|Close Combat|p1a: Tinkaton
+|-damage|p1a: Tinkaton|0 fnt
+|-unboost|p2a: Lucario|def|1
+|-unboost|p2a: Lucario|spd|1
+|faint|p1a: Tinkaton
+|-damage|p2a: Lucario|154/255|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1713918192
+|switch|p1a: Squawkabilly|Squawkabilly-Yellow, L89, F|291/291
+|turn|15
+|
+|t:|1713918199
+|-terastallize|p2a: Lucario|Normal
+|move|p2a: Lucario|Extreme Speed|p1a: Squawkabilly
+|-damage|p1a: Squawkabilly|0 fnt
+|faint|p1a: Squawkabilly
+|-damage|p2a: Lucario|129/255|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1713918206
+|switch|p1a: Drifblim|Drifblim, L86, F|396/396
+|turn|16
+|
+|t:|1713918210
+|move|p2a: Lucario|Meteor Mash|p1a: Drifblim
+|-damage|p1a: Drifblim|0 fnt
+|faint|p1a: Drifblim
+|-damage|p2a: Lucario|104/255|[from] item: Life Orb
+|
+|upkeep
+|-message|pokeblade☆101 forfeited.
+|
+|win|Lucius Artor
+|raw|pokeblade☆101's rating: 2529 &rarr; <strong>2506</strong><br />(-23 for losing)
+|raw|Lucius Artor's rating: 2485 &rarr; <strong>2508</strong><br />(+23 for winning)
+|l|☆pokeblade☆101
+|player|p1|
+|l|☆Lucius Artor
+|player|p2|
+|l| Boris Huang - YT

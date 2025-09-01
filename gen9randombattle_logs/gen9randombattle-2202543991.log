@@ -1,0 +1,278 @@
+|badge|p1|silver|gen9randombattle|30-2
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|bronze|gen9randombattle|100-2
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|raw|<div class="broadcast-blue"><strong>This battle is required to be public due to a player having a name starting with 'rblt'.</div>
+|j|☆RBLT soT
+|j|☆RBLT Pokevin
+|t:|1726454638
+|gametype|singles
+|player|p1|RBLT soT|2|2520
+|player|p2|RBLT Pokevin|n-masters|2490
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1726454638
+|start
+|switch|p1a: Camerupt|Camerupt, L91, F|275/275
+|switch|p2a: Mew|Mew, L82|298/298
+|turn|1
+|j| rblt lw
+|j| RBLT HB28
+|
+|t:|1726454661
+|move|p2a: Mew|Hydro Pump|p1a: Camerupt
+|-supereffective|p1a: Camerupt
+|-damage|p1a: Camerupt|0 fnt
+|faint|p1a: Camerupt
+|-damage|p2a: Mew|269/298|[from] item: Life Orb
+|
+|upkeep
+|j| RBLT Ilex
+|l| rblt lw
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by RBLT Pokevin)
+|j| rb LTG99
+|
+|t:|1726454681
+|switch|p1a: Dragapult|Dragapult, L77, F|262/262
+|turn|2
+|j| RBLT raulcan
+|
+|t:|1726454690
+|switch|p2a: Dunsparce|Dunsparce, L86, F|312/312
+|move|p1a: Dragapult|U-turn|p2a: Dunsparce
+|-damage|p2a: Dunsparce|277/312
+|
+|t:|1726454698
+|switch|p1a: Okidogi|Okidogi, L77, M|262/262|[from] U-turn
+|
+|upkeep
+|turn|3
+|
+|t:|1726454716
+|move|p1a: Okidogi|Knock Off|p2a: Dunsparce
+|-damage|p2a: Dunsparce|219/312
+|-enditem|p2a: Dunsparce|Eviolite|[from] move: Knock Off|[of] p1a: Okidogi
+|move|p2a: Dunsparce|Body Slam|p1a: Okidogi
+|-damage|p1a: Okidogi|195/262
+|
+|-heal|p1a: Okidogi|211/262|[from] item: Leftovers
+|upkeep
+|turn|4
+|j| RBLT Unstoppable
+|
+|t:|1726454724
+|move|p1a: Okidogi|Drain Punch|p2a: Dunsparce
+|-supereffective|p2a: Dunsparce
+|-damage|p2a: Dunsparce|19/312
+|-heal|p1a: Okidogi|262/262|[from] drain|[of] p2a: Dunsparce
+|-status|p2a: Dunsparce|tox|[from] ability: Toxic Chain|[of] p1a: Okidogi
+|move|p2a: Dunsparce|Body Slam|p1a: Okidogi
+|-damage|p1a: Okidogi|198/262
+|-status|p1a: Okidogi|par
+|
+|-heal|p1a: Okidogi|214/262 par|[from] item: Leftovers
+|-damage|p2a: Dunsparce|0 fnt|[from] psn
+|faint|p2a: Dunsparce
+|upkeep
+|
+|t:|1726454751
+|switch|p2a: Crabominable|Crabominable, L90, F|321/321
+|turn|5
+|l| RBLT Unstoppable
+|inactive|RBLT soT has 120 seconds left.
+|
+|t:|1726454789
+|move|p2a: Crabominable|Ice Hammer|p1a: Okidogi
+|-damage|p1a: Okidogi|0 fnt
+|-unboost|p2a: Crabominable|spe|1
+|faint|p1a: Okidogi
+|
+|upkeep
+|j|+Pulse_kS
+|inactive|RBLT soT has 90 seconds left.
+|j| RBLT Fantsy1
+|
+|t:|1726454838
+|switch|p1a: Dragapult|Dragapult, L77, F|262/262
+|turn|6
+|
+|t:|1726454865
+|switch|p2a: Mew|Mew, L82|269/298
+|move|p1a: Dragapult|Fire Blast|p2a: Mew
+|-damage|p2a: Mew|177/298
+|
+|upkeep
+|turn|7
+|inactive|RBLT Pokevin has 120 seconds left.
+|
+|t:|1726454881
+|move|p1a: Dragapult|Fire Blast|p2a: Mew
+|-damage|p2a: Mew|80/298
+|-status|p2a: Mew|brn
+|-activate|p2a: Mew|ability: Synchronize
+|-status|p1a: Dragapult|brn
+|move|p2a: Mew|Nasty Plot|p2a: Mew
+|-boost|p2a: Mew|spa|2
+|
+|-damage|p1a: Dragapult|246/262 brn|[from] brn
+|-damage|p2a: Mew|62/298 brn|[from] brn
+|upkeep
+|turn|8
+|
+|t:|1726454891
+|move|p1a: Dragapult|Fire Blast|p2a: Mew
+|-damage|p2a: Mew|0 fnt
+|faint|p2a: Mew
+|
+|-damage|p1a: Dragapult|230/262 brn|[from] brn
+|upkeep
+|
+|t:|1726454899
+|switch|p2a: Hatterene|Hatterene, L85, F|236/236
+|turn|9
+|j| RBLT Unstoppable
+|
+|t:|1726454918
+|switch|p1a: Frosmoth|Frosmoth, L82, F|249/249
+|move|p2a: Hatterene|Calm Mind|p2a: Hatterene
+|-boost|p2a: Hatterene|spa|1
+|-boost|p2a: Hatterene|spd|1
+|
+|upkeep
+|turn|10
+|j| hammy358
+|
+|t:|1726454937
+|switch|p1a: Dragapult|Dragapult, L77, F|230/262 brn
+|move|p2a: Hatterene|Mystical Fire|p1a: Dragapult
+|-resisted|p1a: Dragapult
+|-damage|p1a: Dragapult|169/262 brn
+|-unboost|p1a: Dragapult|spa|1
+|
+|-damage|p1a: Dragapult|153/262 brn|[from] brn
+|upkeep
+|turn|11
+|
+|t:|1726454952
+|move|p1a: Dragapult|Shadow Ball|p2a: Hatterene
+|-supereffective|p2a: Hatterene
+|-damage|p2a: Hatterene|150/236
+|-unboost|p2a: Hatterene|spd|1
+|move|p2a: Hatterene|Draining Kiss|p1a: Dragapult
+|-supereffective|p1a: Dragapult
+|-damage|p1a: Dragapult|0 fnt
+|-heal|p2a: Hatterene|236/236|[from] drain|[of] p1a: Dragapult
+|faint|p1a: Dragapult
+|
+|upkeep
+|inactive|RBLT soT has 60 seconds left.
+|
+|t:|1726454968
+|switch|p1a: Frosmoth|Frosmoth, L82, F|249/249
+|turn|12
+|
+|t:|1726454974
+|move|p1a: Frosmoth|Quiver Dance|p1a: Frosmoth
+|-boost|p1a: Frosmoth|spa|1
+|-boost|p1a: Frosmoth|spd|1
+|-boost|p1a: Frosmoth|spe|1
+|move|p2a: Hatterene|Mystical Fire|p1a: Frosmoth
+|-supereffective|p1a: Frosmoth
+|-damage|p1a: Frosmoth|103/249
+|-unboost|p1a: Frosmoth|spa|1
+|
+|upkeep
+|turn|13
+|
+|t:|1726454984
+|-terastallize|p1a: Frosmoth|Ground
+|move|p1a: Frosmoth|Quiver Dance|p1a: Frosmoth
+|-boost|p1a: Frosmoth|spa|1
+|-boost|p1a: Frosmoth|spd|1
+|-boost|p1a: Frosmoth|spe|1
+|move|p2a: Hatterene|Mystical Fire|p1a: Frosmoth
+|-damage|p1a: Frosmoth|78/249
+|-unboost|p1a: Frosmoth|spa|1
+|
+|upkeep
+|turn|14
+|l| RBLT Unstoppable
+|
+|t:|1726454999
+|move|p1a: Frosmoth|Quiver Dance|p1a: Frosmoth
+|-boost|p1a: Frosmoth|spa|1
+|-boost|p1a: Frosmoth|spd|1
+|-boost|p1a: Frosmoth|spe|1
+|move|p2a: Hatterene|Psyshock|p1a: Frosmoth
+|-damage|p1a: Frosmoth|0 fnt
+|faint|p1a: Frosmoth
+|
+|upkeep
+|
+|t:|1726455006
+|switch|p1a: Vikavolt|Vikavolt, L83, F|263/263
+|turn|15
+|
+|t:|1726455014
+|move|p1a: Vikavolt|Thunderbolt|p2a: Hatterene
+|-damage|p2a: Hatterene|116/236
+|move|p2a: Hatterene|Calm Mind|p2a: Hatterene
+|-boost|p2a: Hatterene|spa|1
+|-boost|p2a: Hatterene|spd|1
+|
+|-heal|p2a: Hatterene|130/236|[from] item: Leftovers
+|upkeep
+|turn|16
+|j| Revival Tour
+|
+|t:|1726455019
+|move|p1a: Vikavolt|Thunderbolt|p2a: Hatterene
+|-damage|p2a: Hatterene|49/236
+|move|p2a: Hatterene|Draining Kiss|p1a: Vikavolt
+|-damage|p1a: Vikavolt|89/263
+|-heal|p2a: Hatterene|180/236|[from] drain|[of] p1a: Vikavolt
+|
+|-heal|p2a: Hatterene|194/236|[from] item: Leftovers
+|upkeep
+|turn|17
+|
+|t:|1726455023
+|move|p1a: Vikavolt|Thunderbolt|p2a: Hatterene
+|-damage|p2a: Hatterene|122/236
+|move|p2a: Hatterene|Draining Kiss|p1a: Vikavolt
+|-damage|p1a: Vikavolt|0 fnt
+|-heal|p2a: Hatterene|189/236|[from] drain|[of] p1a: Vikavolt
+|faint|p1a: Vikavolt
+|
+|-heal|p2a: Hatterene|203/236|[from] item: Leftovers
+|upkeep
+|
+|t:|1726455028
+|switch|p1a: Koraidon|Koraidon, L64|235/235
+|-weather|SunnyDay|[from] ability: Orichalcum Pulse|[of] p1a: Koraidon
+|-activate|p1a: Koraidon|Orichalcum Pulse|[source]
+|turn|18
+|
+|t:|1726455035
+|move|p1a: Koraidon|Flare Blitz|p2a: Hatterene
+|-damage|p2a: Hatterene|75/236
+|-damage|p1a: Koraidon|193/235|[from] Recoil
+|move|p2a: Hatterene|Psyshock|p1a: Koraidon
+|-supereffective|p1a: Koraidon
+|-damage|p1a: Koraidon|0 fnt
+|faint|p1a: Koraidon
+|
+|win|RBLT Pokevin
+|raw|RBLT soT's rating: 2520 &rarr; <strong>2498</strong><br />(-22 for losing)
+|raw|RBLT Pokevin's rating: 2490 &rarr; <strong>2512</strong><br />(+22 for winning)
+|l|☆RBLT soT
+|player|p1|
+|l| hammy358

@@ -1,0 +1,282 @@
+|badge|p1|silver|gen9randombattle|30-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Aqua
+|j|☆MichaelderBeste2
+|t:|1746311894
+|gametype|singles
+|player|p1|Aqua|#rbtt7teamdarkraif|2456
+|player|p2|MichaelderBeste2|#splxviraiders|2500
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1746311894
+|start
+|switch|p1a: Tropius|Tropius, L91, F|328/328
+|switch|p2a: Electivire|Electivire, L84, F|263/263
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Aqua)
+|
+|t:|1746311930
+|switch|p1a: Swampert|Swampert, L83, M|302/302
+|move|p2a: Electivire|Knock Off|p1a: Swampert
+|-damage|p1a: Swampert|198/302
+|-enditem|p1a: Swampert|Leftovers|[from] move: Knock Off|[of] p2a: Electivire
+|-damage|p2a: Electivire|237/263|[from] item: Life Orb
+|
+|upkeep
+|turn|2
+|
+|t:|1746311940
+|move|p2a: Electivire|Earthquake|p1a: Swampert
+|-damage|p1a: Swampert|95/302
+|-damage|p2a: Electivire|211/263|[from] item: Life Orb
+|move|p1a: Swampert|Yawn|p2a: Electivire
+|-start|p2a: Electivire|move: Yawn|[of] p1a: Swampert
+|
+|upkeep
+|turn|3
+|
+|t:|1746311953
+|switch|p2a: Annihilape|Annihilape, L76, F|292/292
+|move|p1a: Swampert|Stealth Rock|p2a: Annihilape
+|-sidestart|p2: MichaelderBeste2|move: Stealth Rock
+|
+|upkeep
+|turn|4
+|inactive|Aqua has 120 seconds left.
+|
+|t:|1746311987
+|switch|p1a: Tropius|Tropius, L91, F|328/328
+|move|p2a: Annihilape|Gunk Shot|p1a: Tropius
+|-supereffective|p1a: Tropius
+|-damage|p1a: Tropius|184/328
+|
+|upkeep
+|turn|5
+|
+|t:|1746311995
+|switch|p1a: Qwilfish|Qwilfish, L86, M|252/252
+|-ability|p1a: Qwilfish|Intimidate|boost
+|-unboost|p2a: Annihilape|atk|1
+|-ability|p2a: Annihilape|Defiant|boost
+|-boost|p2a: Annihilape|atk|2
+|move|p2a: Annihilape|Gunk Shot|p1a: Qwilfish|[miss]
+|-miss|p2a: Annihilape|p1a: Qwilfish
+|
+|upkeep
+|turn|6
+|
+|t:|1746312003
+|switch|p2a: Electivire|Electivire, L84, F|211/263
+|-damage|p2a: Electivire|179/263|[from] Stealth Rock
+|move|p1a: Qwilfish|Spikes|p2a: Electivire
+|-sidestart|p2: MichaelderBeste2|Spikes
+|
+|upkeep
+|turn|7
+|
+|t:|1746312014
+|switch|p1a: Swampert|Swampert, L83, M|95/302
+|move|p2a: Electivire|Earthquake|p1a: Swampert
+|-damage|p1a: Swampert|0 fnt
+|faint|p1a: Swampert
+|-damage|p2a: Electivire|153/263|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1746312022
+|switch|p1a: Sceptile|Sceptile, L87, F|264/264
+|turn|8
+|
+|t:|1746312029
+|move|p1a: Sceptile|Leaf Storm|p2a: Electivire
+|-damage|p2a: Electivire|0 fnt
+|-unboost|p1a: Sceptile|spa|2
+|faint|p2a: Electivire
+|-damage|p1a: Sceptile|238/264|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1746312036
+|switch|p2a: Annihilape|Annihilape, L76, F|292/292
+|-damage|p2a: Annihilape|274/292|[from] Stealth Rock
+|-damage|p2a: Annihilape|238/292|[from] Spikes
+|turn|9
+|
+|t:|1746312064
+|switch|p1a: Skuntank|Skuntank, L84, M|310/310
+|move|p2a: Annihilape|Gunk Shot|p1a: Skuntank
+|-resisted|p1a: Skuntank
+|-damage|p1a: Skuntank|261/310
+|
+|-heal|p2a: Annihilape|256/292|[from] item: Leftovers
+|upkeep
+|turn|10
+|
+|t:|1746312070
+|move|p1a: Skuntank|Knock Off|p2a: Annihilape
+|-damage|p2a: Annihilape|95/292
+|-enditem|p2a: Annihilape|Leftovers|[from] move: Knock Off|[of] p1a: Skuntank
+|-damage|p1a: Skuntank|230/310|[from] item: Life Orb
+|move|p2a: Annihilape|Bulk Up|p2a: Annihilape
+|-boost|p2a: Annihilape|atk|1
+|-boost|p2a: Annihilape|def|1
+|
+|upkeep
+|turn|11
+|inactive|Aqua has 120 seconds left.
+|inactive|Aqua has 90 seconds left.
+|
+|t:|1746312150
+|move|p1a: Skuntank|Knock Off|p2a: Annihilape
+|-damage|p2a: Annihilape|31/292
+|-damage|p1a: Skuntank|199/310|[from] item: Life Orb
+|move|p2a: Annihilape|Drain Punch|p1a: Skuntank
+|-damage|p1a: Skuntank|52/310
+|-heal|p2a: Annihilape|105/292|[from] drain|[of] p1a: Skuntank
+|
+|upkeep
+|turn|12
+|inactive|MichaelderBeste2 has 120 seconds left.
+|j| jjjnkn
+|inactive|MichaelderBeste2 has 90 seconds left.
+|
+|t:|1746312211
+|move|p1a: Skuntank|Knock Off|p2a: Annihilape
+|-damage|p2a: Annihilape|41/292
+|-damage|p1a: Skuntank|21/310|[from] item: Life Orb
+|move|p2a: Annihilape|Gunk Shot|p1a: Skuntank
+|-resisted|p1a: Skuntank
+|-damage|p1a: Skuntank|0 fnt
+|faint|p1a: Skuntank
+|
+|upkeep
+|
+|t:|1746312219
+|switch|p1a: Qwilfish|Qwilfish, L86, M|252/252
+|-ability|p1a: Qwilfish|Intimidate|boost
+|-unboost|p2a: Annihilape|atk|1
+|-ability|p2a: Annihilape|Defiant|boost
+|-boost|p2a: Annihilape|atk|2
+|turn|13
+|
+|t:|1746312224
+|move|p1a: Qwilfish|Waterfall|p2a: Annihilape
+|-damage|p2a: Annihilape|0 fnt
+|faint|p2a: Annihilape
+|
+|upkeep
+|
+|t:|1746312229
+|switch|p2a: Politoed|Politoed, L88, M|302/302
+|-damage|p2a: Politoed|265/302|[from] Stealth Rock
+|-damage|p2a: Politoed|228/302|[from] Spikes
+|-weather|RainDance|[from] ability: Drizzle|[of] p2a: Politoed
+|turn|14
+|inactive|Aqua has 90 seconds left.
+|
+|t:|1746312242
+|move|p1a: Qwilfish|Gunk Shot|p2a: Politoed
+|-damage|p2a: Politoed|81/302
+|move|p2a: Politoed|Hydro Pump|p1a: Qwilfish
+|-resisted|p1a: Qwilfish
+|-damage|p1a: Qwilfish|60/252
+|
+|-weather|RainDance|[upkeep]
+|-heal|p1a: Qwilfish|75/252|[from] item: Leftovers
+|upkeep
+|turn|15
+|inactive|Aqua has 90 seconds left.
+|
+|t:|1746312252
+|move|p1a: Qwilfish|Gunk Shot|p2a: Politoed
+|-damage|p2a: Politoed|0 fnt
+|faint|p2a: Politoed
+|
+|-weather|RainDance|[upkeep]
+|-heal|p1a: Qwilfish|90/252|[from] item: Leftovers
+|upkeep
+|
+|t:|1746312254
+|switch|p2a: Rampardos|Rampardos, L90, F|321/321
+|-damage|p2a: Rampardos|281/321|[from] Stealth Rock
+|-damage|p2a: Rampardos|241/321|[from] Spikes
+|turn|16
+|
+|t:|1746312264
+|move|p2a: Rampardos|Rock Slide|p1a: Qwilfish
+|-damage|p1a: Qwilfish|0 fnt
+|faint|p1a: Qwilfish
+|
+|-weather|RainDance|[upkeep]
+|upkeep
+|
+|t:|1746312272
+|switch|p1a: Sceptile|Sceptile, L87, F|238/264
+|turn|17
+|
+|t:|1746312292
+|move|p1a: Sceptile|Leaf Storm|p2a: Rampardos
+|-supereffective|p2a: Rampardos
+|-damage|p2a: Rampardos|0 fnt
+|-unboost|p1a: Sceptile|spa|2
+|faint|p2a: Rampardos
+|-damage|p1a: Sceptile|212/264|[from] item: Life Orb
+|
+|-weather|RainDance|[upkeep]
+|upkeep
+|
+|t:|1746312294
+|switch|p2a: Frosmoth|Frosmoth, L82, F|249/249
+|turn|18
+|
+|t:|1746312313
+|move|p1a: Sceptile|Rock Slide|p2a: Frosmoth
+|-supereffective|p2a: Frosmoth
+|-damage|p2a: Frosmoth|0 fnt
+|faint|p2a: Frosmoth
+|-damage|p1a: Sceptile|186/264|[from] item: Life Orb
+|
+|-weather|none
+|upkeep
+|c|☆MichaelderBeste2|What
+|c|☆MichaelderBeste2|I literally
+|c|☆MichaelderBeste2|clicked tera ground
+|c|☆Aqua|h f
+|c|☆MichaelderBeste2|That sucks
+|c|☆Aqua|rip
+|c|☆MichaelderBeste2|What was your last
+|c|☆MichaelderBeste2|gg
+|-message|MichaelderBeste2 forfeited.
+|
+|win|Aqua
+|raw|Aqua's rating: 2456 &rarr; <strong>2479</strong><br />(+23 for winning)
+|raw|MichaelderBeste2's rating: 2500 &rarr; <strong>2477</strong><br />(-23 for losing)
+|c|☆Aqua|!showset typhlosion
+|c|+Aqua|/raw <div class="infobox">Typhlosion @ Choice Scarf  <br />Ability: Blaze  <br />Level: 84  <br />Tera Type: Fire  <br />EVs: 81 HP &#x2f; 85 Def &#x2f; 85 SpA &#x2f; 85 SpD &#x2f; 85 Spe  <br />IVs: 0 Atk  <br />- Fire Blast  <br />- Scorching Sands  <br />- Eruption  <br />- Focus Blast  <br /><br /></div>
+|c|☆MichaelderBeste2|Hm
+|c|☆Aqua|urs?
+|l| jjjnkn
+|c|☆MichaelderBeste2|Dozo
+|c|☆MichaelderBeste2|Wait
+|c|☆MichaelderBeste2|Were yiu
+|c|☆MichaelderBeste2|Dd tropius
+|c|☆MichaelderBeste2|And I tossed the win
+|c|☆Aqua|!showset tropius
+|c|+Aqua|/raw <div class="infobox">Tropius @ Sitrus Berry  <br />Ability: Harvest  <br />Level: 91  <br />Tera Type: Steel  <br />EVs: 85 HP &#x2f; 85 Def &#x2f; 85 SpA &#x2f; 85 SpD &#x2f; 85 Spe  <br />IVs: 0 Atk  <br />- Leech Seed  <br />- Substitute  <br />- Protect  <br />- Air Slash  <br /><br /></div>
+|c|☆MichaelderBeste2|Okay phew
+|c|☆MichaelderBeste2|I was dragon dozl
+|c|☆Aqua|ah
+|c|☆MichaelderBeste2|Just realized I beat dd tropius
+|c|☆Aqua|easily
+|c|☆Aqua|yea
+|c|☆Aqua|gl

@@ -1,0 +1,439 @@
+|badge|p1|gold|gen9randombattle|3-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|‽ye im very bad
+|j|☆MichaelderBeste2
+|t:|1716222963
+|gametype|singles
+|player|p1|ye im very bad|pokekidf-gen8|2540
+|player|p2|MichaelderBeste2|#wcop2021germany|2534
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1716222963
+|start
+|switch|p1a: Comfey|Comfey, L85, F|225/225
+|switch|p2a: Basculegion|Basculegion-F, L83, F|335/335
+|turn|1
+|j| Delta 2777
+|j| Limelames
+|c| Delta 2777|Exciting
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by ye im very bad)
+|c| Limelames|Have fun
+|inactive|ye im very bad has 120 seconds left.
+|inactive|ye im very bad has 90 seconds left.
+|inactive|ye im very bad has 60 seconds left.
+|
+|t:|1716223087
+|move|p1a: Comfey|Calm Mind|p1a: Comfey
+|-boost|p1a: Comfey|spa|1
+|-boost|p1a: Comfey|spd|1
+|move|p2a: Basculegion|Flip Turn|p1a: Comfey
+|-damage|p1a: Comfey|145/225
+|inactive|MichaelderBeste2 has 120 seconds left.
+|
+|t:|1716223119
+|switch|p2a: Cinccino|Cinccino, L83, F|260/260|[from] Flip Turn
+|
+|-heal|p1a: Comfey|159/225|[from] item: Leftovers
+|upkeep
+|turn|2
+|inactive|ye im very bad has 120 seconds left.
+|
+|t:|1716223146
+|switch|p1a: Cobalion|Cobalion, L80|277/277
+|move|p2a: Cinccino|Tail Slap|p1a: Cobalion
+|-resisted|p1a: Cobalion
+|-damage|p1a: Cobalion|263/277
+|-resisted|p1a: Cobalion
+|-damage|p1a: Cobalion|249/277
+|-resisted|p1a: Cobalion
+|-damage|p1a: Cobalion|234/277
+|-resisted|p1a: Cobalion
+|-damage|p1a: Cobalion|220/277
+|-resisted|p1a: Cobalion
+|-damage|p1a: Cobalion|205/277
+|-hitcount|p1a: Cobalion|5
+|
+|-heal|p1a: Cobalion|222/277|[from] item: Leftovers
+|upkeep
+|turn|3
+|inactive|MichaelderBeste2 has 120 seconds left.
+|
+|t:|1716223171
+|move|p2a: Cinccino|U-turn|p1a: Cobalion
+|-resisted|p1a: Cobalion
+|-damage|p1a: Cobalion|213/277
+|
+|t:|1716223172
+|switch|p2a: Basculegion|Basculegion-F, L83, F|335/335|[from] U-turn
+|move|p1a: Cobalion|Thunder Wave|p2a: Basculegion
+|-status|p2a: Basculegion|par
+|
+|-heal|p1a: Cobalion|230/277|[from] item: Leftovers
+|upkeep
+|turn|4
+|inactive|ye im very bad has 120 seconds left.
+|
+|t:|1716223190
+|switch|p1a: Chien-Pao|Chien-Pao, L72|234/234
+|-ability|p1a: Chien-Pao|Sword of Ruin
+|cant|p2a: Basculegion|par
+|
+|upkeep
+|turn|5
+|l| Limelames
+|inactive|MichaelderBeste2 has 120 seconds left.
+|
+|t:|1716223231
+|-terastallize|p2a: Basculegion|Water
+|move|p1a: Chien-Pao|Throat Chop|p2a: Basculegion
+|-damage|p2a: Basculegion|163/335 par
+|-start|p2a: Basculegion|Throat Chop|[silent]
+|move|p2a: Basculegion|Hydro Pump|p1a: Chien-Pao
+|-damage|p1a: Chien-Pao|0 fnt
+|faint|p1a: Chien-Pao
+|
+|upkeep
+|inactive|ye im very bad has 90 seconds left.
+|j| Teres bahji
+|inactive|ye im very bad has 60 seconds left.
+|
+|t:|1716223278
+|switch|p1a: Giratina|Giratina, L75|349/349
+|-ability|p1a: Giratina|Pressure
+|turn|6
+|
+|t:|1716223295
+|move|p1a: Giratina|Calm Mind|p1a: Giratina
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|move|p2a: Basculegion|Flip Turn|p1a: Giratina
+|-resisted|p1a: Giratina
+|-damage|p1a: Giratina|308/349
+|c| Teres bahji|this looks like the battle for the 1st
+|
+|t:|1716223302
+|switch|p2a: Mandibuzz|Mandibuzz, L84, F|322/322|[from] Flip Turn
+|
+|-heal|p1a: Giratina|329/349|[from] item: Leftovers
+|upkeep
+|turn|7
+|
+|t:|1716223323
+|move|p2a: Mandibuzz|Knock Off|p1a: Giratina
+|-supereffective|p1a: Giratina
+|-damage|p1a: Giratina|185/349
+|-enditem|p1a: Giratina|Leftovers|[from] move: Knock Off|[of] p2a: Mandibuzz
+|move|p1a: Giratina|Calm Mind|p1a: Giratina
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|
+|upkeep
+|turn|8
+|inactive|MichaelderBeste2 has 90 seconds left.
+|
+|t:|1716223363
+|move|p2a: Mandibuzz|Knock Off|p1a: Giratina
+|-supereffective|p1a: Giratina
+|-damage|p1a: Giratina|101/349
+|move|p1a: Giratina|Dragon Pulse|p2a: Mandibuzz
+|-damage|p2a: Mandibuzz|171/322
+|
+|upkeep
+|turn|9
+|
+|t:|1716223368
+|switch|p2a: Gastrodon|Gastrodon-East, L86, F|331/331
+|move|p1a: Giratina|Rest|p1a: Giratina
+|-status|p1a: Giratina|slp|[from] move: Rest
+|-heal|p1a: Giratina|349/349 slp|[silent]
+|
+|upkeep
+|turn|10
+|
+|t:|1716223374
+|cant|p1a: Giratina|slp
+|move|p1a: Giratina|Sleep Talk|p1a: Giratina
+|move|p1a: Giratina|Calm Mind|p1a: Giratina|[from]move: Sleep Talk
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|move|p2a: Gastrodon|Clear Smog|p1a: Giratina
+|-resisted|p1a: Giratina
+|-damage|p1a: Giratina|343/349 slp
+|-clearboost|p1a: Giratina
+|
+|upkeep
+|turn|11
+|inactive|MichaelderBeste2 has 90 seconds left.
+|
+|t:|1716223400
+|cant|p1a: Giratina|slp
+|move|p1a: Giratina|Sleep Talk|p1a: Giratina
+|move|p1a: Giratina|Dragon Pulse|p2a: Gastrodon|[from]move: Sleep Talk
+|-damage|p2a: Gastrodon|256/331
+|move|p2a: Gastrodon|Earthquake|p1a: Giratina
+|-damage|p1a: Giratina|258/349 slp
+|
+|-heal|p2a: Gastrodon|276/331|[from] item: Leftovers
+|upkeep
+|turn|12
+|inactive|MichaelderBeste2 has 90 seconds left.
+|inactive|ye im very bad has 90 seconds left.
+|j|+Aqua
+|
+|t:|1716223442
+|-curestatus|p1a: Giratina|slp|[msg]
+|move|p1a: Giratina|Calm Mind|p1a: Giratina
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|move|p2a: Gastrodon|Earthquake|p1a: Giratina
+|-damage|p1a: Giratina|177/349
+|
+|-heal|p2a: Gastrodon|296/331|[from] item: Leftovers
+|upkeep
+|turn|13
+|inactive|MichaelderBeste2 has 90 seconds left.
+|
+|t:|1716223460
+|move|p1a: Giratina|Dragon Pulse|p2a: Gastrodon
+|-damage|p2a: Gastrodon|169/331
+|move|p2a: Gastrodon|Earthquake|p1a: Giratina
+|-damage|p1a: Giratina|93/349
+|
+|-heal|p2a: Gastrodon|189/331|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1716223468
+|move|p1a: Giratina|Rest|p1a: Giratina
+|-status|p1a: Giratina|slp|[from] move: Rest
+|-heal|p1a: Giratina|349/349 slp|[silent]
+|move|p2a: Gastrodon|Earthquake|p1a: Giratina
+|-damage|p1a: Giratina|258/349 slp
+|
+|-heal|p2a: Gastrodon|209/331|[from] item: Leftovers
+|upkeep
+|turn|15
+|
+|t:|1716223472
+|cant|p1a: Giratina|slp
+|move|p1a: Giratina|Sleep Talk|p1a: Giratina
+|move|p1a: Giratina|Rest||[from]move: Sleep Talk|[still]
+|-fail|p1a: Giratina
+|move|p2a: Gastrodon|Clear Smog|p1a: Giratina
+|-resisted|p1a: Giratina
+|-damage|p1a: Giratina|248/349 slp
+|-clearboost|p1a: Giratina
+|
+|-heal|p2a: Gastrodon|229/331|[from] item: Leftovers
+|upkeep
+|turn|16
+|
+|t:|1716223477
+|cant|p1a: Giratina|slp
+|move|p1a: Giratina|Sleep Talk|p1a: Giratina
+|move|p1a: Giratina|Calm Mind|p1a: Giratina|[from]move: Sleep Talk
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|move|p2a: Gastrodon|Surf|p1a: Giratina
+|-resisted|p1a: Giratina
+|-damage|p1a: Giratina|221/349 slp
+|
+|-heal|p2a: Gastrodon|249/331|[from] item: Leftovers
+|upkeep
+|turn|17
+|
+|t:|1716223487
+|-curestatus|p1a: Giratina|slp|[msg]
+|move|p1a: Giratina|Calm Mind|p1a: Giratina
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|move|p2a: Gastrodon|Clear Smog|p1a: Giratina
+|-resisted|p1a: Giratina
+|-damage|p1a: Giratina|212/349
+|-clearboost|p1a: Giratina
+|
+|-heal|p2a: Gastrodon|269/331|[from] item: Leftovers
+|upkeep
+|turn|18
+|
+|t:|1716223493
+|switch|p2a: Cinccino|Cinccino, L83, F|260/260
+|move|p1a: Giratina|Calm Mind|p1a: Giratina
+|-boost|p1a: Giratina|spa|1
+|-boost|p1a: Giratina|spd|1
+|
+|upkeep
+|turn|19
+|
+|t:|1716223496
+|switch|p1a: Typhlosion|Typhlosion-Hisui, L83, M|257/257
+|-item|p2a: Cinccino|Loaded Dice|[from] ability: Frisk|[of] p1a: Typhlosion|[identify]
+|move|p2a: Cinccino|Triple Axel|p1a: Typhlosion
+|-resisted|p1a: Typhlosion
+|-damage|p1a: Typhlosion|245/257
+|-resisted|p1a: Typhlosion
+|-damage|p1a: Typhlosion|222/257
+|-resisted|p1a: Typhlosion
+|-damage|p1a: Typhlosion|188/257
+|-hitcount|p1a: Typhlosion|3
+|
+|upkeep
+|turn|20
+|inactive|ye im very bad has 120 seconds left.
+|
+|t:|1716223516
+|move|p2a: Cinccino|U-turn|p1a: Typhlosion
+|-resisted|p1a: Typhlosion
+|-damage|p1a: Typhlosion|175/257
+|
+|t:|1716223518
+|switch|p2a: Gastrodon|Gastrodon-East, L86, F|269/331|[from] U-turn
+|move|p1a: Typhlosion|Shadow Ball|p2a: Gastrodon
+|-damage|p2a: Gastrodon|169/331
+|
+|-heal|p2a: Gastrodon|189/331|[from] item: Leftovers
+|upkeep
+|turn|21
+|
+|t:|1716223525
+|switch|p1a: Comfey|Comfey, L85, F|159/225
+|move|p2a: Gastrodon|Earthquake|p1a: Comfey
+|-damage|p1a: Comfey|71/225
+|
+|-heal|p1a: Comfey|85/225|[from] item: Leftovers
+|-heal|p2a: Gastrodon|209/331|[from] item: Leftovers
+|upkeep
+|turn|22
+|inactive|ye im very bad has 120 seconds left.
+|
+|t:|1716223533
+|switch|p2a: Archaludon|Archaludon, L78, F|268/268
+|move|p1a: Comfey|Draining Kiss|p2a: Archaludon
+|-crit|p2a: Archaludon
+|-damage|p2a: Archaludon|172/268
+|-heal|p1a: Comfey|157/225|[from] drain|[of] p2a: Archaludon
+|-ability|p2a: Archaludon|Stamina|boost
+|-boost|p2a: Archaludon|def|1
+|
+|-heal|p1a: Comfey|171/225|[from] item: Leftovers
+|upkeep
+|turn|23
+|inactive|ye im very bad has 120 seconds left.
+|j| Revanitohavery
+|l| Revanitohavery
+|j| Revanitohavery
+|inactive|ye im very bad has 90 seconds left.
+|
+|t:|1716223583
+|-terastallize|p1a: Comfey|Ground
+|move|p1a: Comfey|Tera Blast|p2a: Archaludon|[anim] Tera Blast Ground
+|-supereffective|p2a: Archaludon
+|-damage|p2a: Archaludon|0 fnt
+|faint|p2a: Archaludon
+|
+|-heal|p1a: Comfey|185/225|[from] item: Leftovers
+|upkeep
+|
+|t:|1716223608
+|switch|p2a: Cinccino|Cinccino, L83, F|260/260
+|turn|24
+|inactive|ye im very bad has 90 seconds left.
+|l| Revanitohavery
+|inactive|ye im very bad has 60 seconds left.
+|
+|t:|1716223645
+|switch|p1a: Typhlosion|Typhlosion-Hisui, L83, M|175/257
+|-item|p2a: Cinccino|Loaded Dice|[from] ability: Frisk|[of] p1a: Typhlosion|[identify]
+|move|p2a: Cinccino|U-turn|p1a: Typhlosion
+|-resisted|p1a: Typhlosion
+|-damage|p1a: Typhlosion|162/257
+|
+|t:|1716223654
+|switch|p2a: Gastrodon|Gastrodon-East, L86, F|209/331|[from] U-turn
+|
+|-heal|p2a: Gastrodon|229/331|[from] item: Leftovers
+|upkeep
+|turn|25
+|
+|t:|1716223659
+|switch|p1a: Giratina|Giratina, L75|212/349
+|-ability|p1a: Giratina|Pressure
+|move|p2a: Gastrodon|Surf|p1a: Giratina
+|-resisted|p1a: Giratina
+|-damage|p1a: Giratina|168/349
+|
+|-heal|p2a: Gastrodon|249/331|[from] item: Leftovers
+|upkeep
+|turn|26
+|
+|t:|1716223689
+|switch|p2a: Mandibuzz|Mandibuzz, L84, F|171/322
+|move|p1a: Giratina|Rest|p1a: Giratina
+|-status|p1a: Giratina|slp|[from] move: Rest
+|-heal|p1a: Giratina|349/349 slp|[silent]
+|
+|upkeep
+|turn|27
+|
+|t:|1716223693
+|switch|p1a: Cobalion|Cobalion, L80|230/277
+|move|p2a: Mandibuzz|Roost|p2a: Mandibuzz
+|-heal|p2a: Mandibuzz|322/322
+|-singleturn|p2a: Mandibuzz|move: Roost
+|
+|-heal|p1a: Cobalion|247/277|[from] item: Leftovers
+|upkeep
+|turn|28
+|
+|t:|1716223697
+|switch|p2a: Gastrodon|Gastrodon-East, L86, F|249/331
+|move|p1a: Cobalion|Iron Defense|p1a: Cobalion
+|-boost|p1a: Cobalion|def|2
+|
+|-heal|p1a: Cobalion|264/277|[from] item: Leftovers
+|-heal|p2a: Gastrodon|269/331|[from] item: Leftovers
+|upkeep
+|turn|29
+|
+|t:|1716223703
+|move|p1a: Cobalion|Iron Defense|p1a: Cobalion
+|-boost|p1a: Cobalion|def|2
+|move|p2a: Gastrodon|Surf|p1a: Cobalion
+|-damage|p1a: Cobalion|137/277
+|
+|-heal|p1a: Cobalion|154/277|[from] item: Leftovers
+|-heal|p2a: Gastrodon|289/331|[from] item: Leftovers
+|upkeep
+|turn|30
+|
+|t:|1716223708
+|move|p1a: Cobalion|Body Press|p2a: Gastrodon
+|-damage|p2a: Gastrodon|0 fnt
+|faint|p2a: Gastrodon
+|
+|-heal|p1a: Cobalion|171/277|[from] item: Leftovers
+|upkeep
+|-message|MichaelderBeste2 forfeited.
+|
+|win|ye im very bad
+|raw|ye im very bad's rating: 2540 &rarr; <strong>2560</strong><br />(+20 for winning)
+|raw|MichaelderBeste2's rating: 2534 &rarr; <strong>2514</strong><br />(-20 for losing)
+|l|☆MichaelderBeste2
+|player|p2|
+|l|‽ye im very bad
+|player|p1|
+|c| Delta 2777|rip
+|c| Teres bahji|lel
+|l| Delta 2777
+|l|+Aqua
+|l| Teres bahji

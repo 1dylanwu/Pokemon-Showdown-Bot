@@ -1,0 +1,550 @@
+|badge|p1|silver|gen9randombattle|30-4
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-4
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆hammy358
+|j|☆Prosaic
+|t:|1738645479
+|gametype|singles
+|player|p1|hammy358|1|2527
+|player|p2|Prosaic|schoolkid-gen4dp|2608
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1738645479
+|start
+|switch|p1a: Whiscash|Whiscash, L88, M|337/337
+|switch|p2a: Flareon|Flareon, L90, M|263/263
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by hammy358)
+|
+|t:|1738645503
+|move|p2a: Flareon|Trailblaze|p1a: Whiscash
+|-supereffective|p1a: Whiscash
+|-damage|p1a: Whiscash|105/337
+|-boost|p2a: Flareon|spe|1
+|move|p1a: Whiscash|Liquidation|p2a: Flareon
+|-supereffective|p2a: Flareon
+|-damage|p2a: Flareon|0 fnt
+|faint|p2a: Flareon
+|-damage|p1a: Whiscash|72/337|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1738645515
+|switch|p2a: Lanturn|Lanturn, L89, F|367/367
+|turn|2
+|
+|t:|1738645529
+|switch|p1a: Dewgong|Dewgong, L94, M|322/322
+|move|p2a: Lanturn|Scald|p1a: Dewgong
+|-resisted|p1a: Dewgong
+|-crit|p1a: Dewgong
+|-damage|p1a: Dewgong|291/322
+|
+|upkeep
+|turn|3
+|
+|t:|1738645542
+|move|p1a: Dewgong|Flip Turn|p2a: Lanturn
+|-resisted|p2a: Lanturn
+|-damage|p2a: Lanturn|325/367
+|
+|t:|1738645547
+|switch|p1a: Ursaluna|Ursaluna, L79, M|335/335|[from] Flip Turn
+|move|p2a: Lanturn|Thunder Wave|p1a: Ursaluna
+|-immune|p1a: Ursaluna
+|
+|-status|p1a: Ursaluna|brn|[from] item: Flame Orb
+|upkeep
+|turn|4
+|
+|t:|1738645556
+|move|p2a: Lanturn|Scald|p1a: Ursaluna
+|-supereffective|p1a: Ursaluna
+|-damage|p1a: Ursaluna|149/335 brn
+|move|p1a: Ursaluna|Trailblaze|p2a: Lanturn
+|-supereffective|p2a: Lanturn
+|-damage|p2a: Lanturn|157/367
+|-boost|p1a: Ursaluna|spe|1
+|
+|-damage|p1a: Ursaluna|129/335 brn|[from] brn
+|upkeep
+|turn|5
+|
+|t:|1738645573
+|move|p1a: Ursaluna|Trailblaze|p2a: Lanturn
+|-supereffective|p2a: Lanturn
+|-damage|p2a: Lanturn|5/367
+|-boost|p1a: Ursaluna|spe|1
+|move|p2a: Lanturn|Scald|p1a: Ursaluna
+|-supereffective|p1a: Ursaluna
+|-damage|p1a: Ursaluna|0 fnt
+|faint|p1a: Ursaluna
+|
+|upkeep
+|
+|t:|1738645578
+|switch|p1a: Dewgong|Dewgong, L94, M|291/322
+|turn|6
+|
+|t:|1738645585
+|switch|p2a: Quagsire|Quagsire, L84, F|297/297
+|move|p1a: Dewgong|Knock Off|p2a: Quagsire
+|-damage|p2a: Quagsire|225/297
+|-enditem|p2a: Quagsire|Leftovers|[from] move: Knock Off|[of] p1a: Dewgong
+|
+|upkeep
+|turn|7
+|
+|t:|1738645600
+|move|p1a: Dewgong|Ice Beam|p2a: Quagsire
+|-damage|p2a: Quagsire|105/297
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|254/297
+|
+|upkeep
+|turn|8
+|
+|t:|1738645614
+|move|p1a: Dewgong|Hydro Pump|p2a: Quagsire
+|-damage|p2a: Quagsire|115/297
+|move|p2a: Quagsire|Toxic|p1a: Dewgong|[miss]
+|-miss|p2a: Quagsire|p1a: Dewgong
+|
+|upkeep
+|turn|9
+|c|☆hammy358|mb
+|
+|t:|1738645628
+|switch|p2a: Lanturn|Lanturn, L89, F|5/367
+|move|p1a: Dewgong|Hydro Pump|p2a: Lanturn
+|-resisted|p2a: Lanturn
+|-damage|p2a: Lanturn|0 fnt
+|faint|p2a: Lanturn
+|
+|upkeep
+|
+|t:|1738645646
+|switch|p2a: Iron Thorns|Iron Thorns, L83|302/302
+|-enditem|p2a: Iron Thorns|Booster Energy
+|-activate|p2a: Iron Thorns|ability: Quark Drive|[fromitem]
+|-start|p2a: Iron Thorns|quarkdriveatk
+|turn|10
+|
+|t:|1738645654
+|move|p1a: Dewgong|Flip Turn|p2a: Iron Thorns
+|-supereffective|p2a: Iron Thorns
+|-damage|p2a: Iron Thorns|186/302
+|
+|t:|1738645660
+|switch|p1a: Whiscash|Whiscash, L88, M|72/337|[from] Flip Turn
+|move|p2a: Iron Thorns|Dragon Dance|p2a: Iron Thorns
+|-boost|p2a: Iron Thorns|atk|1
+|-boost|p2a: Iron Thorns|spe|1
+|
+|upkeep
+|turn|11
+|
+|t:|1738645668
+|move|p2a: Iron Thorns|Ice Punch|p1a: Whiscash
+|-damage|p1a: Whiscash|0 fnt
+|faint|p1a: Whiscash
+|
+|upkeep
+|
+|t:|1738645673
+|switch|p1a: Ditto|Ditto, L87|225/225
+|-transform|p1a: Ditto|p2a: Iron Thorns|[from] ability: Imposter
+|turn|12
+|
+|t:|1738645693
+|move|p1a: Ditto|Stone Edge|p2a: Iron Thorns
+|-damage|p2a: Iron Thorns|0 fnt
+|faint|p2a: Iron Thorns
+|-end|p2a: Iron Thorns|Quark Drive|[silent]
+|
+|upkeep
+|
+|t:|1738645696
+|switch|p2a: Quagsire|Quagsire, L84, F|115/297
+|turn|13
+|c|☆hammy358|mb x2
+|
+|t:|1738645706
+|-end|p1a: Ditto|Quark Drive|[silent]
+|switch|p1a: Dewgong|Dewgong, L94, M|291/322
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|264/297
+|
+|upkeep
+|turn|14
+|
+|t:|1738645717
+|move|p1a: Dewgong|Hydro Pump|p2a: Quagsire
+|-damage|p2a: Quagsire|119/297
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|268/297
+|
+|upkeep
+|turn|15
+|
+|t:|1738645724
+|move|p1a: Dewgong|Ice Beam|p2a: Quagsire
+|-damage|p2a: Quagsire|144/297
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|293/297
+|
+|upkeep
+|turn|16
+|
+|t:|1738645730
+|move|p1a: Dewgong|Hydro Pump|p2a: Quagsire
+|-damage|p2a: Quagsire|139/297
+|move|p2a: Quagsire|Toxic|p1a: Dewgong
+|-status|p1a: Dewgong|tox
+|
+|-damage|p1a: Dewgong|271/322 tox|[from] psn
+|upkeep
+|turn|17
+|
+|t:|1738645740
+|switch|p2a: Cresselia|Cresselia, L80, F|323/323
+|move|p1a: Dewgong|Hydro Pump|p2a: Cresselia
+|-damage|p2a: Cresselia|232/323
+|
+|-heal|p2a: Cresselia|252/323|[from] item: Leftovers
+|-damage|p1a: Dewgong|231/322 tox|[from] psn
+|upkeep
+|turn|18
+|
+|t:|1738645753
+|move|p1a: Dewgong|Knock Off|p2a: Cresselia
+|-supereffective|p2a: Cresselia
+|-damage|p2a: Cresselia|134/323
+|-enditem|p2a: Cresselia|Leftovers|[from] move: Knock Off|[of] p1a: Dewgong
+|move|p2a: Cresselia|Moonlight|p2a: Cresselia
+|-heal|p2a: Cresselia|295/323
+|
+|-damage|p1a: Dewgong|171/322 tox|[from] psn
+|upkeep
+|turn|19
+|
+|t:|1738645757
+|move|p1a: Dewgong|Flip Turn|p2a: Cresselia
+|-damage|p2a: Cresselia|240/323
+|
+|t:|1738645760
+|switch|p1a: Entei|Entei, L78|307/307|[from] Flip Turn
+|move|p2a: Cresselia|Calm Mind|p2a: Cresselia
+|-boost|p2a: Cresselia|spa|1
+|-boost|p2a: Cresselia|spd|1
+|
+|upkeep
+|turn|20
+|j| albaoGG
+|
+|t:|1738645771
+|move|p1a: Entei|Flare Blitz|p2a: Cresselia
+|-damage|p2a: Cresselia|83/323
+|-status|p2a: Cresselia|brn
+|-damage|p1a: Entei|255/307|[from] Recoil
+|move|p2a: Cresselia|Moonlight|p2a: Cresselia
+|-heal|p2a: Cresselia|244/323 brn
+|
+|-damage|p2a: Cresselia|224/323 brn|[from] brn
+|upkeep
+|turn|21
+|
+|t:|1738645776
+|move|p1a: Entei|Flare Blitz|p2a: Cresselia
+|-damage|p2a: Cresselia|58/323 brn
+|-damage|p1a: Entei|200/307|[from] Recoil
+|move|p2a: Cresselia|Moonlight|p2a: Cresselia
+|-heal|p2a: Cresselia|219/323 brn
+|
+|-damage|p2a: Cresselia|199/323 brn|[from] brn
+|upkeep
+|turn|22
+|
+|t:|1738645783
+|move|p1a: Entei|Flare Blitz|p2a: Cresselia
+|-damage|p2a: Cresselia|25/323 brn
+|-damage|p1a: Entei|143/307|[from] Recoil
+|move|p2a: Cresselia|Moonlight|p2a: Cresselia
+|-heal|p2a: Cresselia|186/323 brn
+|
+|-damage|p2a: Cresselia|166/323 brn|[from] brn
+|upkeep
+|turn|23
+|inactive|Prosaic has 120 seconds left.
+|
+|t:|1738645817
+|move|p1a: Entei|Flare Blitz|p2a: Cresselia
+|-damage|p2a: Cresselia|9/323 brn
+|-damage|p1a: Entei|91/307|[from] Recoil
+|move|p2a: Cresselia|Moonlight|p2a: Cresselia
+|-heal|p2a: Cresselia|170/323 brn
+|
+|-damage|p2a: Cresselia|150/323 brn|[from] brn
+|upkeep
+|turn|24
+|inactive|Prosaic has 120 seconds left.
+|inactive|Prosaic has 90 seconds left.
+|
+|t:|1738645864
+|move|p1a: Entei|Flare Blitz|p2a: Cresselia
+|-damage|p2a: Cresselia|0 fnt
+|faint|p2a: Cresselia
+|-damage|p1a: Entei|41/307|[from] Recoil
+|
+|upkeep
+|
+|t:|1738645866
+|switch|p2a: Quagsire|Quagsire, L84, F|139/297
+|turn|25
+|inactive|Prosaic has 90 seconds left.
+|
+|t:|1738645878
+|switch|p1a: Ditto|Ditto, L87|225/225
+|-transform|p1a: Ditto|p2a: Quagsire|[from] ability: Imposter
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|288/297
+|
+|upkeep
+|turn|26
+|inactive|Prosaic has 90 seconds left.
+|
+|t:|1738645894
+|move|p1a: Ditto|Toxic|p2a: Quagsire
+|-status|p2a: Quagsire|tox
+|move|p2a: Quagsire|Spikes|p1a: Ditto
+|-sidestart|p1: hammy358|Spikes
+|
+|-damage|p2a: Quagsire|270/297 tox|[from] psn
+|upkeep
+|turn|27
+|inactive|Prosaic has 90 seconds left.
+|
+|t:|1738645902
+|switch|p1a: Dewgong|Dewgong, L94, M|171/322 tox
+|-damage|p1a: Dewgong|131/322 tox|[from] Spikes
+|move|p2a: Quagsire|Spikes|p1a: Dewgong
+|-sidestart|p1: hammy358|Spikes
+|
+|-damage|p1a: Dewgong|111/322 tox|[from] psn
+|-damage|p2a: Quagsire|234/297 tox|[from] psn
+|upkeep
+|turn|28
+|inactive|Prosaic has 90 seconds left.
+|
+|t:|1738645915
+|move|p1a: Dewgong|Hydro Pump|p2a: Quagsire
+|-damage|p2a: Quagsire|98/297 tox
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|247/297 tox
+|
+|-damage|p1a: Dewgong|71/322 tox|[from] psn
+|-damage|p2a: Quagsire|193/297 tox|[from] psn
+|upkeep
+|turn|29
+|inactive|Prosaic has 90 seconds left.
+|
+|t:|1738645945
+|move|p1a: Dewgong|Hydro Pump|p2a: Quagsire
+|-damage|p2a: Quagsire|43/297 tox
+|move|p2a: Quagsire|Recover|p2a: Quagsire
+|-heal|p2a: Quagsire|192/297 tox
+|
+|-damage|p1a: Dewgong|11/322 tox|[from] psn
+|-damage|p2a: Quagsire|120/297 tox|[from] psn
+|upkeep
+|turn|30
+|
+|t:|1738645960
+|move|p1a: Dewgong|Ice Beam|p2a: Quagsire
+|-damage|p2a: Quagsire|0 fnt
+|faint|p2a: Quagsire
+|
+|-damage|p1a: Dewgong|0 fnt|[from] psn
+|faint|p1a: Dewgong
+|upkeep
+|
+|t:|1738645967
+|switch|p1a: Zebstrika|Zebstrika, L87, F|272/272
+|switch|p2a: Terapagos|Terapagos, L76, F|262/262
+|-activate|p2a: Terapagos|ability: Tera Shift
+|detailschange|p2a: Terapagos|Terapagos-Terastal, L76, F
+|-heal|p2a: Terapagos|269/269|[silent]
+|-damage|p1a: Zebstrika|227/272|[from] Spikes
+|turn|31
+|inactive|Prosaic has 60 seconds left.
+|
+|t:|1738646021
+|move|p1a: Zebstrika|Volt Switch|p2a: Terapagos
+|-activate|p2a: Terapagos|ability: Tera Shell
+|-resisted|p2a: Terapagos
+|-damage|p2a: Terapagos|226/269
+|-damage|p1a: Zebstrika|200/272|[from] item: Life Orb
+|
+|t:|1738646025
+|switch|p1a: Entei|Entei, L78|41/307|[from] Volt Switch
+|-damage|p1a: Entei|0 fnt|[from] Spikes
+|faint|p1a: Entei
+|move|p2a: Terapagos|Calm Mind|p2a: Terapagos
+|-boost|p2a: Terapagos|spa|1
+|-boost|p2a: Terapagos|spd|1
+|
+|upkeep
+|
+|t:|1738646037
+|switch|p1a: Zebstrika|Zebstrika, L87, F|200/272
+|-damage|p1a: Zebstrika|155/272|[from] Spikes
+|turn|32
+|
+|t:|1738646061
+|move|p1a: Zebstrika|Supercell Slam|p2a: Terapagos
+|-damage|p2a: Terapagos|77/269
+|-damage|p1a: Zebstrika|128/272|[from] item: Life Orb
+|move|p2a: Terapagos|Rest|p2a: Terapagos
+|-status|p2a: Terapagos|slp|[from] move: Rest
+|-heal|p2a: Terapagos|269/269 slp|[silent]
+|-enditem|p2a: Terapagos|Chesto Berry|[eat]
+|-curestatus|p2a: Terapagos|slp|[msg]
+|
+|upkeep
+|turn|33
+|
+|t:|1738646074
+|move|p1a: Zebstrika|Volt Switch|p2a: Terapagos
+|-activate|p2a: Terapagos|ability: Tera Shell
+|-resisted|p2a: Terapagos
+|-damage|p2a: Terapagos|242/269
+|-damage|p1a: Zebstrika|101/272|[from] item: Life Orb
+|
+|t:|1738646078
+|switch|p1a: Ditto|Ditto, L87|225/225|[from] Volt Switch
+|-damage|p1a: Ditto|188/225|[from] Spikes
+|-transform|p1a: Ditto|p2a: Terapagos|[from] ability: Imposter
+|move|p2a: Terapagos|Tera Starstorm|p1a: Ditto
+|-damage|p1a: Ditto|82/225
+|
+|upkeep
+|turn|34
+|inactive|Prosaic has 30 seconds left.
+|inactive|Prosaic has 20 seconds left.
+|inactive|Prosaic has 15 seconds left.
+|
+|t:|1738646121
+|move|p1a: Ditto|Tera Starstorm|p2a: Terapagos
+|-damage|p2a: Terapagos|130/269
+|move|p2a: Terapagos|Calm Mind|p2a: Terapagos
+|-boost|p2a: Terapagos|spa|1
+|-boost|p2a: Terapagos|spd|1
+|
+|upkeep
+|turn|35
+|inactive|Prosaic has 25 seconds left this turn.
+|inactive|Prosaic has 20 seconds left.
+|
+|t:|1738646129
+|move|p1a: Ditto|Tera Starstorm|p2a: Terapagos
+|-damage|p2a: Terapagos|42/269
+|move|p2a: Terapagos|Rest|p2a: Terapagos
+|-status|p2a: Terapagos|slp|[from] move: Rest
+|-heal|p2a: Terapagos|269/269 slp|[silent]
+|
+|upkeep
+|turn|36
+|inactive|Prosaic has 30 seconds left this turn.
+|
+|t:|1738646134
+|switch|p1a: Zebstrika|Zebstrika, L87, F|101/272
+|-damage|p1a: Zebstrika|56/272|[from] Spikes
+|cant|p2a: Terapagos|slp
+|
+|upkeep
+|turn|37
+|inactive|Prosaic has 30 seconds left.
+|
+|t:|1738646152
+|-terastallize|p1a: Zebstrika|Ground
+|move|p1a: Zebstrika|High Horsepower|p2a: Terapagos
+|-activate|p2a: Terapagos|ability: Tera Shell
+|-resisted|p2a: Terapagos
+|-damage|p2a: Terapagos|199/269 slp
+|-damage|p1a: Zebstrika|29/272|[from] item: Life Orb
+|cant|p2a: Terapagos|slp
+|
+|upkeep
+|turn|38
+|inactive|Prosaic has 30 seconds left.
+|inactive|Prosaic has 20 seconds left.
+|
+|t:|1738646172
+|move|p1a: Zebstrika|Supercell Slam|p2a: Terapagos
+|-damage|p2a: Terapagos|63/269 slp
+|-damage|p1a: Zebstrika|2/272|[from] item: Life Orb
+|-curestatus|p2a: Terapagos|slp|[msg]
+|move|p2a: Terapagos|Rest|p2a: Terapagos
+|-status|p2a: Terapagos|slp|[from] move: Rest
+|-heal|p2a: Terapagos|269/269 slp|[silent]
+|
+|upkeep
+|turn|39
+|inactive|Prosaic has 30 seconds left this turn.
+|inactive|Prosaic has 20 seconds left.
+|
+|t:|1738646183
+|move|p1a: Zebstrika|High Horsepower|p2a: Terapagos
+|-activate|p2a: Terapagos|ability: Tera Shell
+|-resisted|p2a: Terapagos
+|-damage|p2a: Terapagos|207/269 slp
+|-damage|p1a: Zebstrika|0 fnt|[from] item: Life Orb
+|faint|p1a: Zebstrika
+|cant|p2a: Terapagos|slp
+|
+|upkeep
+|inactive|Prosaic has 25 seconds left this turn.
+|
+|t:|1738646189
+|switch|p1a: Ditto|Ditto, L87|82/225
+|-damage|p1a: Ditto|45/225|[from] Spikes
+|-transform|p1a: Ditto|p2a: Terapagos|[from] ability: Imposter
+|turn|40
+|inactive|Prosaic has 30 seconds left.
+|
+|t:|1738646201
+|-terastallize|p2a: Terapagos|Stellar
+|detailschange|p2a: Terapagos|Terapagos-Stellar, L76, F, tera:Stellar
+|-heal|p2a: Terapagos|306/368 slp|[silent]
+|move|p1a: Ditto|Tera Starstorm|p2a: Terapagos
+|-damage|p2a: Terapagos|198/368 slp
+|cant|p2a: Terapagos|slp
+|
+|upkeep
+|turn|41
+|inactive|Prosaic has 30 seconds left.
+|c|☆hammy358|gg
+|
+|t:|1738646215
+|move|p1a: Ditto|Tera Starstorm|p2a: Terapagos
+|-damage|p2a: Terapagos|89/368 slp
+|-curestatus|p2a: Terapagos|slp|[msg]
+|move|p2a: Terapagos|Tera Starstorm|p1a: Ditto
+|-damage|p1a: Ditto|0 fnt
+|faint|p1a: Ditto
+|
+|win|Prosaic
+|raw|hammy358's rating: 2527 &rarr; <strong>2512</strong><br />(-15 for losing)
+|raw|Prosaic's rating: 2608 &rarr; <strong>2623</strong><br />(+15 for winning)
+|c|☆Prosaic|gg
+|l|☆hammy358
+|player|p1|

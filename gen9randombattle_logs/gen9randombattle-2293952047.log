@@ -1,0 +1,233 @@
+|badge|p1|silver|gen9randombattle|30-4
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-4
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆pokeblade☆101
+|j|☆Prosaic
+|t:|1738635487
+|gametype|singles
+|player|p1|pokeblade☆101|#rbtt7teamchiyuf|2523
+|player|p2|Prosaic|schoolkid-gen4dp|2577
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1738635487
+|start
+|switch|p1a: Heatran|Heatran, L79, F|273/273
+|switch|p2a: Flareon|Flareon, L90, F|263/263
+|-item|p1a: Heatran|Air Balloon
+|turn|1
+|
+|t:|1738635534
+|move|p2a: Flareon|Trailblaze|p1a: Heatran
+|-resisted|p1a: Heatran
+|-damage|p1a: Heatran|260/273
+|-boost|p2a: Flareon|spe|1
+|-enditem|p1a: Heatran|Air Balloon
+|move|p1a: Heatran|Stealth Rock|p2a: Flareon
+|-sidestart|p2: Prosaic|move: Stealth Rock
+|
+|-status|p2a: Flareon|tox|[from] item: Toxic Orb
+|upkeep
+|turn|2
+|
+|t:|1738635553
+|move|p2a: Flareon|Facade|p1a: Heatran
+|-resisted|p1a: Heatran
+|-damage|p1a: Heatran|154/273
+|move|p1a: Heatran|Earth Power|p2a: Flareon
+|-supereffective|p2a: Flareon
+|-damage|p2a: Flareon|141/263 tox
+|
+|-damage|p2a: Flareon|125/263 tox|[from] psn
+|upkeep
+|turn|3
+|
+|t:|1738635562
+|move|p2a: Flareon|Facade|p1a: Heatran
+|-resisted|p1a: Heatran
+|-damage|p1a: Heatran|62/273
+|move|p1a: Heatran|Earth Power|p2a: Flareon
+|-supereffective|p2a: Flareon
+|-damage|p2a: Flareon|7/263 tox
+|
+|-damage|p2a: Flareon|0 fnt|[from] psn
+|faint|p2a: Flareon
+|upkeep
+|
+|t:|1738635569
+|switch|p2a: Electrode|Electrode-Hisui, L87|246/246
+|-damage|p2a: Electrode|216/246|[from] Stealth Rock
+|turn|4
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Prosaic)
+|
+|t:|1738635596
+|switch|p1a: Gastrodon|Gastrodon-East, L86, M|331/331
+|move|p2a: Electrode|Thunderbolt|p1a: Gastrodon
+|-immune|p1a: Gastrodon
+|
+|upkeep
+|turn|5
+|j| xox11108
+|
+|t:|1738635601
+|switch|p1a: Glalie|Glalie, L96, F|309/309
+|move|p2a: Electrode|Giga Drain|p1a: Glalie
+|-damage|p1a: Glalie|219/309
+|-heal|p2a: Electrode|246/246|[from] drain|[of] p1a: Glalie
+|-damage|p2a: Electrode|222/246|[from] item: Life Orb
+|
+|upkeep
+|turn|6
+|
+|t:|1738635627
+|move|p2a: Electrode|Volt Switch|p1a: Glalie
+|-damage|p1a: Glalie|128/309
+|-damage|p2a: Electrode|198/246|[from] item: Life Orb
+|inactive|Prosaic has 120 seconds left.
+|
+|t:|1738635654
+|switch|p2a: Dewgong|Dewgong, L94, M|322/322|[from] Volt Switch
+|-damage|p2a: Dewgong|242/322|[from] Stealth Rock
+|move|p1a: Glalie|Freeze-Dry|p2a: Dewgong
+|-damage|p2a: Dewgong|215/322
+|
+|upkeep
+|turn|7
+|
+|t:|1738635672
+|switch|p1a: Gastrodon|Gastrodon-East, L86, M|331/331
+|move|p2a: Dewgong|Knock Off|p1a: Gastrodon
+|-damage|p1a: Gastrodon|248/331
+|-enditem|p1a: Gastrodon|Leftovers|[from] move: Knock Off|[of] p2a: Dewgong
+|
+|upkeep
+|turn|8
+|
+|t:|1738635693
+|switch|p2a: Electrode|Electrode-Hisui, L87|198/246
+|-damage|p2a: Electrode|168/246|[from] Stealth Rock
+|move|p1a: Gastrodon|Recover|p1a: Gastrodon
+|-heal|p1a: Gastrodon|331/331
+|
+|upkeep
+|turn|9
+|
+|t:|1738635710
+|switch|p1a: Heatran|Heatran, L79, F|62/273
+|move|p2a: Electrode|Giga Drain|p1a: Heatran
+|-resisted|p1a: Heatran
+|-damage|p1a: Heatran|39/273
+|-heal|p2a: Electrode|180/246|[from] drain|[of] p1a: Heatran
+|-damage|p2a: Electrode|156/246|[from] item: Life Orb
+|
+|upkeep
+|turn|10
+|
+|t:|1738635717
+|move|p2a: Electrode|Thunderbolt|p1a: Heatran
+|-damage|p1a: Heatran|0 fnt
+|faint|p1a: Heatran
+|-damage|p2a: Electrode|132/246|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1738635721
+|switch|p1a: Glalie|Glalie, L96, F|128/309
+|turn|11
+|
+|t:|1738635728
+|move|p2a: Electrode|Volt Switch|p1a: Glalie
+|-damage|p1a: Glalie|42/309
+|-damage|p2a: Electrode|108/246|[from] item: Life Orb
+|inactive|Prosaic has 120 seconds left.
+|
+|t:|1738635742
+|switch|p2a: Virizion|Virizion, L82|283/283|[from] Volt Switch
+|-damage|p2a: Virizion|266/283|[from] Stealth Rock
+|move|p1a: Glalie|Freeze-Dry|p2a: Virizion
+|-supereffective|p2a: Virizion
+|-damage|p2a: Virizion|138/283
+|
+|upkeep
+|turn|12
+|
+|t:|1738635751
+|switch|p1a: Heracross|Heracross, L80, M|259/259
+|move|p2a: Virizion|Leaf Blade|p1a: Heracross
+|-resisted|p1a: Heracross
+|-crit|p1a: Heracross
+|-damage|p1a: Heracross|168/259
+|-damage|p2a: Virizion|110/283|[from] item: Life Orb
+|
+|upkeep
+|turn|13
+|
+|t:|1738635764
+|move|p1a: Heracross|Close Combat|p2a: Virizion
+|-damage|p2a: Virizion|0 fnt
+|-unboost|p1a: Heracross|def|1
+|-unboost|p1a: Heracross|spd|1
+|faint|p2a: Virizion
+|-ability|p1a: Heracross|Moxie|boost
+|-boost|p1a: Heracross|atk|1
+|
+|upkeep
+|inactive|Prosaic has 120 seconds left.
+|
+|t:|1738635780
+|switch|p2a: Polteageist|Polteageist-Antique, L79|224/224
+|-damage|p2a: Polteageist|196/224|[from] Stealth Rock
+|turn|14
+|
+|t:|1738635789
+|switch|p1a: Greedent|Greedent, L86, M|347/347
+|move|p2a: Polteageist|Shell Smash|p2a: Polteageist
+|-unboost|p2a: Polteageist|def|1
+|-unboost|p2a: Polteageist|spd|1
+|-boost|p2a: Polteageist|atk|2
+|-boost|p2a: Polteageist|spa|2
+|-boost|p2a: Polteageist|spe|2
+|-enditem|p2a: Polteageist|White Herb
+|-clearnegativeboost|p2a: Polteageist|[silent]
+|
+|upkeep
+|turn|15
+|
+|t:|1738635797
+|-terastallize|p2a: Polteageist|Fighting
+|move|p2a: Polteageist|Tera Blast|p1a: Greedent|[anim] Tera Blast Fighting
+|-supereffective|p1a: Greedent
+|-damage|p1a: Greedent|0 fnt
+|faint|p1a: Greedent
+|
+|upkeep
+|
+|t:|1738635806
+|switch|p1a: Veluza|Veluza, L85, F|292/292
+|turn|16
+|inactive|Prosaic has 120 seconds left.
+|
+|t:|1738635859
+|-terastallize|p1a: Veluza|Dark
+|move|p2a: Polteageist|Tera Blast|p1a: Veluza|[anim] Tera Blast Fighting
+|-supereffective|p1a: Veluza
+|-damage|p1a: Veluza|0 fnt
+|faint|p1a: Veluza
+|
+|upkeep
+|-message|pokeblade☆101 forfeited.
+|
+|win|Prosaic
+|raw|pokeblade☆101's rating: 2523 &rarr; <strong>2506</strong><br />(-17 for losing)
+|raw|Prosaic's rating: 2577 &rarr; <strong>2594</strong><br />(+17 for winning)
+|l|☆pokeblade☆101
+|player|p1|
+|l| xox11108

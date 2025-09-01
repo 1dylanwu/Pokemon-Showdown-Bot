@@ -1,0 +1,388 @@
+|badge|p1|silver|gen9randombattle|30-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆milkreo
+|j|☆pokeblade☆101
+|t:|1750637489
+|gametype|singles
+|player|p1|milkreo|102|2478
+|player|p2|pokeblade☆101|#rbtt8teamzygarde2|2541
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1750637489
+|start
+|switch|p1a: Arcanine|Arcanine-Hisui, L79, F|280/280
+|switch|p2a: Toxapex|Toxapex, L82, M|216/216
+|turn|1
+|
+|t:|1750637529
+|switch|p1a: Groudon|Groudon, L72|263/263
+|-weather|SunnyDay|[from] ability: Drought|[of] p1a: Groudon
+|move|p2a: Toxapex|Liquidation|p1a: Groudon
+|-supereffective|p1a: Groudon
+|-damage|p1a: Groudon|213/263
+|-unboost|p1a: Groudon|def|1
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|229/263|[from] item: Leftovers
+|upkeep
+|turn|2
+|
+|t:|1750637557
+|switch|p2a: Mudsdale|Mudsdale, L83, F|302/302
+|move|p1a: Groudon|Will-O-Wisp|p2a: Mudsdale
+|-status|p2a: Mudsdale|brn
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|245/263|[from] item: Leftovers
+|-damage|p2a: Mudsdale|284/302 brn|[from] brn
+|upkeep
+|turn|3
+|j|+Aqua
+|
+|t:|1750637596
+|move|p1a: Groudon|Stealth Rock|p2a: Mudsdale
+|-sidestart|p2: pokeblade☆101|move: Stealth Rock
+|move|p2a: Mudsdale|Earthquake|p1a: Groudon
+|-damage|p1a: Groudon|173/263
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|189/263|[from] item: Leftovers
+|-heal|p2a: Mudsdale|302/302 brn|[from] item: Leftovers
+|-damage|p2a: Mudsdale|284/302 brn|[from] brn
+|upkeep
+|turn|4
+|
+|t:|1750637667
+|switch|p1a: Shiftry|Shiftry, L89, F|305/305
+|move|p2a: Mudsdale|Earthquake|p1a: Shiftry
+|-resisted|p1a: Shiftry
+|-damage|p1a: Shiftry|268/305
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p2a: Mudsdale|302/302 brn|[from] item: Leftovers
+|-damage|p2a: Mudsdale|284/302 brn|[from] brn
+|upkeep
+|turn|5
+|
+|t:|1750637678
+|switch|p2a: Glastrier|Glastrier, L86|312/312
+|move|p1a: Shiftry|Knock Off|p2a: Glastrier
+|-damage|p2a: Glastrier|228/312
+|-enditem|p2a: Glastrier|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Shiftry
+|
+|-weather|none
+|upkeep
+|turn|6
+|
+|t:|1750637715
+|move|p1a: Shiftry|Will-O-Wisp|p2a: Glastrier
+|-status|p2a: Glastrier|brn
+|move|p2a: Glastrier|High Horsepower|p1a: Shiftry
+|-resisted|p1a: Shiftry
+|-damage|p1a: Shiftry|240/305
+|
+|-damage|p2a: Glastrier|209/312 brn|[from] brn
+|upkeep
+|turn|7
+|c|☆pokeblade☆101|why does everything have that
+|
+|t:|1750637766
+|switch|p1a: Arcanine|Arcanine-Hisui, L79, F|280/280
+|move|p2a: Glastrier|Icicle Crash|p1a: Arcanine
+|-resisted|p1a: Arcanine
+|-damage|p1a: Arcanine|244/280
+|
+|-damage|p2a: Glastrier|190/312 brn|[from] brn
+|upkeep
+|turn|8
+|
+|t:|1750637775
+|move|p1a: Arcanine|Flare Blitz|p2a: Glastrier
+|-supereffective|p2a: Glastrier
+|-crit|p2a: Glastrier
+|-damage|p2a: Glastrier|0 fnt
+|faint|p2a: Glastrier
+|
+|upkeep
+|
+|t:|1750637782
+|switch|p2a: Toxapex|Toxapex, L82, M|216/216
+|-damage|p2a: Toxapex|189/216|[from] Stealth Rock
+|turn|9
+|
+|t:|1750637800
+|switch|p1a: Groudon|Groudon, L72|189/263
+|-weather|SunnyDay|[from] ability: Drought|[of] p1a: Groudon
+|move|p2a: Toxapex|Toxic|p1a: Groudon
+|-status|p1a: Groudon|tox
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|205/263 tox|[from] item: Leftovers
+|-heal|p2a: Toxapex|202/216|[from] item: Leftovers
+|-damage|p1a: Groudon|189/263 tox|[from] psn
+|upkeep
+|turn|10
+|
+|t:|1750637807
+|switch|p2a: Arboliva|Arboliva, L91, M|288/288
+|-damage|p2a: Arboliva|252/288|[from] Stealth Rock
+|move|p1a: Groudon|Precipice Blades|p2a: Arboliva
+|-resisted|p2a: Arboliva
+|-damage|p2a: Arboliva|186/288
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|205/263 tox|[from] item: Leftovers
+|-damage|p1a: Groudon|173/263 tox|[from] psn
+|upkeep
+|turn|11
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by pokeblade☆101)
+|
+|t:|1750637842
+|switch|p2a: Toxapex|Toxapex, L82, M|216/216
+|-damage|p2a: Toxapex|189/216|[from] Stealth Rock
+|move|p1a: Groudon|Heat Crash|p2a: Toxapex
+|-resisted|p2a: Toxapex
+|-damage|p2a: Toxapex|144/216
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|189/263 tox|[from] item: Leftovers
+|-heal|p2a: Toxapex|157/216|[from] item: Leftovers
+|-damage|p1a: Groudon|141/263 tox|[from] psn
+|upkeep
+|turn|12
+|inactive|milkreo has 120 seconds left.
+|
+|t:|1750637874
+|switch|p1a: Azelf|Azelf, L82|257/257
+|switch|p2a: Mudsdale|Mudsdale, L83, F|284/302 brn
+|-damage|p2a: Mudsdale|266/302 brn|[from] Stealth Rock
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p2a: Mudsdale|284/302 brn|[from] item: Leftovers
+|-damage|p2a: Mudsdale|266/302 brn|[from] brn
+|upkeep
+|turn|13
+|inactive|milkreo has 120 seconds left.
+|
+|t:|1750637903
+|switch|p2a: Lokix|Lokix, L82, F|251/251
+|-damage|p2a: Lokix|189/251|[from] Stealth Rock
+|move|p1a: Azelf|Fire Blast|p2a: Lokix
+|-supereffective|p2a: Lokix
+|-damage|p2a: Lokix|0 fnt
+|faint|p2a: Lokix
+|
+|-weather|none
+|upkeep
+|
+|t:|1750637929
+|switch|p2a: Toxapex|Toxapex, L82, M|216/216
+|-damage|p2a: Toxapex|189/216|[from] Stealth Rock
+|turn|14
+|
+|t:|1750637934
+|switch|p1a: Groudon|Groudon, L72|141/263 tox
+|-weather|SunnyDay|[from] ability: Drought|[of] p1a: Groudon
+|move|p2a: Toxapex|Liquidation|p1a: Groudon
+|-supereffective|p1a: Groudon
+|-damage|p1a: Groudon|93/263 tox
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|109/263 tox|[from] item: Leftovers
+|-heal|p2a: Toxapex|202/216|[from] item: Leftovers
+|-damage|p1a: Groudon|93/263 tox|[from] psn
+|upkeep
+|turn|15
+|
+|t:|1750637946
+|move|p1a: Groudon|Precipice Blades|p2a: Toxapex
+|-supereffective|p2a: Toxapex
+|-damage|p2a: Toxapex|34/216
+|move|p2a: Toxapex|Liquidation|p1a: Groudon
+|-supereffective|p1a: Groudon
+|-damage|p1a: Groudon|49/263 tox
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|65/263 tox|[from] item: Leftovers
+|-heal|p2a: Toxapex|47/216|[from] item: Leftovers
+|-damage|p1a: Groudon|33/263 tox|[from] psn
+|upkeep
+|turn|16
+|
+|t:|1750637957
+|switch|p2a: Mudsdale|Mudsdale, L83, F|266/302 brn
+|-damage|p2a: Mudsdale|248/302 brn|[from] Stealth Rock
+|move|p1a: Groudon|Precipice Blades|p2a: Mudsdale|[miss]
+|-miss|p1a: Groudon|p2a: Mudsdale
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p1a: Groudon|49/263 tox|[from] item: Leftovers
+|-heal|p2a: Mudsdale|266/302 brn|[from] item: Leftovers
+|-damage|p1a: Groudon|1/263 tox|[from] psn
+|-damage|p2a: Mudsdale|248/302 brn|[from] brn
+|upkeep
+|turn|17
+|
+|t:|1750637971
+|move|p1a: Groudon|Precipice Blades|p2a: Mudsdale
+|-damage|p2a: Mudsdale|125/302 brn
+|-ability|p2a: Mudsdale|Stamina|boost
+|-boost|p2a: Mudsdale|def|1
+|move|p2a: Mudsdale|Heavy Slam|p1a: Groudon
+|-crit|p1a: Groudon
+|-damage|p1a: Groudon|0 fnt
+|faint|p1a: Groudon
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p2a: Mudsdale|143/302 brn|[from] item: Leftovers
+|-damage|p2a: Mudsdale|125/302 brn|[from] brn
+|upkeep
+|inactive|milkreo has 120 seconds left.
+|
+|t:|1750638011
+|switch|p1a: Glaceon|Glaceon, L94, M|275/275
+|turn|18
+|
+|t:|1750638030
+|move|p1a: Glaceon|Freeze-Dry|p2a: Mudsdale
+|-supereffective|p2a: Mudsdale
+|-damage|p2a: Mudsdale|0 fnt
+|faint|p2a: Mudsdale
+|
+|-weather|none
+|upkeep
+|
+|t:|1750638034
+|switch|p2a: Arboliva|Arboliva, L91, M|186/288
+|-damage|p2a: Arboliva|150/288|[from] Stealth Rock
+|turn|19
+|inactive|milkreo has 120 seconds left.
+|
+|t:|1750638045
+|move|p2a: Arboliva|Protect|p2a: Arboliva
+|-singleturn|p2a: Arboliva|Protect
+|move|p1a: Glaceon|Freeze-Dry|p2a: Arboliva
+|-activate|p2a: Arboliva|move: Protect
+|
+|upkeep
+|turn|20
+|
+|t:|1750638049
+|-terastallize|p2a: Arboliva|Poison
+|move|p1a: Glaceon|Freeze-Dry|p2a: Arboliva
+|-damage|p2a: Arboliva|54/288
+|-enditem|p2a: Arboliva|Sitrus Berry|[eat]
+|-heal|p2a: Arboliva|126/288|[from] item: Sitrus Berry
+|move|p2a: Arboliva|Hyper Voice|p1a: Glaceon
+|-damage|p1a: Glaceon|163/275
+|
+|upkeep
+|turn|21
+|inactive|milkreo has 120 seconds left.
+|
+|t:|1750638082
+|move|p1a: Glaceon|Freeze-Dry|p2a: Arboliva
+|-damage|p2a: Arboliva|33/288
+|move|p2a: Arboliva|Hyper Voice|p1a: Glaceon
+|-crit|p1a: Glaceon
+|-damage|p1a: Glaceon|0 fnt
+|faint|p1a: Glaceon
+|
+|upkeep
+|inactive|milkreo has 90 seconds left.
+|
+|t:|1750638113
+|switch|p1a: Azelf|Azelf, L82|257/257
+|turn|22
+|
+|t:|1750638116
+|move|p2a: Arboliva|Protect|p2a: Arboliva
+|-singleturn|p2a: Arboliva|Protect
+|move|p1a: Azelf|Psyshock|p2a: Arboliva
+|-activate|p2a: Arboliva|move: Protect
+|
+|upkeep
+|turn|23
+|
+|t:|1750638119
+|move|p1a: Azelf|Psyshock|p2a: Arboliva
+|-supereffective|p2a: Arboliva
+|-damage|p2a: Arboliva|0 fnt
+|faint|p2a: Arboliva
+|
+|upkeep
+|
+|t:|1750638122
+|switch|p2a: Blastoise|Blastoise, L80, M|258/258
+|-damage|p2a: Blastoise|226/258|[from] Stealth Rock
+|turn|24
+|
+|t:|1750638131
+|move|p1a: Azelf|Psyshock|p2a: Blastoise
+|-damage|p2a: Blastoise|82/258
+|move|p2a: Blastoise|Shell Smash|p2a: Blastoise
+|-unboost|p2a: Blastoise|def|1
+|-unboost|p2a: Blastoise|spd|1
+|-boost|p2a: Blastoise|atk|2
+|-boost|p2a: Blastoise|spa|2
+|-boost|p2a: Blastoise|spe|2
+|-enditem|p2a: Blastoise|White Herb
+|-clearnegativeboost|p2a: Blastoise|[silent]
+|
+|upkeep
+|turn|25
+|inactive|milkreo has 120 seconds left.
+|
+|t:|1750638141
+|move|p2a: Blastoise|Hydro Pump|p1a: Azelf
+|-damage|p1a: Azelf|0 fnt
+|faint|p1a: Azelf
+|
+|upkeep
+|
+|t:|1750638161
+|switch|p1a: Shiftry|Shiftry, L89, F|240/305
+|turn|26
+|
+|t:|1750638165
+|move|p2a: Blastoise|Ice Beam|p1a: Shiftry
+|-supereffective|p1a: Shiftry
+|-damage|p1a: Shiftry|0 fnt
+|faint|p1a: Shiftry
+|
+|upkeep
+|
+|t:|1750638167
+|switch|p1a: Kilowattrel|Kilowattrel, L83, F|252/252
+|turn|27
+|
+|t:|1750638170
+|-terastallize|p1a: Kilowattrel|Water
+|move|p2a: Blastoise|Hydro Pump|p1a: Kilowattrel
+|-resisted|p1a: Kilowattrel
+|-damage|p1a: Kilowattrel|54/252
+|move|p1a: Kilowattrel|Thunderbolt|p2a: Blastoise
+|-supereffective|p2a: Blastoise
+|-damage|p2a: Blastoise|0 fnt
+|faint|p2a: Blastoise
+|
+|upkeep
+|c|☆pokeblade☆101|huh
+|c|☆pokeblade☆101|ok
+|-message|pokeblade☆101 forfeited.
+|
+|win|milkreo
+|raw|milkreo's rating: 2478 &rarr; <strong>2502</strong><br />(+24 for winning)
+|raw|pokeblade☆101's rating: 2554 &rarr; <strong>2530</strong><br />(-24 for losing)
+|l|☆pokeblade☆101
+|player|p2|

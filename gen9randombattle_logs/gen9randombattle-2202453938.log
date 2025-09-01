@@ -1,0 +1,578 @@
+|badge|p1|silver|gen9randombattle|30-2
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-2
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|raw|<div class="broadcast-blue"><strong>This battle is required to be public due to a player having a name starting with 'rblt'.</div>
+|j|☆RBLT raulcan
+|j|☆RBLT MDB2
+|t:|1726443818
+|gametype|singles
+|player|p1|RBLT raulcan|adaman|2520
+|player|p2|RBLT MDB2|#vgcpliiizoruas|2472
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1726443818
+|start
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|278/278
+|switch|p2a: Wyrdeer|Wyrdeer, L87, M|321/321
+|-ability|p2a: Wyrdeer|Intimidate|boost
+|-unboost|p1a: Fezandipiti|atk|1
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by RBLT raulcan)
+|j| sealed ruins
+|j| rb LTG99
+|inactive|RBLT MDB2 has 120 seconds left.
+|j| RBLT Ilex
+|j| RBLT yerdunc
+|
+|t:|1726443865
+|switch|p1a: Wigglytuff|Wigglytuff, L96, F|424/424
+|move|p2a: Wyrdeer|Thunder Wave|p1a: Wigglytuff
+|-status|p1a: Wigglytuff|par
+|
+|upkeep
+|turn|2
+|j| Sieeeffmon
+|
+|t:|1726443870
+|switch|p2a: Lanturn|Lanturn, L89, M|367/367
+|move|p1a: Wigglytuff|Thunder Wave|p2a: Lanturn
+|-immune|p2a: Lanturn|[from] ability: Volt Absorb
+|
+|upkeep
+|turn|3
+|
+|t:|1726443875
+|move|p2a: Lanturn|Thunderbolt|p1a: Wigglytuff
+|-damage|p1a: Wigglytuff|315/424 par
+|cant|p1a: Wigglytuff|par
+|
+|-heal|p1a: Wigglytuff|341/424 par|[from] item: Leftovers
+|upkeep
+|turn|4
+|j| PokeChess
+|j| rblt hiye
+|j| RBLT Unstoppable
+|
+|t:|1726443881
+|move|p2a: Lanturn|Thunderbolt|p1a: Wigglytuff
+|-damage|p1a: Wigglytuff|217/424 par
+|cant|p1a: Wigglytuff|par
+|
+|-heal|p1a: Wigglytuff|243/424 par|[from] item: Leftovers
+|upkeep
+|turn|5
+|
+|t:|1726443889
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|278/278
+|move|p2a: Lanturn|Volt Switch|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|224/278
+|
+|t:|1726443893
+|switch|p2a: Wyrdeer|Wyrdeer, L87, M|321/321|[from] Volt Switch
+|-ability|p2a: Wyrdeer|Intimidate|boost
+|-unboost|p1a: Fezandipiti|atk|1
+|
+|-heal|p1a: Fezandipiti|241/278|[from] item: Leftovers
+|upkeep
+|turn|6
+|
+|t:|1726443896
+|switch|p1a: Wigglytuff|Wigglytuff, L96, F|243/424 par
+|move|p2a: Wyrdeer|Earthquake|p1a: Wigglytuff
+|-damage|p1a: Wigglytuff|137/424 par
+|
+|-heal|p1a: Wigglytuff|163/424 par|[from] item: Leftovers
+|upkeep
+|turn|7
+|
+|t:|1726443900
+|move|p2a: Wyrdeer|Psychic Noise|p1a: Wigglytuff
+|-damage|p1a: Wigglytuff|40/424 par
+|-start|p1a: Wigglytuff|move: Heal Block
+|move|p1a: Wigglytuff|Knock Off|p2a: Wyrdeer
+|-supereffective|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|153/321
+|-enditem|p2a: Wyrdeer|Leftovers|[from] move: Knock Off|[of] p1a: Wigglytuff
+|
+|upkeep
+|turn|8
+|
+|t:|1726443904
+|move|p2a: Wyrdeer|Earthquake|p1a: Wigglytuff
+|-damage|p1a: Wigglytuff|0 fnt
+|faint|p1a: Wigglytuff
+|
+|upkeep
+|j| everyyeargetsworse
+|
+|t:|1726443931
+|switch|p1a: Basculegion|Basculegion-F, L83, F|335/335
+|turn|9
+|j|+pokeblade☆101
+|
+|t:|1726443944
+|switch|p2a: Lanturn|Lanturn, L89, M|367/367
+|move|p1a: Basculegion|Flip Turn|p2a: Lanturn
+|-resisted|p2a: Lanturn
+|-damage|p2a: Lanturn|317/367
+|
+|t:|1726443949
+|switch|p1a: Slaking|Slaking, L84, F|389/389|[from] Flip Turn
+|
+|upkeep
+|turn|10
+|
+|t:|1726443957
+|switch|p2a: Jumpluff|Jumpluff, L87, F|271/271
+|move|p1a: Slaking|Double-Edge|p2a: Jumpluff
+|-damage|p2a: Jumpluff|0 fnt
+|faint|p2a: Jumpluff
+|-damage|p1a: Slaking|300/389|[from] Recoil
+|
+|upkeep
+|
+|t:|1726443962
+|switch|p2a: Lanturn|Lanturn, L89, M|317/367
+|turn|11
+|
+|t:|1726443966
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|241/278
+|move|p2a: Lanturn|Thunder Wave|p1a: Fezandipiti
+|-status|p1a: Fezandipiti|par
+|
+|-heal|p1a: Fezandipiti|258/278 par|[from] item: Leftovers
+|upkeep
+|turn|12
+|
+|t:|1726443971
+|move|p2a: Lanturn|Volt Switch|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|198/278 par
+|
+|t:|1726443973
+|switch|p2a: Wyrdeer|Wyrdeer, L87, M|153/321|[from] Volt Switch
+|-ability|p2a: Wyrdeer|Intimidate|boost
+|-unboost|p1a: Fezandipiti|atk|1
+|move|p1a: Fezandipiti|Beat Up|p2a: Wyrdeer
+|-supereffective|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|139/321
+|-supereffective|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|125/321
+|-status|p2a: Wyrdeer|tox|[from] ability: Toxic Chain|[of] p1a: Fezandipiti
+|-supereffective|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|109/321 tox
+|-supereffective|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|89/321 tox
+|-supereffective|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|73/321 tox
+|-hitcount|p2a: Wyrdeer|5
+|
+|-heal|p1a: Fezandipiti|215/278 par|[from] item: Leftovers
+|-damage|p2a: Wyrdeer|53/321 tox|[from] psn
+|upkeep
+|turn|13
+|j| RBLT Star Wheel
+|
+|t:|1726443977
+|switch|p1a: Basculegion|Basculegion-F, L83, F|335/335
+|move|p2a: Wyrdeer|Thunder Wave|p1a: Basculegion
+|-status|p1a: Basculegion|par
+|
+|-damage|p2a: Wyrdeer|13/321 tox|[from] psn
+|upkeep
+|turn|14
+|l| everyyeargetsworse
+|
+|t:|1726443983
+|switch|p2a: Lanturn|Lanturn, L89, M|317/367
+|move|p1a: Basculegion|Flip Turn|p2a: Lanturn
+|-resisted|p2a: Lanturn
+|-damage|p2a: Lanturn|261/367
+|
+|t:|1726443985
+|switch|p1a: Slaking|Slaking, L84, F|300/389|[from] Flip Turn
+|
+|upkeep
+|turn|15
+|
+|t:|1726443988
+|switch|p2a: Wyrdeer|Wyrdeer, L87, M|13/321 tox
+|-ability|p2a: Wyrdeer|Intimidate|boost
+|-unboost|p1a: Slaking|atk|1
+|move|p1a: Slaking|Double-Edge|p2a: Wyrdeer
+|-damage|p2a: Wyrdeer|0 fnt
+|faint|p2a: Wyrdeer
+|-damage|p1a: Slaking|296/389|[from] Recoil
+|
+|upkeep
+|
+|t:|1726443993
+|switch|p2a: Incineroar|Incineroar, L83, F|293/293
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Slaking|atk|1
+|turn|16
+|
+|t:|1726443997
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|215/278 par
+|move|p2a: Incineroar|Knock Off|p1a: Fezandipiti
+|-resisted|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|155/278 par
+|-enditem|p1a: Fezandipiti|Leftovers|[from] move: Knock Off|[of] p2a: Incineroar
+|
+|upkeep
+|turn|17
+|
+|t:|1726444001
+|move|p2a: Incineroar|Overheat|p1a: Fezandipiti|[miss]
+|-miss|p2a: Incineroar|p1a: Fezandipiti
+|cant|p1a: Fezandipiti|par
+|
+|upkeep
+|turn|18
+|
+|t:|1726444004
+|move|p2a: Incineroar|Overheat|p1a: Fezandipiti|[miss]
+|-miss|p2a: Incineroar|p1a: Fezandipiti
+|move|p1a: Fezandipiti|Roost|p1a: Fezandipiti
+|-heal|p1a: Fezandipiti|278/278 par
+|-singleturn|p1a: Fezandipiti|move: Roost
+|
+|upkeep
+|turn|19
+|
+|t:|1726444010
+|move|p2a: Incineroar|Overheat|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|188/278 par
+|-unboost|p2a: Incineroar|spa|2
+|move|p1a: Fezandipiti|Beat Up|p2a: Incineroar
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|288/293
+|-status|p2a: Incineroar|tox|[from] ability: Toxic Chain|[of] p1a: Fezandipiti
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|284/293 tox
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|279/293 tox
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|272/293 tox
+|-hitcount|p2a: Incineroar|4
+|
+|-damage|p2a: Incineroar|254/293 tox|[from] psn
+|upkeep
+|turn|20
+|j| Bodi 69 茶壶这
+|
+|t:|1726444013
+|move|p2a: Incineroar|U-turn|p1a: Fezandipiti
+|-resisted|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|174/278 par
+|
+|t:|1726444016
+|switch|p2a: Carbink|Carbink, L90|236/236|[from] U-turn
+|move|p1a: Fezandipiti|Roost|p1a: Fezandipiti
+|-heal|p1a: Fezandipiti|278/278 par
+|-singleturn|p1a: Fezandipiti|move: Roost
+|
+|upkeep
+|turn|21
+|
+|t:|1726444027
+|switch|p2a: Incineroar|Incineroar, L83, F|254/293 tox
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Fezandipiti|atk|1
+|cant|p1a: Fezandipiti|par
+|
+|-damage|p2a: Incineroar|236/293 tox|[from] psn
+|upkeep
+|turn|22
+|j| Panty&Stockings
+|
+|t:|1726444030
+|move|p2a: Incineroar|Overheat|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|190/278 par
+|-unboost|p2a: Incineroar|spa|2
+|move|p1a: Fezandipiti|Beat Up|p2a: Incineroar
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|233/293 tox
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|230/293 tox
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|226/293 tox
+|-resisted|p2a: Incineroar
+|-damage|p2a: Incineroar|222/293 tox
+|-hitcount|p2a: Incineroar|4
+|
+|-damage|p2a: Incineroar|186/293 tox|[from] psn
+|upkeep
+|turn|23
+|j| IcyPenguin604
+|
+|t:|1726444033
+|move|p2a: Incineroar|U-turn|p1a: Fezandipiti
+|-resisted|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|175/278 par
+|j| paysa
+|
+|t:|1726444035
+|switch|p2a: Carbink|Carbink, L90|236/236|[from] U-turn
+|move|p1a: Fezandipiti|Roost|p1a: Fezandipiti
+|-heal|p1a: Fezandipiti|278/278 par
+|-singleturn|p1a: Fezandipiti|move: Roost
+|
+|upkeep
+|turn|24
+|
+|t:|1726444038
+|move|p2a: Carbink|Iron Defense|p2a: Carbink
+|-boost|p2a: Carbink|def|2
+|move|p1a: Fezandipiti|Beat Up|p2a: Carbink
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|235/236
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|234/236
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|233/236
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|232/236
+|-hitcount|p2a: Carbink|4
+|
+|upkeep
+|turn|25
+|
+|t:|1726444042
+|move|p2a: Carbink|Iron Defense|p2a: Carbink
+|-boost|p2a: Carbink|def|2
+|move|p1a: Fezandipiti|Beat Up|p2a: Carbink
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|231/236
+|-status|p2a: Carbink|tox|[from] ability: Toxic Chain|[of] p1a: Fezandipiti
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|230/236 tox
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|229/236 tox
+|-resisted|p2a: Carbink
+|-damage|p2a: Carbink|228/236 tox
+|-hitcount|p2a: Carbink|4
+|
+|-damage|p2a: Carbink|214/236 tox|[from] psn
+|upkeep
+|turn|26
+|
+|t:|1726444045
+|switch|p1a: Basculegion|Basculegion-F, L83, F|335/335 par
+|move|p2a: Carbink|Moonblast|p1a: Basculegion
+|-damage|p1a: Basculegion|278/335 par
+|-unboost|p1a: Basculegion|spa|1
+|
+|-damage|p2a: Carbink|186/236 tox|[from] psn
+|upkeep
+|turn|27
+|j| Rblt G
+|
+|t:|1726444049
+|-terastallize|p2a: Carbink|Fighting
+|move|p2a: Carbink|Moonblast|p1a: Basculegion
+|-damage|p1a: Basculegion|221/335 par
+|-unboost|p1a: Basculegion|spa|1
+|move|p1a: Basculegion|Hydro Pump|p2a: Carbink
+|-damage|p2a: Carbink|140/236 tox
+|
+|-damage|p2a: Carbink|98/236 tox|[from] psn
+|upkeep
+|turn|28
+|
+|t:|1726444053
+|move|p2a: Carbink|Rest|p2a: Carbink
+|-status|p2a: Carbink|slp|[from] move: Rest
+|-heal|p2a: Carbink|236/236 slp|[silent]
+|-enditem|p2a: Carbink|Chesto Berry|[eat]
+|-curestatus|p2a: Carbink|slp|[msg]
+|move|p1a: Basculegion|Flip Turn|p2a: Carbink
+|-damage|p2a: Carbink|218/236
+|
+|t:|1726444057
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|278/278 par|[from] Flip Turn
+|
+|upkeep
+|turn|29
+|
+|t:|1726444059
+|switch|p1a: Basculegion|Basculegion-F, L83, F|221/335 par
+|move|p2a: Carbink|Body Press|p1a: Basculegion
+|-immune|p1a: Basculegion
+|
+|upkeep
+|turn|30
+|
+|t:|1726444065
+|move|p2a: Carbink|Moonblast|p1a: Basculegion
+|-damage|p1a: Basculegion|161/335 par
+|-unboost|p1a: Basculegion|spa|1
+|move|p1a: Basculegion|Hydro Pump|p2a: Carbink
+|-damage|p2a: Carbink|152/236
+|
+|upkeep
+|turn|31
+|
+|t:|1726444072
+|move|p2a: Carbink|Moonblast|p1a: Basculegion
+|-damage|p1a: Basculegion|107/335 par
+|move|p1a: Basculegion|Hydro Pump|p2a: Carbink|[miss]
+|-miss|p1a: Basculegion|p2a: Carbink
+|
+|upkeep
+|turn|32
+|
+|t:|1726444078
+|move|p2a: Carbink|Moonblast|p1a: Basculegion
+|-damage|p1a: Basculegion|50/335 par
+|-unboost|p1a: Basculegion|spa|1
+|cant|p1a: Basculegion|par
+|
+|upkeep
+|turn|33
+|
+|t:|1726444083
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|278/278 par
+|move|p2a: Carbink|Iron Defense|p2a: Carbink
+|-boost|p2a: Carbink|def|2
+|
+|upkeep
+|turn|34
+|
+|t:|1726444088
+|switch|p1a: Basculegion|Basculegion-F, L83, F|50/335 par
+|move|p2a: Carbink|Body Press|p1a: Basculegion
+|-immune|p1a: Basculegion
+|
+|upkeep
+|turn|35
+|
+|t:|1726444091
+|move|p2a: Carbink|Moonblast|p1a: Basculegion
+|-damage|p1a: Basculegion|0 fnt
+|faint|p1a: Basculegion
+|
+|upkeep
+|
+|t:|1726444094
+|switch|p1a: Ceruledge|Ceruledge, L78, M|245/245
+|turn|36
+|j| Essenwine
+|l| Essenwine
+|
+|t:|1726444118
+|switch|p2a: Incineroar|Incineroar, L83, F|186/293 tox
+|-ability|p2a: Incineroar|Intimidate|boost
+|-unboost|p1a: Ceruledge|atk|1
+|move|p1a: Ceruledge|Swords Dance|p1a: Ceruledge
+|-boost|p1a: Ceruledge|atk|2
+|
+|-damage|p2a: Incineroar|168/293 tox|[from] psn
+|upkeep
+|turn|37
+|
+|t:|1726444125
+|move|p1a: Ceruledge|Close Combat|p2a: Incineroar
+|-supereffective|p2a: Incineroar
+|-damage|p2a: Incineroar|0 fnt
+|-unboost|p1a: Ceruledge|def|1
+|-unboost|p1a: Ceruledge|spd|1
+|faint|p2a: Incineroar
+|
+|upkeep
+|
+|t:|1726444127
+|switch|p2a: Lanturn|Lanturn, L89, M|261/367
+|turn|38
+|
+|t:|1726444131
+|switch|p1a: Fezandipiti|Fezandipiti, L82, M|278/278 par
+|move|p2a: Lanturn|Volt Switch|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|227/278 par
+|
+|t:|1726444133
+|switch|p2a: Oricorio|Oricorio-Pa'u, L87, F|272/272|[from] Volt Switch
+|
+|upkeep
+|turn|39
+|
+|t:|1726444136
+|move|p2a: Oricorio|Quiver Dance|p2a: Oricorio
+|-boost|p2a: Oricorio|spa|1
+|-boost|p2a: Oricorio|spd|1
+|-boost|p2a: Oricorio|spe|1
+|move|p1a: Fezandipiti|Beat Up|p2a: Oricorio
+|-supereffective|p2a: Oricorio
+|-damage|p2a: Oricorio|250/272
+|-status|p2a: Oricorio|tox|[from] ability: Toxic Chain|[of] p1a: Fezandipiti
+|-supereffective|p2a: Oricorio
+|-damage|p2a: Oricorio|230/272 tox
+|-supereffective|p2a: Oricorio
+|-damage|p2a: Oricorio|202/272 tox
+|-supereffective|p2a: Oricorio
+|-damage|p2a: Oricorio|166/272 tox
+|-hitcount|p2a: Oricorio|4
+|
+|-damage|p2a: Oricorio|149/272 tox|[from] psn
+|upkeep
+|turn|40
+|
+|t:|1726444143
+|move|p2a: Oricorio|Revelation Dance|p1a: Fezandipiti
+|-supereffective|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|9/278 par
+|move|p1a: Fezandipiti|Gunk Shot|p2a: Oricorio
+|-damage|p2a: Oricorio|23/272 tox
+|
+|-damage|p2a: Oricorio|0 fnt|[from] psn
+|faint|p2a: Oricorio
+|upkeep
+|
+|t:|1726444154
+|switch|p2a: Lanturn|Lanturn, L89, M|261/367
+|turn|41
+|
+|t:|1726444158
+|move|p2a: Lanturn|Thunderbolt|p1a: Fezandipiti
+|-damage|p1a: Fezandipiti|0 fnt
+|faint|p1a: Fezandipiti
+|
+|upkeep
+|
+|t:|1726444163
+|switch|p1a: Slaking|Slaking, L84, F|296/389
+|turn|42
+|
+|t:|1726444166
+|switch|p2a: Carbink|Carbink, L90, tera:Fighting|152/236
+|move|p1a: Slaking|Double-Edge|p2a: Carbink
+|-damage|p2a: Carbink|0 fnt
+|faint|p2a: Carbink
+|-damage|p1a: Slaking|246/389|[from] Recoil
+|
+|upkeep
+|-message|RBLT MDB2 forfeited.
+|
+|win|RBLT raulcan
+|raw|RBLT raulcan's rating: 2520 &rarr; <strong>2538</strong><br />(+18 for winning)
+|raw|RBLT MDB2's rating: 2491 &rarr; <strong>2473</strong><br />(-18 for losing)
+|l| Rblt G
+|l| paysa
+|l| RBLT Unstoppable
+|l|☆RBLT MDB2
+|player|p2|
+|l| Bodi 69 茶壶这
+|l| rb LTG99
+|j| Rblt G
+|l| sealed ruins
+|l| Rblt G
+|l| Panty&Stockings
+|l| IcyPenguin604

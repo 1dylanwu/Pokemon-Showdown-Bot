@@ -1,0 +1,231 @@
+|badge|p1|gold|gen9randombattle|3-5
+|html|<div class="broadcast-red"><strong>This battle is required to be public due to one or more player having a season medal.</strong><br />During the public phase, you can discuss the state of the ladder <a href="/seasondiscussion">in a special chatroom.</a></div>
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆pokeblade☆101
+|j|☆Dr Father
+|t:|1751229425
+|gametype|singles
+|player|p1|pokeblade☆101|#rbtt8teamzygarde2|2521
+|player|p2|Dr Father|doctor|2487
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1751229425
+|start
+|switch|p1a: Clawitzer|Clawitzer, L87, M|265/265
+|switch|p2a: Palafin|Palafin, L77, M|281/281
+|turn|1
+|
+|t:|1751229478
+|detailschange|p2a: Palafin|Palafin-Hero, L77, M
+|switch|p2a: Lokix|Lokix, L82, M|251/251
+|move|p1a: Clawitzer|Dragon Pulse|p2a: Lokix
+|-damage|p2a: Lokix|0 fnt
+|faint|p2a: Lokix
+|
+|upkeep
+|
+|t:|1751229499
+|switch|p2a: Copperajah|Copperajah, L86, F|349/349
+|turn|2
+|
+|t:|1751229513
+|switch|p1a: Medicham|Medicham, L86, F|243/243
+|move|p2a: Copperajah|Heavy Slam|p1a: Medicham
+|-damage|p1a: Medicham|0 fnt
+|faint|p1a: Medicham
+|
+|upkeep
+|
+|t:|1751229523
+|switch|p1a: Clawitzer|Clawitzer, L87, M|265/265
+|turn|3
+|
+|t:|1751229532
+|move|p1a: Clawitzer|Dark Pulse|p2a: Copperajah
+|-damage|p2a: Copperajah|169/349
+|move|p2a: Copperajah|Heavy Slam|p1a: Clawitzer
+|-resisted|p1a: Clawitzer
+|-damage|p1a: Clawitzer|133/265
+|
+|upkeep
+|turn|4
+|j| sdgherye
+|
+|t:|1751229537
+|switch|p2a: Krookodile|Krookodile, L80, M|283/283
+|-ability|p2a: Krookodile|Intimidate|boost
+|-unboost|p1a: Clawitzer|atk|1
+|move|p1a: Clawitzer|Dark Pulse|p2a: Krookodile
+|-resisted|p2a: Krookodile
+|-damage|p2a: Krookodile|188/283
+|
+|upkeep
+|turn|5
+|
+|t:|1751229550
+|switch|p1a: Beartic|Beartic, L91, F|321/321
+|move|p2a: Krookodile|Stealth Rock|p1a: Beartic
+|-sidestart|p1: pokeblade☆101|move: Stealth Rock
+|
+|upkeep
+|turn|6
+|
+|t:|1751229563
+|move|p2a: Krookodile|Earthquake|p1a: Beartic
+|-damage|p1a: Beartic|169/321
+|-damage|p2a: Krookodile|160/283|[from] item: Life Orb
+|move|p1a: Beartic|Swords Dance|p1a: Beartic
+|-boost|p1a: Beartic|atk|2
+|
+|upkeep
+|turn|7
+|
+|t:|1751229581
+|move|p2a: Krookodile|Earthquake|p1a: Beartic
+|-damage|p1a: Beartic|29/321
+|-damage|p2a: Krookodile|132/283|[from] item: Life Orb
+|move|p1a: Beartic|Earthquake|p2a: Krookodile
+|-damage|p2a: Krookodile|0 fnt
+|faint|p2a: Krookodile
+|
+|upkeep
+|
+|t:|1751229587
+|switch|p2a: Palafin|Palafin-Hero, L77, M|281/281
+|-activate|p2a: Palafin|ability: Zero to Hero
+|turn|8
+|
+|t:|1751229590
+|switch|p1a: Altaria|Altaria, L89, M|278/278
+|move|p2a: Palafin|Jet Punch|p1a: Altaria
+|-resisted|p1a: Altaria
+|-damage|p1a: Altaria|242/278
+|
+|upkeep
+|turn|9
+|
+|t:|1751229599
+|move|p2a: Palafin|Ice Punch|p1a: Altaria
+|-supereffective|p1a: Altaria
+|-damage|p1a: Altaria|0 fnt
+|faint|p1a: Altaria
+|
+|upkeep
+|
+|t:|1751229602
+|switch|p1a: Clawitzer|Clawitzer, L87, M|133/265
+|-damage|p1a: Clawitzer|100/265|[from] Stealth Rock
+|turn|10
+|
+|t:|1751229612
+|switch|p2a: Copperajah|Copperajah, L86, F|169/349
+|move|p1a: Clawitzer|Dark Pulse|p2a: Copperajah
+|-damage|p2a: Copperajah|0 fnt
+|faint|p2a: Copperajah
+|
+|upkeep
+|j|+Aqua
+|
+|t:|1751229618
+|switch|p2a: Lycanroc|Lycanroc-Midnight, L89, F|296/296
+|turn|11
+|
+|t:|1751229629
+|move|p2a: Lycanroc|Stone Edge|p1a: Clawitzer
+|-damage|p1a: Clawitzer|0 fnt
+|faint|p1a: Clawitzer
+|-damage|p2a: Lycanroc|267/296|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1751229634
+|switch|p1a: Revavroom|Revavroom, L79, M|256/256
+|-damage|p1a: Revavroom|240/256|[from] Stealth Rock
+|turn|12
+|
+|t:|1751229644
+|-terastallize|p2a: Lycanroc|Fighting
+|move|p2a: Lycanroc|Close Combat|p1a: Revavroom
+|-damage|p1a: Revavroom|40/256
+|-unboost|p2a: Lycanroc|def|1
+|-unboost|p2a: Lycanroc|spd|1
+|-damage|p2a: Lycanroc|238/296|[from] item: Life Orb
+|move|p1a: Revavroom|Shift Gear|p1a: Revavroom
+|-boost|p1a: Revavroom|spe|2
+|-boost|p1a: Revavroom|atk|1
+|
+|upkeep
+|turn|13
+|
+|t:|1751229653
+|switch|p2a: Oricorio|Oricorio-Pa'u, L87, F|272/272
+|move|p1a: Revavroom|Iron Head|p2a: Oricorio
+|-damage|p2a: Oricorio|89/272
+|-damage|p1a: Revavroom|15/256|[from] item: Life Orb
+|
+|upkeep
+|turn|14
+|
+|t:|1751229659
+|move|p1a: Revavroom|Iron Head|p2a: Oricorio
+|-damage|p2a: Oricorio|0 fnt
+|faint|p2a: Oricorio
+|-damage|p1a: Revavroom|0 fnt|[from] item: Life Orb
+|faint|p1a: Revavroom
+|
+|upkeep
+|
+|t:|1751229665
+|switch|p2a: Lycanroc|Lycanroc-Midnight, L89, F, tera:Fighting|238/296
+|switch|p1a: Beartic|Beartic, L91, F|29/321
+|turn|15
+|j| threedope
+|
+|t:|1751229670
+|move|p1a: Beartic|Aqua Jet|p2a: Lycanroc
+|-damage|p2a: Lycanroc|196/296
+|move|p2a: Lycanroc|Stone Edge|p1a: Beartic
+|-supereffective|p1a: Beartic
+|-damage|p1a: Beartic|0 fnt
+|faint|p1a: Beartic
+|-damage|p2a: Lycanroc|167/296|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1751229673
+|switch|p1a: Virizion|Virizion, L82|283/283
+|-damage|p1a: Virizion|266/283|[from] Stealth Rock
+|turn|16
+|
+|t:|1751229686
+|move|p1a: Virizion|Close Combat|p2a: Lycanroc
+|-damage|p2a: Lycanroc|6/296
+|-unboost|p1a: Virizion|def|1
+|-unboost|p1a: Virizion|spd|1
+|-damage|p1a: Virizion|238/283|[from] item: Life Orb
+|move|p2a: Lycanroc|Close Combat|p1a: Virizion
+|-damage|p1a: Virizion|0 fnt
+|-unboost|p2a: Lycanroc|def|1
+|-unboost|p2a: Lycanroc|spd|1
+|faint|p1a: Virizion
+|-damage|p2a: Lycanroc|0 fnt|[from] item: Life Orb
+|faint|p2a: Lycanroc
+|
+|win|Dr Father
+|raw|pokeblade☆101's rating: 2521 &rarr; <strong>2499</strong><br />(-22 for losing)
+|raw|Dr Father's rating: 2487 &rarr; <strong>2509</strong><br />(+22 for winning)
+|l| threedope
+|c|☆pokeblade☆101|gg
+|l|☆pokeblade☆101
+|player|p1|
+|c|☆Dr Father|gg

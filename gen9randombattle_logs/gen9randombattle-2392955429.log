@@ -1,0 +1,1163 @@
+|badge|p1|silver|gen9randombattle|30-5
+|html|<div class="broadcast-red"><strong>This battle is required to be public due to one or more player having a season medal.</strong><br />During the public phase, you can discuss the state of the ladder <a href="/seasondiscussion">in a special chatroom.</a></div>
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Node
+|j|☆Dr Father
+|t:|1751063534
+|gametype|singles
+|player|p1|Node|#agplviblackpink|2458
+|player|p2|Dr Father|doctor|2540
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1751063534
+|start
+|switch|p1a: Suicune|Suicune, L82|298/298
+|switch|p2a: Overqwil|Overqwil, L82, M|274/274
+|-ability|p2a: Overqwil|Intimidate|boost
+|-unboost|p1a: Suicune|atk|1
+|-ability|p1a: Suicune|Pressure
+|turn|1
+|c|☆Node|hf
+|c|☆Dr Father|hf
+|j| chicosigma
+|
+|t:|1751063603
+|move|p1a: Suicune|Scald|p2a: Overqwil
+|-damage|p2a: Overqwil|174/274
+|-status|p2a: Overqwil|brn
+|move|p2a: Overqwil|Gunk Shot|p1a: Suicune|[miss]
+|-miss|p2a: Overqwil|p1a: Suicune
+|
+|-damage|p2a: Overqwil|157/274 brn|[from] brn
+|upkeep
+|turn|2
+|l|☆Dr Father
+|player|p2|
+|j|☆Dr Father
+|player|p2|Dr Father|doctor|
+|
+|t:|1751063633
+|move|p2a: Overqwil|Gunk Shot|p1a: Suicune
+|-damage|p1a: Suicune|229/298
+|-status|p1a: Suicune|psn
+|-damage|p2a: Overqwil|130/274 brn|[from] item: Life Orb
+|move|p1a: Suicune|Substitute|p1a: Suicune
+|-start|p1a: Suicune|Substitute
+|-damage|p1a: Suicune|155/298 psn
+|
+|-heal|p1a: Suicune|173/298 psn|[from] item: Leftovers
+|-damage|p1a: Suicune|136/298 psn|[from] psn
+|-damage|p2a: Overqwil|113/274 brn|[from] brn
+|upkeep
+|turn|3
+|
+|t:|1751063644
+|switch|p2a: Scream Tail|Scream Tail, L84|330/330
+|move|p1a: Suicune|Scald|p2a: Scream Tail
+|-damage|p2a: Scream Tail|272/330
+|
+|-heal|p2a: Scream Tail|292/330|[from] item: Leftovers
+|-heal|p1a: Suicune|154/298 psn|[from] item: Leftovers
+|-damage|p1a: Suicune|117/298 psn|[from] psn
+|upkeep
+|turn|4
+|
+|t:|1751063656
+|switch|p1a: Blissey|Blissey, L85, F|572/572
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|
+|-heal|p2a: Scream Tail|312/330|[from] item: Leftovers
+|upkeep
+|turn|5
+|
+|t:|1751063662
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Overqwil|Overqwil, L82, M|113/274 brn
+|-ability|p2a: Overqwil|Intimidate|boost
+|-unboost|p1a: Blissey|atk|1
+|move|p1a: Blissey|Heal Bell|p1a: Blissey
+|-activate|p1a: Blissey|move: Heal Bell
+|-curestatus|p1: Suicune|psn|[msg]
+|
+|-heal|p2a: Overqwil|274/274 brn|[from] move: Wish|[wisher] Scream Tail
+|-damage|p2a: Overqwil|257/274 brn|[from] brn
+|upkeep
+|turn|6
+|
+|t:|1751063669
+|switch|p1a: Ting-Lu|Ting-Lu, L78|370/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Overqwil|Swords Dance|p2a: Overqwil
+|-boost|p2a: Overqwil|atk|2
+|
+|-damage|p2a: Overqwil|240/274 brn|[from] brn
+|upkeep
+|turn|7
+|
+|t:|1751063675
+|move|p2a: Overqwil|Liquidation|p1a: Ting-Lu
+|-supereffective|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|239/370
+|-damage|p2a: Overqwil|213/274 brn|[from] item: Life Orb
+|move|p1a: Ting-Lu|Spikes|p2a: Overqwil
+|-sidestart|p2: Dr Father|Spikes
+|
+|-heal|p1a: Ting-Lu|262/370|[from] item: Leftovers
+|-damage|p2a: Overqwil|196/274 brn|[from] brn
+|upkeep
+|turn|8
+|
+|t:|1751063683
+|move|p2a: Overqwil|Liquidation|p1a: Ting-Lu
+|-supereffective|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|129/370
+|-unboost|p1a: Ting-Lu|def|1
+|-damage|p2a: Overqwil|169/274 brn|[from] item: Life Orb
+|move|p1a: Ting-Lu|Earthquake|p2a: Overqwil
+|-supereffective|p2a: Overqwil
+|-damage|p2a: Overqwil|0 fnt
+|faint|p2a: Overqwil
+|
+|-heal|p1a: Ting-Lu|152/370|[from] item: Leftovers
+|upkeep
+|
+|t:|1751063694
+|switch|p2a: Terapagos|Terapagos, L77, M|265/265
+|-activate|p2a: Terapagos|ability: Tera Shift
+|detailschange|p2a: Terapagos|Terapagos-Terastal, L77, M
+|-heal|p2a: Terapagos|273/273|[silent]
+|turn|9
+|
+|t:|1751063704
+|move|p2a: Terapagos|Rapid Spin|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|97/370
+|-boost|p2a: Terapagos|spe|1
+|-sideend|p2: Dr Father|Spikes|[from] move: Rapid Spin|[of] p2a: Terapagos
+|move|p1a: Ting-Lu|Ruination|p2a: Terapagos
+|-damage|p2a: Terapagos|137/273
+|
+|-heal|p1a: Ting-Lu|120/370|[from] item: Leftovers
+|upkeep
+|turn|10
+|
+|t:|1751063710
+|move|p2a: Terapagos|Tera Starstorm|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|26/370
+|move|p1a: Ting-Lu|Spikes|p2a: Terapagos
+|-sidestart|p2: Dr Father|Spikes
+|
+|-heal|p1a: Ting-Lu|49/370|[from] item: Leftovers
+|upkeep
+|turn|11
+|
+|t:|1751063721
+|switch|p1a: Scrafty|Scrafty, L84, F|246/246
+|move|p2a: Terapagos|Rapid Spin|p1a: Scrafty
+|-damage|p1a: Scrafty|210/246
+|-boost|p2a: Terapagos|spe|1
+|-sideend|p2: Dr Father|Spikes|[from] move: Rapid Spin|[of] p2a: Terapagos
+|
+|-heal|p1a: Scrafty|225/246|[from] item: Leftovers
+|upkeep
+|turn|12
+|
+|t:|1751063748
+|move|p2a: Terapagos|Tera Starstorm|p1a: Scrafty
+|-damage|p1a: Scrafty|134/246
+|move|p1a: Scrafty|Knock Off|p2a: Terapagos
+|-damage|p2a: Terapagos|50/273
+|-enditem|p2a: Terapagos|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Scrafty
+|
+|-heal|p1a: Scrafty|149/246|[from] item: Leftovers
+|upkeep
+|turn|13
+|j| bandana don
+|
+|t:|1751063763
+|move|p2a: Terapagos|Tera Starstorm|p1a: Scrafty
+|-damage|p1a: Scrafty|58/246
+|move|p1a: Scrafty|Rest|p1a: Scrafty
+|-status|p1a: Scrafty|slp|[from] move: Rest
+|-heal|p1a: Scrafty|246/246 slp|[silent]
+|
+|-activate|p1a: Scrafty|ability: Shed Skin
+|-curestatus|p1a: Scrafty|slp|[msg]
+|upkeep
+|turn|14
+|
+|t:|1751063769
+|switch|p2a: Scream Tail|Scream Tail, L84|312/330
+|move|p1a: Scrafty|Drain Punch|p2a: Scream Tail
+|-resisted|p2a: Scream Tail
+|-crit|p2a: Scream Tail
+|-damage|p2a: Scream Tail|287/330
+|
+|-heal|p2a: Scream Tail|307/330|[from] item: Leftovers
+|upkeep
+|turn|15
+|l| bandana don
+|
+|t:|1751063775
+|switch|p1a: Blissey|Blissey, L85, F|572/572
+|move|p2a: Scream Tail|Play Rough|p1a: Blissey
+|-damage|p1a: Blissey|361/572
+|
+|-heal|p2a: Scream Tail|327/330|[from] item: Leftovers
+|-heal|p1a: Blissey|396/572|[from] item: Leftovers
+|upkeep
+|turn|16
+|
+|t:|1751063786
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Munkidori|Munkidori, L79, M|269/269
+|move|p1a: Blissey|Thunder Wave|p2a: Munkidori
+|-status|p2a: Munkidori|par
+|
+|-heal|p1a: Blissey|431/572|[from] item: Leftovers
+|upkeep
+|turn|17
+|
+|t:|1751063791
+|switch|p1a: Ting-Lu|Ting-Lu, L78|49/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Munkidori|Fake Out|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|31/370
+|-status|p1a: Ting-Lu|tox|[from] ability: Toxic Chain|[of] p2a: Munkidori
+|
+|-heal|p1a: Ting-Lu|54/370 tox|[from] item: Leftovers
+|-damage|p1a: Ting-Lu|31/370 tox|[from] psn
+|upkeep
+|turn|18
+|
+|t:|1751063800
+|switch|p2a: Terapagos|Terapagos-Terastal, L77, M|50/273
+|move|p1a: Ting-Lu|Earthquake|p2a: Terapagos
+|-damage|p2a: Terapagos|0 fnt
+|faint|p2a: Terapagos
+|
+|-heal|p1a: Ting-Lu|54/370 tox|[from] item: Leftovers
+|-damage|p1a: Ting-Lu|8/370 tox|[from] psn
+|upkeep
+|
+|t:|1751063807
+|switch|p2a: Skeledirge|Skeledirge, L79, F|294/294
+|turn|19
+|
+|t:|1751063825
+|switch|p1a: Blissey|Blissey, L85, F|431/572
+|move|p2a: Skeledirge|Torch Song|p1a: Blissey
+|-damage|p1a: Blissey|377/572
+|-boost|p2a: Skeledirge|spa|1
+|
+|-heal|p1a: Blissey|412/572|[from] item: Leftovers
+|upkeep
+|turn|20
+|
+|t:|1751063830
+|move|p2a: Skeledirge|Torch Song|p1a: Blissey
+|-damage|p1a: Blissey|316/572
+|-boost|p2a: Skeledirge|spa|1
+|move|p1a: Blissey|Thunder Wave|p2a: Skeledirge
+|-status|p2a: Skeledirge|par
+|
+|-heal|p1a: Blissey|351/572|[from] item: Leftovers
+|upkeep
+|turn|21
+|
+|t:|1751063842
+|switch|p1a: Dondozo|Dondozo, L78, M|362/362
+|cant|p2a: Skeledirge|par
+|
+|upkeep
+|turn|22
+|
+|t:|1751063849
+|switch|p2a: Tropius|Tropius, L91, M|328/328
+|move|p1a: Dondozo|Wave Crash|p2a: Tropius
+|-resisted|p2a: Tropius
+|-damage|p2a: Tropius|277/328
+|-damage|p1a: Dondozo|345/362|[from] Recoil
+|
+|-heal|p1a: Dondozo|362/362|[from] item: Leftovers
+|upkeep
+|turn|23
+|
+|t:|1751063861
+|move|p2a: Tropius|Leech Seed|p1a: Dondozo
+|-start|p1a: Dondozo|move: Leech Seed
+|move|p1a: Dondozo|Wave Crash|p2a: Tropius
+|-resisted|p2a: Tropius
+|-damage|p2a: Tropius|220/328
+|-damage|p1a: Dondozo|343/362|[from] Recoil
+|
+|-heal|p1a: Dondozo|362/362|[from] item: Leftovers
+|-damage|p1a: Dondozo|317/362|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|265/328|[silent]
+|upkeep
+|turn|24
+|
+|t:|1751063870
+|switch|p1a: Suicune|Suicune, L82|117/298
+|-ability|p1a: Suicune|Pressure
+|move|p2a: Tropius|Substitute|p2a: Tropius
+|-start|p2a: Tropius|Substitute
+|-damage|p2a: Tropius|183/328
+|
+|-heal|p1a: Suicune|135/298|[from] item: Leftovers
+|upkeep
+|turn|25
+|
+|t:|1751063879
+|move|p1a: Suicune|Ice Beam|p2a: Tropius
+|-supereffective|p2a: Tropius
+|-end|p2a: Tropius|Substitute
+|move|p2a: Tropius|Air Slash|p1a: Suicune
+|-damage|p1a: Suicune|72/298
+|
+|-heal|p1a: Suicune|90/298|[from] item: Leftovers
+|upkeep
+|turn|26
+|
+|t:|1751063882
+|switch|p2a: Munkidori|Munkidori, L79, M|269/269 par
+|move|p1a: Suicune|Substitute|p1a: Suicune
+|-start|p1a: Suicune|Substitute
+|-damage|p1a: Suicune|16/298
+|
+|-heal|p1a: Suicune|34/298|[from] item: Leftovers
+|upkeep
+|turn|27
+|
+|t:|1751063886
+|move|p1a: Suicune|Scald|p2a: Munkidori
+|-damage|p2a: Munkidori|217/269 par
+|move|p2a: Munkidori|Psychic Noise|p1a: Suicune
+|-damage|p1a: Suicune|0 fnt
+|faint|p1a: Suicune
+|
+|upkeep
+|
+|t:|1751063890
+|switch|p1a: Scrafty|Scrafty, L84, F|246/246
+|turn|28
+|
+|t:|1751063899
+|switch|p2a: Scream Tail|Scream Tail, L84|327/330
+|move|p1a: Scrafty|Knock Off|p2a: Scream Tail
+|-damage|p2a: Scream Tail|243/330
+|-enditem|p2a: Scream Tail|Leftovers|[from] move: Knock Off|[of] p1a: Scrafty
+|
+|upkeep
+|turn|29
+|
+|t:|1751063932
+|switch|p1a: Blissey|Blissey, L85, F|351/572
+|move|p2a: Scream Tail|Play Rough|p1a: Blissey
+|-damage|p1a: Blissey|141/572
+|
+|-heal|p1a: Blissey|176/572|[from] item: Leftovers
+|upkeep
+|turn|30
+|
+|t:|1751063948
+|-terastallize|p1a: Blissey|Steel
+|move|p2a: Scream Tail|Play Rough|p1a: Blissey
+|-resisted|p1a: Blissey
+|-damage|p1a: Blissey|66/572
+|move|p1a: Blissey|Soft-Boiled|p1a: Blissey
+|-heal|p1a: Blissey|352/572
+|
+|-heal|p1a: Blissey|387/572|[from] item: Leftovers
+|upkeep
+|turn|31
+|j| piper Saratoga
+|
+|t:|1751063956
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Skeledirge|Skeledirge, L79, F|294/294 par
+|move|p1a: Blissey|Thunder Wave|p2a: Skeledirge
+|-fail|p2a: Skeledirge|par
+|
+|-heal|p1a: Blissey|422/572|[from] item: Leftovers
+|upkeep
+|turn|32
+|l| piper Saratoga
+|
+|t:|1751063966
+|switch|p1a: Scrafty|Scrafty, L84, F|246/246
+|move|p2a: Skeledirge|Will-O-Wisp|p1a: Scrafty
+|-status|p1a: Scrafty|brn
+|
+|-activate|p1a: Scrafty|ability: Shed Skin
+|-curestatus|p1a: Scrafty|brn|[msg]
+|upkeep
+|turn|33
+|
+|t:|1751063976
+|switch|p2a: Scream Tail|Scream Tail, L84|243/330
+|move|p1a: Scrafty|Knock Off|p2a: Scream Tail
+|-damage|p2a: Scream Tail|180/330
+|
+|upkeep
+|turn|34
+|
+|t:|1751063981
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|422/572
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|
+|-heal|p1a: Blissey|457/572|[from] item: Leftovers
+|upkeep
+|turn|35
+|
+|t:|1751063986
+|move|p2a: Scream Tail|Protect|p2a: Scream Tail
+|-singleturn|p2a: Scream Tail|Protect
+|move|p1a: Blissey|Heal Bell|p1a: Blissey
+|-activate|p1a: Blissey|move: Heal Bell
+|-curestatus|p1: Ting-Lu|tox|[msg]
+|
+|-heal|p2a: Scream Tail|330/330|[from] move: Wish|[wisher] Scream Tail
+|-heal|p1a: Blissey|492/572|[from] item: Leftovers
+|upkeep
+|turn|36
+|
+|t:|1751063993
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Skeledirge|Skeledirge, L79, F|294/294 par
+|move|p1a: Blissey|Thunder Wave|p2a: Skeledirge
+|-fail|p2a: Skeledirge|par
+|
+|-heal|p1a: Blissey|527/572|[from] item: Leftovers
+|upkeep
+|turn|37
+|
+|t:|1751063998
+|switch|p1a: Scrafty|Scrafty, L84, F|246/246
+|switch|p2a: Scream Tail|Scream Tail, L84|330/330
+|
+|upkeep
+|turn|38
+|
+|t:|1751064003
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Tropius|Tropius, L91, M|183/328
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|527/572
+|
+|-heal|p1a: Blissey|562/572|[from] item: Leftovers
+|upkeep
+|turn|39
+|
+|t:|1751064011
+|switch|p1a: Noctowl|Noctowl, L95, M|344/344
+|move|p2a: Tropius|Substitute|p2a: Tropius
+|-start|p2a: Tropius|Substitute
+|-damage|p2a: Tropius|101/328
+|-enditem|p2a: Tropius|Sitrus Berry|[eat]
+|-heal|p2a: Tropius|183/328|[from] item: Sitrus Berry
+|
+|-item|p2a: Tropius|Sitrus Berry|[from] ability: Harvest
+|upkeep
+|turn|40
+|
+|t:|1751064035
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|move|p2a: Tropius|Leech Seed|p1a: Noctowl
+|-start|p1a: Noctowl|move: Leech Seed
+|
+|-damage|p1a: Noctowl|301/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|226/328|[silent]
+|upkeep
+|turn|41
+|
+|t:|1751064053
+|move|p1a: Noctowl|Hyper Voice|p2a: Tropius
+|-damage|p2a: Tropius|60/328
+|-enditem|p2a: Tropius|Sitrus Berry|[eat]
+|-heal|p2a: Tropius|142/328|[from] item: Sitrus Berry
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-crit|p1a: Noctowl
+|-damage|p1a: Noctowl|202/344
+|
+|-damage|p1a: Noctowl|159/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|185/328|[silent]
+|upkeep
+|turn|42
+|
+|t:|1751064068
+|move|p1a: Noctowl|Roost|p1a: Noctowl
+|-heal|p1a: Noctowl|331/344
+|-singleturn|p1a: Noctowl|move: Roost
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-damage|p1a: Noctowl|291/344
+|
+|-damage|p1a: Noctowl|248/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|228/328|[silent]
+|-item|p2a: Tropius|Sitrus Berry|[from] ability: Harvest
+|upkeep
+|turn|43
+|
+|t:|1751064074
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-damage|p1a: Noctowl|215/344
+|
+|-damage|p1a: Noctowl|172/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|271/328|[silent]
+|upkeep
+|turn|44
+|
+|t:|1751064077
+|switch|p2a: Scream Tail|Scream Tail, L84|330/330
+|move|p1a: Noctowl|Roost|p1a: Noctowl
+|-heal|p1a: Noctowl|344/344
+|-singleturn|p1a: Noctowl|move: Roost
+|
+|-damage|p1a: Noctowl|301/344|[from] Leech Seed|[of] p2a: Scream Tail
+|upkeep
+|turn|45
+|
+|t:|1751064082
+|move|p2a: Scream Tail|Thunder Wave|p1a: Noctowl
+|-status|p1a: Noctowl|par
+|move|p1a: Noctowl|Hurricane|p2a: Scream Tail
+|-damage|p2a: Scream Tail|90/330
+|
+|-damage|p1a: Noctowl|258/344 par|[from] Leech Seed|[of] p2a: Scream Tail
+|-heal|p2a: Scream Tail|133/330|[silent]
+|upkeep
+|turn|46
+|
+|t:|1751064092
+|switch|p1a: Ting-Lu|Ting-Lu, L78|8/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Scream Tail|Protect||[still]
+|-fail|p2a: Scream Tail
+|
+|-heal|p1a: Ting-Lu|31/370|[from] item: Leftovers
+|upkeep
+|turn|47
+|
+|t:|1751064100
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|562/572
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|
+|-heal|p1a: Blissey|572/572|[from] item: Leftovers
+|upkeep
+|turn|48
+|
+|t:|1751064104
+|switch|p1a: Ting-Lu|Ting-Lu, L78|31/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Scream Tail|Protect||[still]
+|-fail|p2a: Scream Tail
+|
+|-heal|p2a: Scream Tail|298/330|[from] move: Wish|[wisher] Scream Tail
+|-heal|p1a: Ting-Lu|54/370|[from] item: Leftovers
+|upkeep
+|turn|49
+|
+|t:|1751064110
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Tropius|Tropius, L91, M|271/328
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|572/572
+|
+|upkeep
+|turn|50
+|
+|t:|1751064114
+|move|p2a: Tropius|Substitute|p2a: Tropius
+|-start|p2a: Tropius|Substitute
+|-damage|p2a: Tropius|189/328
+|move|p1a: Blissey|Heal Bell|p1a: Blissey
+|-activate|p1a: Blissey|move: Heal Bell
+|-curestatus|p1: Noctowl|par|[msg]
+|
+|upkeep
+|turn|51
+|
+|t:|1751064122
+|switch|p1a: Noctowl|Noctowl, L95, M|258/344
+|move|p2a: Tropius|Leech Seed|p1a: Noctowl
+|-start|p1a: Noctowl|move: Leech Seed
+|
+|-damage|p1a: Noctowl|215/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|232/328|[silent]
+|upkeep
+|turn|52
+|
+|t:|1751064132
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-damage|p1a: Noctowl|172/344
+|
+|-damage|p1a: Noctowl|129/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|275/328|[silent]
+|upkeep
+|turn|53
+|
+|t:|1751064137
+|move|p1a: Noctowl|Roost|p1a: Noctowl
+|-heal|p1a: Noctowl|301/344
+|-singleturn|p1a: Noctowl|move: Roost
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-damage|p1a: Noctowl|262/344
+|
+|-damage|p1a: Noctowl|219/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|318/328|[silent]
+|upkeep
+|turn|54
+|
+|t:|1751064145
+|move|p1a: Noctowl|Hyper Voice|p2a: Tropius
+|-damage|p2a: Tropius|165/328
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-damage|p1a: Noctowl|173/344
+|
+|-damage|p1a: Noctowl|130/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|208/328|[silent]
+|upkeep
+|turn|55
+|
+|t:|1751064158
+|move|p1a: Noctowl|Roost|p1a: Noctowl
+|-heal|p1a: Noctowl|302/344
+|-singleturn|p1a: Noctowl|move: Roost
+|move|p2a: Tropius|Air Slash|p1a: Noctowl
+|-damage|p1a: Noctowl|262/344
+|
+|-damage|p1a: Noctowl|219/344|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|251/328|[silent]
+|upkeep
+|turn|56
+|
+|t:|1751064164
+|switch|p2a: Scream Tail|Scream Tail, L84|298/330
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|
+|-damage|p1a: Noctowl|176/344|[from] Leech Seed|[of] p2a: Scream Tail
+|-heal|p2a: Scream Tail|330/330|[silent]
+|upkeep
+|turn|57
+|
+|t:|1751064168
+|move|p2a: Scream Tail|Play Rough|p1a: Noctowl
+|-damage|p1a: Noctowl|85/344
+|move|p1a: Noctowl|Hyper Voice|p2a: Scream Tail
+|-damage|p2a: Scream Tail|144/330
+|
+|-damage|p1a: Noctowl|42/344|[from] Leech Seed|[of] p2a: Scream Tail
+|-heal|p2a: Scream Tail|187/330|[silent]
+|upkeep
+|turn|58
+|
+|t:|1751064175
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|572/572
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|
+|upkeep
+|turn|59
+|
+|t:|1751064180
+|move|p2a: Scream Tail|Protect|p2a: Scream Tail
+|-singleturn|p2a: Scream Tail|Protect
+|move|p1a: Blissey|Thunder Wave|p2a: Scream Tail
+|-activate|p2a: Scream Tail|move: Protect
+|
+|-heal|p2a: Scream Tail|330/330|[from] move: Wish|[wisher] Scream Tail
+|upkeep
+|turn|60
+|
+|t:|1751064185
+|switch|p1a: Ting-Lu|Ting-Lu, L78|54/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Scream Tail|Play Rough|p1a: Ting-Lu|[miss]
+|-miss|p2a: Scream Tail|p1a: Ting-Lu
+|
+|-heal|p1a: Ting-Lu|77/370|[from] item: Leftovers
+|upkeep
+|turn|61
+|
+|t:|1751064194
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Tropius|Tropius, L91, M|251/328
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|572/572
+|
+|upkeep
+|turn|62
+|
+|t:|1751064197
+|switch|p1a: Ting-Lu|Ting-Lu, L78|77/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Tropius|Substitute|p2a: Tropius
+|-start|p2a: Tropius|Substitute
+|-damage|p2a: Tropius|169/328
+|
+|-heal|p1a: Ting-Lu|100/370|[from] item: Leftovers
+|upkeep
+|turn|63
+|
+|t:|1751064201
+|move|p2a: Tropius|Air Slash|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|34/370
+|move|p1a: Ting-Lu|Spikes|p2a: Tropius
+|-sidestart|p2: Dr Father|Spikes
+|
+|-heal|p1a: Ting-Lu|57/370|[from] item: Leftovers
+|upkeep
+|turn|64
+|
+|t:|1751064208
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|572/572
+|move|p2a: Tropius|Leech Seed|p1a: Blissey
+|-start|p1a: Blissey|move: Leech Seed
+|
+|-damage|p1a: Blissey|501/572|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|240/328|[silent]
+|upkeep
+|turn|65
+|
+|t:|1751064213
+|move|p2a: Tropius|Air Slash|p1a: Blissey
+|-resisted|p1a: Blissey
+|-damage|p1a: Blissey|476/572
+|move|p1a: Blissey|Seismic Toss|p2a: Tropius
+|-end|p2a: Tropius|Substitute
+|
+|-heal|p1a: Blissey|511/572|[from] item: Leftovers
+|-damage|p1a: Blissey|440/572|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|311/328|[silent]
+|upkeep
+|turn|66
+|
+|t:|1751064218
+|switch|p2a: Skeledirge|Skeledirge, L79, F|294/294 par
+|move|p1a: Blissey|Thunder Wave|p2a: Skeledirge|[miss]
+|-miss|p1a: Blissey|p2a: Skeledirge
+|
+|-heal|p1a: Blissey|475/572|[from] item: Leftovers
+|-damage|p1a: Blissey|404/572|[from] Leech Seed|[of] p2a: Skeledirge
+|upkeep
+|turn|67
+|
+|t:|1751064225
+|move|p1a: Blissey|Thunder Wave|p2a: Skeledirge
+|-fail|p2a: Skeledirge|par
+|move|p2a: Skeledirge|Torch Song|p1a: Blissey
+|-supereffective|p1a: Blissey
+|-damage|p1a: Blissey|294/572
+|-boost|p2a: Skeledirge|spa|1
+|
+|-heal|p1a: Blissey|329/572|[from] item: Leftovers
+|-damage|p1a: Blissey|258/572|[from] Leech Seed|[of] p2a: Skeledirge
+|upkeep
+|turn|68
+|
+|t:|1751064230
+|switch|p1a: Dondozo|Dondozo, L78, M|317/362
+|move|p2a: Skeledirge|Torch Song|p1a: Dondozo
+|-resisted|p1a: Dondozo
+|-damage|p1a: Dondozo|263/362
+|-boost|p2a: Skeledirge|spa|1
+|
+|-heal|p1a: Dondozo|285/362|[from] item: Leftovers
+|upkeep
+|turn|69
+|
+|t:|1751064236
+|switch|p2a: Tropius|Tropius, L91, M|311/328
+|move|p1a: Dondozo|Wave Crash|p2a: Tropius
+|-resisted|p2a: Tropius
+|-damage|p2a: Tropius|252/328
+|-damage|p1a: Dondozo|266/362|[from] Recoil
+|
+|-heal|p1a: Dondozo|288/362|[from] item: Leftovers
+|upkeep
+|turn|70
+|
+|t:|1751064242
+|switch|p2a: Skeledirge|Skeledirge, L79, F|294/294 par
+|move|p1a: Dondozo|Wave Crash|p2a: Skeledirge
+|-supereffective|p2a: Skeledirge
+|-damage|p2a: Skeledirge|60/294 par
+|-damage|p1a: Dondozo|211/362|[from] Recoil
+|
+|-heal|p1a: Dondozo|233/362|[from] item: Leftovers
+|upkeep
+|turn|71
+|
+|t:|1751064245
+|switch|p2a: Tropius|Tropius, L91, M|252/328
+|move|p1a: Dondozo|Wave Crash|p2a: Tropius
+|-resisted|p2a: Tropius
+|-damage|p2a: Tropius|199/328
+|-damage|p1a: Dondozo|216/362|[from] Recoil
+|
+|-heal|p1a: Dondozo|238/362|[from] item: Leftovers
+|upkeep
+|turn|72
+|
+|t:|1751064253
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|258/572
+|move|p2a: Tropius|Air Slash|p1a: Blissey
+|-resisted|p1a: Blissey
+|-damage|p1a: Blissey|231/572
+|
+|-heal|p1a: Blissey|266/572|[from] item: Leftovers
+|upkeep
+|turn|73
+|
+|t:|1751064260
+|switch|p2a: Skeledirge|Skeledirge, L79, F|60/294 par
+|move|p1a: Blissey|Soft-Boiled|p1a: Blissey
+|-heal|p1a: Blissey|552/572
+|
+|-heal|p1a: Blissey|572/572|[from] item: Leftovers
+|upkeep
+|turn|74
+|
+|t:|1751064264
+|switch|p1a: Ting-Lu|Ting-Lu, L78|57/370
+|-ability|p1a: Ting-Lu|Vessel of Ruin
+|move|p2a: Skeledirge|Torch Song|p1a: Ting-Lu
+|-damage|p1a: Ting-Lu|0 fnt
+|-boost|p2a: Skeledirge|spa|1
+|faint|p1a: Ting-Lu
+|
+|upkeep
+|
+|t:|1751064271
+|switch|p1a: Noctowl|Noctowl, L95, M|42/344
+|turn|75
+|
+|t:|1751064275
+|switch|p2a: Scream Tail|Scream Tail, L84|330/330
+|-damage|p2a: Scream Tail|289/330|[from] Spikes
+|move|p1a: Noctowl|Roost|p1a: Noctowl
+|-heal|p1a: Noctowl|214/344
+|-singleturn|p1a: Noctowl|move: Roost
+|
+|upkeep
+|turn|76
+|
+|t:|1751064283
+|move|p2a: Scream Tail|Thunder Wave|p1a: Noctowl|[miss]
+|-miss|p2a: Scream Tail|p1a: Noctowl
+|move|p1a: Noctowl|Hurricane|p2a: Scream Tail
+|-damage|p2a: Scream Tail|186/330
+|
+|upkeep
+|turn|77
+|
+|t:|1751064289
+|move|p2a: Scream Tail|Thunder Wave|p1a: Noctowl
+|-status|p1a: Noctowl|par
+|cant|p1a: Noctowl|par
+|
+|upkeep
+|turn|78
+|
+|t:|1751064295
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|572/572
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|
+|upkeep
+|turn|79
+|
+|t:|1751064299
+|move|p2a: Scream Tail|Protect|p2a: Scream Tail
+|-singleturn|p2a: Scream Tail|Protect
+|move|p1a: Blissey|Heal Bell|p1a: Blissey
+|-activate|p1a: Blissey|move: Heal Bell
+|-curestatus|p1: Noctowl|par|[msg]
+|
+|-heal|p2a: Scream Tail|330/330|[from] move: Wish|[wisher] Scream Tail
+|upkeep
+|turn|80
+|
+|t:|1751064308
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Skeledirge|Skeledirge, L79, F|60/294 par
+|move|p1a: Blissey|Thunder Wave|p2a: Skeledirge
+|-fail|p2a: Skeledirge|par
+|
+|upkeep
+|turn|81
+|
+|t:|1751064312
+|switch|p1a: Noctowl|Noctowl, L95, M|214/344
+|move|p2a: Skeledirge|Slack Off|p2a: Skeledirge
+|-heal|p2a: Skeledirge|207/294 par
+|
+|upkeep
+|turn|82
+|
+|t:|1751064317
+|switch|p2a: Scream Tail|Scream Tail, L84|330/330
+|-damage|p2a: Scream Tail|289/330|[from] Spikes
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|
+|upkeep
+|turn|83
+|
+|t:|1751064321
+|move|p2a: Scream Tail|Thunder Wave|p1a: Noctowl
+|-status|p1a: Noctowl|par
+|cant|p1a: Noctowl|par
+|
+|upkeep
+|turn|84
+|
+|t:|1751064326
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|572/572
+|move|p2a: Scream Tail|Play Rough|p1a: Blissey
+|-resisted|p1a: Blissey
+|-damage|p1a: Blissey|462/572
+|
+|-heal|p1a: Blissey|497/572|[from] item: Leftovers
+|upkeep
+|turn|85
+|j| US West
+|
+|t:|1751064336
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|switch|p2a: Skeledirge|Skeledirge, L79, F|207/294 par
+|move|p1a: Blissey|Heal Bell|p1a: Blissey
+|-activate|p1a: Blissey|move: Heal Bell
+|-curestatus|p1: Noctowl|par|[msg]
+|
+|-heal|p1a: Blissey|532/572|[from] item: Leftovers
+|upkeep
+|turn|86
+|l| US West
+|
+|t:|1751064366
+|switch|p1a: Dondozo|Dondozo, L78, M|238/362
+|move|p2a: Skeledirge|Torch Song|p1a: Dondozo
+|-resisted|p1a: Dondozo
+|-damage|p1a: Dondozo|184/362
+|-boost|p2a: Skeledirge|spa|1
+|
+|-heal|p1a: Dondozo|206/362|[from] item: Leftovers
+|upkeep
+|turn|87
+|
+|t:|1751064373
+|switch|p2a: Tropius|Tropius, L91, M|199/328
+|move|p1a: Dondozo|Curse|p1a: Dondozo
+|-unboost|p1a: Dondozo|spe|1
+|-boost|p1a: Dondozo|atk|1
+|-boost|p1a: Dondozo|def|1
+|
+|-heal|p1a: Dondozo|228/362|[from] item: Leftovers
+|upkeep
+|turn|88
+|
+|t:|1751064377
+|move|p2a: Tropius|Leech Seed|p1a: Dondozo
+|-start|p1a: Dondozo|move: Leech Seed
+|move|p1a: Dondozo|Curse|p1a: Dondozo
+|-unboost|p1a: Dondozo|spe|1
+|-boost|p1a: Dondozo|atk|1
+|-boost|p1a: Dondozo|def|1
+|
+|-heal|p1a: Dondozo|250/362|[from] item: Leftovers
+|-damage|p1a: Dondozo|205/362|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|244/328|[silent]
+|upkeep
+|turn|89
+|
+|t:|1751064383
+|move|p2a: Tropius|Air Slash|p1a: Dondozo
+|-damage|p1a: Dondozo|100/362
+|cant|p1a: Dondozo|flinch
+|
+|-heal|p1a: Dondozo|122/362|[from] item: Leftovers
+|-damage|p1a: Dondozo|77/362|[from] Leech Seed|[of] p2a: Tropius
+|-heal|p2a: Tropius|289/328|[silent]
+|upkeep
+|turn|90
+|
+|t:|1751064391
+|switch|p2a: Skeledirge|Skeledirge, L79, F|207/294 par
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|532/572
+|
+|-heal|p1a: Blissey|567/572|[from] item: Leftovers
+|upkeep
+|turn|91
+|
+|t:|1751064395
+|switch|p1a: Noctowl|Noctowl, L95, M|214/344
+|move|p2a: Skeledirge|Hex|p1a: Noctowl
+|-immune|p1a: Noctowl
+|
+|upkeep
+|turn|92
+|
+|t:|1751064402
+|switch|p2a: Scream Tail|Scream Tail, L84|289/330
+|-damage|p2a: Scream Tail|248/330|[from] Spikes
+|move|p1a: Noctowl|Hurricane|p2a: Scream Tail
+|-damage|p2a: Scream Tail|128/330
+|
+|upkeep
+|turn|93
+|
+|t:|1751064408
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|
+|upkeep
+|turn|94
+|
+|t:|1751064418
+|move|p2a: Scream Tail|Protect|p2a: Scream Tail
+|-singleturn|p2a: Scream Tail|Protect
+|move|p1a: Noctowl|Roost|p1a: Noctowl
+|-heal|p1a: Noctowl|344/344
+|-singleturn|p1a: Noctowl|move: Roost
+|
+|-heal|p2a: Scream Tail|293/330|[from] move: Wish|[wisher] Scream Tail
+|upkeep
+|turn|95
+|
+|t:|1751064421
+|move|p2a: Scream Tail|Thunder Wave|p1a: Noctowl
+|-status|p1a: Noctowl|par
+|move|p1a: Noctowl|Hyper Voice|p2a: Scream Tail
+|-damage|p2a: Scream Tail|152/330
+|
+|upkeep
+|turn|96
+|
+|t:|1751064438
+|move|p2a: Scream Tail|Wish|p2a: Scream Tail
+|cant|p1a: Noctowl|par
+|
+|upkeep
+|turn|97
+|
+|t:|1751064452
+|move|p2a: Scream Tail|Protect|p2a: Scream Tail
+|-singleturn|p2a: Scream Tail|Protect
+|move|p1a: Noctowl|Calm Mind|p1a: Noctowl
+|-boost|p1a: Noctowl|spa|1
+|-boost|p1a: Noctowl|spd|1
+|
+|-heal|p2a: Scream Tail|317/330|[from] move: Wish|[wisher] Scream Tail
+|upkeep
+|turn|98
+|
+|t:|1751064455
+|move|p2a: Scream Tail|Play Rough|p1a: Noctowl
+|-damage|p1a: Noctowl|250/344 par
+|move|p1a: Noctowl|Hyper Voice|p2a: Scream Tail
+|-crit|p2a: Scream Tail
+|-damage|p2a: Scream Tail|41/330
+|
+|upkeep
+|turn|99
+|
+|t:|1751064463
+|move|p2a: Scream Tail|Play Rough|p1a: Noctowl
+|-damage|p1a: Noctowl|162/344 par
+|move|p1a: Noctowl|Hyper Voice|p2a: Scream Tail
+|-damage|p2a: Scream Tail|0 fnt
+|faint|p2a: Scream Tail
+|-end|p2a: Scream Tail|Protosynthesis|[silent]
+|
+|upkeep
+|
+|t:|1751064468
+|switch|p2a: Munkidori|Munkidori, L79, M|217/269 par
+|-damage|p2a: Munkidori|184/269 par|[from] Spikes
+|turn|100
+|
+|t:|1751064473
+|switch|p1a: Blissey|Blissey, L85, F, tera:Steel|567/572
+|move|p2a: Munkidori|Sludge Wave|p1a: Blissey
+|-immune|p1a: Blissey
+|
+|-heal|p1a: Blissey|572/572|[from] item: Leftovers
+|upkeep
+|turn|101
+|j| Shaky3
+|
+|t:|1751064479
+|switch|p2a: Skeledirge|Skeledirge, L79, F|207/294 par
+|move|p1a: Blissey|Heal Bell|p1a: Blissey
+|-activate|p1a: Blissey|move: Heal Bell
+|-curestatus|p1: Noctowl|par|[msg]
+|
+|upkeep
+|turn|102
+|
+|t:|1751064494
+|switch|p1a: Scrafty|Scrafty, L84, F|246/246
+|switch|p2a: Tropius|Tropius, L91, M|289/328
+|
+|upkeep
+|turn|103
+|
+|t:|1751064501
+|switch|p2a: Skeledirge|Skeledirge, L79, F|207/294 par
+|move|p1a: Scrafty|Knock Off|p2a: Skeledirge
+|-supereffective|p2a: Skeledirge
+|-damage|p2a: Skeledirge|27/294 par
+|-enditem|p2a: Skeledirge|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Scrafty
+|
+|upkeep
+|turn|104
+|
+|t:|1751064512
+|move|p1a: Scrafty|Knock Off|p2a: Skeledirge
+|-supereffective|p2a: Skeledirge
+|-damage|p2a: Skeledirge|0 fnt
+|faint|p2a: Skeledirge
+|
+|upkeep
+|
+|t:|1751064517
+|switch|p2a: Tropius|Tropius, L91, M|289/328
+|turn|105
+|
+|t:|1751064521
+|move|p1a: Scrafty|Knock Off|p2a: Tropius
+|-damage|p2a: Tropius|202/328
+|-enditem|p2a: Tropius|Sitrus Berry|[from] move: Knock Off|[of] p1a: Scrafty
+|move|p2a: Tropius|Air Slash|p1a: Scrafty
+|-supereffective|p1a: Scrafty
+|-damage|p1a: Scrafty|118/246
+|
+|-heal|p1a: Scrafty|133/246|[from] item: Leftovers
+|upkeep
+|turn|106
+|-message|Dr Father forfeited.
+|
+|win|Node
+|raw|Node's rating: 2458 &rarr; <strong>2483</strong><br />(+25 for winning)
+|raw|Dr Father's rating: 2540 &rarr; <strong>2515</strong><br />(-25 for losing)
+|l|☆Dr Father
+|player|p2|
+|l| chicosigma

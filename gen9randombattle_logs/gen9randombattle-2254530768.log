@@ -1,0 +1,467 @@
+|badge|p1|gold|gen9randombattle|3-3
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-3
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆dcenoris
+|j|☆paysa
+|t:|1733057847
+|gametype|singles
+|player|p1|dcenoris|lucas|2506
+|player|p2|paysa|266|2510
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1733057847
+|start
+|switch|p1a: Cryogonal|Cryogonal, L89|287/287
+|switch|p2a: Spiritomb|Spiritomb, L89, F|234/234
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by dcenoris)
+|
+|t:|1733057870
+|switch|p1a: Scizor|Scizor, L79, M|240/240
+|move|p2a: Spiritomb|Toxic|p1a: Scizor|[miss]
+|-miss|p2a: Spiritomb|p1a: Scizor
+|
+|upkeep
+|turn|2
+|
+|t:|1733057888
+|move|p1a: Scizor|U-turn|p2a: Spiritomb
+|-damage|p2a: Spiritomb|137/234
+|
+|t:|1733057891
+|switch|p1a: Clawitzer|Clawitzer, L87, M|265/265|[from] U-turn
+|move|p2a: Spiritomb|Poltergeist|p1a: Clawitzer
+|-activate|p1a: Clawitzer|move: Poltergeist|Choice Specs
+|-crit|p1a: Clawitzer
+|-damage|p1a: Clawitzer|67/265
+|
+|-heal|p2a: Spiritomb|151/234|[from] item: Leftovers
+|upkeep
+|turn|3
+|inactive|paysa has 120 seconds left.
+|
+|t:|1733057925
+|switch|p2a: Dialga|Dialga-Origin, L73|266/266
+|-ability|p2a: Dialga|Pressure
+|move|p1a: Clawitzer|Water Pulse|p2a: Dialga
+|-resisted|p2a: Dialga
+|-damage|p2a: Dialga|187/266
+|-start|p2a: Dialga|confusion
+|
+|upkeep
+|turn|4
+|inactive|paysa has 120 seconds left.
+|
+|t:|1733057943
+|switch|p1a: Espeon|Espeon, L84, M|246/246
+|-activate|p2a: Dialga|confusion
+|move|p2a: Dialga|Heavy Slam|p1a: Espeon
+|-damage|p1a: Espeon|102/246
+|
+|upkeep
+|turn|5
+|inactive|paysa has 120 seconds left.
+|
+|t:|1733057953
+|move|p1a: Espeon|Shadow Ball|p2a: Dialga
+|-damage|p2a: Dialga|105/266
+|-damage|p1a: Espeon|78/246|[from] item: Life Orb
+|-end|p2a: Dialga|confusion
+|move|p2a: Dialga|Heavy Slam|p1a: Espeon
+|-damage|p1a: Espeon|0 fnt
+|faint|p1a: Espeon
+|
+|upkeep
+|
+|t:|1733057958
+|switch|p1a: Charizard|Charizard, L85, M|271/271
+|turn|6
+|inactive|paysa has 120 seconds left.
+|
+|t:|1733057991
+|switch|p2a: Mandibuzz|Mandibuzz, L85, F|326/326
+|move|p1a: Charizard|Earthquake|p2a: Mandibuzz
+|-immune|p2a: Mandibuzz
+|
+|upkeep
+|turn|7
+|
+|t:|1733058001
+|switch|p1a: Cryogonal|Cryogonal, L89|287/287
+|move|p2a: Mandibuzz|Knock Off|p1a: Cryogonal
+|-damage|p1a: Cryogonal|170/287
+|-enditem|p1a: Cryogonal|Heavy-Duty Boots|[from] move: Knock Off|[of] p2a: Mandibuzz
+|
+|upkeep
+|turn|8
+|
+|t:|1733058010
+|switch|p2a: Hariyama|Hariyama, L87, M|392/392
+|move|p1a: Cryogonal|Ice Beam|p2a: Hariyama
+|-damage|p2a: Hariyama|251/392
+|-status|p2a: Hariyama|frz
+|
+|upkeep
+|turn|9
+|inactive|paysa has 120 seconds left.
+|c|☆paysa|free guts boost
+|l|☆dcenoris
+|inactive|dcenoris disconnected and has a minute to reconnect!
+|player|p1|
+|inactive|paysa has 90 seconds left.
+|j|☆dcenoris
+|inactive|dcenoris reconnected.
+|player|p1|dcenoris|lucas|
+|j| xavvcb
+|l| xavvcb
+|inactive|paysa has 60 seconds left.
+|
+|t:|1733058087
+|move|p1a: Cryogonal|Ice Beam|p2a: Hariyama
+|-damage|p2a: Hariyama|106/392 frz
+|cant|p2a: Hariyama|frz
+|
+|upkeep
+|turn|10
+|
+|t:|1733058098
+|-curestatus|p2a: Hariyama|frz|[msg]
+|move|p2a: Hariyama|Bullet Punch|p1a: Cryogonal
+|-supereffective|p1a: Cryogonal
+|-damage|p1a: Cryogonal|74/287
+|move|p1a: Cryogonal|Recover|p1a: Cryogonal
+|-heal|p1a: Cryogonal|218/287
+|
+|-status|p2a: Hariyama|brn|[from] item: Flame Orb
+|upkeep
+|turn|11
+|
+|t:|1733058107
+|move|p2a: Hariyama|Bullet Punch|p1a: Cryogonal
+|-supereffective|p1a: Cryogonal
+|-damage|p1a: Cryogonal|76/287
+|move|p1a: Cryogonal|Ice Beam|p2a: Hariyama
+|-damage|p2a: Hariyama|0 fnt
+|faint|p2a: Hariyama
+|
+|upkeep
+|inactive|paysa has 60 seconds left.
+|inactive|paysa has 30 seconds left.
+|inactive|paysa has 20 seconds left.
+|
+|t:|1733058157
+|switch|p2a: Spectrier|Spectrier, L75|274/274
+|turn|12
+|inactive|paysa has 30 seconds left this turn.
+|j| Zaha11
+|inactive|paysa has 20 seconds left.
+|inactive|paysa has 15 seconds left.
+|
+|t:|1733058180
+|switch|p1a: Scizor|Scizor, L79, M|240/240
+|-terastallize|p2a: Spectrier|Fighting
+|move|p2a: Spectrier|Tera Blast|p1a: Scizor|[anim] Tera Blast Fighting
+|-damage|p1a: Scizor|138/240
+|
+|upkeep
+|turn|13
+|inactive|paysa has 25 seconds left this turn.
+|inactive|paysa has 20 seconds left.
+|inactive|paysa has 15 seconds left.
+|inactive|paysa has 10 seconds left.
+|
+|t:|1733058195
+|switch|p2a: Spiritomb|Spiritomb, L89, F|151/234
+|move|p1a: Scizor|Bullet Punch|p2a: Spiritomb
+|-damage|p2a: Spiritomb|67/234
+|
+|-heal|p2a: Spiritomb|81/234|[from] item: Leftovers
+|upkeep
+|turn|14
+|inactive|paysa has 20 seconds left this turn.
+|inactive|paysa has 15 seconds left.
+|inactive|paysa has 10 seconds left.
+|
+|t:|1733058207
+|switch|p2a: Dialga|Dialga-Origin, L73|105/266
+|-ability|p2a: Dialga|Pressure
+|move|p1a: Scizor|Bullet Punch|p2a: Dialga
+|-resisted|p2a: Dialga
+|-damage|p2a: Dialga|60/266
+|
+|upkeep
+|turn|15
+|inactive|paysa has 20 seconds left this turn.
+|inactive|paysa has 15 seconds left.
+|inactive|paysa has 10 seconds left.
+|
+|t:|1733058218
+|-terastallize|p1a: Scizor|Steel
+|move|p1a: Scizor|Bullet Punch|p2a: Dialga
+|-resisted|p2a: Dialga
+|-damage|p2a: Dialga|0 fnt
+|faint|p2a: Dialga
+|
+|upkeep
+|inactive|paysa has 15 seconds left this turn.
+|inactive|paysa has 10 seconds left.
+|
+|t:|1733058224
+|switch|p2a: Spectrier|Spectrier, L75, tera:Fighting|274/274
+|turn|16
+|inactive|paysa has 20 seconds left this turn.
+|
+|t:|1733058226
+|move|p1a: Scizor|Bullet Punch|p2a: Spectrier
+|-damage|p2a: Spectrier|56/274
+|move|p2a: Spectrier|Tera Blast|p1a: Scizor|[anim] Tera Blast Fighting
+|-supereffective|p1a: Scizor
+|-damage|p1a: Scizor|0 fnt
+|faint|p1a: Scizor
+|-ability|p2a: Spectrier|Grim Neigh|boost
+|-boost|p2a: Spectrier|spa|1
+|
+|-heal|p2a: Spectrier|73/274|[from] item: Leftovers
+|upkeep
+|inactive|paysa has 25 seconds left this turn.
+|
+|t:|1733058237
+|switch|p1a: Illumise|Illumise, L91, F|266/266
+|turn|17
+|inactive|paysa has 30 seconds left.
+|
+|t:|1733058245
+|switch|p2a: Mandibuzz|Mandibuzz, L85, F|326/326
+|move|p1a: Illumise|Encore|p2a: Mandibuzz
+|-hint|Since gen 7, Dark is immune to Prankster moves.
+|-immune|p2a: Mandibuzz
+|
+|upkeep
+|turn|18
+|
+|t:|1733058255
+|move|p1a: Illumise|Thunder Wave|p2a: Mandibuzz
+|-hint|Since gen 7, Dark is immune to Prankster moves.
+|-immune|p2a: Mandibuzz
+|move|p2a: Mandibuzz|Brave Bird|p1a: Illumise
+|-supereffective|p1a: Illumise
+|-damage|p1a: Illumise|42/266
+|-damage|p2a: Mandibuzz|252/326|[from] Recoil
+|
+|upkeep
+|turn|19
+|
+|t:|1733058261
+|move|p1a: Illumise|Bug Buzz|p2a: Mandibuzz
+|-damage|p2a: Mandibuzz|171/326
+|move|p2a: Mandibuzz|Brave Bird|p1a: Illumise
+|-supereffective|p1a: Illumise
+|-damage|p1a: Illumise|0 fnt
+|faint|p1a: Illumise
+|-damage|p2a: Mandibuzz|157/326|[from] Recoil
+|
+|upkeep
+|
+|t:|1733058266
+|switch|p1a: Cryogonal|Cryogonal, L89|76/287
+|turn|20
+|
+|t:|1733058272
+|move|p1a: Cryogonal|Recover|p1a: Cryogonal
+|-heal|p1a: Cryogonal|220/287
+|move|p2a: Mandibuzz|Brave Bird|p1a: Cryogonal
+|-damage|p1a: Cryogonal|88/287
+|-damage|p2a: Mandibuzz|113/326|[from] Recoil
+|
+|upkeep
+|turn|21
+|
+|t:|1733058276
+|move|p1a: Cryogonal|Recover|p1a: Cryogonal
+|-heal|p1a: Cryogonal|232/287
+|move|p2a: Mandibuzz|Brave Bird|p1a: Cryogonal
+|-damage|p1a: Cryogonal|93/287
+|-damage|p2a: Mandibuzz|67/326|[from] Recoil
+|
+|upkeep
+|turn|22
+|
+|t:|1733058279
+|move|p1a: Cryogonal|Recover|p1a: Cryogonal
+|-heal|p1a: Cryogonal|237/287
+|move|p2a: Mandibuzz|Brave Bird|p1a: Cryogonal
+|-damage|p1a: Cryogonal|104/287
+|-damage|p2a: Mandibuzz|23/326|[from] Recoil
+|
+|upkeep
+|turn|23
+|
+|t:|1733058281
+|move|p1a: Cryogonal|Recover|p1a: Cryogonal
+|-heal|p1a: Cryogonal|248/287
+|move|p2a: Mandibuzz|Brave Bird|p1a: Cryogonal
+|-damage|p1a: Cryogonal|103/287
+|-damage|p2a: Mandibuzz|0 fnt|[from] Recoil
+|faint|p2a: Mandibuzz
+|
+|upkeep
+|
+|t:|1733058291
+|switch|p2a: Spectrier|Spectrier, L75, tera:Fighting|73/274
+|turn|24
+|inactive|paysa has 90 seconds left.
+|
+|t:|1733058305
+|switch|p1a: Charizard|Charizard, L85, M|271/271
+|move|p2a: Spectrier|Substitute|p2a: Spectrier
+|-start|p2a: Spectrier|Substitute
+|-damage|p2a: Spectrier|5/274
+|
+|-heal|p2a: Spectrier|22/274|[from] item: Leftovers
+|upkeep
+|turn|25
+|inactive|paysa has 90 seconds left.
+|
+|t:|1733058313
+|move|p2a: Spectrier|Shadow Ball|p1a: Charizard
+|-damage|p1a: Charizard|166/271
+|move|p1a: Charizard|Earthquake|p2a: Spectrier
+|-end|p2a: Spectrier|Substitute
+|
+|-heal|p2a: Spectrier|39/274|[from] item: Leftovers
+|upkeep
+|turn|26
+|inactive|paysa has 90 seconds left.
+|inactive|paysa has 60 seconds left.
+|
+|t:|1733058370
+|switch|p2a: Ditto|Ditto, L87|225/225
+|-transform|p2a: Ditto|p1a: Charizard|[from] ability: Imposter
+|move|p1a: Charizard|Flare Blitz|p2a: Ditto
+|-resisted|p2a: Ditto
+|-damage|p2a: Ditto|162/225
+|-damage|p1a: Charizard|145/271|[from] Recoil
+|
+|upkeep
+|turn|27
+|
+|t:|1733058385
+|switch|p2a: Spiritomb|Spiritomb, L89, F|81/234
+|switch|p1a: Clawitzer|Clawitzer, L87, M|67/265
+|
+|-heal|p2a: Spiritomb|95/234|[from] item: Leftovers
+|upkeep
+|turn|28
+|
+|t:|1733058393
+|move|p1a: Clawitzer|U-turn|p2a: Spiritomb
+|-damage|p2a: Spiritomb|61/234
+|
+|t:|1733058397
+|switch|p1a: Cryogonal|Cryogonal, L89|103/287|[from] U-turn
+|move|p2a: Spiritomb|Poltergeist||[still]
+|-fail|p2a: Spiritomb
+|
+|-heal|p2a: Spiritomb|75/234|[from] item: Leftovers
+|upkeep
+|turn|29
+|
+|t:|1733058402
+|move|p1a: Cryogonal|Recover|p1a: Cryogonal
+|-heal|p1a: Cryogonal|247/287
+|move|p2a: Spiritomb|Pain Split|p1a: Cryogonal
+|-sethp|p1a: Cryogonal|161/287|[from] move: Pain Split|[silent]
+|-sethp|p2a: Spiritomb|161/234|[from] move: Pain Split
+|
+|-heal|p2a: Spiritomb|175/234|[from] item: Leftovers
+|upkeep
+|turn|30
+|
+|t:|1733058404
+|move|p1a: Cryogonal|Ice Beam|p2a: Spiritomb
+|-damage|p2a: Spiritomb|88/234
+|move|p2a: Spiritomb|Toxic|p1a: Cryogonal
+|-status|p1a: Cryogonal|tox
+|
+|-heal|p2a: Spiritomb|102/234|[from] item: Leftovers
+|-damage|p1a: Cryogonal|144/287 tox|[from] psn
+|upkeep
+|turn|31
+|
+|t:|1733058410
+|move|p1a: Cryogonal|Ice Beam|p2a: Spiritomb
+|-damage|p2a: Spiritomb|14/234
+|move|p2a: Spiritomb|Foul Play|p1a: Cryogonal
+|-damage|p1a: Cryogonal|53/287 tox
+|
+|-heal|p2a: Spiritomb|28/234|[from] item: Leftovers
+|-damage|p1a: Cryogonal|19/287 tox|[from] psn
+|upkeep
+|turn|32
+|inactive|paysa has 90 seconds left.
+|
+|t:|1733058423
+|move|p1a: Cryogonal|Ice Beam|p2a: Spiritomb
+|-damage|p2a: Spiritomb|0 fnt
+|faint|p2a: Spiritomb
+|
+|-damage|p1a: Cryogonal|0 fnt|[from] psn
+|faint|p1a: Cryogonal
+|upkeep
+|
+|t:|1733058427
+|switch|p1a: Charizard|Charizard, L85, M|145/271
+|switch|p2a: Spectrier|Spectrier, L75, tera:Fighting|39/274
+|turn|33
+|
+|t:|1733058431
+|move|p2a: Spectrier|Shadow Ball|p1a: Charizard
+|-damage|p1a: Charizard|54/271
+|move|p1a: Charizard|Earthquake|p2a: Spectrier
+|-damage|p2a: Spectrier|0 fnt
+|faint|p2a: Spectrier
+|
+|upkeep
+|
+|t:|1733058432
+|switch|p2a: Ditto|Ditto, L87|162/225
+|-transform|p2a: Ditto|p1a: Charizard|[from] ability: Imposter
+|turn|34
+|
+|t:|1733058437
+|move|p2a: Ditto|Outrage|p1a: Charizard
+|-damage|p1a: Charizard|0 fnt
+|faint|p1a: Charizard
+|
+|upkeep
+|c|☆dcenoris|Damn
+|c|☆dcenoris|I choked
+|c|☆dcenoris|If I spun against mandi I think I won
+|c|☆dcenoris|GG mate
+|
+|t:|1733058462
+|switch|p1a: Clawitzer|Clawitzer, L87, M|67/265
+|turn|35
+|l| Zaha11
+|c|☆paysa|gg, fun game
+|c|☆dcenoris|Poltergeist CRIT might have decided it after all
+|
+|t:|1733058481
+|move|p2a: Ditto|Outrage|p1a: Clawitzer|[from]lockedmove
+|-damage|p1a: Clawitzer|0 fnt
+|faint|p1a: Clawitzer
+|
+|win|paysa
+|raw|dcenoris's rating: 2506 &rarr; <strong>2486</strong><br />(-20 for losing)
+|raw|paysa's rating: 2510 &rarr; <strong>2530</strong><br />(+20 for winning)
+|l|☆dcenoris
+|player|p1|

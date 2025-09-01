@@ -1,0 +1,510 @@
+|badge|p1|silver|gen9randombattle|30-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆pokeblade☆101
+|j|☆PTKmoekyuun
+|t:|1746395220
+|gametype|singles
+|player|p1|pokeblade☆101|#rbtt8teamzygarde2|2464
+|player|p2|PTKmoekyuun|1|2523
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1746395220
+|start
+|switch|p1a: Mightyena|Mightyena, L95, F|287/287
+|switch|p2a: Dondozo|Dondozo, L78, M|362/362
+|-ability|p1a: Mightyena|Intimidate|boost
+|-unboost|p2a: Dondozo|atk|1
+|turn|1
+|
+|t:|1746395246
+|move|p1a: Mightyena|Throat Chop|p2a: Dondozo
+|-damage|p2a: Dondozo|269/362
+|-start|p2a: Dondozo|Throat Chop|[silent]
+|move|p2a: Dondozo|Curse|p2a: Dondozo
+|-unboost|p2a: Dondozo|spe|1
+|-boost|p2a: Dondozo|atk|1
+|-boost|p2a: Dondozo|def|1
+|
+|-heal|p2a: Dondozo|291/362|[from] item: Leftovers
+|upkeep
+|turn|2
+|
+|t:|1746395252
+|switch|p1a: Sunflora|Sunflora, F|312/312
+|move|p2a: Dondozo|Wave Crash|p1a: Sunflora
+|-resisted|p1a: Sunflora
+|-damage|p1a: Sunflora|244/312
+|-damage|p2a: Dondozo|269/362|[from] Recoil
+|
+|-heal|p2a: Dondozo|291/362|[from] item: Leftovers
+|-end|p2a: Dondozo|Throat Chop|[silent]
+|upkeep
+|turn|3
+|
+|t:|1746395270
+|switch|p2a: Iron Hands|Iron Hands, L79|373/373
+|move|p1a: Sunflora|Leaf Storm|p2a: Iron Hands
+|-damage|p2a: Iron Hands|129/373
+|-unboost|p1a: Sunflora|spa|2
+|
+|upkeep
+|turn|4
+|
+|t:|1746395286
+|switch|p1a: Landorus|Landorus-Therian, L76, M|260/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-unboost|p2a: Iron Hands|atk|1
+|move|p2a: Iron Hands|Drain Punch|p1a: Landorus
+|-resisted|p1a: Landorus
+|-damage|p1a: Landorus|226/260
+|-heal|p2a: Iron Hands|146/373|[from] drain|[of] p1a: Landorus
+|
+|-heal|p1a: Landorus|242/260|[from] item: Leftovers
+|upkeep
+|turn|5
+|
+|t:|1746395296
+|-end|p2a: Iron Hands|Quark Drive|[silent]
+|switch|p2a: Hippowdon|Hippowdon, L82, M|311/311
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Hippowdon
+|move|p1a: Landorus|Earthquake|p2a: Hippowdon
+|-damage|p2a: Hippowdon|205/311
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|258/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|224/311|[from] item: Leftovers
+|upkeep
+|turn|6
+|
+|t:|1746395304
+|move|p1a: Landorus|Taunt|p2a: Hippowdon
+|-start|p2a: Hippowdon|move: Taunt
+|cant|p2a: Hippowdon|move: Taunt|Stealth Rock
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|260/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|243/311|[from] item: Leftovers
+|upkeep
+|turn|7
+|
+|t:|1746395310
+|move|p1a: Landorus|Earthquake|p2a: Hippowdon
+|-damage|p2a: Hippowdon|137/311
+|move|p2a: Hippowdon|Stone Edge|p1a: Landorus
+|-damage|p1a: Landorus|184/260
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|200/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|156/311|[from] item: Leftovers
+|upkeep
+|turn|8
+|
+|t:|1746395321
+|switch|p2a: Dondozo|Dondozo, L78, M|291/362
+|move|p1a: Landorus|Earthquake|p2a: Dondozo
+|-damage|p2a: Dondozo|182/362
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p2a: Dondozo|160/362|[from] Sandstorm
+|-heal|p1a: Landorus|216/260|[from] item: Leftovers
+|-heal|p2a: Dondozo|182/362|[from] item: Leftovers
+|upkeep
+|turn|9
+|
+|t:|1746395328
+|switch|p2a: Zangoose|Zangoose, L85, F|263/263
+|move|p1a: Landorus|U-turn|p2a: Zangoose
+|-damage|p2a: Zangoose|185/263
+|
+|t:|1746395337
+|switch|p1a: Mightyena|Mightyena, L95, F|287/287|[from] U-turn
+|-ability|p1a: Mightyena|Intimidate|boost
+|-unboost|p2a: Zangoose|atk|1
+|
+|-weather|none
+|-status|p2a: Zangoose|tox|[from] item: Toxic Orb
+|upkeep
+|turn|10
+|
+|t:|1746395350
+|switch|p2a: Hippowdon|Hippowdon, L82, M|156/311
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Hippowdon
+|move|p1a: Mightyena|Throat Chop|p2a: Hippowdon
+|-damage|p2a: Hippowdon|77/311
+|-start|p2a: Hippowdon|Throat Chop|[silent]
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Mightyena|270/287|[from] Sandstorm
+|-heal|p1a: Mightyena|287/287|[from] item: Leftovers
+|-heal|p2a: Hippowdon|96/311|[from] item: Leftovers
+|upkeep
+|turn|11
+|
+|t:|1746395361
+|move|p1a: Mightyena|Taunt|p2a: Hippowdon
+|-start|p2a: Hippowdon|move: Taunt
+|cant|p2a: Hippowdon|move: Taunt|Slack Off
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Mightyena|270/287|[from] Sandstorm
+|-heal|p1a: Mightyena|287/287|[from] item: Leftovers
+|-heal|p2a: Hippowdon|115/311|[from] item: Leftovers
+|-end|p2a: Hippowdon|Throat Chop|[silent]
+|upkeep
+|turn|12
+|
+|t:|1746395366
+|switch|p1a: Landorus|Landorus-Therian, L76, M|216/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-unboost|p2a: Hippowdon|atk|1
+|move|p2a: Hippowdon|Earthquake|p1a: Landorus
+|-immune|p1a: Landorus
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|232/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|134/311|[from] item: Leftovers
+|upkeep
+|turn|13
+|
+|t:|1746395370
+|switch|p2a: Quagsire|Quagsire, L84, M|297/297
+|move|p1a: Landorus|Earthquake|p2a: Quagsire
+|-damage|p2a: Quagsire|173/297
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|248/260|[from] item: Leftovers
+|-heal|p2a: Quagsire|191/297|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1746395379
+|move|p1a: Landorus|U-turn|p2a: Quagsire
+|-damage|p2a: Quagsire|130/297
+|
+|t:|1746395387
+|switch|p1a: Mightyena|Mightyena, L95, F|287/287|[from] U-turn
+|-ability|p1a: Mightyena|Intimidate|boost
+|-unboost|p2a: Quagsire|atk|1
+|move|p2a: Quagsire|Ice Beam|p1a: Mightyena
+|-damage|p1a: Mightyena|233/287
+|
+|-weather|none
+|-heal|p1a: Mightyena|250/287|[from] item: Leftovers
+|-heal|p2a: Quagsire|148/297|[from] item: Leftovers
+|upkeep
+|turn|15
+|
+|t:|1746395401
+|move|p1a: Mightyena|Throat Chop|p2a: Quagsire
+|-damage|p2a: Quagsire|48/297
+|-start|p2a: Quagsire|Throat Chop|[silent]
+|move|p2a: Quagsire|Toxic|p1a: Mightyena
+|-status|p1a: Mightyena|tox
+|
+|-heal|p1a: Mightyena|267/287 tox|[from] item: Leftovers
+|-heal|p2a: Quagsire|66/297|[from] item: Leftovers
+|-damage|p1a: Mightyena|250/287 tox|[from] psn
+|upkeep
+|turn|16
+|
+|t:|1746395409
+|move|p1a: Mightyena|Throat Chop|p2a: Quagsire
+|-damage|p2a: Quagsire|0 fnt
+|faint|p2a: Quagsire
+|
+|-heal|p1a: Mightyena|267/287 tox|[from] item: Leftovers
+|-damage|p1a: Mightyena|233/287 tox|[from] psn
+|upkeep
+|
+|t:|1746395411
+|switch|p2a: Hippowdon|Hippowdon, L82, M|134/311
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Hippowdon
+|turn|17
+|
+|t:|1746395415
+|switch|p1a: Landorus|Landorus-Therian, L76, M|248/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-unboost|p2a: Hippowdon|atk|1
+|move|p2a: Hippowdon|Slack Off|p2a: Hippowdon
+|-heal|p2a: Hippowdon|290/311
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|260/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|309/311|[from] item: Leftovers
+|upkeep
+|turn|18
+|
+|t:|1746395419
+|move|p1a: Landorus|Taunt|p2a: Hippowdon
+|-start|p2a: Hippowdon|move: Taunt
+|move|p2a: Hippowdon|Stone Edge|p1a: Landorus|[miss]
+|-miss|p2a: Hippowdon|p1a: Landorus
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p2a: Hippowdon|311/311|[from] item: Leftovers
+|upkeep
+|turn|19
+|
+|t:|1746395422
+|move|p1a: Landorus|Earthquake|p2a: Hippowdon
+|-damage|p2a: Hippowdon|214/311
+|move|p2a: Hippowdon|Stone Edge|p1a: Landorus
+|-crit|p1a: Landorus
+|-damage|p1a: Landorus|135/260
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|151/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|233/311|[from] item: Leftovers
+|upkeep
+|turn|20
+|
+|t:|1746395427
+|move|p1a: Landorus|Earthquake|p2a: Hippowdon
+|-damage|p2a: Hippowdon|134/311
+|move|p2a: Hippowdon|Stone Edge|p1a: Landorus
+|-damage|p1a: Landorus|94/260
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|110/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|153/311|[from] item: Leftovers
+|-end|p2a: Hippowdon|move: Taunt
+|upkeep
+|turn|21
+|
+|t:|1746395432
+|switch|p2a: Iron Hands|Iron Hands, L79|146/373
+|move|p1a: Landorus|Taunt|p2a: Iron Hands
+|-start|p2a: Iron Hands|move: Taunt
+|
+|-weather|none
+|-heal|p1a: Landorus|126/260|[from] item: Leftovers
+|upkeep
+|turn|22
+|
+|t:|1746395439
+|move|p1a: Landorus|Earthquake|p2a: Iron Hands
+|-supereffective|p2a: Iron Hands
+|-damage|p2a: Iron Hands|0 fnt
+|faint|p2a: Iron Hands
+|-end|p2a: Iron Hands|Quark Drive|[silent]
+|
+|-heal|p1a: Landorus|142/260|[from] item: Leftovers
+|upkeep
+|
+|t:|1746395440
+|switch|p2a: Zangoose|Zangoose, L85, F|185/263 tox
+|turn|23
+|
+|t:|1746395443
+|switch|p1a: Magnezone|Magnezone, L85|258/258
+|move|p2a: Zangoose|Facade|p1a: Magnezone
+|-resisted|p1a: Magnezone
+|-damage|p1a: Magnezone|150/258
+|
+|-damage|p2a: Zangoose|169/263 tox|[from] psn
+|upkeep
+|turn|24
+|
+|t:|1746395449
+|move|p2a: Zangoose|Close Combat|p1a: Magnezone
+|-supereffective|p1a: Magnezone
+|-damage|p1a: Magnezone|0 fnt
+|-unboost|p2a: Zangoose|def|1
+|-unboost|p2a: Zangoose|spd|1
+|faint|p1a: Magnezone
+|
+|-damage|p2a: Zangoose|137/263 tox|[from] psn
+|upkeep
+|
+|t:|1746395455
+|switch|p1a: Mightyena|Mightyena, L95, F|233/287 tox
+|-ability|p1a: Mightyena|Intimidate|boost
+|-unboost|p2a: Zangoose|atk|1
+|turn|25
+|
+|t:|1746395460
+|switch|p2a: Hippowdon|Hippowdon, L82, M|153/311
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Hippowdon
+|move|p1a: Mightyena|Throat Chop|p2a: Hippowdon
+|-damage|p2a: Hippowdon|62/311
+|-start|p2a: Hippowdon|Throat Chop|[silent]
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Mightyena|216/287 tox|[from] Sandstorm
+|-heal|p1a: Mightyena|233/287 tox|[from] item: Leftovers
+|-heal|p2a: Hippowdon|81/311|[from] item: Leftovers
+|-damage|p1a: Mightyena|216/287 tox|[from] psn
+|upkeep
+|turn|26
+|
+|t:|1746395469
+|move|p1a: Mightyena|Throat Chop|p2a: Hippowdon
+|-damage|p2a: Hippowdon|2/311
+|move|p2a: Hippowdon|Slack Off|p2a: Hippowdon
+|-heal|p2a: Hippowdon|158/311
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Mightyena|199/287 tox|[from] Sandstorm
+|-heal|p1a: Mightyena|216/287 tox|[from] item: Leftovers
+|-heal|p2a: Hippowdon|177/311|[from] item: Leftovers
+|-damage|p1a: Mightyena|182/287 tox|[from] psn
+|-end|p2a: Hippowdon|Throat Chop|[silent]
+|upkeep
+|turn|27
+|
+|t:|1746395473
+|switch|p1a: Landorus|Landorus-Therian, L76, M|142/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-unboost|p2a: Hippowdon|atk|1
+|move|p2a: Hippowdon|Stone Edge|p1a: Landorus
+|-damage|p1a: Landorus|85/260
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|101/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|196/311|[from] item: Leftovers
+|upkeep
+|turn|28
+|
+|t:|1746395484
+|move|p1a: Landorus|Earthquake|p2a: Hippowdon
+|-damage|p2a: Hippowdon|100/311
+|move|p2a: Hippowdon|Stealth Rock|p1a: Landorus
+|-sidestart|p1: pokeblade☆101|move: Stealth Rock
+|
+|-weather|Sandstorm|[upkeep]
+|-heal|p1a: Landorus|117/260|[from] item: Leftovers
+|-heal|p2a: Hippowdon|119/311|[from] item: Leftovers
+|upkeep
+|turn|29
+|
+|t:|1746395490
+|switch|p2a: Furret|Furret, L94, F|312/312
+|-item|p1a: Landorus|Leftovers|[from] ability: Frisk|[of] p2a: Furret
+|move|p1a: Landorus|Earthquake|p2a: Furret
+|-damage|p2a: Furret|180/312
+|
+|-weather|none
+|-heal|p1a: Landorus|133/260|[from] item: Leftovers
+|upkeep
+|turn|30
+|
+|t:|1746395509
+|move|p2a: Furret|Double-Edge|p1a: Landorus
+|-damage|p1a: Landorus|0 fnt
+|faint|p1a: Landorus
+|-damage|p2a: Furret|136/312|[from] Recoil
+|-damage|p2a: Furret|105/312|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1746395523
+|switch|p1a: Masquerain|Masquerain, L87, F|264/264
+|-ability|p1a: Masquerain|Intimidate|boost
+|-unboost|p2a: Furret|atk|1
+|turn|31
+|
+|t:|1746395547
+|switch|p2a: Zangoose|Zangoose, L85, F|137/263 tox
+|move|p1a: Masquerain|Quiver Dance|p1a: Masquerain
+|-boost|p1a: Masquerain|spa|1
+|-boost|p1a: Masquerain|spd|1
+|-boost|p1a: Masquerain|spe|1
+|
+|-damage|p2a: Zangoose|121/263 tox|[from] psn
+|upkeep
+|turn|32
+|
+|t:|1746395566
+|switch|p2a: Hippowdon|Hippowdon, L82, M|119/311
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Hippowdon
+|move|p1a: Masquerain|Bug Buzz|p2a: Hippowdon
+|-damage|p2a: Hippowdon|0 fnt
+|faint|p2a: Hippowdon
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Masquerain|248/264|[from] Sandstorm
+|upkeep
+|
+|t:|1746395571
+|switch|p2a: Dondozo|Dondozo, L78, M|182/362
+|turn|33
+|
+|t:|1746395581
+|move|p1a: Masquerain|Bug Buzz|p2a: Dondozo
+|-damage|p2a: Dondozo|35/362
+|move|p2a: Dondozo|Rest|p2a: Dondozo
+|-status|p2a: Dondozo|slp|[from] move: Rest
+|-heal|p2a: Dondozo|362/362 slp|[silent]
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Masquerain|232/264|[from] Sandstorm
+|-damage|p2a: Dondozo|340/362 slp|[from] Sandstorm
+|-heal|p2a: Dondozo|362/362 slp|[from] item: Leftovers
+|upkeep
+|turn|34
+|
+|t:|1746395592
+|move|p1a: Masquerain|Bug Buzz|p2a: Dondozo
+|-damage|p2a: Dondozo|221/362 slp
+|cant|p2a: Dondozo|slp
+|move|p2a: Dondozo|Sleep Talk|p2a: Dondozo
+|move|p2a: Dondozo|Curse|p2a: Dondozo|[from] move: Sleep Talk
+|-unboost|p2a: Dondozo|spe|1
+|-boost|p2a: Dondozo|atk|1
+|-boost|p2a: Dondozo|def|1
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Masquerain|216/264|[from] Sandstorm
+|-damage|p2a: Dondozo|199/362 slp|[from] Sandstorm
+|-heal|p2a: Dondozo|221/362 slp|[from] item: Leftovers
+|upkeep
+|turn|35
+|
+|t:|1746395598
+|move|p1a: Masquerain|Bug Buzz|p2a: Dondozo
+|-damage|p2a: Dondozo|86/362 slp
+|cant|p2a: Dondozo|slp
+|move|p2a: Dondozo|Sleep Talk|p2a: Dondozo
+|move|p2a: Dondozo|Wave Crash|p1a: Masquerain|[from] move: Sleep Talk
+|-damage|p1a: Masquerain|23/264
+|-damage|p2a: Dondozo|22/362 slp|[from] Recoil
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Masquerain|7/264|[from] Sandstorm
+|-damage|p2a: Dondozo|0 fnt|[from] Sandstorm
+|faint|p2a: Dondozo
+|upkeep
+|
+|t:|1746395601
+|switch|p2a: Zangoose|Zangoose, L85, F|121/263 tox
+|turn|36
+|
+|t:|1746395605
+|move|p2a: Zangoose|Quick Attack|p1a: Masquerain
+|-damage|p1a: Masquerain|0 fnt
+|faint|p1a: Masquerain
+|
+|-weather|none
+|-damage|p2a: Zangoose|105/263 tox|[from] psn
+|upkeep
+|
+|t:|1746395612
+|switch|p1a: Gardevoir|Gardevoir, L83, M|249/249
+|-damage|p1a: Gardevoir|218/249|[from] Stealth Rock
+|-ability|p1a: Gardevoir|Toxic Boost|[from] ability: Trace|[of] p2a: Zangoose
+|turn|37
+|-message|PTKmoekyuun forfeited.
+|
+|win|pokeblade☆101
+|raw|pokeblade☆101's rating: 2464 &rarr; <strong>2487</strong><br />(+23 for winning)
+|raw|PTKmoekyuun's rating: 2523 &rarr; <strong>2500</strong><br />(-23 for losing)

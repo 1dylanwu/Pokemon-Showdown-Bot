@@ -1,0 +1,523 @@
+|badge|p1|silver|gen9randombattle|30-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Node
+|j|☆Star Wheel
+|t:|1748667818
+|gametype|singles
+|player|p1|Node|miku-psychic|2472
+|player|p2|Star Wheel|darach-caitlin|2565
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1748667818
+|start
+|switch|p1a: Heracross|Heracross, L80, F|259/259
+|switch|p2a: Registeel|Registeel, L81|262/262
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Star Wheel)
+|j| pb.sav
+|
+|t:|1748667843
+|switch|p2a: Clefable|Clefable, L83, F|293/293
+|move|p1a: Heracross|Close Combat|p2a: Clefable
+|-resisted|p2a: Clefable
+|-damage|p2a: Clefable|214/293
+|-unboost|p1a: Heracross|def|1
+|-unboost|p1a: Heracross|spd|1
+|
+|-status|p1a: Heracross|brn|[from] item: Flame Orb
+|upkeep
+|turn|2
+|
+|t:|1748667851
+|switch|p1a: Grafaiai|Grafaiai, L86, F|249/249
+|move|p2a: Clefable|Moonblast|p1a: Grafaiai
+|-resisted|p1a: Grafaiai
+|-damage|p1a: Grafaiai|181/249
+|
+|upkeep
+|turn|3
+|
+|t:|1748667861
+|switch|p2a: Registeel|Registeel, L81|262/262
+|move|p1a: Grafaiai|Swords Dance|p1a: Grafaiai
+|-boost|p1a: Grafaiai|atk|2
+|
+|upkeep
+|turn|4
+|
+|t:|1748667883
+|switch|p2a: Clefable|Clefable, L83, F|214/293
+|move|p1a: Grafaiai|Low Kick|p2a: Clefable
+|-resisted|p2a: Clefable
+|-damage|p2a: Clefable|146/293
+|-status|p2a: Clefable|psn|[from] ability: Poison Touch|[of] p1a: Grafaiai
+|-damage|p1a: Grafaiai|157/249|[from] item: Life Orb
+|
+|upkeep
+|turn|5
+|
+|t:|1748667893
+|move|p1a: Grafaiai|Gunk Shot|p2a: Clefable
+|-supereffective|p2a: Clefable
+|-damage|p2a: Clefable|0 fnt
+|faint|p2a: Clefable
+|-damage|p1a: Grafaiai|133/249|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1748667896
+|switch|p2a: Raichu|Raichu, L88, M|249/249
+|turn|6
+|
+|t:|1748667901
+|switch|p1a: Whimsicott|Whimsicott, L84, M|238/238
+|move|p2a: Raichu|Thunderbolt|p1a: Whimsicott
+|-resisted|p1a: Whimsicott
+|-damage|p1a: Whimsicott|165/238
+|-damage|p2a: Raichu|225/249|[from] item: Life Orb
+|
+|-heal|p1a: Whimsicott|179/238|[from] item: Leftovers
+|upkeep
+|turn|7
+|
+|t:|1748667907
+|switch|p2a: Hypno|Hypno, L95, F|315/315
+|move|p1a: Whimsicott|Leech Seed|p2a: Hypno
+|-start|p2a: Hypno|move: Leech Seed
+|
+|-heal|p1a: Whimsicott|193/238|[from] item: Leftovers
+|-damage|p2a: Hypno|276/315|[from] Leech Seed|[of] p1a: Whimsicott
+|-heal|p1a: Whimsicott|232/238|[silent]
+|upkeep
+|turn|8
+|
+|t:|1748667910
+|move|p1a: Whimsicott|Substitute|p1a: Whimsicott
+|-start|p1a: Whimsicott|Substitute
+|-damage|p1a: Whimsicott|173/238
+|move|p2a: Hypno|Psychic Noise|p1a: Whimsicott
+|-damage|p1a: Whimsicott|73/238
+|-start|p1a: Whimsicott|move: Heal Block
+|
+|-heal|p2a: Hypno|295/315|[from] item: Leftovers
+|-damage|p2a: Hypno|256/315|[from] Leech Seed|[of] p1a: Whimsicott
+|upkeep
+|turn|9
+|
+|t:|1748667924
+|switch|p1a: Espeon|Espeon, L84, F|246/246
+|move|p2a: Hypno|Psychic Noise|p1a: Espeon
+|-resisted|p1a: Espeon
+|-damage|p1a: Espeon|208/246
+|-start|p1a: Espeon|move: Heal Block
+|
+|-heal|p2a: Hypno|275/315|[from] item: Leftovers
+|-damage|p2a: Hypno|236/315|[from] Leech Seed|[of] p1a: Espeon
+|upkeep
+|turn|10
+|
+|t:|1748667934
+|switch|p1a: Heracross|Heracross, L80, F|259/259 brn
+|switch|p2a: Registeel|Registeel, L81|262/262
+|
+|-damage|p1a: Heracross|243/259 brn|[from] brn
+|upkeep
+|turn|11
+|
+|t:|1748667959
+|-terastallize|p2a: Registeel|Fighting
+|move|p1a: Heracross|Close Combat|p2a: Registeel
+|-damage|p2a: Registeel|115/262
+|-unboost|p1a: Heracross|def|1
+|-unboost|p1a: Heracross|spd|1
+|move|p2a: Registeel|Iron Defense|p2a: Registeel
+|-boost|p2a: Registeel|def|2
+|
+|-damage|p1a: Heracross|227/259 brn|[from] brn
+|upkeep
+|turn|12
+|
+|t:|1748667969
+|move|p1a: Heracross|Knock Off|p2a: Registeel
+|-resisted|p2a: Registeel
+|-damage|p2a: Registeel|96/262
+|-enditem|p2a: Registeel|Chesto Berry|[from] move: Knock Off|[of] p1a: Heracross
+|move|p2a: Registeel|Body Press|p1a: Heracross
+|-resisted|p1a: Heracross
+|-damage|p1a: Heracross|42/259 brn
+|
+|-damage|p1a: Heracross|26/259 brn|[from] brn
+|upkeep
+|turn|13
+|
+|t:|1748667977
+|move|p1a: Heracross|Close Combat|p2a: Registeel
+|-damage|p2a: Registeel|24/262
+|-unboost|p1a: Heracross|def|1
+|-unboost|p1a: Heracross|spd|1
+|move|p2a: Registeel|Body Press|p1a: Heracross
+|-resisted|p1a: Heracross
+|-damage|p1a: Heracross|0 fnt
+|faint|p1a: Heracross
+|
+|upkeep
+|
+|t:|1748667996
+|switch|p1a: Whimsicott|Whimsicott, L84, M|73/238
+|turn|14
+|
+|t:|1748668015
+|switch|p2a: Hypno|Hypno, L95, F|236/315
+|move|p1a: Whimsicott|Moonblast|p2a: Hypno
+|-damage|p2a: Hypno|169/315
+|
+|-heal|p1a: Whimsicott|87/238|[from] item: Leftovers
+|-heal|p2a: Hypno|188/315|[from] item: Leftovers
+|upkeep
+|turn|15
+|
+|t:|1748668045
+|switch|p1a: Espeon|Espeon, L84, F|208/246
+|move|p2a: Hypno|Psychic Noise|p1a: Espeon
+|-resisted|p1a: Espeon
+|-damage|p1a: Espeon|167/246
+|-start|p1a: Espeon|move: Heal Block
+|
+|-heal|p2a: Hypno|207/315|[from] item: Leftovers
+|upkeep
+|turn|16
+|
+|t:|1748668050
+|move|p2a: Hypno|Protect|p2a: Hypno
+|-singleturn|p2a: Hypno|Protect
+|move|p1a: Espeon|Shadow Ball|p2a: Hypno
+|-activate|p2a: Hypno|move: Protect
+|
+|-heal|p2a: Hypno|226/315|[from] item: Leftovers
+|-end|p1a: Espeon|move: Heal Block
+|upkeep
+|turn|17
+|
+|t:|1748668063
+|switch|p2a: Registeel|Registeel, L81, tera:Fighting|24/262
+|move|p1a: Espeon|Morning Sun|p1a: Espeon
+|-heal|p1a: Espeon|246/246
+|
+|upkeep
+|turn|18
+|
+|t:|1748668070
+|move|p1a: Espeon|Calm Mind|p1a: Espeon
+|-boost|p1a: Espeon|spa|1
+|-boost|p1a: Espeon|spd|1
+|move|p2a: Registeel|Iron Head|p1a: Espeon
+|-damage|p1a: Espeon|158/246
+|
+|upkeep
+|turn|19
+|
+|t:|1748668082
+|move|p1a: Espeon|Calm Mind|p1a: Espeon
+|-boost|p1a: Espeon|spa|1
+|-boost|p1a: Espeon|spd|1
+|move|p2a: Registeel|Iron Head|p1a: Espeon
+|-damage|p1a: Espeon|65/246
+|
+|upkeep
+|turn|20
+|
+|t:|1748668088
+|switch|p2a: Probopass|Probopass, L92, F|260/260
+|move|p1a: Espeon|Morning Sun|p1a: Espeon
+|-heal|p1a: Espeon|188/246
+|
+|upkeep
+|turn|21
+|
+|t:|1748668106
+|switch|p1a: Grafaiai|Grafaiai, L86, F|133/249
+|move|p2a: Probopass|Iron Defense|p2a: Probopass
+|-boost|p2a: Probopass|def|2
+|
+|upkeep
+|turn|22
+|
+|t:|1748668111
+|switch|p2a: Raichu|Raichu, L88, M|225/249
+|move|p1a: Grafaiai|Low Kick|p2a: Raichu
+|-damage|p2a: Raichu|154/249
+|-damage|p1a: Grafaiai|109/249|[from] item: Life Orb
+|
+|upkeep
+|turn|23
+|
+|t:|1748668124
+|switch|p1a: Whimsicott|Whimsicott, L84, M|87/238
+|move|p2a: Raichu|Thunderbolt|p1a: Whimsicott
+|-resisted|p1a: Whimsicott
+|-damage|p1a: Whimsicott|12/238
+|-damage|p2a: Raichu|130/249|[from] item: Life Orb
+|
+|-heal|p1a: Whimsicott|26/238|[from] item: Leftovers
+|upkeep
+|turn|24
+|
+|t:|1748668129
+|move|p1a: Whimsicott|Leech Seed|p2a: Raichu
+|-start|p2a: Raichu|move: Leech Seed
+|move|p2a: Raichu|Thunderbolt|p1a: Whimsicott
+|-resisted|p1a: Whimsicott
+|-damage|p1a: Whimsicott|0 fnt
+|faint|p1a: Whimsicott
+|-damage|p2a: Raichu|106/249|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1748668155
+|switch|p1a: Regieleki|Regieleki, L79|256/256
+|turn|25
+|
+|t:|1748668162
+|switch|p2a: Hypno|Hypno, L95, F|226/315
+|move|p1a: Regieleki|Tera Blast|p2a: Hypno
+|-damage|p2a: Hypno|186/315
+|
+|-heal|p2a: Hypno|205/315|[from] item: Leftovers
+|upkeep
+|turn|26
+|
+|t:|1748668174
+|move|p2a: Hypno|Protect|p2a: Hypno
+|-singleturn|p2a: Hypno|Protect
+|move|p1a: Regieleki|Volt Switch|p2a: Hypno
+|-activate|p2a: Hypno|move: Protect
+|
+|-heal|p2a: Hypno|224/315|[from] item: Leftovers
+|upkeep
+|turn|27
+|
+|t:|1748668178
+|move|p1a: Regieleki|Volt Switch|p2a: Hypno
+|-damage|p2a: Hypno|152/315
+|
+|t:|1748668180
+|switch|p1a: Espeon|Espeon, L84, F|188/246|[from] Volt Switch
+|move|p2a: Hypno|Psychic Noise|p1a: Espeon
+|-resisted|p1a: Espeon
+|-damage|p1a: Espeon|146/246
+|-start|p1a: Espeon|move: Heal Block
+|
+|-heal|p2a: Hypno|171/315|[from] item: Leftovers
+|upkeep
+|turn|28
+|
+|t:|1748668186
+|switch|p2a: Probopass|Probopass, L92, F|260/260
+|move|p1a: Espeon|Shadow Ball|p2a: Probopass
+|-damage|p2a: Probopass|207/260
+|-damage|p1a: Espeon|122/246|[from] item: Life Orb
+|
+|-end|p1a: Espeon|move: Heal Block
+|upkeep
+|turn|29
+|
+|t:|1748668196
+|move|p1a: Espeon|Morning Sun|p1a: Espeon
+|-heal|p1a: Espeon|245/246
+|move|p2a: Probopass|Body Press|p1a: Espeon
+|-resisted|p1a: Espeon
+|-damage|p1a: Espeon|183/246
+|
+|upkeep
+|turn|30
+|
+|t:|1748668207
+|switch|p1a: Grafaiai|Grafaiai, L86, F|109/249
+|move|p2a: Probopass|Iron Defense|p2a: Probopass
+|-boost|p2a: Probopass|def|2
+|
+|upkeep
+|turn|31
+|
+|t:|1748668213
+|switch|p2a: Registeel|Registeel, L81, tera:Fighting|24/262
+|move|p1a: Grafaiai|Knock Off|p2a: Registeel
+|-resisted|p2a: Registeel
+|-damage|p2a: Registeel|3/262
+|-status|p2a: Registeel|psn|[from] ability: Poison Touch|[of] p1a: Grafaiai
+|-damage|p1a: Grafaiai|85/249|[from] item: Life Orb
+|
+|-damage|p2a: Registeel|0 fnt|[from] psn
+|faint|p2a: Registeel
+|upkeep
+|
+|t:|1748668223
+|switch|p2a: Raichu|Raichu, L88, M|106/249
+|turn|32
+|
+|t:|1748668233
+|switch|p1a: Regieleki|Regieleki, L79|256/256
+|move|p2a: Raichu|Thunderbolt|p1a: Regieleki
+|-resisted|p1a: Regieleki
+|-damage|p1a: Regieleki|162/256
+|-damage|p2a: Raichu|82/249|[from] item: Life Orb
+|
+|upkeep
+|turn|33
+|
+|t:|1748668240
+|move|p1a: Regieleki|Volt Switch|p2a: Raichu
+|-ability|p2a: Raichu|Lightning Rod|boost
+|-boost|p2a: Raichu|spa|1
+|move|p2a: Raichu|Focus Blast|p1a: Regieleki
+|-damage|p1a: Regieleki|0 fnt
+|faint|p1a: Regieleki
+|-damage|p2a: Raichu|58/249|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1748668244
+|switch|p1a: Ninetales|Ninetales, L85, M|263/263
+|-weather|SunnyDay|[from] ability: Drought|[of] p1a: Ninetales
+|turn|34
+|
+|t:|1748668255
+|move|p2a: Raichu|Thunderbolt|p1a: Ninetales
+|-damage|p1a: Ninetales|91/263
+|-damage|p2a: Raichu|34/249|[from] item: Life Orb
+|move|p1a: Ninetales|Scorching Sands|p2a: Raichu
+|-supereffective|p2a: Raichu
+|-damage|p2a: Raichu|0 fnt
+|faint|p2a: Raichu
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|
+|t:|1748668267
+|switch|p2a: Iron Valiant|Iron Valiant, L78|244/244
+|turn|35
+|
+|t:|1748668287
+|move|p2a: Iron Valiant|Close Combat|p1a: Ninetales
+|-damage|p1a: Ninetales|0 fnt
+|-unboost|p2a: Iron Valiant|def|1
+|-unboost|p2a: Iron Valiant|spd|1
+|faint|p1a: Ninetales
+|-damage|p2a: Iron Valiant|220/244|[from] item: Life Orb
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|
+|t:|1748668289
+|switch|p1a: Grafaiai|Grafaiai, L86, F|85/249
+|turn|36
+|
+|t:|1748668300
+|move|p1a: Grafaiai|Gunk Shot|p2a: Iron Valiant
+|-supereffective|p2a: Iron Valiant
+|-damage|p2a: Iron Valiant|0 fnt
+|faint|p2a: Iron Valiant
+|-end|p2a: Iron Valiant|Quark Drive|[silent]
+|-damage|p1a: Grafaiai|61/249|[from] item: Life Orb
+|
+|-weather|SunnyDay|[upkeep]
+|upkeep
+|inactive|Star Wheel has 120 seconds left.
+|
+|t:|1748668317
+|switch|p2a: Probopass|Probopass, L92, F|207/260
+|turn|37
+|
+|t:|1748668324
+|switch|p2a: Hypno|Hypno, L95, F|171/315
+|move|p1a: Grafaiai|Low Kick|p2a: Hypno
+|-resisted|p2a: Hypno
+|-damage|p2a: Hypno|132/315
+|-damage|p1a: Grafaiai|37/249|[from] item: Life Orb
+|
+|-weather|SunnyDay|[upkeep]
+|-heal|p2a: Hypno|151/315|[from] item: Leftovers
+|upkeep
+|turn|38
+|
+|t:|1748668332
+|switch|p2a: Probopass|Probopass, L92, F|207/260
+|-terastallize|p1a: Grafaiai|Dark
+|move|p1a: Grafaiai|Knock Off|p2a: Probopass
+|-damage|p2a: Probopass|125/260
+|-enditem|p2a: Probopass|Chesto Berry|[from] move: Knock Off|[of] p1a: Grafaiai
+|-damage|p1a: Grafaiai|13/249|[from] item: Life Orb
+|
+|-weather|none
+|upkeep
+|turn|39
+|
+|t:|1748668351
+|switch|p2a: Hypno|Hypno, L95, F|151/315
+|move|p1a: Grafaiai|Low Kick|p2a: Hypno
+|-resisted|p2a: Hypno
+|-damage|p2a: Hypno|113/315
+|-status|p2a: Hypno|psn|[from] ability: Poison Touch|[of] p1a: Grafaiai
+|-damage|p1a: Grafaiai|0 fnt|[from] item: Life Orb
+|faint|p1a: Grafaiai
+|
+|-heal|p2a: Hypno|132/315 psn|[from] item: Leftovers
+|-damage|p2a: Hypno|93/315 psn|[from] psn
+|upkeep
+|
+|t:|1748668353
+|switch|p1a: Espeon|Espeon, L84, F|183/246
+|turn|40
+|
+|t:|1748668359
+|switch|p2a: Probopass|Probopass, L92, F|125/260
+|move|p1a: Espeon|Calm Mind|p1a: Espeon
+|-boost|p1a: Espeon|spa|1
+|-boost|p1a: Espeon|spd|1
+|
+|upkeep
+|turn|41
+|
+|t:|1748668369
+|move|p1a: Espeon|Shadow Ball|p2a: Probopass
+|-damage|p2a: Probopass|39/260
+|-unboost|p2a: Probopass|spd|1
+|-damage|p1a: Espeon|159/246|[from] item: Life Orb
+|move|p2a: Probopass|Iron Defense|p2a: Probopass
+|-boost|p2a: Probopass|def|2
+|
+|upkeep
+|turn|42
+|
+|t:|1748668373
+|move|p1a: Espeon|Shadow Ball|p2a: Probopass
+|-damage|p2a: Probopass|0 fnt
+|faint|p2a: Probopass
+|-damage|p1a: Espeon|135/246|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1748668376
+|switch|p2a: Hypno|Hypno, L95, F|93/315 psn
+|turn|43
+|
+|t:|1748668378
+|move|p1a: Espeon|Shadow Ball|p2a: Hypno
+|-supereffective|p2a: Hypno
+|-damage|p2a: Hypno|0 fnt
+|faint|p2a: Hypno
+|-damage|p1a: Espeon|111/246|[from] item: Life Orb
+|
+|win|Node
+|raw|Node's rating: 2472 &rarr; <strong>2497</strong><br />(+25 for winning)
+|raw|Star Wheel's rating: 2565 &rarr; <strong>2540</strong><br />(-25 for losing)

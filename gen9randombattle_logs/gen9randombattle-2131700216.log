@@ -1,0 +1,487 @@
+|badge|p1|gold|gen9randombattle|3-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆MichaelderBeste2
+|j|☆Delta 2777
+|t:|1716842168
+|gametype|singles
+|player|p1|MichaelderBeste2|#wcop2024germany|2554
+|player|p2|Delta 2777|102|2464
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1716842168
+|start
+|switch|p1a: Entei|Entei, L78|307/307
+|switch|p2a: Goodra|Goodra-Hisui, L82, M|265/265
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Delta 2777)
+|inactive|MichaelderBeste2 has 120 seconds left.
+|inactive|MichaelderBeste2 has 90 seconds left.
+|
+|t:|1716842235
+|switch|p2a: Milotic|Milotic, L83, F|293/293
+|move|p1a: Entei|Sacred Fire|p2a: Milotic
+|-resisted|p2a: Milotic
+|-damage|p2a: Milotic|214/293
+|
+|-heal|p2a: Milotic|232/293|[from] item: Leftovers
+|upkeep
+|turn|2
+|
+|t:|1716842244
+|switch|p1a: Slowbro|Slowbro, L84, M|297/297
+|move|p2a: Milotic|Ice Beam|p1a: Slowbro
+|-resisted|p1a: Slowbro
+|-damage|p1a: Slowbro|276/297
+|
+|-heal|p2a: Milotic|250/293|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1716842251
+|switch|p2a: Scrafty|Scrafty, L84, F|246/246
+|move|p1a: Slowbro|Future Sight|p2a: Scrafty
+|-start|p1a: Slowbro|move: Future Sight
+|
+|upkeep
+|turn|4
+|
+|t:|1716842266
+|switch|p1a: Gurdurr|Gurdurr, L85, F|283/283
+|move|p2a: Scrafty|Bulk Up|p2a: Scrafty
+|-boost|p2a: Scrafty|atk|1
+|-boost|p2a: Scrafty|def|1
+|
+|upkeep
+|turn|5
+|
+|t:|1716842277
+|move|p2a: Scrafty|Knock Off|p1a: Gurdurr
+|-resisted|p1a: Gurdurr
+|-damage|p1a: Gurdurr|229/283
+|-enditem|p1a: Gurdurr|Eviolite|[from] move: Knock Off|[of] p2a: Scrafty
+|move|p1a: Gurdurr|Knock Off|p2a: Scrafty
+|-resisted|p2a: Scrafty
+|-damage|p2a: Scrafty|236/246
+|-enditem|p2a: Scrafty|Leftovers|[from] move: Knock Off|[of] p1a: Gurdurr
+|
+|-end|p2a: Scrafty|move: Future Sight
+|-immune|p2a: Scrafty
+|upkeep
+|turn|6
+|
+|t:|1716842302
+|move|p2a: Scrafty|Bulk Up|p2a: Scrafty
+|-boost|p2a: Scrafty|atk|1
+|-boost|p2a: Scrafty|def|1
+|move|p1a: Gurdurr|Drain Punch|p2a: Scrafty
+|-supereffective|p2a: Scrafty
+|-damage|p2a: Scrafty|162/246
+|-heal|p1a: Gurdurr|266/283|[from] drain|[of] p2a: Scrafty
+|
+|upkeep
+|turn|7
+|
+|t:|1716842319
+|move|p2a: Scrafty|Bulk Up|p2a: Scrafty
+|-boost|p2a: Scrafty|atk|1
+|-boost|p2a: Scrafty|def|1
+|move|p1a: Gurdurr|Drain Punch|p2a: Scrafty
+|-supereffective|p2a: Scrafty
+|-damage|p2a: Scrafty|102/246
+|-heal|p1a: Gurdurr|283/283|[from] drain|[of] p2a: Scrafty
+|
+|upkeep
+|turn|8
+|
+|t:|1716842325
+|switch|p1a: Iron Crown|Iron Crown, L79|272/272
+|move|p2a: Scrafty|Drain Punch|p1a: Iron Crown
+|-damage|p1a: Iron Crown|85/272
+|-heal|p2a: Scrafty|196/246|[from] drain|[of] p1a: Iron Crown
+|
+|upkeep
+|turn|9
+|j| TiltAccount2
+|inactive|Delta 2777 has 120 seconds left.
+|
+|t:|1716842374
+|-terastallize|p2a: Scrafty|Poison
+|move|p1a: Iron Crown|Focus Blast|p2a: Scrafty
+|-resisted|p2a: Scrafty
+|-damage|p2a: Scrafty|138/246
+|move|p2a: Scrafty|Drain Punch|p1a: Iron Crown
+|-damage|p1a: Iron Crown|0 fnt
+|-heal|p2a: Scrafty|181/246|[from] drain|[of] p1a: Iron Crown
+|faint|p1a: Iron Crown
+|-end|p1a: Iron Crown|Quark Drive|[silent]
+|
+|upkeep
+|
+|t:|1716842381
+|switch|p1a: Slowbro|Slowbro, L84, M|297/297
+|turn|10
+|
+|t:|1716842395
+|-terastallize|p1a: Slowbro|Fairy
+|move|p2a: Scrafty|Drain Punch|p1a: Slowbro
+|-resisted|p1a: Slowbro
+|-damage|p1a: Slowbro|219/297
+|-heal|p2a: Scrafty|220/246|[from] drain|[of] p1a: Slowbro
+|move|p1a: Slowbro|Future Sight|p2a: Scrafty
+|-start|p1a: Slowbro|move: Future Sight
+|
+|upkeep
+|turn|11
+|
+|t:|1716842413
+|move|p2a: Scrafty|Knock Off|p1a: Slowbro
+|-resisted|p1a: Slowbro
+|-damage|p1a: Slowbro|117/297
+|-enditem|p1a: Slowbro|Assault Vest|[from] move: Knock Off|[of] p2a: Scrafty
+|move|p1a: Slowbro|Scald|p2a: Scrafty
+|-damage|p2a: Scrafty|145/246
+|
+|upkeep
+|turn|12
+|j| MDILL97
+|inactive|Delta 2777 has 90 seconds left.
+|
+|t:|1716842469
+|switch|p2a: Milotic|Milotic, L83, F|250/293
+|move|p1a: Slowbro|Body Press|p2a: Milotic
+|-damage|p2a: Milotic|183/293
+|
+|-end|p2a: Milotic|move: Future Sight
+|-damage|p2a: Milotic|81/293
+|-heal|p2a: Milotic|99/293|[from] item: Leftovers
+|upkeep
+|turn|13
+|j| Teres bahji
+|
+|t:|1716842480
+|switch|p1a: Smeargle|Smeargle, L93, M|253/253
+|move|p2a: Milotic|Recover|p2a: Milotic
+|-heal|p2a: Milotic|246/293
+|
+|-heal|p2a: Milotic|264/293|[from] item: Leftovers
+|upkeep
+|turn|14
+|c| Teres bahji|money on delta
+|
+|t:|1716842496
+|move|p1a: Smeargle|Stealth Rock|p2a: Milotic
+|-sidestart|p2: Delta 2777|move: Stealth Rock
+|move|p2a: Milotic|Scald|p1a: Smeargle
+|-damage|p1a: Smeargle|130/253
+|-status|p1a: Smeargle|brn
+|
+|-heal|p2a: Milotic|282/293|[from] item: Leftovers
+|-damage|p1a: Smeargle|115/253 brn|[from] brn
+|upkeep
+|turn|15
+|
+|t:|1716842505
+|move|p1a: Smeargle|Ceaseless Edge|p2a: Milotic
+|-damage|p2a: Milotic|270/293
+|-sidestart|p2: Delta 2777|Spikes
+|move|p2a: Milotic|Scald|p1a: Smeargle
+|-damage|p1a: Smeargle|0 fnt
+|faint|p1a: Smeargle
+|
+|-heal|p2a: Milotic|288/293|[from] item: Leftovers
+|upkeep
+|
+|t:|1716842510
+|switch|p1a: Gurdurr|Gurdurr, L85, F|283/283
+|turn|16
+|inactive|Delta 2777 has 60 seconds left.
+|
+|t:|1716842541
+|switch|p2a: Scrafty|Scrafty, L84, F, tera:Poison|145/246
+|-damage|p2a: Scrafty|115/246|[from] Stealth Rock
+|-damage|p2a: Scrafty|85/246|[from] Spikes
+|move|p1a: Gurdurr|Knock Off|p2a: Scrafty
+|-damage|p2a: Scrafty|41/246
+|
+|upkeep
+|turn|17
+|inactive|Delta 2777 has 60 seconds left.
+|
+|t:|1716842560
+|switch|p1a: Dodrio|Dodrio, L86, F|243/243
+|move|p2a: Scrafty|Rest|p2a: Scrafty
+|-status|p2a: Scrafty|slp|[from] move: Rest
+|-heal|p2a: Scrafty|246/246 slp|[silent]
+|
+|upkeep
+|turn|18
+|j| PokeChess
+|inactive|Delta 2777 has 60 seconds left.
+|inactive|Delta 2777 has 30 seconds left.
+|inactive|Delta 2777 has 20 seconds left.
+|
+|t:|1716842612
+|switch|p2a: Arcanine|Arcanine-Hisui, L82, M|290/290
+|move|p1a: Dodrio|Swords Dance|p1a: Dodrio
+|-boost|p1a: Dodrio|atk|2
+|
+|upkeep
+|turn|19
+|inactive|Delta 2777 has 30 seconds left this turn.
+|inactive|Delta 2777 has 20 seconds left.
+|inactive|Delta 2777 has 15 seconds left.
+|inactive|Delta 2777 has 10 seconds left.
+|
+|t:|1716842632
+|move|p1a: Dodrio|Knock Off|p2a: Arcanine
+|-damage|p2a: Arcanine|114/290
+|-enditem|p2a: Arcanine|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Dodrio
+|move|p2a: Arcanine|Flare Blitz|p1a: Dodrio
+|-damage|p1a: Dodrio|90/243
+|
+|upkeep
+|turn|20
+|inactive|Delta 2777 has 20 seconds left this turn.
+|
+|t:|1716842636
+|move|p1a: Dodrio|Knock Off|p2a: Arcanine
+|-damage|p2a: Arcanine|0 fnt
+|faint|p2a: Arcanine
+|
+|upkeep
+|inactive|Delta 2777 has 25 seconds left this turn.
+|inactive|Delta 2777 has 20 seconds left.
+|
+|t:|1716842646
+|switch|p2a: Malamar|Malamar, L82, M|275/275
+|-damage|p2a: Malamar|241/275|[from] Stealth Rock
+|-damage|p2a: Malamar|207/275|[from] Spikes
+|turn|21
+|inactive|Delta 2777 has 30 seconds left this turn.
+|
+|t:|1716842655
+|move|p1a: Dodrio|Brave Bird|p2a: Malamar
+|-damage|p2a: Malamar|0 fnt
+|faint|p2a: Malamar
+|-damage|p1a: Dodrio|22/243|[from] Recoil
+|
+|upkeep
+|inactive|Delta 2777 has 30 seconds left.
+|inactive|Delta 2777 has 20 seconds left.
+|
+|t:|1716842673
+|switch|p2a: Milotic|Milotic, L83, F|288/293
+|-damage|p2a: Milotic|252/293|[from] Stealth Rock
+|-damage|p2a: Milotic|216/293|[from] Spikes
+|turn|22
+|inactive|Delta 2777 has 30 seconds left this turn.
+|
+|t:|1716842683
+|switch|p2a: Scrafty|Scrafty, L84, F, tera:Poison|246/246 slp
+|-damage|p2a: Scrafty|216/246 slp|[from] Stealth Rock
+|-damage|p2a: Scrafty|186/246 slp|[from] Spikes
+|move|p1a: Dodrio|Brave Bird|p2a: Scrafty
+|-damage|p2a: Scrafty|0 fnt
+|faint|p2a: Scrafty
+|-damage|p1a: Dodrio|0 fnt|[from] Recoil
+|faint|p1a: Dodrio
+|
+|upkeep
+|
+|t:|1716842698
+|switch|p1a: Gurdurr|Gurdurr, L85, F|283/283
+|switch|p2a: Milotic|Milotic, L83, F|216/293
+|-damage|p2a: Milotic|180/293|[from] Stealth Rock
+|-damage|p2a: Milotic|144/293|[from] Spikes
+|turn|23
+|
+|t:|1716842701
+|move|p2a: Milotic|Recover|p2a: Milotic
+|-heal|p2a: Milotic|291/293
+|move|p1a: Gurdurr|Knock Off|p2a: Milotic
+|-damage|p2a: Milotic|211/293
+|-enditem|p2a: Milotic|Leftovers|[from] move: Knock Off|[of] p1a: Gurdurr
+|
+|upkeep
+|turn|24
+|
+|t:|1716842724
+|move|p2a: Milotic|Ice Beam|p1a: Gurdurr
+|-damage|p1a: Gurdurr|183/283
+|-status|p1a: Gurdurr|frz
+|cant|p1a: Gurdurr|frz
+|
+|upkeep
+|turn|25
+|c| PokeChess|...
+|j| chiefbeef1234
+|
+|t:|1716842753
+|move|p2a: Milotic|Ice Beam|p1a: Gurdurr
+|-damage|p1a: Gurdurr|94/283 frz
+|cant|p1a: Gurdurr|frz
+|
+|upkeep
+|turn|26
+|c|☆MichaelderBeste2|I 1v1d this
+|c|☆MichaelderBeste2|:(
+|inactive|MichaelderBeste2 has 120 seconds left.
+|l| chiefbeef1234
+|c|☆Delta 2777|sry
+|c|☆MichaelderBeste2|you could have just went into goodra against dodrio too
+|c|☆MichaelderBeste2|but yea
+|c|☆MichaelderBeste2|it is what it is
+|inactive|MichaelderBeste2 has 90 seconds left.
+|
+|t:|1716842799
+|switch|p1a: Slowbro|Slowbro, L84, M, tera:Fairy|216/297
+|move|p2a: Milotic|Scald|p1a: Slowbro
+|-damage|p1a: Slowbro|116/297
+|
+|upkeep
+|turn|27
+|c|☆Delta 2777|+2 drill run kills
+|inactive|Delta 2777 has 60 seconds left.
+|c|☆MichaelderBeste2|you saw
+|inactive|MichaelderBeste2 has 90 seconds left.
+|c|☆MichaelderBeste2|that i dont have drill run
+|c|☆MichaelderBeste2|...
+|c| MDILL97|Based
+|
+|t:|1716842822
+|move|p2a: Milotic|Scald|p1a: Slowbro
+|-damage|p1a: Slowbro|23/297
+|move|p1a: Slowbro|Future Sight|p2a: Milotic
+|-start|p1a: Slowbro|move: Future Sight
+|
+|upkeep
+|turn|28
+|c| Teres bahji|lel
+|inactive|Delta 2777 has 60 seconds left.
+|c|☆Delta 2777|whatever man I guess you're just better
+|
+|t:|1716842845
+|switch|p1a: Gurdurr|Gurdurr, L85, F|94/283 frz
+|move|p2a: Milotic|Scald|p1a: Gurdurr
+|-damage|p1a: Gurdurr|0 fnt
+|faint|p1a: Gurdurr
+|
+|upkeep
+|
+|t:|1716842849
+|switch|p1a: Entei|Entei, L78|307/307
+|turn|29
+|c| Teres bahji|well
+|inactive|Delta 2777 has 60 seconds left.
+|c| Teres bahji|u are a good too delta
+|c| Teres bahji|lol
+|
+|t:|1716842860
+|move|p1a: Entei|Sacred Fire|p2a: Milotic
+|-resisted|p2a: Milotic
+|-damage|p2a: Milotic|128/293
+|-status|p2a: Milotic|brn
+|move|p2a: Milotic|Recover|p2a: Milotic
+|-heal|p2a: Milotic|275/293 brn
+|
+|-end|p2a: Milotic|move: Future Sight
+|-damage|p2a: Milotic|175/293 brn
+|-damage|p2a: Milotic|157/293 brn|[from] brn
+|upkeep
+|turn|30
+|
+|t:|1716842867
+|switch|p1a: Slowbro|Slowbro, L84, M, tera:Fairy|122/297
+|move|p2a: Milotic|Recover|p2a: Milotic
+|-heal|p2a: Milotic|293/293 brn
+|
+|-damage|p2a: Milotic|275/293 brn|[from] brn
+|upkeep
+|turn|31
+|c|☆Delta 2777|(I was under time pressure)
+|
+|t:|1716842877
+|move|p2a: Milotic|Scald|p1a: Slowbro
+|-damage|p1a: Slowbro|37/297
+|move|p1a: Slowbro|Body Press|p2a: Milotic
+|-damage|p2a: Milotic|206/293 brn
+|
+|-damage|p2a: Milotic|188/293 brn|[from] brn
+|upkeep
+|turn|32
+|
+|t:|1716842884
+|move|p2a: Milotic|Scald|p1a: Slowbro
+|-damage|p1a: Slowbro|0 fnt
+|faint|p1a: Slowbro
+|
+|-damage|p2a: Milotic|170/293 brn|[from] brn
+|upkeep
+|
+|t:|1716842886
+|switch|p1a: Entei|Entei, L78|307/307
+|turn|33
+|
+|t:|1716842890
+|move|p1a: Entei|Sacred Fire|p2a: Milotic
+|-resisted|p2a: Milotic
+|-damage|p2a: Milotic|77/293 brn
+|move|p2a: Milotic|Scald|p1a: Entei
+|-supereffective|p1a: Entei
+|-damage|p1a: Entei|101/307
+|
+|-damage|p2a: Milotic|59/293 brn|[from] brn
+|upkeep
+|turn|34
+|
+|t:|1716842894
+|move|p1a: Entei|Sacred Fire|p2a: Milotic
+|-resisted|p2a: Milotic
+|-damage|p2a: Milotic|0 fnt
+|faint|p2a: Milotic
+|
+|upkeep
+|c| Teres bahji|lel
+|
+|t:|1716842897
+|switch|p2a: Goodra|Goodra-Hisui, L82, M|265/265
+|-damage|p2a: Goodra|249/265|[from] Stealth Rock
+|-damage|p2a: Goodra|216/265|[from] Spikes
+|turn|35
+|c| MDILL97|Interesting
+|
+|t:|1716842900
+|move|p1a: Entei|Sacred Fire|p2a: Goodra
+|-damage|p2a: Goodra|78/265
+|-status|p2a: Goodra|brn
+|move|p2a: Goodra|Draco Meteor|p1a: Entei
+|-damage|p1a: Entei|0 fnt
+|-unboost|p2a: Goodra|spa|2
+|faint|p1a: Entei
+|
+|win|Delta 2777
+|raw|MichaelderBeste2's rating: 2554 &rarr; <strong>2529</strong><br />(-25 for losing)
+|raw|Delta 2777's rating: 2464 &rarr; <strong>2489</strong><br />(+25 for winning)
+|c|☆MichaelderBeste2|gg
+|c|☆Delta 2777|gg
+|c|☆MichaelderBeste2|what was your last
+|c|☆Delta 2777|uhh
+|c|☆Delta 2777|passimian
+|l|☆Delta 2777
+|player|p2|
+|c|☆MichaelderBeste2|bet
+|c|☆MichaelderBeste2|ty
+|l|☆MichaelderBeste2
+|player|p1|
+|l| MDILL97
+|l| PokeChess

@@ -1,0 +1,329 @@
+|badge|p1|gold|gen9randombattle|3-3
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-3
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆MichaelderBeste2
+|j|☆bobbybs
+|t:|1729819237
+|gametype|singles
+|player|p1|MichaelderBeste2|#scl4islanders2|2563
+|player|p2|bobbybs|170|2523
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1729819237
+|start
+|switch|p1a: Dudunsparce|Dudunsparce, L83, M|343/343
+|switch|p2a: Tyranitar|Tyranitar, L79, F|288/288
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Tyranitar
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by MichaelderBeste2)
+|
+|t:|1729819315
+|switch|p1a: Klawf|Klawf, L90, M|272/272
+|move|p2a: Tyranitar|Stone Edge|p1a: Klawf
+|-damage|p1a: Klawf|182/272
+|
+|-weather|Sandstorm|[upkeep]
+|upkeep
+|turn|2
+|inactive|bobbybs has 120 seconds left.
+|inactive|bobbybs has 90 seconds left.
+|
+|t:|1729819402
+|switch|p2a: Heatran|Heatran, L79, M|273/273
+|-item|p2a: Heatran|Air Balloon
+|move|p1a: Klawf|Stealth Rock|p2a: Heatran
+|-sidestart|p2: bobbybs|move: Stealth Rock
+|
+|-weather|Sandstorm|[upkeep]
+|upkeep
+|turn|3
+|inactive|bobbybs has 60 seconds left.
+|
+|t:|1729819422
+|move|p1a: Klawf|Crabhammer|p2a: Heatran
+|-supereffective|p2a: Heatran
+|-crit|p2a: Heatran
+|-damage|p2a: Heatran|0 fnt
+|-enditem|p2a: Heatran|Air Balloon
+|faint|p2a: Heatran
+|-damage|p1a: Klawf|155/272|[from] item: Life Orb
+|
+|-weather|Sandstorm|[upkeep]
+|upkeep
+|inactive|bobbybs has 60 seconds left.
+|inactive|bobbybs has 30 seconds left.
+|inactive|bobbybs has 20 seconds left.
+|inactive|bobbybs has 15 seconds left.
+|
+|t:|1729819477
+|switch|p2a: Grafaiai|Grafaiai, L86, M|249/249
+|-damage|p2a: Grafaiai|218/249|[from] Stealth Rock
+|turn|4
+|inactive|bobbybs has 25 seconds left this turn.
+|inactive|bobbybs has 20 seconds left.
+|inactive|bobbybs has 15 seconds left.
+|j| PokeChess
+|inactive|bobbybs has 10 seconds left.
+|
+|t:|1729819493
+|switch|p1a: Toxapex|Toxapex, L82, M|216/216
+|move|p2a: Grafaiai|Knock Off|p1a: Toxapex
+|-damage|p1a: Toxapex|158/216
+|-enditem|p1a: Toxapex|Leftovers|[from] move: Knock Off|[of] p2a: Grafaiai
+|-damage|p2a: Grafaiai|194/249|[from] item: Life Orb
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p2a: Grafaiai|179/249|[from] Sandstorm
+|-damage|p1a: Toxapex|145/216|[from] Sandstorm
+|upkeep
+|turn|5
+|inactive|bobbybs has 20 seconds left this turn.
+|inactive|bobbybs has 15 seconds left.
+|inactive|bobbybs has 10 seconds left.
+|
+|t:|1729819506
+|switch|p2a: Palafin|Palafin, L77, M|281/281
+|-damage|p2a: Palafin|246/281|[from] Stealth Rock
+|move|p1a: Toxapex|Liquidation|p2a: Palafin
+|-resisted|p2a: Palafin
+|-damage|p2a: Palafin|208/281
+|-unboost|p2a: Palafin|def|1
+|
+|-weather|none
+|-heal|p2a: Palafin|225/281|[from] item: Leftovers
+|upkeep
+|turn|6
+|inactive|bobbybs has 20 seconds left this turn.
+|inactive|bobbybs has 15 seconds left.
+|inactive|bobbybs has 10 seconds left.
+|inactive|bobbybs has 5 seconds left.
+|
+|t:|1729819522
+|detailschange|p2a: Palafin|Palafin-Hero, L77, M
+|switch|p2a: Flapple|Flapple, L88, M|266/266
+|-damage|p2a: Flapple|233/266|[from] Stealth Rock
+|move|p1a: Toxapex|Liquidation|p2a: Flapple
+|-resisted|p2a: Flapple
+|-damage|p2a: Flapple|218/266
+|
+|upkeep
+|turn|7
+|inactive|bobbybs has 15 seconds left this turn.
+|
+|t:|1729819527
+|switch|p1a: Glastrier|Glastrier, L86|312/312
+|move|p2a: Flapple|Dragon Dance|p2a: Flapple
+|-boost|p2a: Flapple|atk|1
+|-boost|p2a: Flapple|spe|1
+|
+|upkeep
+|turn|8
+|inactive|bobbybs has 25 seconds left this turn.
+|inactive|bobbybs has 20 seconds left.
+|inactive|bobbybs has 15 seconds left.
+|
+|t:|1729819540
+|move|p2a: Flapple|Outrage|p1a: Glastrier
+|-damage|p1a: Glastrier|83/312
+|move|p1a: Glastrier|Icicle Crash|p2a: Flapple
+|-supereffective|p2a: Flapple
+|-damage|p2a: Flapple|0 fnt
+|faint|p2a: Flapple
+|-ability|p1a: Glastrier|Chilling Neigh|boost
+|-boost|p1a: Glastrier|atk|1
+|
+|upkeep
+|inactive|bobbybs has 20 seconds left this turn.
+|inactive|bobbybs has 15 seconds left.
+|inactive|bobbybs has 10 seconds left.
+|
+|t:|1729819552
+|switch|p2a: Palafin|Palafin-Hero, L77, M|225/281
+|-damage|p2a: Palafin|190/281|[from] Stealth Rock
+|-activate|p2a: Palafin|ability: Zero to Hero
+|turn|9
+|inactive|bobbybs has 20 seconds left this turn.
+|inactive|bobbybs has 15 seconds left.
+|
+|t:|1729819558
+|switch|p1a: Toxapex|Toxapex, L82, M|216/216
+|move|p2a: Palafin|Close Combat|p1a: Toxapex
+|-resisted|p1a: Toxapex
+|-damage|p1a: Toxapex|180/216
+|-unboost|p2a: Palafin|def|1
+|-unboost|p2a: Palafin|spd|1
+|
+|-heal|p2a: Palafin|207/281|[from] item: Leftovers
+|upkeep
+|turn|10
+|inactive|bobbybs has 25 seconds left this turn.
+|
+|t:|1729819562
+|switch|p2a: Lapras|Lapras, L87, M|367/367
+|-damage|p2a: Lapras|276/367|[from] Stealth Rock
+|move|p1a: Toxapex|Toxic|p2a: Lapras
+|-status|p2a: Lapras|tox
+|
+|-damage|p2a: Lapras|254/367 tox|[from] psn
+|upkeep
+|turn|11
+|inactive|bobbybs has 30 seconds left.
+|
+|t:|1729819568
+|switch|p1a: Dudunsparce|Dudunsparce, L83, M|343/343
+|move|p2a: Lapras|Freeze-Dry|p1a: Dudunsparce
+|-damage|p1a: Dudunsparce|225/343
+|
+|-heal|p1a: Dudunsparce|246/343|[from] item: Leftovers
+|-damage|p2a: Lapras|210/367 tox|[from] psn
+|upkeep
+|turn|12
+|inactive|bobbybs has 30 seconds left.
+|
+|t:|1729819586
+|switch|p2a: Tyranitar|Tyranitar, L79, F|288/288
+|-damage|p2a: Tyranitar|252/288|[from] Stealth Rock
+|-weather|Sandstorm|[from] ability: Sand Stream|[of] p2a: Tyranitar
+|move|p1a: Dudunsparce|Calm Mind|p1a: Dudunsparce
+|-boost|p1a: Dudunsparce|spa|1
+|-boost|p1a: Dudunsparce|spd|1
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Dudunsparce|225/343|[from] Sandstorm
+|-heal|p1a: Dudunsparce|246/343|[from] item: Leftovers
+|upkeep
+|turn|13
+|inactive|bobbybs has 30 seconds left.
+|
+|t:|1729819596
+|move|p2a: Tyranitar|Knock Off|p1a: Dudunsparce
+|-damage|p1a: Dudunsparce|120/343
+|-ability|p1a: Dudunsparce|Rattled|boost
+|-boost|p1a: Dudunsparce|spe|1
+|-enditem|p1a: Dudunsparce|Leftovers|[from] move: Knock Off|[of] p2a: Tyranitar
+|move|p1a: Dudunsparce|Roost|p1a: Dudunsparce
+|-heal|p1a: Dudunsparce|292/343
+|-singleturn|p1a: Dudunsparce|move: Roost
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Dudunsparce|271/343|[from] Sandstorm
+|upkeep
+|turn|14
+|j| Ichhh Gu
+|
+|t:|1729819599
+|move|p1a: Dudunsparce|Earth Power|p2a: Tyranitar
+|-supereffective|p2a: Tyranitar
+|-damage|p2a: Tyranitar|178/288
+|-unboost|p2a: Tyranitar|spd|1
+|move|p2a: Tyranitar|Stone Edge|p1a: Dudunsparce
+|-damage|p1a: Dudunsparce|145/343
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Dudunsparce|124/343|[from] Sandstorm
+|upkeep
+|turn|15
+|inactive|bobbybs has 30 seconds left.
+|
+|t:|1729819622
+|move|p1a: Dudunsparce|Roost|p1a: Dudunsparce
+|-heal|p1a: Dudunsparce|296/343
+|-singleturn|p1a: Dudunsparce|move: Roost
+|move|p2a: Tyranitar|Stone Edge|p1a: Dudunsparce
+|-damage|p1a: Dudunsparce|155/343
+|
+|-weather|Sandstorm|[upkeep]
+|-damage|p1a: Dudunsparce|134/343|[from] Sandstorm
+|upkeep
+|turn|16
+|inactive|bobbybs has 30 seconds left.
+|
+|t:|1729819636
+|move|p1a: Dudunsparce|Roost|p1a: Dudunsparce
+|-heal|p1a: Dudunsparce|306/343
+|-singleturn|p1a: Dudunsparce|move: Roost
+|move|p2a: Tyranitar|Stone Edge|p1a: Dudunsparce|[miss]
+|-miss|p2a: Tyranitar|p1a: Dudunsparce
+|
+|-weather|none
+|upkeep
+|turn|17
+|
+|t:|1729819642
+|move|p1a: Dudunsparce|Earth Power|p2a: Tyranitar
+|-supereffective|p2a: Tyranitar
+|-damage|p2a: Tyranitar|18/288
+|move|p2a: Tyranitar|Stone Edge|p1a: Dudunsparce|[miss]
+|-miss|p2a: Tyranitar|p1a: Dudunsparce
+|
+|upkeep
+|turn|18
+|
+|t:|1729819646
+|move|p1a: Dudunsparce|Boomburst|p2a: Tyranitar
+|-resisted|p2a: Tyranitar
+|-damage|p2a: Tyranitar|0 fnt
+|faint|p2a: Tyranitar
+|
+|upkeep
+|
+|t:|1729819659
+|switch|p2a: Grafaiai|Grafaiai, L86, M|179/249
+|-damage|p2a: Grafaiai|148/249|[from] Stealth Rock
+|turn|19
+|
+|t:|1729819665
+|move|p2a: Grafaiai|Low Kick|p1a: Dudunsparce
+|-supereffective|p1a: Dudunsparce
+|-damage|p1a: Dudunsparce|184/343
+|-status|p1a: Dudunsparce|psn|[from] ability: Poison Touch|[of] p2a: Grafaiai
+|-damage|p2a: Grafaiai|124/249|[from] item: Life Orb
+|move|p1a: Dudunsparce|Boomburst|p2a: Grafaiai
+|-damage|p2a: Grafaiai|0 fnt
+|faint|p2a: Grafaiai
+|
+|-damage|p1a: Dudunsparce|142/343 psn|[from] psn
+|upkeep
+|j| inoion
+|
+|t:|1729819668
+|switch|p2a: Palafin|Palafin-Hero, L77, M|207/281
+|-damage|p2a: Palafin|172/281|[from] Stealth Rock
+|turn|20
+|
+|t:|1729819679
+|move|p2a: Palafin|Jet Punch|p1a: Dudunsparce
+|-damage|p1a: Dudunsparce|55/343 psn
+|move|p1a: Dudunsparce|Boomburst|p2a: Palafin
+|-damage|p2a: Palafin|0 fnt
+|faint|p2a: Palafin
+|
+|-damage|p1a: Dudunsparce|13/343 psn|[from] psn
+|upkeep
+|
+|t:|1729819682
+|switch|p2a: Lapras|Lapras, L87, M|210/367 tox
+|-damage|p2a: Lapras|119/367 tox|[from] Stealth Rock
+|turn|21
+|
+|t:|1729819686
+|move|p1a: Dudunsparce|Boomburst|p2a: Lapras
+|-damage|p2a: Lapras|0 fnt
+|faint|p2a: Lapras
+|
+|win|MichaelderBeste2
+|raw|MichaelderBeste2's rating: 2563 &rarr; <strong>2581</strong><br />(+18 for winning)
+|raw|bobbybs's rating: 2523 &rarr; <strong>2505</strong><br />(-18 for losing)
+|l|☆MichaelderBeste2
+|player|p1|
+|l| Ichhh Gu
+|l| inoion

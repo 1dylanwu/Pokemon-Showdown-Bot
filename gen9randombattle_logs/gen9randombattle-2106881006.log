@@ -1,0 +1,418 @@
+|badge|p1|silver|gen9randombattle|30-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Boris Huang - YT
+|j|☆MichaelderBeste2
+|t:|1713519957
+|gametype|singles
+|player|p1|Boris Huang - YT|#rbtt6teampalkiaf|2502
+|player|p2|MichaelderBeste2|#rbtt7teamdarkrai|2515
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1713519958
+|start
+|switch|p1a: Scizor|Scizor, L79, F|240/240
+|switch|p2a: Kyurem|Kyurem-White, L74|307/307
+|-ability|p2a: Kyurem|Turboblaze
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Boris Huang - YT)
+|c|☆MichaelderBeste2|in
+|c|☆Boris Huang - YT|in
+|c|☆MichaelderBeste2|ha
+|c|☆MichaelderBeste2|sniped
+|c|☆MichaelderBeste2|hf
+|c|☆Boris Huang - YT|du2
+|inactive|Boris Huang - YT has 120 seconds left.
+|inactive|MichaelderBeste2 has 120 seconds left.
+|
+|t:|1713519993
+|switch|p1a: Sylveon|Sylveon, L84, M|297/297
+|move|p2a: Kyurem|Fusion Flare|p1a: Sylveon
+|-damage|p1a: Sylveon|236/297
+|
+|-heal|p1a: Sylveon|254/297|[from] item: Leftovers
+|upkeep
+|turn|2
+|
+|t:|1713520000
+|switch|p2a: Wigglytuff|Wigglytuff, L96, M|424/424
+|move|p1a: Sylveon|Hyper Voice|p2a: Wigglytuff
+|-damage|p2a: Wigglytuff|273/424
+|
+|-heal|p1a: Sylveon|272/297|[from] item: Leftovers
+|-heal|p2a: Wigglytuff|299/424|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1713520011
+|move|p1a: Sylveon|Calm Mind|p1a: Sylveon
+|-boost|p1a: Sylveon|spa|1
+|-boost|p1a: Sylveon|spd|1
+|move|p2a: Wigglytuff|Thunder Wave|p1a: Sylveon
+|-status|p1a: Sylveon|par
+|
+|-heal|p2a: Wigglytuff|325/424|[from] item: Leftovers
+|-heal|p1a: Sylveon|290/297 par|[from] item: Leftovers
+|upkeep
+|turn|4
+|
+|t:|1713520013
+|move|p2a: Wigglytuff|Knock Off|p1a: Sylveon
+|-resisted|p1a: Sylveon
+|-damage|p1a: Sylveon|244/297 par
+|-enditem|p1a: Sylveon|Leftovers|[from] move: Knock Off|[of] p2a: Wigglytuff
+|move|p1a: Sylveon|Hyper Voice|p2a: Wigglytuff
+|-damage|p2a: Wigglytuff|87/424
+|
+|-heal|p2a: Wigglytuff|113/424|[from] item: Leftovers
+|upkeep
+|turn|5
+|
+|t:|1713520018
+|move|p2a: Wigglytuff|Dazzling Gleam|p1a: Sylveon
+|-damage|p1a: Sylveon|196/297 par
+|cant|p1a: Sylveon|par
+|
+|-heal|p2a: Wigglytuff|139/424|[from] item: Leftovers
+|upkeep
+|turn|6
+|
+|t:|1713520022
+|switch|p2a: Ambipom|Ambipom, L84, M|263/263
+|move|p1a: Sylveon|Wish|p1a: Sylveon
+|
+|upkeep
+|turn|7
+|
+|t:|1713520043
+|move|p1a: Sylveon|Protect|p1a: Sylveon
+|-singleturn|p1a: Sylveon|Protect
+|move|p2a: Ambipom|Double-Edge|p1a: Sylveon
+|-activate|p1a: Sylveon|move: Protect
+|
+|-heal|p1a: Sylveon|297/297 par|[from] move: Wish|[wisher] Sylveon
+|upkeep
+|turn|8
+|inactive|Boris Huang - YT has 120 seconds left.
+|inactive|Boris Huang - YT has 90 seconds left.
+|
+|t:|1713520107
+|switch|p1a: Scizor|Scizor, L79, F|240/240
+|move|p2a: Ambipom|Double-Edge|p1a: Scizor
+|-resisted|p1a: Scizor
+|-damage|p1a: Scizor|164/240
+|-damage|p2a: Ambipom|238/263|[from] Recoil
+|
+|upkeep
+|turn|9
+|
+|t:|1713520120
+|switch|p2a: Eternatus|Eternatus, L69|308/308
+|-ability|p2a: Eternatus|Pressure
+|move|p1a: Scizor|Close Combat|p2a: Eternatus
+|-resisted|p2a: Eternatus
+|-damage|p2a: Eternatus|234/308
+|-unboost|p1a: Scizor|def|1
+|-unboost|p1a: Scizor|spd|1
+|-damage|p1a: Scizor|140/240|[from] item: Life Orb
+|
+|-heal|p2a: Eternatus|253/308|[from] item: Leftovers
+|upkeep
+|turn|10
+|
+|t:|1713520148
+|switch|p1a: Toxicroak|Toxicroak, L84, M|277/277
+|move|p2a: Eternatus|Sludge Bomb|p1a: Toxicroak
+|-resisted|p1a: Toxicroak
+|-damage|p1a: Toxicroak|223/277
+|
+|-heal|p2a: Eternatus|272/308|[from] item: Leftovers
+|upkeep
+|turn|11
+|
+|t:|1713520160
+|move|p2a: Eternatus|Dynamax Cannon|p1a: Toxicroak
+|-damage|p1a: Toxicroak|102/277
+|move|p1a: Toxicroak|Earthquake|p2a: Eternatus
+|-supereffective|p2a: Eternatus
+|-damage|p2a: Eternatus|64/308
+|-damage|p1a: Toxicroak|75/277|[from] item: Life Orb
+|
+|-heal|p2a: Eternatus|83/308|[from] item: Leftovers
+|upkeep
+|turn|12
+|
+|t:|1713520167
+|move|p2a: Eternatus|Dynamax Cannon|p1a: Toxicroak
+|-damage|p1a: Toxicroak|0 fnt
+|faint|p1a: Toxicroak
+|
+|-heal|p2a: Eternatus|102/308|[from] item: Leftovers
+|upkeep
+|
+|t:|1713520186
+|switch|p1a: Iron Boulder|Iron Boulder, L77|265/265
+|-enditem|p1a: Iron Boulder|Booster Energy
+|-activate|p1a: Iron Boulder|ability: Quark Drive|[fromitem]
+|-start|p1a: Iron Boulder|quarkdrivespe
+|turn|13
+|
+|t:|1713520194
+|move|p1a: Iron Boulder|Swords Dance|p1a: Iron Boulder
+|-boost|p1a: Iron Boulder|atk|2
+|move|p2a: Eternatus|Dynamax Cannon|p1a: Iron Boulder
+|-damage|p1a: Iron Boulder|178/265
+|
+|-heal|p2a: Eternatus|121/308|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1713520220
+|switch|p2a: Wigglytuff|Wigglytuff, L96, M|139/424
+|move|p1a: Iron Boulder|Swords Dance|p1a: Iron Boulder
+|-boost|p1a: Iron Boulder|atk|2
+|
+|-heal|p2a: Wigglytuff|165/424|[from] item: Leftovers
+|upkeep
+|turn|15
+|inactive|Boris Huang - YT has 60 seconds left.
+|
+|t:|1713520251
+|move|p1a: Iron Boulder|Mighty Cleave|p2a: Wigglytuff
+|-damage|p2a: Wigglytuff|0 fnt
+|faint|p2a: Wigglytuff
+|
+|upkeep
+|
+|t:|1713520253
+|switch|p2a: Regieleki|Regieleki, L78|253/253
+|turn|16
+|inactive|Boris Huang - YT has 60 seconds left.
+|
+|t:|1713520260
+|move|p2a: Regieleki|Volt Switch|p1a: Iron Boulder
+|-damage|p1a: Iron Boulder|84/265
+|
+|t:|1713520262
+|switch|p2a: Kyurem|Kyurem-White, L74|307/307|[from] Volt Switch
+|-ability|p2a: Kyurem|Turboblaze
+|move|p1a: Iron Boulder|Mighty Cleave|p2a: Kyurem
+|-supereffective|p2a: Kyurem
+|-damage|p2a: Kyurem|0 fnt
+|faint|p2a: Kyurem
+|
+|upkeep
+|
+|t:|1713520263
+|switch|p2a: Regieleki|Regieleki, L78|253/253
+|turn|17
+|inactive|Boris Huang - YT has 60 seconds left.
+|
+|t:|1713520296
+|move|p2a: Regieleki|Thunderbolt|p1a: Iron Boulder
+|-damage|p1a: Iron Boulder|0 fnt
+|faint|p1a: Iron Boulder
+|-end|p1a: Iron Boulder|Quark Drive|[silent]
+|
+|upkeep
+|inactive|Boris Huang - YT has 30 seconds left.
+|
+|t:|1713520329
+|switch|p1a: Hitmonlee|Hitmonlee, L84, M|221/221
+|turn|18
+|inactive|MichaelderBeste2 has 120 seconds left.
+|
+|t:|1713520364
+|-terastallize|p2a: Regieleki|Electric
+|move|p2a: Regieleki|Volt Switch|p1a: Hitmonlee
+|-damage|p1a: Hitmonlee|105/221
+|
+|t:|1713520367
+|switch|p2a: Eternatus|Eternatus, L69|121/308|[from] Volt Switch
+|-ability|p2a: Eternatus|Pressure
+|move|p1a: Hitmonlee|Close Combat|p2a: Eternatus
+|-resisted|p2a: Eternatus
+|-damage|p2a: Eternatus|30/308
+|-unboost|p1a: Hitmonlee|def|1
+|-unboost|p1a: Hitmonlee|spd|1
+|-enditem|p1a: Hitmonlee|White Herb
+|-clearnegativeboost|p1a: Hitmonlee|[silent]
+|
+|-heal|p2a: Eternatus|49/308|[from] item: Leftovers
+|upkeep
+|turn|19
+|j| KosmosShiftyleafs
+|
+|t:|1713520375
+|move|p1a: Hitmonlee|Knock Off|p2a: Eternatus
+|-damage|p2a: Eternatus|0 fnt
+|-enditem|p2a: Eternatus|Leftovers|[from] move: Knock Off|[of] p1a: Hitmonlee
+|faint|p2a: Eternatus
+|
+|upkeep
+|
+|t:|1713520376
+|switch|p2a: Ambipom|Ambipom, L84, M|238/263
+|turn|20
+|
+|t:|1713520400
+|move|p2a: Ambipom|Fake Out|p1a: Hitmonlee
+|-damage|p1a: Hitmonlee|0 fnt
+|faint|p1a: Hitmonlee
+|
+|upkeep
+|
+|t:|1713520409
+|switch|p1a: Scizor|Scizor, L79, F|140/240
+|turn|21
+|
+|t:|1713520414
+|switch|p2a: Lanturn|Lanturn, L89, F|367/367
+|move|p1a: Scizor|Close Combat|p2a: Lanturn
+|-damage|p2a: Lanturn|205/367
+|-unboost|p1a: Scizor|def|1
+|-unboost|p1a: Scizor|spd|1
+|-damage|p1a: Scizor|116/240|[from] item: Life Orb
+|
+|upkeep
+|turn|22
+|
+|t:|1713520430
+|move|p1a: Scizor|Bullet Punch|p2a: Lanturn
+|-resisted|p2a: Lanturn
+|-damage|p2a: Lanturn|176/367
+|-damage|p1a: Scizor|92/240|[from] item: Life Orb
+|move|p2a: Lanturn|Volt Switch|p1a: Scizor
+|-damage|p1a: Scizor|0 fnt
+|faint|p1a: Scizor
+|
+|t:|1713520433
+|switch|p2a: Ambipom|Ambipom, L84, M|238/263|[from] Volt Switch
+|
+|upkeep
+|inactive|Boris Huang - YT has 30 seconds left.
+|inactive|Boris Huang - YT has 20 seconds left.
+|
+|t:|1713520467
+|switch|p1a: Victreebel|Victreebel, L90, M|290/290
+|turn|23
+|inactive|Boris Huang - YT has 30 seconds left this turn.
+|
+|t:|1713520473
+|move|p2a: Ambipom|Fake Out|p1a: Victreebel
+|-damage|p1a: Victreebel|206/290
+|cant|p1a: Victreebel|flinch
+|
+|upkeep
+|turn|24
+|
+|t:|1713520484
+|switch|p2a: Lanturn|Lanturn, L89, F|176/367
+|move|p1a: Victreebel|Strength Sap|p2a: Lanturn
+|-unboost|p2a: Lanturn|atk|1
+|-heal|p1a: Victreebel|290/290
+|
+|upkeep
+|turn|25
+|inactive|Boris Huang - YT has 30 seconds left.
+|
+|t:|1713520503
+|move|p1a: Victreebel|Power Whip|p2a: Lanturn
+|-supereffective|p2a: Lanturn
+|-damage|p2a: Lanturn|0 fnt
+|faint|p2a: Lanturn
+|-damage|p1a: Victreebel|261/290|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1713520505
+|switch|p2a: Ambipom|Ambipom, L84, M|238/263
+|turn|26
+|
+|t:|1713520508
+|move|p2a: Ambipom|Fake Out|p1a: Victreebel
+|-damage|p1a: Victreebel|167/290
+|cant|p1a: Victreebel|flinch
+|
+|upkeep
+|turn|27
+|
+|t:|1713520513
+|move|p2a: Ambipom|Double-Edge|p1a: Victreebel
+|-damage|p1a: Victreebel|0 fnt
+|faint|p1a: Victreebel
+|-damage|p2a: Ambipom|183/263|[from] Recoil
+|
+|upkeep
+|
+|t:|1713520516
+|switch|p1a: Sylveon|Sylveon, L84, M|297/297 par
+|turn|28
+|inactive|Boris Huang - YT has 60 seconds left.
+|
+|t:|1713520526
+|-terastallize|p1a: Sylveon|Steel
+|move|p2a: Ambipom|Double-Edge|p1a: Sylveon
+|-resisted|p1a: Sylveon
+|-damage|p1a: Sylveon|200/297 par
+|-damage|p2a: Ambipom|151/263|[from] Recoil
+|move|p1a: Sylveon|Hyper Voice|p2a: Ambipom
+|-damage|p2a: Ambipom|0 fnt
+|faint|p2a: Ambipom
+|
+|upkeep
+|
+|t:|1713520530
+|switch|p2a: Regieleki|Regieleki, L78, tera:Electric|253/253
+|turn|29
+|
+|t:|1713520538
+|move|p2a: Regieleki|Thunderbolt|p1a: Sylveon
+|-damage|p1a: Sylveon|72/297 par
+|move|p1a: Sylveon|Wish|p1a: Sylveon
+|
+|upkeep
+|turn|30
+|
+|t:|1713520542
+|move|p1a: Sylveon|Protect|p1a: Sylveon
+|-singleturn|p1a: Sylveon|Protect
+|move|p2a: Regieleki|Thunderbolt|p1a: Sylveon
+|-activate|p1a: Sylveon|move: Protect
+|
+|-heal|p1a: Sylveon|220/297 par|[from] move: Wish|[wisher] Sylveon
+|upkeep
+|turn|31
+|
+|t:|1713520555
+|move|p2a: Regieleki|Thunderbolt|p1a: Sylveon
+|-damage|p1a: Sylveon|100/297 par
+|move|p1a: Sylveon|Wish|p1a: Sylveon
+|
+|upkeep
+|turn|32
+|
+|t:|1713520559
+|cant|p1a: Sylveon|par
+|move|p2a: Regieleki|Thunderbolt|p1a: Sylveon
+|-damage|p1a: Sylveon|0 fnt
+|faint|p1a: Sylveon
+|
+|win|MichaelderBeste2
+|raw|Boris Huang - YT's rating: 2502 &rarr; <strong>2483</strong><br />(-19 for losing)
+|raw|MichaelderBeste2's rating: 2515 &rarr; <strong>2534</strong><br />(+19 for winning)
+|c|☆MichaelderBeste2|gg
+|c|☆Boris Huang - YT|gg
+|l|☆Boris Huang - YT
+|player|p1|
+|l|☆MichaelderBeste2
+|player|p2|

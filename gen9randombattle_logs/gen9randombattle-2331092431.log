@@ -1,0 +1,299 @@
+|badge|p1|silver|gen9randombattle|30-4
+|html|<div class="broadcast-red"><strong>This battle is required to be public due to one or more player having a season medal.</strong><br />During the public phase, you can discuss the state of the ladder <a href="/seasondiscussion">in a special chatroom.</a></div>
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-4
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|☆Node
+|j|☆Star Wheel
+|t:|1743313409
+|gametype|singles
+|player|p1|Node|#agplviblackpink|2465
+|player|p2|Star Wheel|darach-caitlin|2539
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1743313409
+|start
+|switch|p1a: Overqwil|Overqwil, L82, F|274/274
+|switch|p2a: Lugia|Lugia, L73|275/275
+|-ability|p1a: Overqwil|Intimidate|boost
+|-unboost|p2a: Lugia|atk|1
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Star Wheel)
+|c|☆Node|!
+|c|☆Node|decay?
+|inactive|Star Wheel has 120 seconds left.
+|
+|t:|1743313457
+|-terastallize|p2a: Lugia|Ground
+|move|p2a: Lugia|Earth Power|p1a: Overqwil
+|-supereffective|p1a: Overqwil
+|-damage|p1a: Overqwil|92/274
+|move|p1a: Overqwil|Scale Shot|p2a: Lugia
+|-damage|p2a: Lugia|267/275
+|-damage|p2a: Lugia|251/275
+|-damage|p2a: Lugia|234/275
+|-damage|p2a: Lugia|218/275
+|-hitcount|p2a: Lugia|4
+|-unboost|p1a: Overqwil|def|1
+|-boost|p1a: Overqwil|spe|1
+|
+|upkeep
+|turn|2
+|
+|t:|1743313481
+|switch|p1a: Piloswine|Piloswine, L85, M|309/309
+|move|p2a: Lugia|Recover|p2a: Lugia
+|-heal|p2a: Lugia|275/275
+|
+|upkeep
+|turn|3
+|
+|t:|1743313496
+|switch|p2a: Gengar|Gengar, L81, M|230/230
+|move|p1a: Piloswine|Icicle Crash|p2a: Gengar
+|-damage|p2a: Gengar|107/230
+|
+|upkeep
+|turn|4
+|
+|t:|1743313505
+|switch|p1a: Ariados|Ariados, L95, F|287/287
+|move|p2a: Gengar|Focus Blast|p1a: Ariados|[miss]
+|-miss|p2a: Gengar|p1a: Ariados
+|
+|upkeep
+|turn|5
+|j| afrohasfaith
+|
+|t:|1743313520
+|move|p2a: Gengar|Shadow Ball|p1a: Ariados
+|-crit|p1a: Ariados
+|-damage|p1a: Ariados|92/287
+|-damage|p2a: Gengar|84/230|[from] item: Life Orb
+|move|p1a: Ariados|Sticky Web|p2a: Gengar
+|-sidestart|p2: Star Wheel|move: Sticky Web
+|
+|upkeep
+|turn|6
+|
+|t:|1743313528
+|move|p1a: Ariados|Sucker Punch|p2a: Gengar
+|-supereffective|p2a: Gengar
+|-damage|p2a: Gengar|0 fnt
+|faint|p2a: Gengar
+|
+|upkeep
+|
+|t:|1743313535
+|switch|p2a: Klefki|Klefki, L84, M|233/233
+|-activate|p2a: Klefki|move: Sticky Web
+|-unboost|p2a: Klefki|spe|1
+|turn|7
+|
+|t:|1743313553
+|switch|p1a: Piloswine|Piloswine, L85, M|309/309
+|move|p2a: Klefki|Spikes|p1a: Piloswine
+|-sidestart|p1: Node|Spikes
+|
+|upkeep
+|turn|8
+|j| d18l
+|
+|t:|1743313558
+|move|p2a: Klefki|Magnet Rise|p2a: Klefki
+|-start|p2a: Klefki|Magnet Rise
+|move|p1a: Piloswine|Icicle Crash|p2a: Klefki
+|-resisted|p2a: Klefki
+|-damage|p2a: Klefki|186/233
+|
+|-heal|p2a: Klefki|200/233|[from] item: Leftovers
+|upkeep
+|turn|9
+|
+|t:|1743313560
+|move|p2a: Klefki|Spikes|p1a: Piloswine
+|-sidestart|p1: Node|Spikes
+|move|p1a: Piloswine|Roar|p2a: Klefki
+|drag|p2a: Glaceon|Glaceon, L94, M|275/275
+|
+|upkeep
+|turn|10
+|l| d18l
+|c|☆Node|is that shiny
+|c|☆Node|I cant tell
+|
+|t:|1743313579
+|move|p2a: Glaceon|Freeze-Dry|p1a: Piloswine
+|-damage|p1a: Piloswine|263/309
+|move|p1a: Piloswine|Earthquake|p2a: Glaceon
+|-damage|p2a: Glaceon|188/275
+|
+|upkeep
+|turn|11
+|
+|t:|1743313584
+|move|p2a: Glaceon|Wish|p2a: Glaceon
+|move|p1a: Piloswine|Earthquake|p2a: Glaceon
+|-damage|p2a: Glaceon|95/275
+|
+|upkeep
+|turn|12
+|
+|t:|1743313593
+|move|p2a: Glaceon|Freeze-Dry|p1a: Piloswine
+|-damage|p1a: Piloswine|215/309
+|move|p1a: Piloswine|Roar|p2a: Glaceon
+|drag|p2a: Lugia|Lugia, L73, tera:Ground|275/275
+|
+|upkeep
+|turn|13
+|
+|t:|1743313599
+|switch|p2a: Klefki|Klefki, L84, M|200/233
+|-activate|p2a: Klefki|move: Sticky Web
+|-unboost|p2a: Klefki|spe|1
+|move|p1a: Piloswine|Icicle Crash|p2a: Klefki
+|-resisted|p2a: Klefki
+|-damage|p2a: Klefki|155/233
+|
+|-heal|p2a: Klefki|169/233|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1743313605
+|move|p2a: Klefki|Spikes|p1a: Piloswine
+|-sidestart|p1: Node|Spikes
+|move|p1a: Piloswine|Earthquake|p2a: Klefki
+|-supereffective|p2a: Klefki
+|-damage|p2a: Klefki|0 fnt
+|faint|p2a: Klefki
+|
+|upkeep
+|
+|t:|1743313618
+|switch|p2a: Espathra|Espathra, L80, M|283/283
+|-activate|p2a: Espathra|move: Sticky Web
+|-unboost|p2a: Espathra|spe|1
+|turn|15
+|
+|t:|1743313630
+|move|p2a: Espathra|Lumina Crash|p1a: Piloswine
+|-damage|p1a: Piloswine|110/309
+|-unboost|p1a: Piloswine|spd|2
+|move|p1a: Piloswine|Earthquake|p2a: Espathra
+|-damage|p2a: Espathra|114/283
+|
+|-ability|p2a: Espathra|Speed Boost|boost
+|-boost|p2a: Espathra|spe|1
+|upkeep
+|turn|16
+|
+|t:|1743313635
+|switch|p1a: Overqwil|Overqwil, L82, F|92/274
+|-damage|p1a: Overqwil|24/274|[from] Spikes
+|-ability|p1a: Overqwil|Intimidate|boost
+|-unboost|p2a: Espathra|atk|1
+|move|p2a: Espathra|Lumina Crash|p1a: Overqwil
+|-immune|p1a: Overqwil
+|
+|-ability|p2a: Espathra|Speed Boost|boost
+|-boost|p2a: Espathra|spe|1
+|upkeep
+|turn|17
+|
+|t:|1743313641
+|switch|p2a: Lugia|Lugia, L73, tera:Ground|275/275
+|move|p1a: Overqwil|Gunk Shot|p2a: Lugia|[miss]
+|-miss|p1a: Overqwil|p2a: Lugia
+|
+|upkeep
+|turn|18
+|
+|t:|1743313651
+|switch|p1a: Volbeat|Volbeat, L90, M|263/263
+|move|p2a: Lugia|Earth Power|p1a: Volbeat
+|-resisted|p1a: Volbeat
+|-damage|p1a: Volbeat|227/263
+|
+|upkeep
+|turn|19
+|
+|t:|1743313663
+|move|p1a: Volbeat|Encore|p2a: Lugia
+|-start|p2a: Lugia|Encore
+|move|p2a: Lugia|Earth Power|p1a: Volbeat
+|-resisted|p1a: Volbeat
+|-damage|p1a: Volbeat|196/263
+|
+|upkeep
+|turn|20
+|
+|t:|1743313671
+|move|p1a: Volbeat|Lunge|p2a: Lugia
+|-damage|p2a: Lugia|243/275
+|-unboost|p2a: Lugia|atk|1
+|move|p2a: Lugia|Earth Power|p1a: Volbeat
+|-resisted|p1a: Volbeat
+|-damage|p1a: Volbeat|164/263
+|
+|upkeep
+|turn|21
+|
+|t:|1743313676
+|switch|p2a: Glaceon|Glaceon, L94, M|95/275
+|move|p1a: Volbeat|Roost|p1a: Volbeat
+|-heal|p1a: Volbeat|263/263
+|-singleturn|p1a: Volbeat|move: Roost
+|
+|upkeep
+|turn|22
+|
+|t:|1743313684
+|move|p1a: Volbeat|Lunge|p2a: Glaceon
+|-damage|p2a: Glaceon|40/275
+|-unboost|p2a: Glaceon|atk|1
+|move|p2a: Glaceon|Wish|p2a: Glaceon
+|
+|upkeep
+|turn|23
+|
+|t:|1743313687
+|switch|p1a: Hitmontop|Hitmontop, L88, M|231/231
+|-damage|p1a: Hitmontop|174/231|[from] Spikes
+|move|p2a: Glaceon|Protect||[still]
+|-fail|p2a: Glaceon
+|
+|-heal|p2a: Glaceon|177/275|[from] move: Wish|[wisher] Glaceon
+|-heal|p1a: Hitmontop|188/231|[from] item: Leftovers
+|upkeep
+|turn|24
+|
+|t:|1743313700
+|-terastallize|p1a: Hitmontop|Ice
+|move|p2a: Glaceon|Freeze-Dry|p1a: Hitmontop
+|-resisted|p1a: Hitmontop
+|-damage|p1a: Hitmontop|144/231
+|move|p1a: Hitmontop|Rapid Spin|p2a: Glaceon
+|-crit|p2a: Glaceon
+|-damage|p2a: Glaceon|116/275
+|-boost|p1a: Hitmontop|spe|1
+|-sideend|p1: Node|Spikes|[from] move: Rapid Spin|[of] p1a: Hitmontop
+|
+|-heal|p1a: Hitmontop|158/231|[from] item: Leftovers
+|upkeep
+|turn|25
+|-message|Star Wheel forfeited.
+|
+|win|Node
+|raw|Node's rating: 2465 &rarr; <strong>2489</strong><br />(+24 for winning)
+|raw|Star Wheel's rating: 2539 &rarr; <strong>2515</strong><br />(-24 for losing)
+|l|☆Star Wheel
+|player|p2|

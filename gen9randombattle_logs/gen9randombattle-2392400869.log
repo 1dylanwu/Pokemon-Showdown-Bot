@@ -1,0 +1,313 @@
+|badge|p1|silver|gen9randombattle|30-5
+|html|<div class="broadcast-red"><strong>This battle is required to be public due to one or more player having a season medal.</strong><br />During the public phase, you can discuss the state of the ladder <a href="/seasondiscussion">in a special chatroom.</a></div>
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-5
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|raw|<div class="broadcast-blue"><strong>This battle is required to be public due to a player having a name starting with 'medal'.</div>
+|j|☆Dr Father
+|j|☆Lang Wu Yao
+|t:|1750983120
+|gametype|singles
+|player|p1|Dr Father|doctor|2491
+|player|p2|Lang Wu Yao|1|2495
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1750983120
+|start
+|switch|p1a: Qwilfish|Qwilfish-Hisui, L83, F|244/244
+|switch|p2a: Phione|Phione, L91|293/293
+|-ability|p1a: Qwilfish|Intimidate|boost
+|-unboost|p2a: Phione|atk|1
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by Lang Wu Yao)
+|inactive|Dr Father has 120 seconds left.
+|
+|t:|1750983173
+|switch|p1a: Blissey|Blissey, L85, F|572/572
+|move|p2a: Phione|Scald|p1a: Blissey
+|-damage|p1a: Blissey|512/572
+|
+|-heal|p1a: Blissey|547/572|[from] item: Leftovers
+|upkeep
+|turn|2
+|inactive|Lang Wu Yao has 120 seconds left.
+|
+|t:|1750983213
+|switch|p2a: Bellibolt|Bellibolt, L84, F|320/320
+|move|p1a: Blissey|Stealth Rock|p2a: Bellibolt
+|-sidestart|p2: Lang Wu Yao|move: Stealth Rock
+|
+|-heal|p1a: Blissey|572/572|[from] item: Leftovers
+|upkeep
+|turn|3
+|inactive|Lang Wu Yao has 120 seconds left.
+|
+|t:|1750983223
+|move|p1a: Blissey|Seismic Toss|p2a: Bellibolt
+|-damage|p2a: Bellibolt|235/320
+|-start|p2a: Bellibolt|Charge|Seismic Toss|[from] ability: Electromorphosis
+|move|p2a: Bellibolt|Toxic|p1a: Blissey
+|-status|p1a: Blissey|tox
+|
+|-heal|p2a: Bellibolt|255/320|[from] item: Leftovers
+|-damage|p1a: Blissey|537/572 tox|[from] psn
+|upkeep
+|turn|4
+|
+|t:|1750983235
+|move|p1a: Blissey|Seismic Toss|p2a: Bellibolt
+|-damage|p2a: Bellibolt|170/320
+|-start|p2a: Bellibolt|Charge|Seismic Toss|[from] ability: Electromorphosis
+|move|p2a: Bellibolt|Thunderbolt|p1a: Blissey
+|-damage|p1a: Blissey|392/572 tox
+|-end|p2a: Bellibolt|Charge|[silent]
+|
+|-heal|p1a: Blissey|427/572 tox|[from] item: Leftovers
+|-heal|p2a: Bellibolt|190/320|[from] item: Leftovers
+|-damage|p1a: Blissey|357/572 tox|[from] psn
+|upkeep
+|turn|5
+|
+|t:|1750983246
+|-curestatus|p1a: Blissey|tox|[from] ability: Natural Cure
+|switch|p1a: Flapple|Flapple, L88, F|266/266
+|move|p2a: Bellibolt|Thunderbolt|p1a: Flapple
+|-resisted|p1a: Flapple
+|-damage|p1a: Flapple|233/266
+|
+|-heal|p2a: Bellibolt|210/320|[from] item: Leftovers
+|upkeep
+|turn|6
+|inactive|Dr Father has 120 seconds left.
+|
+|t:|1750983281
+|move|p1a: Flapple|Grav Apple|p2a: Bellibolt
+|-damage|p2a: Bellibolt|57/320
+|-unboost|p2a: Bellibolt|def|1
+|-start|p2a: Bellibolt|Charge|Grav Apple|[from] ability: Electromorphosis
+|move|p2a: Bellibolt|Toxic|p1a: Flapple
+|-status|p1a: Flapple|tox
+|-enditem|p1a: Flapple|Lum Berry|[eat]
+|-curestatus|p1a: Flapple|tox|[msg]
+|
+|-heal|p2a: Bellibolt|77/320|[from] item: Leftovers
+|upkeep
+|turn|7
+|
+|t:|1750983292
+|move|p1a: Flapple|Grav Apple|p2a: Bellibolt
+|-damage|p2a: Bellibolt|0 fnt
+|faint|p2a: Bellibolt
+|
+|upkeep
+|inactive|Lang Wu Yao has 120 seconds left.
+|
+|t:|1750983335
+|switch|p2a: Phione|Phione, L91|293/293
+|-damage|p2a: Phione|257/293|[from] Stealth Rock
+|turn|8
+|
+|t:|1750983340
+|switch|p1a: Blissey|Blissey, L85, F|357/572
+|move|p2a: Phione|Take Heart|p2a: Phione
+|-boost|p2a: Phione|spa|1
+|-boost|p2a: Phione|spd|1
+|
+|-heal|p2a: Phione|275/293|[from] item: Leftovers
+|-heal|p1a: Blissey|392/572|[from] item: Leftovers
+|upkeep
+|turn|9
+|
+|t:|1750983352
+|move|p2a: Phione|Take Heart|p2a: Phione
+|-boost|p2a: Phione|spa|1
+|-boost|p2a: Phione|spd|1
+|move|p1a: Blissey|Seismic Toss|p2a: Phione
+|-damage|p2a: Phione|190/293
+|
+|-heal|p2a: Phione|208/293|[from] item: Leftovers
+|-heal|p1a: Blissey|427/572|[from] item: Leftovers
+|upkeep
+|turn|10
+|inactive|Lang Wu Yao has 120 seconds left.
+|
+|t:|1750983371
+|move|p2a: Phione|Take Heart|p2a: Phione
+|-boost|p2a: Phione|spa|1
+|-boost|p2a: Phione|spd|1
+|move|p1a: Blissey|Seismic Toss|p2a: Phione
+|-damage|p2a: Phione|123/293
+|
+|-heal|p2a: Phione|141/293|[from] item: Leftovers
+|-heal|p1a: Blissey|462/572|[from] item: Leftovers
+|upkeep
+|turn|11
+|
+|t:|1750983377
+|move|p2a: Phione|Scald|p1a: Blissey
+|-damage|p1a: Blissey|309/572
+|-status|p1a: Blissey|brn
+|move|p1a: Blissey|Seismic Toss|p2a: Phione
+|-damage|p2a: Phione|56/293
+|
+|-heal|p2a: Phione|74/293|[from] item: Leftovers
+|-heal|p1a: Blissey|344/572 brn|[from] item: Leftovers
+|-damage|p1a: Blissey|309/572 brn|[from] brn
+|upkeep
+|turn|12
+|
+|t:|1750983386
+|move|p2a: Phione|Scald|p1a: Blissey
+|-damage|p1a: Blissey|153/572 brn
+|move|p1a: Blissey|Seismic Toss|p2a: Phione
+|-damage|p2a: Phione|0 fnt
+|faint|p2a: Phione
+|
+|-heal|p1a: Blissey|188/572 brn|[from] item: Leftovers
+|-damage|p1a: Blissey|153/572 brn|[from] brn
+|upkeep
+|
+|t:|1750983396
+|switch|p2a: Azumarill|Azumarill, L82, M|298/298
+|-damage|p2a: Azumarill|261/298|[from] Stealth Rock
+|turn|13
+|
+|t:|1750983410
+|-curestatus|p1a: Blissey|brn|[from] ability: Natural Cure
+|switch|p1a: Qwilfish|Qwilfish-Hisui, L83, F|244/244
+|-ability|p1a: Qwilfish|Intimidate|boost
+|-unboost|p2a: Azumarill|atk|1
+|move|p2a: Azumarill|Play Rough|p1a: Qwilfish
+|-damage|p1a: Qwilfish|171/244
+|
+|upkeep
+|turn|14
+|
+|t:|1750983423
+|switch|p2a: Pachirisu|Pachirisu, L96, M|271/271
+|-damage|p2a: Pachirisu|238/271|[from] Stealth Rock
+|move|p1a: Qwilfish|Spikes|p2a: Pachirisu
+|-sidestart|p2: Lang Wu Yao|Spikes
+|
+|upkeep
+|turn|15
+|
+|t:|1750983438
+|switch|p1a: Flapple|Flapple, L88, F|233/266
+|move|p2a: Pachirisu|Nuzzle|p1a: Flapple
+|-resisted|p1a: Flapple
+|-damage|p1a: Flapple|229/266
+|-status|p1a: Flapple|par
+|
+|upkeep
+|turn|16
+|
+|t:|1750983450
+|move|p2a: Pachirisu|Super Fang|p1a: Flapple
+|-damage|p1a: Flapple|115/266 par
+|cant|p1a: Flapple|par
+|
+|upkeep
+|turn|17
+|
+|t:|1750983465
+|move|p2a: Pachirisu|U-turn|p1a: Flapple
+|-supereffective|p1a: Flapple
+|-damage|p1a: Flapple|33/266 par
+|
+|t:|1750983466
+|switch|p2a: Bellossom|Bellossom, L84, F|263/263|[from] U-turn
+|-damage|p2a: Bellossom|231/263|[from] Stealth Rock
+|-damage|p2a: Bellossom|199/263|[from] Spikes
+|move|p1a: Flapple|Grav Apple|p2a: Bellossom
+|-resisted|p2a: Bellossom
+|-damage|p2a: Bellossom|132/263
+|-unboost|p2a: Bellossom|def|1
+|
+|-heal|p2a: Bellossom|148/263|[from] item: Leftovers
+|upkeep
+|turn|18
+|
+|t:|1750983482
+|switch|p1a: Qwilfish|Qwilfish-Hisui, L83, F|171/244
+|-ability|p1a: Qwilfish|Intimidate|boost
+|-unboost|p2a: Bellossom|atk|1
+|move|p2a: Bellossom|Quiver Dance|p2a: Bellossom
+|-boost|p2a: Bellossom|spa|1
+|-boost|p2a: Bellossom|spd|1
+|-boost|p2a: Bellossom|spe|1
+|
+|-heal|p2a: Bellossom|164/263|[from] item: Leftovers
+|upkeep
+|turn|19
+|
+|t:|1750983492
+|move|p2a: Bellossom|Sleep Powder|p1a: Qwilfish
+|-status|p1a: Qwilfish|slp|[from] move: Sleep Powder
+|cant|p1a: Qwilfish|slp
+|
+|-heal|p2a: Bellossom|180/263|[from] item: Leftovers
+|upkeep
+|turn|20
+|
+|t:|1750983508
+|switch|p1a: Blissey|Blissey, L85, F|153/572
+|-terastallize|p2a: Bellossom|Water
+|move|p2a: Bellossom|Quiver Dance|p2a: Bellossom
+|-boost|p2a: Bellossom|spa|1
+|-boost|p2a: Bellossom|spd|1
+|-boost|p2a: Bellossom|spe|1
+|
+|-heal|p2a: Bellossom|196/263|[from] item: Leftovers
+|-heal|p1a: Blissey|188/572|[from] item: Leftovers
+|upkeep
+|turn|21
+|
+|t:|1750983516
+|move|p2a: Bellossom|Giga Drain|p1a: Blissey
+|-crit|p1a: Blissey
+|-damage|p1a: Blissey|19/572
+|-heal|p2a: Bellossom|263/263|[from] drain|[of] p1a: Blissey
+|move|p1a: Blissey|Thunder Wave|p2a: Bellossom
+|-status|p2a: Bellossom|par
+|
+|-heal|p1a: Blissey|54/572|[from] item: Leftovers
+|upkeep
+|turn|22
+|
+|t:|1750983525
+|switch|p1a: Sawsbuck|Sawsbuck, L88, M|284/284
+|move|p2a: Bellossom|Quiver Dance|p2a: Bellossom
+|-boost|p2a: Bellossom|spa|1
+|-boost|p2a: Bellossom|spd|1
+|-boost|p2a: Bellossom|spe|1
+|
+|upkeep
+|turn|23
+|c|☆Lang Wu Yao|giga countered
+|
+|t:|1750983554
+|switch|p2a: Blissey|Blissey, L85, F|572/572
+|-damage|p2a: Blissey|501/572|[from] Stealth Rock
+|-damage|p2a: Blissey|430/572|[from] Spikes
+|move|p1a: Sawsbuck|Swords Dance|p1a: Sawsbuck
+|-boost|p1a: Sawsbuck|atk|2
+|
+|-heal|p2a: Blissey|465/572|[from] item: Leftovers
+|upkeep
+|turn|24
+|-message|Lang Wu Yao forfeited.
+|
+|win|Dr Father
+|raw|Dr Father's rating: 2491 &rarr; <strong>2511</strong><br />(+20 for winning)
+|raw|Lang Wu Yao's rating: 2495 &rarr; <strong>2475</strong><br />(-20 for losing)
+|l|☆Lang Wu Yao
+|player|p2|

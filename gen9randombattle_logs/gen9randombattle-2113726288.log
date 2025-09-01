@@ -1,0 +1,299 @@
+|badge|p1|silver|gen9randombattle|30-1
+|html|<div class="broadcast-red"><strong>This battle is required to be public due to one or more player having a season medal.</strong><br />During the public phase, you can discuss the state of the ladder <a href="/seasondiscussion">in a special chatroom.</a></div>
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|raw|<div class="broadcast-blue"><strong>This battle is required to be public due to a player having a name starting with 'medal'.</div>
+|j|☆freezai
+|j|☆pokeblade☆101
+|t:|1714356362
+|gametype|singles
+|player|p1|freezai|#scl1breakers|2497
+|player|p2|pokeblade☆101|#rbtt7teamchiyu|2460
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1714356362
+|start
+|switch|p1a: Oinkologne|Oinkologne-F, L93, F|365/365
+|switch|p2a: Bruxish|Bruxish, L85, M|254/254
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by freezai)
+|inactive|freezai has 120 seconds left.
+|inactive|pokeblade☆101 has 120 seconds left.
+|
+|t:|1714356405
+|switch|p2a: Spidops|Spidops, L96, F|271/271
+|move|p1a: Oinkologne|Double-Edge|p2a: Spidops
+|-damage|p2a: Spidops|138/271
+|-damage|p1a: Oinkologne|321/365|[from] Recoil
+|
+|-heal|p1a: Oinkologne|343/365|[from] item: Leftovers
+|upkeep
+|turn|2
+|j| ash_won_kalos
+|
+|t:|1714356431
+|move|p1a: Oinkologne|Double-Edge|p2a: Spidops
+|-damage|p2a: Spidops|18/271
+|-damage|p1a: Oinkologne|303/365|[from] Recoil
+|move|p2a: Spidops|Sticky Web|p1a: Oinkologne
+|-sidestart|p1: freezai|move: Sticky Web
+|
+|-heal|p1a: Oinkologne|325/365|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1714356442
+|move|p1a: Oinkologne|Double-Edge|p2a: Spidops
+|-damage|p2a: Spidops|0 fnt
+|faint|p2a: Spidops
+|-damage|p1a: Oinkologne|319/365|[from] Recoil
+|
+|-heal|p1a: Oinkologne|341/365|[from] item: Leftovers
+|upkeep
+|j| ehdjdndkxnx
+|
+|t:|1714356447
+|switch|p2a: Mienshao|Mienshao, L83, F|243/243
+|turn|4
+|
+|t:|1714356450
+|switch|p1a: Landorus|Landorus-Therian, L76, M|260/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-unboost|p2a: Mienshao|atk|1
+|move|p2a: Mienshao|U-turn|p1a: Landorus
+|-resisted|p1a: Landorus
+|-damage|p1a: Landorus|229/260
+|
+|t:|1714356456
+|switch|p2a: Bruxish|Bruxish, L85, M|254/254|[from] U-turn
+|
+|-heal|p1a: Landorus|245/260|[from] item: Leftovers
+|upkeep
+|turn|5
+|
+|t:|1714356468
+|switch|p1a: Oinkologne|Oinkologne-F, L93, F|341/365
+|-activate|p1a: Oinkologne|move: Sticky Web
+|-unboost|p1a: Oinkologne|spe|1
+|move|p2a: Bruxish|Swords Dance|p2a: Bruxish
+|-boost|p2a: Bruxish|atk|2
+|
+|-heal|p1a: Oinkologne|363/365|[from] item: Leftovers
+|upkeep
+|turn|6
+|
+|t:|1714356483
+|move|p2a: Bruxish|Psychic Fangs|p1a: Oinkologne
+|-damage|p1a: Oinkologne|0 fnt
+|faint|p1a: Oinkologne
+|-damage|p2a: Bruxish|229/254|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1714356487
+|switch|p1a: Ditto|Ditto, L87|225/225
+|-activate|p1a: Ditto|move: Sticky Web
+|-unboost|p1a: Ditto|spe|1
+|-transform|p1a: Ditto|p2a: Bruxish|[from] ability: Imposter
+|turn|7
+|inactive|freezai has 120 seconds left.
+|inactive|pokeblade☆101 has 120 seconds left.
+|
+|t:|1714356539
+|-terastallize|p2a: Bruxish|Dark
+|move|p1a: Ditto|Crunch|p2a: Bruxish
+|-resisted|p2a: Bruxish
+|-damage|p2a: Bruxish|112/254
+|move|p2a: Bruxish|Crunch|p1a: Ditto
+|-supereffective|p1a: Ditto
+|-damage|p1a: Ditto|0 fnt
+|faint|p1a: Ditto
+|-damage|p2a: Bruxish|87/254|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1714356552
+|switch|p1a: Skeledirge|Skeledirge, L79, F|294/294
+|turn|8
+|inactive|pokeblade☆101 has 120 seconds left.
+|
+|t:|1714356592
+|-terastallize|p1a: Skeledirge|Fairy
+|move|p2a: Bruxish|Psychic Fangs|p1a: Skeledirge
+|-damage|p1a: Skeledirge|109/294
+|-damage|p2a: Bruxish|62/254|[from] item: Life Orb
+|move|p1a: Skeledirge|Flame Charge|p2a: Bruxish
+|-damage|p2a: Bruxish|17/254
+|-boost|p1a: Skeledirge|spe|1
+|
+|upkeep
+|turn|9
+|inactive|freezai has 90 seconds left.
+|
+|t:|1714356607
+|move|p1a: Skeledirge|Torch Song|p2a: Bruxish
+|-damage|p2a: Bruxish|0 fnt
+|-boost|p1a: Skeledirge|spa|1
+|faint|p2a: Bruxish
+|
+|upkeep
+|
+|t:|1714356612
+|switch|p2a: Serperior|Serperior, L80, F|251/251
+|turn|10
+|
+|t:|1714356625
+|move|p2a: Serperior|Leaf Storm|p1a: Skeledirge
+|-damage|p1a: Skeledirge|0 fnt
+|-boost|p2a: Serperior|spa|2
+|faint|p1a: Skeledirge
+|-damage|p2a: Serperior|226/251|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1714356629
+|switch|p1a: Copperajah|Copperajah, L86, F|350/350
+|-activate|p1a: Copperajah|move: Sticky Web
+|-unboost|p1a: Copperajah|spe|1
+|turn|11
+|inactive|pokeblade☆101 has 120 seconds left.
+|
+|t:|1714356644
+|switch|p2a: Reuniclus|Reuniclus, L88, F|337/337
+|move|p1a: Copperajah|Iron Head|p2a: Reuniclus
+|-damage|p2a: Reuniclus|125/337
+|
+|upkeep
+|turn|12
+|
+|t:|1714356651
+|switch|p1a: Landorus|Landorus-Therian, L76, M|245/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-unboost|p2a: Reuniclus|atk|1
+|move|p2a: Reuniclus|Recover|p2a: Reuniclus
+|-heal|p2a: Reuniclus|294/337
+|
+|-heal|p1a: Landorus|260/260|[from] item: Leftovers
+|upkeep
+|turn|13
+|inactive|freezai has 120 seconds left.
+|
+|t:|1714356660
+|move|p1a: Landorus|Earthquake|p2a: Reuniclus
+|-damage|p2a: Reuniclus|161/337
+|move|p2a: Reuniclus|Psyshock|p1a: Landorus
+|-crit|p1a: Landorus
+|-damage|p1a: Landorus|30/260
+|
+|-heal|p1a: Landorus|46/260|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1714356666
+|move|p1a: Landorus|Taunt|p2a: Reuniclus
+|-start|p2a: Reuniclus|move: Taunt
+|cant|p2a: Reuniclus|move: Taunt|Recover
+|
+|-heal|p1a: Landorus|62/260|[from] item: Leftovers
+|upkeep
+|turn|15
+|
+|t:|1714356675
+|move|p1a: Landorus|U-turn|p2a: Reuniclus
+|-supereffective|p2a: Reuniclus
+|-damage|p2a: Reuniclus|37/337
+|
+|t:|1714356677
+|switch|p1a: Meowstic|Meowstic-F, L89, F|277/277|[from] U-turn
+|-activate|p1a: Meowstic|move: Sticky Web
+|-unboost|p1a: Meowstic|spe|1
+|move|p2a: Reuniclus|Psyshock|p1a: Meowstic
+|-resisted|p1a: Meowstic
+|-crit|p1a: Meowstic
+|-damage|p1a: Meowstic|159/277
+|
+|upkeep
+|turn|16
+|
+|t:|1714356685
+|move|p1a: Meowstic|Psyshock|p2a: Reuniclus
+|-resisted|p2a: Reuniclus
+|-damage|p2a: Reuniclus|0 fnt
+|faint|p2a: Reuniclus
+|-damage|p1a: Meowstic|132/277|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1714356690
+|switch|p2a: Serperior|Serperior, L80, F|226/251
+|turn|17
+|
+|t:|1714356697
+|switch|p1a: Copperajah|Copperajah, L86, F|350/350
+|-activate|p1a: Copperajah|move: Sticky Web
+|-unboost|p1a: Copperajah|spe|1
+|move|p2a: Serperior|Leaf Storm|p1a: Copperajah
+|-resisted|p1a: Copperajah
+|-damage|p1a: Copperajah|271/350
+|-boost|p2a: Serperior|spa|2
+|-damage|p2a: Serperior|201/251|[from] item: Life Orb
+|
+|upkeep
+|turn|18
+|
+|t:|1714356705
+|move|p2a: Serperior|Knock Off|p1a: Copperajah
+|-crit|p1a: Copperajah
+|-damage|p1a: Copperajah|151/350
+|-enditem|p1a: Copperajah|Life Orb|[from] move: Knock Off|[of] p2a: Serperior
+|-damage|p2a: Serperior|176/251|[from] item: Life Orb
+|move|p1a: Copperajah|Iron Head|p2a: Serperior
+|-damage|p2a: Serperior|35/251
+|
+|upkeep
+|turn|19
+|c|☆pokeblade☆101|these crits though
+|
+|t:|1714356716
+|move|p2a: Serperior|Leaf Storm|p1a: Copperajah
+|-resisted|p1a: Copperajah
+|-damage|p1a: Copperajah|0 fnt
+|-boost|p2a: Serperior|spa|2
+|faint|p1a: Copperajah
+|-damage|p2a: Serperior|10/251|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1714356719
+|switch|p1a: Landorus|Landorus-Therian, L76, M|62/260
+|-ability|p1a: Landorus|Intimidate|boost
+|-boost|p2a: Serperior|atk|1
+|turn|20
+|
+|t:|1714356724
+|move|p2a: Serperior|Knock Off|p1a: Landorus
+|-damage|p1a: Landorus|0 fnt
+|-enditem|p1a: Landorus|Leftovers|[from] move: Knock Off|[of] p2a: Serperior
+|faint|p1a: Landorus
+|-damage|p2a: Serperior|0 fnt|[from] item: Life Orb
+|faint|p2a: Serperior
+|
+|upkeep
+|-message|freezai forfeited.
+|
+|win|pokeblade☆101
+|raw|freezai's rating: 2497 &rarr; <strong>2475</strong><br />(-22 for losing)
+|raw|pokeblade☆101's rating: 2460 &rarr; <strong>2482</strong><br />(+22 for winning)
+|l|☆freezai
+|player|p1|
+|l| ash_won_kalos
+|l| ehdjdndkxnx

@@ -1,0 +1,375 @@
+|badge|p1|silver|gen9randombattle|30-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|gold|gen9randombattle|3-1
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|j|‽Norman2!
+|j|☆pokeblade☆101
+|t:|1713122011
+|gametype|singles
+|player|p1|Norman2!|101|2502
+|player|p2|pokeblade☆101|#rbtt7teamchiyu|2514
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1713122011
+|start
+|switch|p1a: Bronzong|Bronzong, L88|261/261
+|switch|p2a: Tatsugiri|Tatsugiri-Droopy, L86, M|257/257
+|turn|1
+|j|+Aqua
+|
+|t:|1713122032
+|move|p2a: Tatsugiri|Surf|p1a: Bronzong
+|-damage|p1a: Bronzong|164/261
+|move|p1a: Bronzong|Hypnosis|p2a: Tatsugiri|[miss]
+|-miss|p1a: Bronzong|p2a: Tatsugiri
+|
+|-heal|p1a: Bronzong|180/261|[from] item: Leftovers
+|upkeep
+|turn|2
+|
+|t:|1713122035
+|move|p2a: Tatsugiri|Surf|p1a: Bronzong
+|-damage|p1a: Bronzong|96/261
+|move|p1a: Bronzong|Hypnosis|p2a: Tatsugiri
+|-status|p2a: Tatsugiri|slp|[from] move: Hypnosis
+|
+|-heal|p1a: Bronzong|112/261|[from] item: Leftovers
+|upkeep
+|turn|3
+|
+|t:|1713122039
+|cant|p2a: Tatsugiri|slp
+|move|p1a: Bronzong|Stealth Rock|p2a: Tatsugiri
+|-sidestart|p2: pokeblade☆101|move: Stealth Rock
+|
+|-heal|p1a: Bronzong|128/261|[from] item: Leftovers
+|upkeep
+|turn|4
+|
+|t:|1713122043
+|switch|p1a: Sableye|Sableye, L90, F|236/236
+|cant|p2a: Tatsugiri|slp
+|
+|upkeep
+|turn|5
+|
+|t:|1713122046
+|switch|p2a: Houndoom|Houndoom, L86, F|269/269
+|move|p1a: Sableye|Foul Play|p2a: Houndoom
+|-resisted|p2a: Houndoom
+|-damage|p2a: Houndoom|192/269
+|
+|upkeep
+|turn|6
+|
+|t:|1713122053
+|switch|p1a: Muk|Muk-Alola, L82, F|306/306
+|move|p2a: Houndoom|Fire Blast|p1a: Muk
+|-damage|p1a: Muk|215/306
+|
+|upkeep
+|turn|7
+|
+|t:|1713122071
+|move|p2a: Houndoom|Fire Blast|p1a: Muk|[miss]
+|-miss|p2a: Houndoom|p1a: Muk
+|move|p1a: Muk|Poison Jab|p2a: Houndoom
+|-damage|p2a: Houndoom|74/269
+|-status|p2a: Houndoom|psn|[from] ability: Poison Touch|[of] p1a: Muk
+|
+|-damage|p2a: Houndoom|41/269 psn|[from] psn
+|upkeep
+|turn|8
+|
+|t:|1713122075
+|move|p2a: Houndoom|Fire Blast|p1a: Muk
+|-damage|p1a: Muk|127/306
+|move|p1a: Muk|Drain Punch|p2a: Houndoom
+|-supereffective|p2a: Houndoom
+|-damage|p2a: Houndoom|0 fnt
+|-heal|p1a: Muk|148/306|[from] drain|[of] p2a: Houndoom
+|faint|p2a: Houndoom
+|
+|upkeep
+|
+|t:|1713122082
+|switch|p2a: Breloom|Breloom, L82, M|233/233
+|-damage|p2a: Breloom|219/233|[from] Stealth Rock
+|turn|9
+|
+|t:|1713122092
+|move|p2a: Breloom|Spore|p1a: Muk
+|-status|p1a: Muk|slp|[from] move: Spore
+|cant|p1a: Muk|slp
+|
+|upkeep
+|turn|10
+|
+|t:|1713122099
+|move|p2a: Breloom|Bullet Seed|p1a: Muk
+|-resisted|p1a: Muk
+|-damage|p1a: Muk|113/306 slp
+|-resisted|p1a: Muk
+|-crit|p1a: Muk
+|-damage|p1a: Muk|57/306 slp
+|-hitcount|p1a: Muk|2
+|-damage|p2a: Breloom|196/233|[from] item: Life Orb
+|cant|p1a: Muk|slp
+|
+|upkeep
+|turn|11
+|
+|t:|1713122114
+|switch|p1a: Scizor|Scizor, L79, M|240/240
+|move|p2a: Breloom|Bullet Seed|p1a: Scizor
+|-resisted|p1a: Scizor
+|-damage|p1a: Scizor|224/240
+|-resisted|p1a: Scizor
+|-damage|p1a: Scizor|211/240
+|-resisted|p1a: Scizor
+|-damage|p1a: Scizor|195/240
+|-hitcount|p1a: Scizor|3
+|-damage|p2a: Breloom|173/233|[from] item: Life Orb
+|
+|-heal|p1a: Scizor|210/240|[from] item: Leftovers
+|upkeep
+|turn|12
+|
+|t:|1713122121
+|move|p2a: Breloom|Rock Tomb|p1a: Scizor
+|-damage|p1a: Scizor|116/240
+|-unboost|p1a: Scizor|spe|1
+|-damage|p2a: Breloom|150/233|[from] item: Life Orb
+|move|p1a: Scizor|Close Combat|p2a: Breloom
+|-damage|p2a: Breloom|40/233
+|-unboost|p1a: Scizor|def|1
+|-unboost|p1a: Scizor|spd|1
+|
+|-heal|p1a: Scizor|131/240|[from] item: Leftovers
+|upkeep
+|turn|13
+|
+|t:|1713122128
+|switch|p1a: Sableye|Sableye, L90, F|236/236
+|move|p2a: Breloom|Bullet Seed|p1a: Sableye
+|-damage|p1a: Sableye|166/236
+|-damage|p1a: Sableye|104/236
+|-damage|p1a: Sableye|36/236
+|-hitcount|p1a: Sableye|3
+|-damage|p2a: Breloom|17/233|[from] item: Life Orb
+|
+|-heal|p1a: Sableye|50/236|[from] item: Leftovers
+|upkeep
+|turn|14
+|
+|t:|1713122133
+|move|p1a: Sableye|Recover|p1a: Sableye
+|-heal|p1a: Sableye|168/236
+|move|p2a: Breloom|Bullet Seed|p1a: Sableye
+|-damage|p1a: Sableye|108/236
+|-damage|p1a: Sableye|44/236
+|-damage|p1a: Sableye|0 fnt
+|faint|p1a: Sableye
+|-hitcount|p1: Sableye|3
+|-damage|p2a: Breloom|0 fnt|[from] item: Life Orb
+|faint|p2a: Breloom
+|
+|upkeep
+|
+|t:|1713122145
+|switch|p2a: Raikou|Raikou, L81|278/278
+|switch|p1a: Minun|Minun, L95, M|268/268
+|-damage|p2a: Raikou|244/278|[from] Stealth Rock
+|-ability|p2a: Raikou|Pressure
+|turn|15
+|
+|t:|1713122153
+|switch|p2a: Rabsca|Rabsca, L91, F|284/284
+|move|p1a: Minun|Nasty Plot|p1a: Minun
+|-boost|p1a: Minun|spa|2
+|
+|upkeep
+|turn|16
+|
+|t:|1713122157
+|move|p1a: Minun|Thunderbolt|p2a: Rabsca
+|-damage|p2a: Rabsca|50/284
+|-damage|p1a: Minun|242/268|[from] item: Life Orb
+|move|p2a: Rabsca|Trick Room|p2a: Rabsca
+|-fieldstart|move: Trick Room|[of] p2a: Rabsca
+|
+|upkeep
+|turn|17
+|
+|t:|1713122168
+|move|p2a: Rabsca|Revival Blessing|p2a: Rabsca
+|j| Ayuubjuh
+|
+|t:|1713122170
+|-heal|p2: Breloom|116/233|[from] move: Revival Blessing
+|move|p1a: Minun|Thunderbolt|p2a: Rabsca
+|-damage|p2a: Rabsca|0 fnt
+|faint|p2a: Rabsca
+|-damage|p1a: Minun|216/268|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1713122173
+|switch|p2a: Breloom|Breloom, L82, M|116/233
+|-damage|p2a: Breloom|102/233|[from] Stealth Rock
+|turn|18
+|
+|t:|1713122192
+|switch|p1a: Scizor|Scizor, L79, M|131/240
+|move|p2a: Breloom|Rock Tomb|p1a: Scizor
+|-damage|p1a: Scizor|30/240
+|-unboost|p1a: Scizor|spe|1
+|-damage|p2a: Breloom|79/233|[from] item: Life Orb
+|
+|-heal|p1a: Scizor|45/240|[from] item: Leftovers
+|upkeep
+|turn|19
+|
+|t:|1713122200
+|move|p1a: Scizor|Bullet Punch|p2a: Breloom
+|-damage|p2a: Breloom|0 fnt
+|faint|p2a: Breloom
+|
+|-heal|p1a: Scizor|60/240|[from] item: Leftovers
+|upkeep
+|
+|t:|1713122207
+|switch|p2a: Tatsugiri|Tatsugiri-Droopy, L86, M|257/257 slp
+|turn|20
+|
+|t:|1713122210
+|move|p1a: Scizor|Knock Off|p2a: Tatsugiri
+|-damage|p2a: Tatsugiri|162/257 slp
+|-enditem|p2a: Tatsugiri|Heavy-Duty Boots|[from] move: Knock Off|[of] p1a: Scizor
+|cant|p2a: Tatsugiri|slp
+|
+|-heal|p1a: Scizor|75/240|[from] item: Leftovers
+|-fieldend|move: Trick Room
+|upkeep
+|turn|21
+|
+|t:|1713122230
+|-curestatus|p2a: Tatsugiri|slp|[msg]
+|move|p2a: Tatsugiri|Rapid Spin|p1a: Scizor
+|-resisted|p1a: Scizor
+|-damage|p1a: Scizor|64/240
+|-boost|p2a: Tatsugiri|spe|1
+|-sideend|p2: pokeblade☆101|Stealth Rock|[from] move: Rapid Spin|[of] p2a: Tatsugiri
+|move|p1a: Scizor|Close Combat|p2a: Tatsugiri
+|-damage|p2a: Tatsugiri|32/257
+|-unboost|p1a: Scizor|def|1
+|-unboost|p1a: Scizor|spd|1
+|
+|-heal|p1a: Scizor|79/240|[from] item: Leftovers
+|upkeep
+|turn|22
+|
+|t:|1713122237
+|switch|p2a: Raikou|Raikou, L81|244/278
+|-ability|p2a: Raikou|Pressure
+|move|p1a: Scizor|Bullet Punch|p2a: Raikou
+|-resisted|p2a: Raikou
+|-damage|p2a: Raikou|205/278
+|
+|-heal|p1a: Scizor|94/240|[from] item: Leftovers
+|upkeep
+|turn|23
+|
+|t:|1713122241
+|move|p2a: Raikou|Scald|p1a: Scizor
+|-crit|p1a: Scizor
+|-damage|p1a: Scizor|0 fnt
+|faint|p1a: Scizor
+|
+|upkeep
+|
+|t:|1713122243
+|switch|p1a: Minun|Minun, L95, M|216/268
+|turn|24
+|
+|t:|1713122249
+|-terastallize|p1a: Minun|Grass
+|move|p1a: Minun|Nasty Plot|p1a: Minun
+|-boost|p1a: Minun|spa|2
+|move|p2a: Raikou|Scald|p1a: Minun
+|-resisted|p1a: Minun
+|-damage|p1a: Minun|178/268
+|
+|upkeep
+|turn|25
+|
+|t:|1713122256
+|switch|p2a: Tatsugiri|Tatsugiri-Droopy, L86, M|32/257
+|move|p1a: Minun|Grass Knot|p2a: Tatsugiri
+|-damage|p2a: Tatsugiri|0 fnt
+|faint|p2a: Tatsugiri
+|-damage|p1a: Minun|152/268|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1713122259
+|switch|p2a: Lokix|Lokix, L82, M|251/251
+|turn|26
+|
+|t:|1713122275
+|switch|p1a: Muk|Muk-Alola, L82, F|57/306 slp
+|move|p2a: Lokix|First Impression|p1a: Muk
+|-damage|p1a: Muk|0 fnt
+|faint|p1a: Muk
+|-damage|p2a: Lokix|226/251|[from] item: Life Orb
+|
+|upkeep
+|
+|t:|1713122280
+|switch|p1a: Hariyama|Hariyama, L87, M|392/392
+|turn|27
+|
+|t:|1713122288
+|switch|p2a: Raikou|Raikou, L81|205/278
+|-ability|p2a: Raikou|Pressure
+|move|p1a: Hariyama|Close Combat|p2a: Raikou
+|-damage|p2a: Raikou|16/278
+|-unboost|p1a: Hariyama|def|1
+|-unboost|p1a: Hariyama|spd|1
+|
+|-status|p1a: Hariyama|brn|[from] item: Flame Orb
+|upkeep
+|turn|28
+|
+|t:|1713122297
+|switch|p1a: Minun|Minun, L95, M, tera:Grass|152/268
+|move|p2a: Raikou|Shadow Ball|p1a: Minun
+|-damage|p1a: Minun|63/268
+|
+|upkeep
+|turn|29
+|
+|t:|1713122300
+|switch|p2a: Lokix|Lokix, L82, M|226/251
+|move|p1a: Minun|Alluring Voice|p2a: Lokix
+|-supereffective|p2a: Lokix
+|-damage|p2a: Lokix|0 fnt
+|faint|p2a: Lokix
+|-damage|p1a: Minun|37/268|[from] item: Life Orb
+|
+|upkeep
+|-message|pokeblade☆101 forfeited.
+|
+|win|Norman2!
+|raw|Norman2!'s rating: 2502 &rarr; <strong>2523</strong><br />(+21 for winning)
+|raw|pokeblade☆101's rating: 2514 &rarr; <strong>2493</strong><br />(-21 for losing)
+|l|☆pokeblade☆101
+|player|p2|

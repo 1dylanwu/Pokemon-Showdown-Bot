@@ -1,0 +1,278 @@
+|badge|p1|bronze|gen9randombattle|100-2
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|badge|p2|silver|gen9randombattle|30-2
+|uhtml|medal-msg|<div class="broadcast-blue">Curious what those medals under the avatar are? PS now has Ladder Seasons! For more information, check out the <a href="https://www.smogon.com/forums/threads/3740067/">thread on Smogon.</a></div>
+|raw|<div class="broadcast-blue"><strong>This battle is required to be public due to a player having a name starting with 'rblt'.</div>
+|j|☆RBLT Pokevin
+|j|☆rblt lw
+|t:|1726455173
+|gametype|singles
+|player|p1|RBLT Pokevin|n-masters|2512
+|player|p2|rblt lw|bertha|2510
+|teamsize|p1|6
+|teamsize|p2|6
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1726455173
+|start
+|switch|p1a: Vaporeon|Vaporeon, L86, F|364/364
+|switch|p2a: Serperior|Serperior, L79, M|248/248
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by rblt lw)
+|j| Revival Tour
+|j| RBLT HB28
+|j| RBLT raulcan
+|j| RBLT jj
+|inactive|RBLT Pokevin has 120 seconds left.
+|j| rb LTG99
+|j| RBLT Ilex
+|j| freezai
+|inactive|RBLT Pokevin has 90 seconds left.
+|j| skymin<3
+|
+|t:|1726455247
+|switch|p1a: Masquerain|Masquerain, L87, F|264/264
+|-ability|p1a: Masquerain|Intimidate|boost
+|-boost|p2a: Serperior|atk|1
+|move|p2a: Serperior|Leaf Storm|p1a: Masquerain|[miss]
+|-miss|p2a: Serperior|p1a: Masquerain
+|
+|upkeep
+|turn|2
+|c| skymin<3|GO POKEVIN
+|c| skymin<3|!!!
+|c|☆rblt lw|fuck yeah dude
+|
+|t:|1726455264
+|switch|p2a: Mismagius|Mismagius, L86, F|243/243
+|move|p1a: Masquerain|Quiver Dance|p1a: Masquerain
+|-boost|p1a: Masquerain|spa|1
+|-boost|p1a: Masquerain|spd|1
+|-boost|p1a: Masquerain|spe|1
+|
+|upkeep
+|turn|3
+|c| skymin<3|,
+|
+|t:|1726455283
+|move|p1a: Masquerain|Hurricane|p2a: Mismagius
+|-damage|p2a: Mismagius|71/243
+|-start|p2a: Mismagius|confusion
+|-activate|p2a: Mismagius|confusion
+|-damage|p2a: Mismagius|51/243|[from] confusion
+|
+|upkeep
+|turn|4
+|c|☆rblt lw|yea
+|c|☆rblt lw|par for the course
+|
+|t:|1726455293
+|move|p1a: Masquerain|Bug Buzz|p2a: Mismagius
+|-resisted|p2a: Mismagius
+|-damage|p2a: Mismagius|0 fnt
+|faint|p2a: Mismagius
+|
+|upkeep
+|
+|t:|1726455295
+|switch|p2a: Mandibuzz|Mandibuzz, L85, F|326/326
+|turn|5
+|c|☆rblt lw|truly unreal stuff
+|
+|t:|1726455318
+|switch|p1a: Archaludon|Archaludon, L78, M|268/268
+|move|p2a: Mandibuzz|Toxic|p1a: Archaludon|[miss]
+|-miss|p2a: Mandibuzz|p1a: Archaludon
+|
+|upkeep
+|turn|6
+|j|+chemcoop
+|inactive|RBLT Pokevin has 120 seconds left.
+|
+|t:|1726455340
+|switch|p2a: Forretress|Forretress, L84, F|263/263
+|move|p1a: Archaludon|Draco Meteor|p2a: Forretress
+|-resisted|p2a: Forretress
+|-damage|p2a: Forretress|167/263
+|-unboost|p1a: Archaludon|spa|2
+|
+|-heal|p2a: Forretress|183/263|[from] item: Leftovers
+|upkeep
+|turn|7
+|inactive|RBLT Pokevin has 120 seconds left.
+|
+|t:|1726455357
+|switch|p1a: Jolteon|Jolteon, L84, F|246/246
+|move|p2a: Forretress|Stealth Rock|p1a: Jolteon
+|-sidestart|p1: RBLT Pokevin|move: Stealth Rock
+|
+|-heal|p2a: Forretress|199/263|[from] item: Leftovers
+|upkeep
+|turn|8
+|inactive|RBLT Pokevin has 120 seconds left.
+|
+|t:|1726455365
+|switch|p2a: Terrakion|Terrakion, L79|273/273
+|move|p1a: Jolteon|Calm Mind|p1a: Jolteon
+|-boost|p1a: Jolteon|spa|1
+|-boost|p1a: Jolteon|spd|1
+|
+|upkeep
+|turn|9
+|inactive|RBLT Pokevin has 120 seconds left.
+|j| Panty&Stockings
+|j| liamgdffffg
+|j| RBLT Unstoppable
+|inactive|RBLT Pokevin has 90 seconds left.
+|
+|t:|1726455412
+|-terastallize|p1a: Jolteon|Electric
+|move|p1a: Jolteon|Thunderbolt|p2a: Terrakion
+|-damage|p2a: Terrakion|0 fnt
+|faint|p2a: Terrakion
+|-damage|p1a: Jolteon|222/246|[from] item: Life Orb
+|
+|upkeep
+|c|☆rblt lw|yup
+|c|☆rblt lw|classic stuff video game
+|
+|t:|1726455422
+|switch|p2a: Serperior|Serperior, L79, M|248/248
+|turn|10
+|c|☆rblt lw|love u for that
+|l| RBLT Unstoppable
+|inactive|RBLT Pokevin has 90 seconds left.
+|
+|t:|1726455442
+|move|p1a: Jolteon|Thunderbolt|p2a: Serperior
+|-resisted|p2a: Serperior
+|-damage|p2a: Serperior|104/248
+|-damage|p1a: Jolteon|198/246|[from] item: Life Orb
+|move|p2a: Serperior|Leech Seed|p1a: Jolteon
+|-start|p1a: Jolteon|move: Leech Seed
+|
+|-heal|p2a: Serperior|119/248|[from] item: Leftovers
+|-damage|p1a: Jolteon|168/246|[from] Leech Seed|[of] p2a: Serperior
+|-heal|p2a: Serperior|149/248|[silent]
+|upkeep
+|turn|11
+|inactive|RBLT Pokevin has 90 seconds left.
+|
+|t:|1726455459
+|move|p1a: Jolteon|Thunderbolt|p2a: Serperior
+|-resisted|p2a: Serperior
+|-damage|p2a: Serperior|11/248
+|-status|p2a: Serperior|par
+|-damage|p1a: Jolteon|144/246|[from] item: Life Orb
+|move|p2a: Serperior|Leaf Storm|p1a: Jolteon
+|-damage|p1a: Jolteon|74/246
+|-boost|p2a: Serperior|spa|2
+|
+|-heal|p2a: Serperior|26/248 par|[from] item: Leftovers
+|-damage|p1a: Jolteon|44/246|[from] Leech Seed|[of] p2a: Serperior
+|-heal|p2a: Serperior|56/248 par|[silent]
+|upkeep
+|turn|12
+|c|☆rblt lw|i mean u deserve top6 with this luck thats what gets u far in randbats
+|
+|t:|1726455472
+|move|p1a: Jolteon|Thunderbolt|p2a: Serperior
+|-resisted|p2a: Serperior
+|-damage|p2a: Serperior|0 fnt
+|faint|p2a: Serperior
+|-damage|p1a: Jolteon|20/246|[from] item: Life Orb
+|
+|upkeep
+|j| hjkhj
+|
+|t:|1726455476
+|switch|p2a: Forretress|Forretress, L84, F|199/263
+|turn|13
+|
+|t:|1726455481
+|move|p1a: Jolteon|Thunderbolt|p2a: Forretress
+|-damage|p2a: Forretress|0 fnt
+|faint|p2a: Forretress
+|-damage|p1a: Jolteon|0 fnt|[from] item: Life Orb
+|faint|p1a: Jolteon
+|
+|upkeep
+|j| RBLT gomdol2
+|j|+Pulse_kS
+|
+|t:|1726455495
+|switch|p1a: Spiritomb|Spiritomb, L89, F|234/234
+|switch|p2a: Persian|Persian-Alola, L86, M|252/252
+|-damage|p1a: Spiritomb|205/234|[from] Stealth Rock
+|turn|14
+|j| alwayssimple
+|c|☆rblt lw|kinda just wish i wasnt one 1 turn sleep off of sealing top 6
+|
+|t:|1726455509
+|move|p2a: Persian|Nasty Plot|p2a: Persian
+|-boost|p2a: Persian|spa|2
+|move|p1a: Spiritomb|Toxic|p2a: Persian
+|-status|p2a: Persian|tox
+|
+|-heal|p1a: Spiritomb|219/234|[from] item: Leftovers
+|-damage|p2a: Persian|237/252 tox|[from] psn
+|upkeep
+|turn|15
+|l|+Pulse_kS
+|
+|t:|1726455519
+|switch|p1a: Vaporeon|Vaporeon, L86, F|364/364
+|-damage|p1a: Vaporeon|319/364|[from] Stealth Rock
+|move|p2a: Persian|Nasty Plot|p2a: Persian
+|-boost|p2a: Persian|spa|2
+|
+|-heal|p1a: Vaporeon|341/364|[from] item: Leftovers
+|-damage|p2a: Persian|207/252 tox|[from] psn
+|upkeep
+|turn|16
+|
+|t:|1726455526
+|move|p1a: Vaporeon|Protect|p1a: Vaporeon
+|-singleturn|p1a: Vaporeon|Protect
+|move|p2a: Persian|Thunderbolt|p1a: Vaporeon
+|-activate|p1a: Vaporeon|move: Protect
+|
+|-heal|p1a: Vaporeon|363/364|[from] item: Leftovers
+|-damage|p2a: Persian|162/252 tox|[from] psn
+|upkeep
+|turn|17
+|inactive|RBLT Pokevin has 120 seconds left.
+|j| RBLT Unstoppable
+|
+|t:|1726455544
+|switch|p1a: Masquerain|Masquerain, L87, F|264/264
+|-ability|p1a: Masquerain|Intimidate|boost
+|-unboost|p2a: Persian|atk|1
+|move|p2a: Persian|Dark Pulse|p1a: Masquerain
+|-damage|p1a: Masquerain|0 fnt
+|faint|p1a: Masquerain
+|-damage|p2a: Persian|137/252 tox|[from] item: Life Orb
+|
+|-damage|p2a: Persian|77/252 tox|[from] psn
+|upkeep
+|
+|t:|1726455550
+|switch|p1a: Vaporeon|Vaporeon, L86, F|363/364
+|-damage|p1a: Vaporeon|318/364|[from] Stealth Rock
+|turn|18
+|-message|rblt lw forfeited.
+|
+|win|RBLT Pokevin
+|raw|RBLT Pokevin's rating: 2512 &rarr; <strong>2532</strong><br />(+20 for winning)
+|raw|rblt lw's rating: 2510 &rarr; <strong>2490</strong><br />(-20 for losing)
+|l|☆rblt lw
+|player|p2|
+|l| RBLT raulcan
+|l| skymin<3
+|l| RBLT Ilex
