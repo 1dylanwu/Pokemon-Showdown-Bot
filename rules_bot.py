@@ -5,26 +5,24 @@ from type_chart import get_effectiveness
 
 class RulesBot(Player):
     def choose_move(self, battle: Battle):
-        
         #if we can KO the opponent and we outspeed, use the move that can KO
         #this does not account for priority moves
         if self.can_ko(battle) and self.speed(battle.active_pokemon, battle) >= self.speed(battle.opponent_active_pokemon, battle):
+            print(f"Using max damage move {self.max_damage_move(battle)} to attempt KO on {battle.opponent_active_pokemon}")
+            print("imma do " + str(calculate_damage(
+                battle.active_pokemon.identifier("p2"),
+                battle.opponent_active_pokemon.identifier("p1"),
+                self.max_damage_move(battle),
+                battle,
+                False
+            )[0] / battle.opponent_active_pokemon.current_hp) + "damage")
             return self.create_order(self.max_damage_move(battle))
-        
-        #if we have bad defensive type matchup, switch out
-        #doesnt account for alternatively being able to terrastalize
-        defensive_switch = False
-        for enemy_type in battle.opponent_active_pokemon.types:
-            #checks enemy STAB typing against our active pokemon
-            if get_effectiveness(enemy_type, battle.active_pokemon.types) > 1.0:
-                defensive_switch = True
 
-        if defensive_switch:
-            #find a pokemon to switch to with better matchup
-            #this does not account for coverage moves or pokemon bulk/current hp
-            for pokemon in battle.available_switches:
-                if all(get_effectiveness(enemy_type, pokemon.types) <= 1.0 for enemy_type in battle.opponent_active_pokemon.types):
-                    return self.create_order(pokemon)
+        #if we have bad type matchup, switch out
+        #choose a pokemon with better matchup and higher hp
+        if self.should_switch(battle) and battle.available_switches:
+            print(f"Switching out {battle.active_pokemon} to {self.defensive_switch(battle)} due to bad type matchup")
+            return self.create_order(self.defensive_switch(battle))
         
         #if we have HP to spare, prioritize using available status/setup/hazard moves
         if(battle.active_pokemon.current_hp_fraction > 0.6):
@@ -44,8 +42,39 @@ class RulesBot(Player):
         if battle.available_moves:
             return self.create_order(self.max_damage_move(battle))
         
+        #if our active pokemon is fainted, switch to a pokemon using same logic as defensive switch
+        #this should be changed to be offensive(revenge kill)
+        if(battle.active_pokemon is None and battle.available_switches):
+            return self.create_order(self.defensive_switch(battle))
+        
         return self.choose_random_move(battle)
+    
+    def should_switch(self, battle: Battle):
+        #if we have bad defensive type matchup, switch out
+        #doesnt account for alternatively being able to terrastalize
+        for enemy_type in battle.opponent_active_pokemon.types:
+            #checks enemy STAB typing against our active pokemon
+            if battle.active_pokemon.damage_multiplier(enemy_type) > 1.0:
+                return True
+        return False
 
+    def defensive_switch(self, battle: Battle):
+            #find a pokemon to switch to with better matchup
+            #this does not account for coverage moves
+            best_score = -10
+            best_switch = None
+            for pokemon in battle.available_switches:
+                #calculate score based on current hp and enemy type matchups
+                #higher score means better switch
+                score = pokemon.current_hp_fraction
+                for enemy_type in battle.opponent_active_pokemon.types:
+                    score -= pokemon.damage_multiplier(enemy_type)
+                if score > best_score:
+                    best_score = score
+                    best_switch = pokemon
+            return best_switch
+
+                
     def max_damage_move(self, battle: Battle):
         #function to find the move with maximum damage
         return max(

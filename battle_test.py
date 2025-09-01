@@ -1,26 +1,26 @@
 import asyncio
-from poke_env import RandomPlayer
+from poke_env import RandomPlayer, SimpleHeuristicsPlayer
 from poke_env import LocalhostServerConfiguration
 from rules_bot import RulesBot
 # tests connecting to local showdown server and using poke-env/async
 # by creating 2 bots that choose random moves and battling them against each other
 # config
 BATTLE_FORMAT = "gen9randombattle"
-N_BATTLES = 100
+N_BATTLES = 1
 
 # connect to server
 server_config = LocalhostServerConfiguration
 
 async def main():
     # create 2 random players
-    player1 = RandomPlayer(
+    player1 = SimpleHeuristicsPlayer(
         battle_format=BATTLE_FORMAT,
         server_configuration=server_config,
         max_concurrent_battles=1
     )
     player2 = RulesBot(
     )
-    player1._username = "RandomBot"
+    player1._username = "SimpleHeuristicsBot"
     player2._username = "RulesBot"
     await player1.battle_against(player2, n_battles=N_BATTLES)
 
