@@ -95,7 +95,7 @@ def parse_battle_log(path: str | Path):
     # decisions for each side in a turn use the same pre-turn snapshot because they happen at the same time
     # we use a decision buffer because the state only updates at the start of each turn so we need to delay changing data until the next turn
     lines = Path(path).read_text(encoding="utf-8", errors="ignore").splitlines()
-    last_fainted_slot = None  # track forced switches after faint
+    fainted_slots = set() # track forced switches after faint
     # Live state for snapshots (what the model will see)
     state = {
         "turn": 0,
@@ -165,7 +165,7 @@ def parse_battle_log(path: str | Path):
 
             # snapshot state at start of this turn (both players decide from this)
             turn_start_state = freeze_state(state)
-            last_fainted_slot = None
+            fainted_slots.clear()
             # Update turn counter
             try:
                 state["turn"] = int(parts[2])
@@ -185,7 +185,7 @@ def parse_battle_log(path: str | Path):
             team_status[side][mon] = "fnt"
 
             # set last fainted so we can track forced switch next
-            last_fainted_slot = slot
+            fainted_slots.add(slot)
 
         # decision lines (buffered with pre-turn state)
         elif tag == "switch":
@@ -193,7 +193,7 @@ def parse_battle_log(path: str | Path):
             mon_name= parts[2].split(": ", 1)[1].split(",")[0]
             hp_field= parts[3] if len(parts) > 3 else None
 
-            if slot == last_fainted_slot:
+            if slot in fainted_slots:
                 # forced switch: record post-faint state
                 records.append({
                     "turn": state["turn"],
@@ -204,6 +204,8 @@ def parse_battle_log(path: str | Path):
                 })
                 # now apply the incoming mon
                 apply_switch(slot, mon_name, hp_field)
+                fainted_slots.remove(slot)
+                #remove from fainted slots
 
             else:
                 # player choice switch: buffer with pre-turn snapshot
@@ -216,8 +218,6 @@ def parse_battle_log(path: str | Path):
                 })
                 apply_switch(slot, mon_name, hp_field)
 
-            last_fainted_slot = None
-            # reset last fainted slot
 
         elif tag == "move":
             slot = slot_from(parts[2])
