@@ -1,81 +1,352 @@
-import re
+from pathlib import Path
+from collections import defaultdict
 import pandas as pd
 
-def parse_showdown_log(log_path):
-    with open(log_path, 'r', encoding='utf8') as f:
-        lines = f.readlines()
+# entry hazards to track
+HAZARDS = {"Stealth Rock", "Spikes", "Toxic Spikes", "Sticky Web"}
 
-    battle_state = init_battle_state()
-    features_per_turn = []
-    current_turn = 0
+# status conditions to track
+STATUS_TOKENS = {"brn", "par", "psn", "tox", "slp", "frz", "fnt"}
 
-    for line in lines:
-        line = line.strip()
-        if line.startswith("|turn|"):
-            if current_turn > 0:
-                features_per_turn.append(flatten_state(battle_state, current_turn))
-            current_turn = int(line.split('|')[2])
-        else:
-            update_battle_state(line, battle_state)
-    # Capture final turn
-    features_per_turn.append(flatten_state(battle_state, current_turn))
-    return pd.DataFrame(features_per_turn)
 
-def init_battle_state():
-    # Initializes a dictionary with all features to track per turn
+def slot_from(parts2: str) -> str:
+    # extracts the slot (p1a, p2b, etc) from a parts[2] string
+    # handles both pokemon and player slots
+    return parts2.split(":", 1)[0].strip()
+
+
+def side_from(parts2: str) -> str:
+    # truncate slot to just the side (p1 or p2)
+    return slot_from(parts2)[:2]
+
+
+def parse_hp_fraction(hp_field: str):
+    # parse hp tokens into a float fraction (0.0 to 1.0)
+    if not hp_field:
+        return None
+    token = hp_field.split()[0]  # '72/100' or '0'
+    if "/" in token:
+        cur, mx = token.split("/")
+        try:
+            cur_i, mx_i = int(cur), int(mx)
+            if mx_i > 0:
+                return max(0.0, min(1.0, cur_i / mx_i))
+        except ValueError:
+            return None
+    elif token == "0":
+        return 0.0
+    return None
+
+
+def parse_status_from_hp_field(hp_field: str):
+    # extract status from hp field
+    # for example, get the psn from "20/281 psn"
+    if not hp_field:
+        return None
+    parts = hp_field.split()
+    if len(parts) >= 2:
+        st = parts[1].strip()
+        if st in STATUS_TOKENS:
+            return st
+    return None
+
+
+def freeze_state(state: dict) -> dict:
+    # create snapshot of live state with only plain types
+    # what model will actually see as pre-action state
     return {
-        'active_pokemon': {'p1': None, 'p2': None},
-        'hp': {'p1': None, 'p2': None},
-        'status': {'p1': None, 'p2': None},
-        'last_move': {'p1': None, 'p2': None},
-        'field': {'weather': None, 'terrain': None},
-        'hazards': {'p1': set(), 'p2': set()},
-        'turn_result': {'faint': False, 'gameover': False}
+        "turn": state["turn"],
+
+        # active slot (singles => a-slot)
+        "p1a_active": state["p1a_active"],
+        "p2a_active": state["p2a_active"],
+
+        # active hp percentages
+        "p1a_hp_pct": state["p1a_hp_pct"],
+        "p2a_hp_pct": state["p2a_hp_pct"],
+
+        # active status conditions (sleep, burn etc)
+        "p1a_status": state["p1a_status"],
+        "p2a_status": state["p2a_status"],
+
+        # active stat boosts (can be negative)
+        "p1a_boosts": dict(state["p1a_boosts"]),
+        "p2a_boosts": dict(state["p2a_boosts"]),
+
+        # entry hazards on each side
+        "hazards_p1": list(state["hazards_p1"]),
+        "hazards_p2": list(state["hazards_p2"]),
+        "weather": state["weather"],
+        "terrain": state["terrain"],
+
+        # Known team species (discovered so far)
+        "p1_team_species": sorted(state["p1_team_species"]),
+        "p2_team_species": sorted(state["p2_team_species"]),
+
+        # number of fainted mons on each side
+        "p1a_fainted": state["p1a_fainted"],
+        "p2a_fainted": state["p2a_fainted"],
     }
 
-def update_battle_state(line, state):
-    # Example patterns:
-    # |switch|p1a: Garchomp|Garchomp, L80, F|100/100
-    if line.startswith('|switch|'):
-        m = re.match(r'\|switch\|(p\d)a?: ([^|]+)\|([^,]+),.*\|([\d/]+)', line)
-        if m:
-            player = m.group(1)
-            poke = m.group(3)
-            hp = m.group(4)
-            state['active_pokemon'][player] = poke
-            state['hp'][player] = hp
-    elif line.startswith('|move|'):
-        m = re.match(r'\|move\|(p\d)a?: ([^|]+)\|([^\|]+)', line)
-        if m:
-            player = m.group(1)
-            move = m.group(3)
-            state['last_move'][player] = move
-    elif line.startswith('|-status|'):
-        m = re.match(r'\|-status\|(p\d)a?: ([^|]+)\|([A-Za-z]+)', line)
-        if m:
-            player = m.group(1)
-            status = m.group(3)
-            state['status'][player] = status
-    elif line.startswith('|-weather|'):
-        weather = line.split('|')[2]
-        state['field']['weather'] = weather
-    elif line.startswith('|win|'):
-        state['turn_result']['gameover'] = True
 
-def flatten_state(state, turn):
-    # Builds a flat dict for the DataFrame row
-    flat = {'turn': turn}
-    for key, d in state.items():
-        if isinstance(d, dict):
-            for k, v in d.items():
-                if isinstance(v, dict):
-                    for subk, subv in v.items():
-                        flat[f'{key}_{k}_{subk}'] = subv
-                else:
-                    flat[f'{key}_{k}'] = v
-        else:
-            flat[key] = d
-    return flat
+def parse_battle_log(path: str | Path):
+    # extract structured decision records from battle log
+    # turn, side, action_type, action, state (pre-turn snapshot)
+    # decisions for each side in a turn use the same pre-turn snapshot because they happen at the same time
+    # we use a decision buffer because the state only updates at the start of each turn so we need to delay changing data until the next turn
+    lines = Path(path).read_text(encoding="utf-8", errors="ignore").splitlines()
+    last_fainted_slot = None  # track forced switches after faint
+    # Live state for snapshots (what the model will see)
+    state = {
+        "turn": 0,
+        "p1a_active": None, "p2a_active": None,
+        "p1a_hp_pct": None, "p2a_hp_pct": None,
+        "p1a_status": None, "p2a_status": None,
+        "p1a_boosts": defaultdict(int), "p2a_boosts": defaultdict(int),
+        "hazards_p1": [], "hazards_p2": [],
+        "weather": None, "terrain": None,
+        "p1_team_species": set(), "p2_team_species": set(),
+        "p1a_fainted": 0, "p2a_fainted": 0,
+    }
 
-df = parse_showdown_log("data/logs/gen9randombattle_logs/gen9randombattle-2099652333.log")
-print(df[df["turn"] == 5])
+    # per-mon for tracking hp% and status condition across switches
+    team_hp = {"p1": {}, "p2": {}}        # mon -> hp_pct
+    team_status = {"p1": {}, "p2": {}}    # mon -> status token or None
+
+    records = []
+    decision_buffer = []
+    turn_start_state = freeze_state(state)
+    # the state each player sees before they pick their move
+
+    def save_slot(slot: str):
+        #save current active mon to team tracker for switching
+        mon = state.get(f"{slot}_active")
+        if mon:
+            side = slot[:2]
+            team_hp[side][mon] = state.get(f"{slot}_hp_pct")
+            team_status[side][mon] = state.get(f"{slot}_status")
+
+    def apply_switch(slot: str, mon_name: str, hp_field: str | None):
+        # apply switch effects to live state
+        side = slot[:2]
+        save_slot(slot)  # persist outgoing mon
+        state[f"{slot}_active"] = mon_name
+        state[f"{slot}_boosts"].clear()
+        state[f"{side}_team_species"].add(mon_name)
+
+        hp_pct = parse_hp_fraction(hp_field) if hp_field else None
+        st = parse_status_from_hp_field(hp_field) if hp_field else None
+
+        # defaults if not provided or not previously seen for new mon
+        if hp_pct is None:
+            hp_pct = team_hp[side].get(mon_name, 1.0)
+        if st is None:
+            st = team_status[side].get(mon_name)
+
+        state[f"{slot}_hp_pct"] = hp_pct
+        state[f"{slot}_status"] = st
+
+        # persist after switch-in
+        team_hp[side][mon_name] = hp_pct
+        team_status[side][mon_name] = st
+
+    for raw in lines:
+        parts = raw.split("|")
+        if len(parts) < 2:
+            continue
+        tag = parts[1]
+
+        # New turn
+        if tag == "turn":
+            # add decisions from the previous turn
+            if decision_buffer:
+                records.extend(decision_buffer)
+                decision_buffer.clear()
+
+            # snapshot state at start of this turn (both players decide from this)
+            turn_start_state = freeze_state(state)
+            last_fainted_slot = None
+            # Update turn counter
+            try:
+                state["turn"] = int(parts[2])
+            except ValueError:
+                pass
+        
+        elif tag == "faint":
+            slot = slot_from(parts[2])
+            side = slot[:2]
+            mon = state[f"{slot}_active"]
+            # clear active mon
+            state[f"{slot}_hp_pct"] = 0.0
+            state[f"{slot}_status"] = "fnt"
+            state[f"{slot}_boosts"].clear()
+            state[f"{side}a_fainted"] += 1
+            team_hp[side][mon] = 0.0
+            team_status[side][mon] = "fnt"
+
+            # set last fainted so we can track forced switch next
+            last_fainted_slot = slot
+
+        # decision lines (buffered with pre-turn state)
+        elif tag == "switch":
+            slot = slot_from(parts[2])
+            mon_name= parts[2].split(": ", 1)[1].split(",")[0]
+            hp_field= parts[3] if len(parts) > 3 else None
+
+            if slot == last_fainted_slot:
+                # forced switch: record post-faint state
+                records.append({
+                    "turn": state["turn"],
+                    "side": slot,
+                    "action_type":"forced_switch",
+                    "action": mon_name,
+                    "state": freeze_state(state),
+                })
+                # now apply the incoming mon
+                apply_switch(slot, mon_name, hp_field)
+
+            else:
+                # player choice switch: buffer with pre-turn snapshot
+                decision_buffer.append({
+                    "turn": state["turn"],
+                    "side": slot,
+                    "action_type":"switch",
+                    "action": mon_name,
+                    "state": turn_start_state,
+                })
+                apply_switch(slot, mon_name, hp_field)
+
+            last_fainted_slot = None
+            # reset last fainted slot
+
+        elif tag == "move":
+            slot = slot_from(parts[2])
+            move_name = parts[3]
+            decision_buffer.append({
+                "turn": state["turn"],
+                "side": slot,
+                "action_type": "move",
+                "action": move_name,
+                "state": turn_start_state
+            })
+            # effects (damage, status) arrive via later tags
+
+        # HP changes (damage, healing, status from damage)
+        elif tag in ("damage", "heal", "-damage", "-heal"):
+            slot = slot_from(parts[2])
+            side = slot[:2]
+            mon = state.get(f"{slot}_active")
+            if len(parts) > 3:
+                hp_pct = parse_hp_fraction(parts[3])
+                if hp_pct is not None:
+                    state[f"{slot}_hp_pct"] = hp_pct
+                    if mon:
+                        team_hp[side][mon] = hp_pct
+
+                st = parse_status_from_hp_field(parts[3])
+                if st in STATUS_TOKENS and st != "fnt":
+                    state[f"{slot}_status"] = st
+                    if mon:
+                        team_status[side][mon] = st
+
+        # Status application and cure
+        elif tag in ("status", "-status"):
+            slot = slot_from(parts[2])
+            side = slot[:2]
+            mon = state.get(f"{slot}_active")
+            st = parts[3] if len(parts) > 3 else None
+            state[f"{slot}_status"] = st
+            if mon:
+                team_status[side][mon] = st
+
+        elif tag in ("curestatus", "-curestatus"):
+            slot = slot_from(parts[2])
+            side = slot[:2]
+            mon = state.get(f"{slot}_active")
+            state[f"{slot}_status"] = None
+            if mon:
+                team_status[side][mon] = None
+
+        # boost changes
+        elif tag in ("-boost", "-unboost"):
+            slot = slot_from(parts[2])
+            stat = parts[3] if len(parts) > 3 else None
+            try:
+                change = int(parts[4]) if len(parts) > 4 else 0
+            except ValueError:
+                change = 0
+            delta = change if tag == "-boost" else -change
+            if stat:
+                state[f"{slot}_boosts"][stat] += delta
+
+        elif tag == "-clearallboost":
+            state["p1a_boosts"].clear()
+            state["p2a_boosts"].clear()
+
+        elif tag == "-clearboost":
+            slot = slot_from(parts[2])
+            stat = parts[3] if len(parts) > 3 else None
+            if stat and stat in state[f"{slot}_boosts"]:
+                del state[f"{slot}_boosts"][stat]
+
+        # Hazards
+        elif tag == "-sidestart":
+            side = side_from(parts[2])
+            cond = parts[3] if len(parts) > 3 else ""
+            if ": " in cond:  # e.g., 'move: Stealth Rock'
+                cond = cond.split(": ", 1)[1]
+            if cond in HAZARDS and cond not in state[f"hazards_{side}"]:
+                state[f"hazards_{side}"].append(cond)
+
+        elif tag == "-sideend":
+            side = side_from(parts[2])
+            cond = parts[3] if len(parts) > 3 else ""
+            if ": " in cond:
+                cond = cond.split(": ", 1)[1]
+            if cond in HAZARDS and cond in state[f"hazards_{side}"]:
+                state[f"hazards_{side}"].remove(cond)
+
+        # Weather and terrain
+        elif tag == "-weather":
+            w = parts[2] if len(parts) > 2 else None
+            state["weather"] = None if w in (None, "none") else w
+
+        elif tag == "-fieldstart":
+            cond = parts[2] if len(parts) > 2 else ""
+            if ": " in cond:
+                cond = cond.split(": ", 1)[1]
+            state["terrain"] = cond or None
+
+        elif tag == "-fieldend":
+            state["terrain"] = None
+
+        # Ignore other tags (including win/tie)
+
+    # flush any decisions from the final turn
+    if decision_buffer:
+        records.extend(decision_buffer)
+        decision_buffer.clear()
+
+    return records
+
+
+def parse_folder(folder_path: str | Path) -> pd.DataFrame:
+    # parse all logs in a folder and return a dataframe of all records
+    folder = Path(folder_path)
+    all_records = []
+    for fn in folder.glob("*.log"):
+        try:
+            recs = parse_battle_log(fn)
+            for r in recs:
+                r["replay_id"] = fn.stem
+            all_records.extend(recs)
+        except Exception as e:
+            print(f"[WARN] Failed parsing {fn.name}: {e}")
+
+    df = pd.json_normalize(all_records, sep="_")
+    return df
+#testing
+if __name__ == "__main__":
+    df = pd.json_normalize(parse_battle_log("data/logs/gen9randombattle_logs/gen9randombattle-2006881803.log"), sep="_")
+    pd.set_option("display.max_columns", None)
+    df.to_csv("parsed_battles.csv", index=False)
