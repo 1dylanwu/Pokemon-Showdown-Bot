@@ -328,25 +328,3 @@ def parse_battle_log(path: str | Path):
         decision_buffer.clear()
 
     return records
-
-
-def parse_folder(folder_path: str | Path) -> pd.DataFrame:
-    # parse all logs in a folder and return a dataframe of all records
-    folder = Path(folder_path)
-    all_records = []
-    for fn in folder.glob("*.log"):
-        try:
-            recs = parse_battle_log(fn)
-            for r in recs:
-                r["replay_id"] = fn.stem
-            all_records.extend(recs)
-        except Exception as e:
-            print(f"[WARN] Failed parsing {fn.name}: {e}")
-
-    df = pd.json_normalize(all_records, sep="_")
-    return df
-#testing
-if __name__ == "__main__":
-    df = pd.json_normalize(parse_battle_log("data/logs/gen9randombattle_logs/gen9randombattle-2006881803.log"), sep="_")
-    pd.set_option("display.max_columns", None)
-    df.to_csv("parsed_battles.csv", index=False)

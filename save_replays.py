@@ -34,4 +34,4 @@ def save_replays(pages: int = 50, delay: float = 0.5):
 
 if __name__ == "__main__":
     #script runs directly
-    save_replays(pages=50, delay=0.5)
+    save_replays(pages=100, delay=0.5)
