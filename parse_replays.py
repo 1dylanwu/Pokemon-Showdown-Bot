@@ -79,13 +79,20 @@ def freeze_state(state: dict) -> dict:
         "weather": state["weather"],
         "terrain": state["terrain"],
 
-        # Known team species (discovered so far)
+        # current alive/known team species
         "p1_team_species": sorted(state["p1_team_species"]),
         "p2_team_species": sorted(state["p2_team_species"]),
 
         # number of fainted mons on each side
         "p1a_fainted": state["p1a_fainted"],
         "p2a_fainted": state["p2a_fainted"],
+
+        "p1_known_hp": dict(state["p1_known_hp"]),
+        "p2_known_hp": dict(state["p2_known_hp"]),
+
+        "p1_known_status": dict(state["p1_known_status"]),
+        "p2_known_status": dict(state["p2_known_status"]),
+
     }
 
 
@@ -107,11 +114,13 @@ def parse_battle_log(path: str | Path):
         "weather": None, "terrain": None,
         "p1_team_species": set(), "p2_team_species": set(),
         "p1a_fainted": 0, "p2a_fainted": 0,
-    }
+        "p1_known_hp": {}, "p2_known_hp": {},
+        "p1_known_status": {}, "p2_known_status": {},
 
-    # per-mon for tracking hp% and status condition across switches
-    team_hp = {"p1": {}, "p2": {}}        # mon -> hp_pct
-    team_status = {"p1": {}, "p2": {}}    # mon -> status token or None
+    }
+    #    # per-mon for tracking hp% and status condition across switches
+    #team_hp = {"p1": {}, "p2": {}}        # mon -> hp_pct
+    #team_status = {"p1": {}, "p2": {}}    # mon -> status token or None
 
     records = []
     decision_buffer = []
@@ -123,8 +132,9 @@ def parse_battle_log(path: str | Path):
         mon = state.get(f"{slot}_active")
         if mon:
             side = slot[:2]
-            team_hp[side][mon] = state.get(f"{slot}_hp_pct")
-            team_status[side][mon] = state.get(f"{slot}_status")
+            state[f"{side}_known_hp"][mon] = state.get(f"{slot}_hp_pct")
+            state[f"{side}_known_status"][mon] = state.get(f"{slot}_status")
+
 
     def apply_switch(slot: str, mon_name: str, hp_field: str | None):
         # apply switch effects to live state
@@ -139,16 +149,16 @@ def parse_battle_log(path: str | Path):
 
         # defaults if not provided or not previously seen for new mon
         if hp_pct is None:
-            hp_pct = team_hp[side].get(mon_name, 1.0)
+            hp_pct = state[f"{side}_known_hp"].get(mon_name, 1.0)
         if st is None:
-            st = team_status[side].get(mon_name)
+            st = state[f"{side}_known_status"].get(mon_name)
 
         state[f"{slot}_hp_pct"] = hp_pct
         state[f"{slot}_status"] = st
 
         # persist after switch-in
-        team_hp[side][mon_name] = hp_pct
-        team_status[side][mon_name] = st
+        state[f"{side}_known_hp"][mon_name] = hp_pct
+        state[f"{side}_known_status"][mon_name] = st
 
     for raw in lines:
         parts = raw.split("|")
@@ -177,12 +187,15 @@ def parse_battle_log(path: str | Path):
             side = slot[:2]
             mon = state[f"{slot}_active"]
             # clear active mon
+            state[f"{side}_team_species"].discard(mon)
+            state[f"{side}_known_hp"].pop(mon, None)
+            state[f"{side}_known_status"].pop(mon, None)
             state[f"{slot}_hp_pct"] = 0.0
             state[f"{slot}_status"] = "fnt"
             state[f"{slot}_boosts"].clear()
             state[f"{side}a_fainted"] += 1
-            team_hp[side][mon] = 0.0
-            team_status[side][mon] = "fnt"
+            state[f"{side}_known_hp"][mon] = 0.0
+            state[f"{side}_known_status"][mon] = "fnt"
 
             # set last fainted so we can track forced switch next
             fainted_slots.add(slot)
@@ -241,13 +254,13 @@ def parse_battle_log(path: str | Path):
                 if hp_pct is not None:
                     state[f"{slot}_hp_pct"] = hp_pct
                     if mon:
-                        team_hp[side][mon] = hp_pct
+                        state[f"{side}_known_hp"][mon] = hp_pct
 
                 st = parse_status_from_hp_field(parts[3])
                 if st in STATUS_TOKENS and st != "fnt":
                     state[f"{slot}_status"] = st
                     if mon:
-                        team_status[side][mon] = st
+                        state[f"{side}_known_status"][mon] = st
 
         # Status application and cure
         elif tag in ("status", "-status"):
@@ -257,7 +270,7 @@ def parse_battle_log(path: str | Path):
             st = parts[3] if len(parts) > 3 else None
             state[f"{slot}_status"] = st
             if mon:
-                team_status[side][mon] = st
+                state[f"{side}_known_status"][mon] = st
 
         elif tag in ("curestatus", "-curestatus"):
             slot = slot_from(parts[2])
@@ -265,7 +278,7 @@ def parse_battle_log(path: str | Path):
             mon = state.get(f"{slot}_active")
             state[f"{slot}_status"] = None
             if mon:
-                team_status[side][mon] = None
+                state[f"{side}_known_status"][mon] = None
 
         # boost changes
         elif tag in ("-boost", "-unboost"):

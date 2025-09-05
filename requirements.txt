@@ -2,6 +2,8 @@ poke-env
 requests
 tqdm
 asyncio
+pandas
+scikit-learn
 
 #I edited poke-env's damage calculation for the rules bot to include the opponent's stats, since those are always known in random battles
 #I removed the assertion for the defender stats being defined and included 
