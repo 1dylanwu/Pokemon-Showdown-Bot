@@ -41,6 +41,12 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
         if num_col in df.columns:
             df[num_col] = pd.to_numeric(df[num_col], errors="coerce")
 
+    for col in ("hazards_p1", "hazards_p2"):
+        if col in df.columns:
+            df[col] = df[col].apply(
+                lambda x: eval(x) if isinstance(x, str) else {}
+            )
+
     return df
 
 
@@ -65,6 +71,19 @@ def flatten_sets(
     
     return onehot, mlb
 
+# entry hazards
+def collect_hazards(df, col):
+    all_keys = set()
+    for d in df[col].dropna():
+        all_keys |= set(d.keys())
+    return sorted(all_keys)
+
+def flatten_haz(df, col, prefix, keys):
+    data = {}
+    for k in keys:
+        name = f"{prefix}{k}"
+        data[name] = df[col].apply(lambda d: float(d.get(k, 0)) if isinstance(d, dict) else 0.0)
+    return pd.DataFrame(data, index=df.index)
 
 
 def build_feature_matrix(
@@ -76,7 +95,13 @@ def build_feature_matrix(
     # multi-hot encode team species
     p1_ts, mlb1 = flatten_sets(df, "p1_team_species", "p1_team_", mlb1)
     p2_ts, mlb2 = flatten_sets(df, "p2_team_species", "p2_team_", mlb2)
+    
+    #idk why p1 and p2 are at the end :(
+    p1_haz_keys = collect_hazards(df, "hazards_p1")
+    p2_haz_keys = collect_hazards(df, "hazards_p2")
 
+    p1_haz = flatten_haz(df, "hazards_p1", "p1_haz_", p1_haz_keys)
+    p2_haz = flatten_haz(df, "hazards_p2", "p2_haz_", p2_haz_keys)
 
     # for the known HP and status columns (already flattened)
     hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") 
@@ -101,6 +126,8 @@ def build_feature_matrix(
             df[cat_cols].astype(str),
             p1_ts,
             p2_ts,
+            p1_haz,
+            p2_haz,
         ],
         axis=1,
     )
@@ -158,7 +185,7 @@ def preprocess(
 
     # TEST
     df_test = load_and_clean(test_csv)
-    X_test, y_test, *_ = build_feature_matrix(df_val, mlb1=mlb1, mlb2=mlb2)
+    X_test, y_test, *_ = build_feature_matrix(df_test, mlb1=mlb1, mlb2=mlb2)
     X_test_proc = pipeline.transform(X_test)
 
     np.save(out_dir / "X_test.npy", X_test_proc)
