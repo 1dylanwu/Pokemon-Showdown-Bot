@@ -165,6 +165,7 @@ def preprocess(
     if y_test is not None:
         np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
+    # total number of features is 7210. wowzers!
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 
