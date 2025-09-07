@@ -17,8 +17,15 @@ env/
 .DS_Store
 
 #Logs and data
-data/
-*.log
+data/raw/
+data/processed/*.npy
+data/parsed/*.csv
+data/processed/*.pkl
+
+!data/
+!data/processed/
+!data/raw/*.txt
+!data/parsed/
 
 #VSCode
 .vscode/

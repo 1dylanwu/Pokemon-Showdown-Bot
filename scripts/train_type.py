@@ -1,11 +1,9 @@
 import numpy as np
 import joblib
 from lightgbm import LGBMClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
 from pathlib import Path
-from sklearn.model_selection import RandomizedSearchCV
 import pandas as pd
+
 pre = "data/processed/"
 X_train, y_train = np.load(pre + "X_train.npy", ), np.load(pre + "y_train.npy", allow_pickle=True)
 X_val,   y_val   = np.load(pre+"X_val.npy"),   np.load(pre+"y_val.npy", allow_pickle=True)
@@ -16,7 +14,6 @@ def split_action_type(y):
     types = np.array(["move" if act.startswith("move_") else "switch"
                       for act in y])
     return types
-
 
 y_tr_type = split_action_type(y_train)
 y_va_type = split_action_type(y_val)
