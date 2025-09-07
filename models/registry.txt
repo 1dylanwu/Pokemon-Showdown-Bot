@@ -1,0 +1,16 @@
+Model: type_clf.pkl
+Algorithm: HistGradientBoostingClassifier
+Hyperparams: Default
+Train Accuracy: 0.7948
+Val Accuracy: 0.7943
+Date: 9/6/25 10:30 pm
+Notes: Baseline model
+------------------------------------------------------------
+Model: type_clf_tuned.pkl
+Algorithm: HistGradientBoostingClassifier
+Hyperparams: 'min_samples_leaf': 10, 'max_iter': 100, 'max_depth': 3, 'learning_rate': 0.05, 'class_weight': 'balanced'
+Train Accuracy: 0.7943
+Val Accuracy: 
+Date: 9/6/25 7:00 pm
+Notes: Used custom tune_param RandomizedSearch to tune
+------------------------------------------------------------

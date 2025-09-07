@@ -1,7 +1,7 @@
 import asyncio
 from poke_env import RandomPlayer, SimpleHeuristicsPlayer
 from poke_env import LocalhostServerConfiguration
-from rules_bot import RulesBot
+from src.bot.rules_bot import RulesBot
 # tests connecting to local showdown server and using poke-env/async
 # by creating 2 bots that choose random moves and battling them against each other
 # config

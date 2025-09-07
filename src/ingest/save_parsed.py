@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from parse_replays import parse_battle_log
+from src.ingest.parse_replays import parse_battle_log
 
 # processes raw logs, builds master CSV, and splits into train/val/test sets
 def build_and_split(

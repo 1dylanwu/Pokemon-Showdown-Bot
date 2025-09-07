@@ -1,0 +1,49 @@
+import numpy as np
+import joblib
+from lightgbm import LGBMClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import LabelEncoder
+from pathlib import Path
+from sklearn.model_selection import RandomizedSearchCV
+import pandas as pd
+pre = "data/processed/"
+X_train, y_train = np.load(pre + "X_train.npy", ), np.load(pre + "y_train.npy", allow_pickle=True)
+X_val,   y_val   = np.load(pre+"X_val.npy"),   np.load(pre+"y_val.npy", allow_pickle=True)
+X_test,  y_test  = np.load(pre+"X_test.npy"),  np.load(pre+"y_test.npy", allow_pickle=True)
+
+# separate out the action types
+def split_action_type(y):
+    types = np.array(["move" if act.startswith("move_") else "switch"
+                      for act in y])
+    return types
+
+
+y_tr_type = split_action_type(y_train)
+y_va_type = split_action_type(y_val)
+y_te_type = split_action_type(y_test)
+
+# change to float32 to save memory
+X_train = X_train.astype(np.float32)
+X_val   = X_val.astype(np.float32)
+
+# binary classifier to check for either move or switch
+type_clf = LGBMClassifier(
+    objective="binary",
+    boosting_type="gbdt",
+    n_estimators=200,
+    learning_rate=0.05,
+    max_depth=5,
+    class_weight="balanced",
+    random_state=42,
+    min_child_samples = 5,
+    n_jobs=2,
+    verbosity = -1,
+    min_leaves = 128,
+    max_bin = 512
+)
+
+type_clf.fit(X_train, y_tr_type)
+
+print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
+print("Stage1 val acc:", type_clf.score(X_val,   y_va_type))
+#joblib.dump(type_clf, "models/type/type_clf_2.0.pkl")
