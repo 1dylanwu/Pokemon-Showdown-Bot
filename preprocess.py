@@ -22,7 +22,9 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
     # strip leading "state_" from nested-field columns
     df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c,
               inplace=True)
-
+    if "action_type" in df.columns and "action" in df.columns:
+        df["action_full"] = df["action_type"] + "_" + df["action"]
+        
     # restore team‐species lists (they were saved as strings)
     for col in ("p1_team_species", "p2_team_species"):
         if col in df.columns:
@@ -75,7 +77,14 @@ def flatten_sets(
 def collect_hazards(df, col):
     all_keys = set()
     for d in df[col].dropna():
-        all_keys |= set(d.keys())
+        if isinstance(d, dict):
+            all_keys |= set(d.keys())
+        elif isinstance(d, list):
+            # if it's a list of dicts, flatten it
+            for item in d:
+                if isinstance(item, dict):
+                    all_keys |= set(item.keys())
+        # else: skip anything that's not dict or list
     return sorted(all_keys)
 
 def flatten_haz(df, col, prefix, keys):
@@ -133,7 +142,7 @@ def build_feature_matrix(
     )
 
     # target
-    y = df["action"] if "action" in df.columns else None
+    y = df["action_full"] if "action_full" in df.columns else None
 
     return X, y, mlb1, mlb2
 
