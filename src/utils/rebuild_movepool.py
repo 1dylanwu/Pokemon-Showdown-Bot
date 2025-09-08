@@ -4,45 +4,40 @@ from collections import defaultdict
 import joblib
 import pandas as pd
 
-CSV_DIR = Path("data/parsed") 
-JSON_PATH = Path("data/raw/gen9randombattle.json") 
+CSV_FILES = [
+    Path("data/parsed/train.csv"),
+    Path("data/parsed/val.csv"),
+    Path("data/parsed/test.csv")
+]
 OUT_PATH = Path("data/processed/move/full_movepools_from_data.pkl")
+JSON_PATH = Path("data/raw/gen9randombattle.json")
 
-with JSON_PATH.open() as f:
+with open(JSON_PATH) as f:
     role_data = json.load(f)
-
-def extract_from_df(df: pd.DataFrame, movepools: dict[str,set]):
-    # keep only actual moves
-    df = df[df["action_type"] == "move"]
-    if "state_p1a_active" in df.columns:
-        df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c, inplace=True)
-    # pull species+move per row
-    for sp1, sp2, player, move_label in zip(
-        df["p1a_active"], df["p2a_active"], df["side"], df["action"]
-    ):
-        # raw move
-        raw = move_label.split("_", 1)[1] if "_" in move_label else move_label
-        # active species depends on player
-        species = sp1 if player == "p1" else sp2
-        movepools[species].add(raw)
 
 movepools = defaultdict(set)
 
-# from all CSVs (e.g. train.csv, val.csv)
-for csv_file in CSV_DIR.glob("*.csv"):
-    df = pd.read_csv(csv_file, dtype=str)
-    df = df[df["action_type"] == "move"].copy()
-    extract_from_df(df, movepools)
+for csv_path in CSV_FILES:
+    df = pd.read_csv(csv_path, dtype=str)
+    df = df[df["action_type"] == "move"]
+    for _, row in df.iterrows():
+        species = row["state_p1a_active"] if row["side"] == "p1a" else row["state_p2a_active"]
+        move = row["action"]
+        if(species.strip() == "Gardevoir" and move.strip() == "Bug Buzz"):
+            print("gardevoir bug buzz found: ", row["replay_id"], row["turn"])
+        if(species.strip() == "Dragalge" and move.strip() == "Strength Sap"):
+            print("dragalge found: ", row["replay_id"], row["turn"])
+        if(species.strip() == "Dragalge" and move.strip() == "Dark Pulse"):
+            print("dragalge found: ", row["replay_id"], row["turn"])
+        movepools[species.strip()].add(move.strip())
+"""
+for species, data in role_data.items():
+    for role in data.get("roles", {}).values():
+        for mv in role.get("moves", []):
+            movepools[species.strip()].add(mv.strip())
 
-for species, spec_data in role_data.items():
-    roles = spec_data.get("roles", {})
-    for role_name, role_info in roles.items():
-        moves = role_info.get("moves", [])
-        for move in moves:
-            movepools[species].add(move)
 
 movepools = {sp: sorted(list(moves)) for sp, moves in movepools.items()}
-
 joblib.dump(movepools, OUT_PATH)
-print(f"Extracted movepools for {len(movepools)} species → saved to {OUT_PATH}")
-
+print(f"Saved movepools for {len(movepools)} species to {OUT_PATH}")
+"""

@@ -27,7 +27,7 @@ X_train = X_train.astype(np.float32)
 X_val   = X_val.astype(np.float32)
 
 # binary classifier to check for either move or switch
-
+"""
 type_clf = LGBMClassifier(
     objective="binary",
     boosting_type="gbdt",
@@ -42,11 +42,12 @@ type_clf = LGBMClassifier(
     num_leaves= 63,
     max_bin = 252
 )
-type_clf.fit(X_train, y_tr_type)
 """
 type_clf = HistGradientBoostingClassifier(min_samples_leaf = 10, max_iter = 100, max_depth = 3, learning_rate = 0.05, class_weight = 'balanced')
+
+
 type_clf.fit(X_train, y_tr_type)
-"""
+
 print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
 print("Stage1 val acc:", type_clf.score(X_val,   y_va_type))
 if(type_clf.score(X_val, y_va_type) > 0.7947):

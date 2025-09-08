@@ -5,12 +5,12 @@ from pathlib import Path
 from sklearn.metrics import accuracy_score, top_k_accuracy_score
 import random
 
-MODEL_PATH    = Path("models/stage2_move/final/move_clf_1.1.pkl")
+MODEL_PATH    = Path("models/stage2_move/final/move_clf_1.0.pkl")
 LABEL_ENCODER    = Path("models/stage2_move/util/label_encoder.pkl")
 FULL_MOVEPOOLS   = Path("data/processed/move/full_movepools.pkl")
 X_VAL_PATH       = Path("data/processed/move/X_va_moves.npy")
 Y_VAL_PATH       = Path("data/processed/move/y_va_moves.npy")
-VAL_CSV_PATH     = Path("data/parsed/val.csv") 
+VAL_CSV_PATH     = Path("data/parsed/val0.csv") 
 
 # load everything
 move_clf = joblib.load(MODEL_PATH)
@@ -21,11 +21,19 @@ X_val = np.load(X_VAL_PATH)
 y_val_enc = np.load(Y_VAL_PATH, allow_pickle=True)
 
 # process csv (filter for only moves and remove state prefix)
+"""
 df = pd.read_csv(VAL_CSV_PATH, dtype=str)
+df["turn"] = pd.to_numeric(df["turn"], errors="coerce")
+df = df[df["turn"] > 0].copy()
+
 df = df[df["action_type"] == "move"].copy()
 df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c, inplace=True)
-
+"""
 # create list of the active species per row
+species_val = np.load("data/processed/move/species_va_moves.npy", allow_pickle=True)
+legal_moves_batch = [movepools.get(species, []) for species in species_val]
+
+"""
 species_val = np.where(
     df["side"] == "p1a",
     df["p1a_active"],
@@ -36,13 +44,17 @@ opponent_species = np.where(
     df["p2a_active"],
     df["p1a_active"]
 )
-
-
+"""
 # create list of total available moves per row, according to possible movesets json
 legal_moves_batch = [
     movepools.get(species, [])
     for species in species_val
 ]
+
+print(len(X_val))
+print(species_val.shape)
+
+print(le_moves.classes_.shape, X_val.shape, y_val_enc.shape)
 
 def apply_legal_move_mask(probs: np.ndarray,
                           legal_moves_batch: list[list[str]],
@@ -89,12 +101,12 @@ for i in sample_indices:
     pred_move = le_moves.inverse_transform([y_pred_enc[i]])[0]
     allowed = legal_moves_batch[i]
     species = species_val[i]
-    opponent = opponent_species[i]
+    #opponent = opponent_species[i]
     top3 = np.argsort(probs_masked[i])[::-1][:3]
     top3_moves = le_moves.inverse_transform(top3)
 
     print(f"[{i}] Species: {species}")
-    print(f"Opponent: {opponent}")
+    #print(f"Opponent: {opponent}")
     print(f"     True: {true_move}")
     print(f"     Pred: {pred_move}")
     print(f"     Legal: {allowed}")
@@ -125,7 +137,7 @@ for i in range(len(y_val_enc)):
         count += 1
         if count >= 10:
             break
-"""
+
 acc_top1 = accuracy_score(y_val_enc, y_pred_enc)
 acc_top3 = top_k_accuracy_score(y_val_enc, probs_masked, k=3, labels = labels)
 acc_top5 = top_k_accuracy_score(y_val_enc, probs_masked, k=5, labels = labels)
@@ -136,4 +148,3 @@ print(f" → Top-1 Accuracy: {acc_top1:.4f}")
 print(f" → Top-3 Accuracy: {acc_top3:.4f}")
 print(f" → Top-5 Accuracy: {acc_top5:.4f}")
 print(f" → Top-10 Accuracy: {acc_top10:.4f}")
-"""
