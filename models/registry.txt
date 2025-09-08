@@ -1,3 +1,36 @@
+Model: type_clf_1.0.pkl
+Algorithm: HistGradientBoostingClassifier
+Hyperparams:     
+    min_samples_leaf = 10, 
+    max_iter = 100, 
+    max_depth = 3, 
+    learning_rate = 0.05, 
+    class_weight = 'balanced'
+Train Accuracy: 0.7939566290417549
+Val Accuracy: 0.7944052235590467
+Date: 9/8/25 5:30 pm
+Notes: baseline histgradient model after adding new info
+------------------------------------------------------------
+Model: type_clf_2.0.pkl
+Algorithm: LGBMClassifier
+Hyperparams:     
+    objective="binary",
+    boosting_type="gbdt",
+    n_estimators=500,
+    learning_rate=0.01,
+    max_depth=7,
+    class_weight="balanced",
+    random_state=42,
+    min_child_samples = 5,
+    n_jobs=2,
+    verbosity = -1,
+    num_leaves= 63,
+    max_bin = 252
+Train Accuracy: 0.7944368582154684
+Val Accuracy: 0.792946869510457
+Date: 9/8/25 5:30 pm
+Notes: baseline lightgbm model after adding new info
+------------------------------------------------------------
 Model: move_clf_1.0.pkl
 Algorithm: LGBMClassifier
 Hyperparams:     
@@ -11,22 +44,8 @@ Hyperparams:
     class_weight="balanced",
     n_jobs=4,
     verbosity=-1
-Train Accuracy: 0.4940678438144043
-Val Accuracy: 0.296327294210319
-Date: 9/7/25 10:30 pm
-Notes: not including illegal moves/available bank
-------------------------------------------------------------
-Model: move_clf_2.0.pkl
-Algorithm: RandomForest
-Hyperparams:     
-    n_estimators=200,
-    max_depth=None,
-    min_samples_leaf=5,
-    class_weight="balanced",
-    n_jobs=-1,
-    random_state=42
-Train Accuracy: 0.2187378154068958
-Val Accuracy: 0.11687672311933832
-Date: 9/7/25 11:00 pm
-Notes: cant believe this thing used 100% of my cpu for 10 minutes just for 11% accuracy
+Train Accuracy: 0.7944368582154684
+Val Accuracy: 0.792946869510457
+Date: 9/8/25 5:30 pm
+Notes: baseline lightgbm model after adding new info
 ------------------------------------------------------------

@@ -54,6 +54,9 @@ def parse_status_from_hp_field(hp_field: str):
 def freeze_state(state: dict) -> dict:
     # create snapshot of live state with only plain types
     # what model will actually see as pre-action state
+    is_tera_1 = state["p1a_active"] == state["p1a_tera_species"]
+    is_tera_2 = state["p2a_active"] == state["p2a_tera_species"]
+
     return {
         "turn": state["turn"],
 
@@ -87,12 +90,15 @@ def freeze_state(state: dict) -> dict:
         "p1a_fainted": state["p1a_fainted"],
         "p2a_fainted": state["p2a_fainted"],
 
+        # known hp% of seen mons on each side
         "p1_known_hp": dict(state["p1_known_hp"]),
         "p2_known_hp": dict(state["p2_known_hp"]),
 
-        "p1_known_status": dict(state["p1_known_status"]),
-        "p2_known_status": dict(state["p2_known_status"]),
-
+        # terastallization state
+        "p1a_tera_type": state["p1a_tera_type"] if is_tera_1 else None,
+        "p2a_tera_type": state["p2a_tera_type"] if is_tera_2 else None,
+        "p1a_is_terastallized": is_tera_1,
+        "p2a_is_terastallized": is_tera_2,
     }
 
 
@@ -115,12 +121,9 @@ def parse_battle_log(path: str | Path):
         "p1_team_species": set(), "p2_team_species": set(),
         "p1a_fainted": 0, "p2a_fainted": 0,
         "p1_known_hp": {}, "p2_known_hp": {},
-        "p1_known_status": {}, "p2_known_status": {},
-
+        "p1a_tera_type": None, "p2a_tera_type": None,
+        "p1a_tera_species": None, "p2a_tera_species": None,
     }
-    #    # per-mon for tracking hp% and status condition across switches
-    #team_hp = {"p1": {}, "p2": {}}        # mon -> hp_pct
-    #team_status = {"p1": {}, "p2": {}}    # mon -> status token or None
 
     records = []
     decision_buffer = []
@@ -133,10 +136,9 @@ def parse_battle_log(path: str | Path):
         if mon:
             side = slot[:2]
             state[f"{side}_known_hp"][mon] = state.get(f"{slot}_hp_pct")
-            state[f"{side}_known_status"][mon] = state.get(f"{slot}_status")
 
 
-    def apply_switch(slot: str, mon_name: str, hp_field: str | None):
+    def apply_switch(slot: str, mon_name: str, hp_field: str | None, tera_type: str | None):
         # apply switch effects to live state
         side = slot[:2]
         save_slot(slot)  # persist outgoing mon
@@ -146,26 +148,37 @@ def parse_battle_log(path: str | Path):
 
         hp_pct = parse_hp_fraction(hp_field) if hp_field else None
         st = parse_status_from_hp_field(hp_field) if hp_field else None
+        # If this mon is terastallized, record its Tera Type and species
+        if tera_type:
+            state[f"{slot}_tera_type"] = tera_type
+            state[f"{slot}_tera_species"] = mon_name
+        else:
+            state[f"{slot}_tera_type"] = None
+            state[f"{slot}_tera_species"] = None
 
         # defaults if not provided or not previously seen for new mon
         if hp_pct is None:
             hp_pct = state[f"{side}_known_hp"].get(mon_name, 1.0)
-        if st is None:
-            st = state[f"{side}_known_status"].get(mon_name)
 
         state[f"{slot}_hp_pct"] = hp_pct
         state[f"{slot}_status"] = st
 
         # persist after switch-in
         state[f"{side}_known_hp"][mon_name] = hp_pct
-        state[f"{side}_known_status"][mon_name] = st
 
     for raw in lines:
         parts = raw.split("|")
         if len(parts) < 2:
             continue
         tag = parts[1]
-
+        if tag == "-terastallize":
+            # |-terastallize|p1a: Kyogre|Water
+            slot = slot_from(parts[2])
+            tera_type = parts[3].strip() if len(parts) > 3 else None
+            state[f"{slot}_tera_type"] = tera_type
+            state[f"{slot}_tera_species"] = state[f"{slot}_active"]
+            continue
+        
         # New turn
         if tag == "turn":
             # add decisions from the previous turn
@@ -189,13 +202,11 @@ def parse_battle_log(path: str | Path):
             # clear active mon
             state[f"{side}_team_species"].discard(mon)
             state[f"{side}_known_hp"].pop(mon, None)
-            state[f"{side}_known_status"].pop(mon, None)
             state[f"{slot}_hp_pct"] = 0.0
             state[f"{slot}_status"] = "fnt"
             state[f"{slot}_boosts"].clear()
             state[f"{side}a_fainted"] += 1
             state[f"{side}_known_hp"][mon] = 0.0
-            state[f"{side}_known_status"][mon] = "fnt"
 
             # set last fainted so we can track forced switch next
             fainted_slots.add(slot)
@@ -205,7 +216,11 @@ def parse_battle_log(path: str | Path):
             slot = slot_from(parts[2])
             mon_name= parts[3].split(",", 1)[0].strip()
             hp_field = parts[4] if len(parts) > 4 else parts[3] if len(parts) > 3 else None
-
+            meta_fields = parts[3].split(",") 
+            tera_type = None
+            for field in meta_fields:
+                if field.strip().startswith("tera:"):
+                    tera_type = field.strip().split(":", 1)[1]
             if slot in fainted_slots:
                 # forced switch: record post-faint state
                 records.append({
@@ -216,7 +231,7 @@ def parse_battle_log(path: str | Path):
                     "state": freeze_state(state),
                 })
                 # now apply the incoming mon
-                apply_switch(slot, mon_name, hp_field)
+                apply_switch(slot, mon_name, hp_field, tera_type)
                 fainted_slots.remove(slot)
                 #remove from fainted slots
 
@@ -229,12 +244,21 @@ def parse_battle_log(path: str | Path):
                     "action": mon_name,
                     "state": turn_start_state,
                 })
-                apply_switch(slot, mon_name, hp_field)
+                apply_switch(slot, mon_name, hp_field, tera_type)
 
+        elif tag == "drag":
+            # only update state for drag, dont record as decision since not player choice
+            slot = slot_from(parts[2])
+            mon_name = parts[3].split(",", 1)[0].strip()
+            hp_field = parts[4] if len(parts) > 4 else None
+            apply_switch(slot, mon_name, hp_field, tera_type)
+            continue 
 
         elif tag == "move":
             slot = slot_from(parts[2])
             move_name = parts[3]
+            if "[from]ability: Magic Bounce" in raw:
+                continue
             decision_buffer.append({
                 "turn": state["turn"],
                 "side": slot,
@@ -259,8 +283,6 @@ def parse_battle_log(path: str | Path):
                 st = parse_status_from_hp_field(parts[3])
                 if st in STATUS_TOKENS and st != "fnt":
                     state[f"{slot}_status"] = st
-                    if mon:
-                        state[f"{side}_known_status"][mon] = st
 
         # Status application and cure
         elif tag in ("status", "-status"):
@@ -269,16 +291,12 @@ def parse_battle_log(path: str | Path):
             mon = state.get(f"{slot}_active")
             st = parts[3] if len(parts) > 3 else None
             state[f"{slot}_status"] = st
-            if mon:
-                state[f"{side}_known_status"][mon] = st
 
         elif tag in ("curestatus", "-curestatus"):
             slot = slot_from(parts[2])
             side = slot[:2]
             mon = state.get(f"{slot}_active")
             state[f"{slot}_status"] = None
-            if mon:
-                state[f"{side}_known_status"][mon] = None
 
         # boost changes
         elif tag in ("-boost", "-unboost"):

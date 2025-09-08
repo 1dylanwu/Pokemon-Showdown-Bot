@@ -10,7 +10,7 @@ X_tr_moves = np.load("data/processed/move/X_tr_moves.npy")
 y_tr_moves_enc = np.load("data/processed/move/y_tr_moves.npy")
 X_va_moves = np.load("data/processed/move/X_va_moves.npy")
 y_va_moves_enc = np.load("data/processed/move/y_va_moves.npy")
-"""
+
 move_clf = LGBMClassifier(
     objective="multiclass",
     num_class=len(np.unique(y_tr_moves_enc)),
@@ -44,8 +44,8 @@ move_clf = RandomForestClassifier(
     random_state=42
 )
 move_clf.fit(X_tr_moves, y_tr_moves_enc)
-
+"""
 print("Stage2a move train acc:", move_clf.score(X_tr_moves, y_tr_moves_enc))
 print("Stage2a move val   acc:", move_clf.score(X_va_moves,  y_va_moves_enc))
 
-joblib.dump((move_clf), "models/stage2_move/final/move_clf_2.0.pkl")
+joblib.dump((move_clf), "models/stage2_move/final/move_clf_1.0.pkl")
