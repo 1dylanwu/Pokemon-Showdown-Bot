@@ -21,11 +21,14 @@ data/raw/
 data/processed/*.npy
 data/parsed/*.csv
 data/processed/*.pkl
+data/processed/move/*.npy
+data/processed/move/*.pkl
 
-!data/
-!data/processed/
 !data/raw/*.txt
 !data/parsed/
 
 #VSCode
 .vscode/
+
+#Large Models
+models/stage2_move/final/

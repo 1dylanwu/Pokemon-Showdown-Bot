@@ -8,8 +8,8 @@ from sklearn.preprocessing import LabelEncoder
 # custom parameter tuning script for stage 1 classifier with autosaving feature since my computer kept crashing
 # config
 SEED          = 42
-CHECKPOINT_F = Path("models/random_search_checkpoint.pkl")
-BEST_MODEL_F  = Path("models/type_clf_best.pkl")
+CHECKPOINT_F = Path("models/stage1_type/random_search_checkpoint.pkl")
+BEST_MODEL_F  = Path("models/stage1_type/type_clf_best.pkl")
 N_ITER        = 30
 CV_FOLDS      = 3
 SAVE_INTERVAL = 600   # seconds between auto-saves (10 minutes)

@@ -4,7 +4,7 @@ Hyperparams: Default
 Train Accuracy: 0.7948
 Val Accuracy: 0.7943
 Date: 9/6/25 10:30 pm
-Notes: Baseline model
+Notes: Baseline model, PRE-SIDE ADDITION
 ------------------------------------------------------------
 Model: type_clf_1.1.pkl
 Algorithm: HistGradientBoostingClassifier
@@ -12,13 +12,84 @@ Hyperparams: 'min_samples_leaf': 10, 'max_iter': 100, 'max_depth': 3, 'learning_
 Train Accuracy: 0.7943
 Val Accuracy: 
 Date: 9/6/25 7:00 pm
-Notes: Used custom tune_param RandomizedSearch to tune
+Notes: Used custom tune_param RandomizedSearch to tune, PRE-SIDE ADDITION
 ------------------------------------------------------------
-Model: type_clf_1.1.pkl
-Algorithm: LGBMClassifier
+Model: type_clf_1.2.pkl
+Algorithm: HistGradientBoostingClassifier
 Hyperparams: 'min_samples_leaf': 10, 'max_iter': 100, 'max_depth': 3, 'learning_rate': 0.05, 'class_weight': 'balanced'
+Train Accuracy: 0.7949
+Val Accuracy: 0.7934
+Date: 9/7/25 4:00 pm
+Notes: Used custom tune_param RandomizedSearch to tune, POST-SIDE ADDITION
+------------------------------------------------------------
+Model: type_clf_2.0.pkl
+Algorithm: LGBMClassifier
+Hyperparams:     
+    objective="binary",
+    boosting_type="gbdt",
+    n_estimators=200,
+    learning_rate=0.05,
+    max_depth=5,
+    class_weight="balanced",
+    random_state=42,
+    n_jobs=2,
+    verbosity = -1,
 Train Accuracy: 0.7943
 Val Accuracy: 
 Date: 9/6/25 11:30 pm
-Notes: 
+Notes: split too strict, PRE-SIDE ADDITION
+------------------------------------------------------------
+Model: type_clf_2.1.pkl
+Algorithm: LGBMClassifier
+Hyperparams:     
+    objective="binary",
+    boosting_type="gbdt",
+    n_estimators=500,
+    learning_rate=0.01,
+    max_depth=7,
+    class_weight="balanced",
+    random_state=42,
+    min_child_samples = 5,
+    n_jobs=2,
+    verbosity = -1,
+    num_leaves= 63,
+    max_bin = 252
+Train Accuracy: 0.7957
+Val Accuracy: 0.7947
+Date: 9/7/25 5:30 pm
+Notes: Post side addition
+------------------------------------------------------------
+Model: move_clf_1.0.pkl
+Algorithm: LGBMClassifier
+Hyperparams:     
+    objective="multiclass",
+    num_class=len(le_moves.classes_),
+    boosting_type="gbdt",
+    n_estimators=200,
+    learning_rate=0.01,
+    max_depth=7,
+    num_leaves=31,
+    class_weight="balanced",
+Train Accuracy: 0.34274585006292324
+Val Accuracy: 0.17104447728464509
+Date: 9/7/25 2:00 am
+Notes: not including illegal moves/available bank. is lowkey overfitting. logloss still decreasing (0.02), PRE-SIDE ADDITION
+------------------------------------------------------------
+Model: move_clf_1.1.pkl
+Algorithm: LGBMClassifier
+Hyperparams:     
+    objective="multiclass",
+    num_class=len(np.unique(y_tr_moves_enc)),
+    boosting_type="gbdt",
+    n_estimators=200,
+    learning_rate=0.01,
+    max_depth=7,
+    num_leaves=31,
+    class_weight="balanced",
+    n_jobs=4,
+    verbosity=-1
+Train Accuracy: 0.4845748187211602
+Val Accuracy: 0.29260618772941793
+Date: 9/7/25 6:00 pm
+Notes: not including illegal moves/available bank. post-side addition
 ------------------------------------------------------------

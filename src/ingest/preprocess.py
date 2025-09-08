@@ -125,7 +125,7 @@ def build_feature_matrix(
     raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted"]
     num_cols = [c for c in raw_nums + hp_cols if c in df.columns]
 
-    raw_cats = ["p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain"]
+    raw_cats = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain"]
     cat_cols = [c for c in raw_cats + status_cols if c in df.columns]
 
     # assemble feature matrix!!!
@@ -201,14 +201,14 @@ def preprocess(
     if y_test is not None:
         np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
-    # total number of features is 7210. wowzers!
+    # total number of features is 7212. wowzers!
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 
 if __name__ == "__main__":
-    TRAIN = Path("data/logs/parsed/train.csv")
-    VAL   = Path("data/logs/parsed/val.csv")
-    TEST  = Path("data/logs/parsed/test.csv")
+    TRAIN = Path("data/parsed/train.csv")
+    VAL   = Path("data/parsed/val.csv")
+    TEST  = Path("data/parsed/test.csv")
     OUT   = Path("data/processed")
 
     preprocess(TRAIN, VAL, TEST, OUT, seed=42)

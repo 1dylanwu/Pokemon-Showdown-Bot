@@ -3,7 +3,7 @@ import joblib
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from pathlib import Path
-from train_type import split_action_type
+from src.utils.utils import split_action_type
 
 pre = "data/processed/"
 X_train, y_train = np.load(pre + "X_train.npy", ).astype(np.float32), np.load(pre + "y_train.npy", allow_pickle=True)
