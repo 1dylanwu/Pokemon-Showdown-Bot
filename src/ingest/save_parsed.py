@@ -16,7 +16,7 @@ def build_and_split(
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # prse all logs
+    # parse all logs
     all_records = []
     for log_file in raw_dir.glob("*.log"):
         try:
@@ -64,8 +64,8 @@ def build_and_split(
 
 if __name__ == "__main__":
     build_and_split(
-        raw_log_dir = "data/logs/gen9randombattle_logs",
-        out_dir = "data/logs/parsed",
+        raw_log_dir = "data/raw/gen9randombattle_logs",
+        out_dir = "data/parsed",
         train_frac = 0.8,
         val_frac = 0.1,
         test_frac = 0.1,

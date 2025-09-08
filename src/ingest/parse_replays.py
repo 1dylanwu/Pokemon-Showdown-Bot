@@ -203,8 +203,8 @@ def parse_battle_log(path: str | Path):
         # decision lines (buffered with pre-turn state)
         elif tag == "switch":
             slot = slot_from(parts[2])
-            mon_name= parts[2].split(": ", 1)[1].split(",")[0]
-            hp_field= parts[3] if len(parts) > 3 else None
+            mon_name= parts[3].split(",", 1)[0].strip()
+            hp_field = parts[4] if len(parts) > 4 else parts[3] if len(parts) > 3 else None
 
             if slot in fainted_slots:
                 # forced switch: record post-faint state

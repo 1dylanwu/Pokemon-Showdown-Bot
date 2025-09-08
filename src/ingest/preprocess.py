@@ -48,6 +48,26 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
             df[col] = df[col].apply(
                 lambda x: eval(x) if isinstance(x, str) else {}
             )
+    # filter out turn 0 (pre‐battle) rows
+    df = df[df["turn"] > 0].copy()
+    boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
+    known_hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") or c.startswith("p2_known_hp_")]
+    # fill with 0s
+    for c in boost_cols + known_hp_cols:
+            df[c] = pd.to_numeric(df[c], errors="coerce")
+    if boost_cols:
+        df[boost_cols] = df[boost_cols].fillna(0.0)
+    if known_hp_cols:
+        df[known_hp_cols] = df[known_hp_cols].fillna(0.0)
+    
+    # Fill categoricals with explicit tokens so OHE can encode them
+    cat_fill = {}
+    if "p1a_status" in df.columns: cat_fill["p1a_status"] = "none"
+    if "p2a_status" in df.columns: cat_fill["p2a_status"] = "none"
+    if "weather" in df.columns:    cat_fill["weather"]    = "clear"
+    if "terrain" in df.columns:    cat_fill["terrain"]    = "none"
+    if cat_fill:
+        df.fillna(cat_fill, inplace=True)
 
     return df
 
@@ -122,11 +142,12 @@ def build_feature_matrix(
                                        or c.startswith("p2_known_status_")]
 
     # raw numeric and categorical columns
+    # i removed status for inactive pokemon due to too many features
     raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted"]
     num_cols = [c for c in raw_nums + hp_cols if c in df.columns]
 
     raw_cats = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain"]
-    cat_cols = [c for c in raw_cats + status_cols if c in df.columns]
+    cat_cols = [c for c in raw_cats if c in df.columns]
 
     # assemble feature matrix!!!
     X = pd.concat(
@@ -202,6 +223,7 @@ def preprocess(
         np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
     # total number of features is 7212. wowzers!
+    # just kidding its 3458 now! less is more
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 
