@@ -16,16 +16,19 @@ env/
 #OS
 .DS_Store
 
-#Logs and data
-data/raw/
-data/processed/*.npy
-data/parsed/*.csv
-data/processed/*.pkl
-data/processed/move/*.npy
-data/processed/move/*.pkl
+#Data, but keep folders
+data/**
 
-!data/raw/*.txt
+!data/
+!data/raw/
 !data/parsed/
+!data/processed/
+!data/processed/move/
+
+!data/raw/.gitkeep
+!data/parsed/.gitkeep
+!data/processed/.gitkeep
+!data/processed/move/.gitkeep
 
 #VSCode
 .vscode/

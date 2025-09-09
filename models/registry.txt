@@ -44,8 +44,8 @@ Hyperparams:
     class_weight="balanced",
     n_jobs=4,
     verbosity=-1
-Train Accuracy: 0.7944368582154684
-Val Accuracy: 0.792946869510457
+Train Accuracy: 0.49704120035654153
+Val Accuracy: 0.29993106165058103
 Date: 9/8/25 5:30 pm
 Notes: baseline lightgbm model after adding new info
 ------------------------------------------------------------

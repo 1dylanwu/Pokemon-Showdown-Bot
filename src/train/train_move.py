@@ -15,11 +15,16 @@ move_clf = LGBMClassifier(
     objective="multiclass",
     num_class=len(np.unique(y_tr_moves_enc)),
     boosting_type="gbdt",
-    n_estimators=200,
-    learning_rate=0.01,
-    max_depth=7,
-    num_leaves=31,
+    n_estimators=6000,
+    learning_rate=0.02,
+    max_depth=8,
+    num_leaves=63,
+    min_data_in_leaf=200,
     class_weight="balanced",
+    feature_fraction = 0.8,
+    bagging_fraction = 0.8,
+    bagging_freq=1,
+    lambda_l2=1.0,
     n_jobs=4,
     verbosity=-1
 )
@@ -31,6 +36,7 @@ move_clf.fit(
     eval_set=[(X_va_moves, y_va_moves_enc)],
     eval_metric="multi_error",
     callbacks=[
+        early_stopping(stopping_rounds=200, verbose=True),
         log_evaluation(period=10)
     ]
 )
@@ -45,7 +51,10 @@ move_clf = RandomForestClassifier(
 )
 move_clf.fit(X_tr_moves, y_tr_moves_enc)
 """
-print("Stage2a move train acc:", move_clf.score(X_tr_moves, y_tr_moves_enc))
-print("Stage2a move val   acc:", move_clf.score(X_va_moves,  y_va_moves_enc))
+tr_acc = move_clf.score(X_tr_moves, y_tr_moves_enc)
+va_acc = move_clf.score(X_va_moves,  y_va_moves_enc)
+print("Stage2a move train acc:", tr_acc)
+print("Stage2a move val acc:", va_acc)
 
-joblib.dump((move_clf), "models/stage2_move/final/move_clf_1.0.pkl")
+if(tr_acc > 0.49704120035654153 or va_acc > 0.29993106165058103):
+    joblib.dump((move_clf), "models/stage2_move/final/move_clf_1.2.pkl")

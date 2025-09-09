@@ -49,7 +49,7 @@ type_clf = HistGradientBoostingClassifier(min_samples_leaf = 10, max_iter = 100,
 type_clf.fit(X_train, y_tr_type)
 
 print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
-print("Stage1 val acc:", type_clf.score(X_val,   y_va_type))
+print("Stage1 val acc:", type_clf.score(X_val, y_va_type))
 joblib.dump(type_clf, "models/stage1_type/final/type_clf_2.0.pkl")
 """
 if(type_clf.score(X_val, y_va_type) > 0.7947):

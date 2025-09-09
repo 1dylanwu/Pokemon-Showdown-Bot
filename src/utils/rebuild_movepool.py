@@ -23,14 +23,8 @@ for csv_path in CSV_FILES:
     for _, row in df.iterrows():
         species = row["state_p1a_active"] if row["side"] == "p1a" else row["state_p2a_active"]
         move = row["action"]
-        if(species.strip() == "Gardevoir" and move.strip() == "Bug Buzz"):
-            print("gardevoir bug buzz found: ", row["replay_id"], row["turn"])
-        if(species.strip() == "Dragalge" and move.strip() == "Strength Sap"):
-            print("dragalge found: ", row["replay_id"], row["turn"])
-        if(species.strip() == "Dragalge" and move.strip() == "Dark Pulse"):
-            print("dragalge found: ", row["replay_id"], row["turn"])
         movepools[species.strip()].add(move.strip())
-"""
+
 for species, data in role_data.items():
     for role in data.get("roles", {}).values():
         for mv in role.get("moves", []):
@@ -40,4 +34,3 @@ for species, data in role_data.items():
 movepools = {sp: sorted(list(moves)) for sp, moves in movepools.items()}
 joblib.dump(movepools, OUT_PATH)
 print(f"Saved movepools for {len(movepools)} species to {OUT_PATH}")
-"""
