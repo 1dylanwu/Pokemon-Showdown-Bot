@@ -4,10 +4,10 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import SimpleImputer
 import pandas as pd
 
-pre = "data/processed/"
+pre = "data/processed/general"
 X_train, y_train = np.load(pre + "X_train.npy", ).astype(np.float32), np.load(pre + "y_train.npy", allow_pickle=True)
-X_val,   y_val   = np.load(pre+"X_val.npy").astype(np.float32),   np.load(pre+"y_val.npy", allow_pickle=True)
-X_test,  y_test  = np.load(pre+"X_test.npy").astype(np.float32),  np.load(pre+"y_test.npy", allow_pickle=True)
+X_val, y_val = np.load(pre+"X_val.npy").astype(np.float32), np.load(pre+"y_val.npy", allow_pickle=True)
+X_test, y_test = np.load(pre+"X_test.npy").astype(np.float32), np.load(pre+"y_test.npy", allow_pickle=True)
 
 # y_tr_type[i] = "move" or "switch", length is full y_train array
 # move_idx_tr = indices of only the "move" actions in y_train,length is number of move actions
@@ -20,7 +20,7 @@ y_va_type = np.array(["move" if act.startswith("move_") else "switch"
 move_idx_va = np.where(y_va_type == "move")[0]
 
 train_df = pd.read_csv("data/parsed/train.csv", dtype=str)
-val_df   = pd.read_csv("data/parsed/val.csv",   dtype=str)
+val_df = pd.read_csv("data/parsed/val.csv",   dtype=str)
 
 def clean_df(df):
     df.drop(columns=["turn"], errors="ignore", inplace=True) 
@@ -37,7 +37,7 @@ val_df   = clean_df(val_df)
 species_train_full = np.where(train_df["side"] == "p1a",
                               train_df["p1a_active"],
                               train_df["p2a_active"])
-species_val_full   = np.where(val_df["side"] == "p1a",
+species_val_full = np.where(val_df["side"] == "p1a",
                               val_df["p1a_active"],
                               val_df["p2a_active"])
 

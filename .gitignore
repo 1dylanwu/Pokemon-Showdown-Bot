@@ -24,14 +24,19 @@ data/**
 !data/parsed/
 !data/processed/
 !data/processed/move/
+!data/processed/general/
+!data/processed/switch/
 
 !data/raw/.gitkeep
 !data/parsed/.gitkeep
 !data/processed/.gitkeep
 !data/processed/move/.gitkeep
+!data/processed/general/.gitkeep
+!data/processed/switch/.gitkeep
 
 #VSCode
 .vscode/
 
 #Large Models
 models/stage2_move/final/
+models/stage2_switch/final
