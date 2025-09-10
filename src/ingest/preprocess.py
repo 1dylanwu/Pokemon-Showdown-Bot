@@ -232,15 +232,14 @@ def preprocess(
     if y_test is not None:
         np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
-    # total number of features is 7212. wowzers!
-    # just kidding its 3500 now! less is more
+    # total number of features is 3398
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 
 if __name__ == "__main__":
     TRAIN = Path("data/parsed/train.csv")
-    VAL   = Path("data/parsed/val.csv")
-    TEST  = Path("data/parsed/test.csv")
-    OUT   = Path("data/processed")
+    VAL = Path("data/parsed/val.csv")
+    TEST = Path("data/parsed/test.csv")
+    OUT = Path("data/processed/general")
 
     preprocess(TRAIN, VAL, TEST, OUT, seed=42)

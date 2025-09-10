@@ -34,12 +34,6 @@ le_sw = LabelEncoder().fit(all_switch_labels)
 y_te_sw_enc = le_sw.transform(y_te_sw)
 y_tr_sw_enc = le_sw.transform(y_tr_sw)
 y_va_sw_enc = le_sw.transform(y_va_sw)
-X_dummy = np.zeros((1, X_tr_sw.shape[1]), dtype=np.float32)
-#dummy for missing vivillon
-y_dummy = np.array([534], dtype=np.int32)
-
-X_tr_sw = np.vstack([X_tr_sw, X_dummy])
-y_tr_sw_enc = np.concatenate([y_tr_sw_enc, y_dummy])
 
 
 joblib.dump(le_sw, "models/stage2_switch/util/label_encoder.pkl")

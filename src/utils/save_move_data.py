@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import SimpleImputer
 import pandas as pd
 
-pre = "data/processed/general"
+pre = "data/processed/general/"
 X_train, y_train = np.load(pre + "X_train.npy", ).astype(np.float32), np.load(pre + "y_train.npy", allow_pickle=True)
 X_val, y_val = np.load(pre+"X_val.npy").astype(np.float32), np.load(pre+"y_val.npy", allow_pickle=True)
 X_test, y_test = np.load(pre+"X_test.npy").astype(np.float32), np.load(pre+"y_test.npy", allow_pickle=True)
@@ -31,7 +31,7 @@ def clean_df(df):
     return df
 
 train_df = clean_df(train_df)
-val_df   = clean_df(val_df)
+val_df = clean_df(val_df)
 
 # return the active species for each row based off which side is active (p1a or p2a)
 species_train_full = np.where(train_df["side"] == "p1a",

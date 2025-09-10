@@ -8,6 +8,12 @@ HAZARDS = {"Stealth Rock", "Spikes", "Toxic Spikes", "Sticky Web"}
 # status conditions to track
 STATUS_TOKENS = {"brn", "par", "psn", "tox", "slp", "frz", "fnt"}
 
+def normalize_species(mon: str) -> str:
+    # stops treating all the different vivillon forms (vivillon-jungle, vivillon-modern etc) as different pokemon
+    key = mon.lower()
+    if key.startswith("vivillon-"):
+        return "Vivillon"
+    return mon
 
 def slot_from(parts2: str) -> str:
     # extracts the slot (p1a, p2b, etc) from a parts[2] string
@@ -214,7 +220,7 @@ def parse_battle_log(path: str | Path):
         # decision lines (buffered with pre-turn state)
         elif tag == "switch":
             slot = slot_from(parts[2])
-            mon_name= parts[3].split(",", 1)[0].strip()
+            mon_name= normalize_species(parts[3].split(",", 1)[0].strip())
             hp_field = parts[4] if len(parts) > 4 else parts[3] if len(parts) > 3 else None
             meta_fields = parts[3].split(",") 
             tera_type = None
@@ -249,7 +255,7 @@ def parse_battle_log(path: str | Path):
         elif tag == "drag":
             # only update state for drag, dont record as decision since not player choice
             slot = slot_from(parts[2])
-            mon_name = parts[3].split(",", 1)[0].strip()
+            mon_name = normalize_species(parts[3].split(",", 1)[0].strip())
             hp_field = parts[4] if len(parts) > 4 else None
             apply_switch(slot, mon_name, hp_field, tera_type)
             continue 

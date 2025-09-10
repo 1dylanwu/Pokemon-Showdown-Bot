@@ -31,6 +31,7 @@ def build_and_split(
 
     # builds master dataframe
     master_df = pd.json_normalize(all_records, sep="_")
+    master_df = master_df[master_df["turn"] > 0]
     master_csv = out_dir / "master.csv"
     master_df.to_csv(master_csv, index=False)
     print(f"Saved master.csv ({len(master_df)} rows) → {master_csv}")
