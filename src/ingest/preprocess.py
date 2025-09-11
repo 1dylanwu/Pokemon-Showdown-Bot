@@ -54,8 +54,6 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
             df[col] = df[col].apply(
                 lambda x: eval(x) if isinstance(x, str) else {}
             )
-    # filter out turn 0 (pre‐battle) rows
-    df = df[df["turn"] > 0].copy()
 
     boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
     known_hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") or c.startswith("p2_known_hp_")]

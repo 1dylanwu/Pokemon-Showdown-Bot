@@ -51,6 +51,9 @@ Hyperparams:
     verbosity=-1
 Train Accuracy: multi_logloss: 2.65406
 Val Accuracy: 0.291476
+With Inference:
+Top-1 Accuracy: 0.3265
+Top-3 Accuracy: 0.7100
 Date: 9/11/25 1:00 am
 Notes: baseline lightgbm model after adding new info. I banished the mysterious force removing the move models from my laptop
 ------------------------------------------------------------

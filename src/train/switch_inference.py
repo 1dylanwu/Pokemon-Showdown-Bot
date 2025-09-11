@@ -3,15 +3,35 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import joblib
 from sklearn.metrics import accuracy_score, top_k_accuracy_score
+import ast
+from src.utils.utils import split_action_type
 
 pre = "data/processed/switch/"
-model = joblib.load("models/stage2_switch/final/switch_clf_1.2.pkl")
+model = joblib.load("models/stage2_switch/final/switch_clf_1.0.pkl")
 le = joblib.load("models/stage2_switch/util/label_encoder.pkl")
 X_te = np.load(pre + "X_va_sw.npy")
 y_te = np.load(pre + "y_va_sw.npy").astype(int)
+# Base switch rows for the validation split
 df = pd.read_csv("data/parsed/val.csv")
 df = df[df["action_type"] == "switch"].reset_index(drop=True)
-df = df[df["turn"] != 0].reset_index(drop=True)
+df.to_csv("inspect.csv", index = False)
+# Load team availability info built by save_full_team_info.py
+# Default to validation split file; change path for other splits as needed
+team_info_path = "data/parsed/team_info/val_team_info.csv"
+team_df = pd.read_csv(
+    team_info_path,
+    converters={
+        "p1_available": lambda x: ast.literal_eval(x) if isinstance(x, str) and x.startswith("[") else ([] if pd.isna(x) else [x]),
+        "p2_available": lambda x: ast.literal_eval(x) if isinstance(x, str) and x.startswith("[") else ([] if pd.isna(x) else [x]),
+    },
+)
+
+# Merge availability onto switch rows
+df = df.merge(
+    team_df[["replay_id", "turn", "p1_available", "p2_available"]],
+    on=["replay_id", "turn"],
+    how="left",
+)
 
 def switch_mask(
     df: pd.DataFrame,
@@ -25,15 +45,16 @@ def switch_mask(
         side = row["side"][:2] # only p1 instead of p1a
 
         active = row[f"state_{side}a_active"]
-        team = row[f"state_{side}_team_species"] or []
-        # team species is all pokemon that have been seen and have not yet fainted
-        bench = [s for s in team if s != active]
+        # Use available mons from team-info CSV (revealed minus fainted) for the correct side
+        available = row[f"{side}_available"] if f"{side}_available" in row and isinstance(row[f"{side}_available"], (list, tuple)) else []
+        # Exclude the currently active mon
+        bench = [s for s in available if s != active]
 
         for mon in bench:
             label = f"switch_{mon}"
 
             if label in classes:
-                idx = le_switch.transform([label][0])
+                idx = le_switch.transform([label])[0]
                 mask[i][idx] = True
 
     return mask

@@ -7,7 +7,7 @@ import random
 
 MODEL_PATH = Path("models/stage2_move/final/move_clf_1.0.pkl")
 LABEL_ENCODER = Path("models/stage2_move/util/label_encoder.pkl")
-FULL_MOVEPOOLS = Path("data/processed/move/full_movepools_from_data.pkl")
+FULL_MOVEPOOLS = Path("data/processed/move/full_movepool.pkl")
 X_VAL_PATH = Path("data/processed/move/X_va_moves.npy")
 Y_VAL_PATH = Path("data/processed/move/y_va_moves.npy")
 VAL_NAME_PATH = Path("data/processed/move/species_va.npy")
