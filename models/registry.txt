@@ -6,9 +6,9 @@ Hyperparams:
     max_depth = 3, 
     learning_rate = 0.05, 
     class_weight = 'balanced'
-Train Accuracy: 0.7939566290417549
-Val Accuracy: 0.7944052235590467
-Date: 9/8/25 5:30 pm
+Train Accuracy: .7934
+Val Accuracy: 0.7919
+Date: 9/10/25 6:30 pm
 Notes: baseline histgradient model after adding new info
 ------------------------------------------------------------
 Model: type_clf_2.0.pkl
@@ -16,7 +16,7 @@ Algorithm: LGBMClassifier
 Hyperparams:     
     objective="binary",
     boosting_type="gbdt",
-    n_estimators=500,
+    n_estimators=5000,
     learning_rate=0.01,
     max_depth=7,
     class_weight="balanced",
@@ -26,9 +26,9 @@ Hyperparams:
     verbosity = -1,
     num_leaves= 63,
     max_bin = 252
-Train Accuracy: 0.7944368582154684
-Val Accuracy: 0.792946869510457
-Date: 9/8/25 5:30 pm
+Train Accuracy: 0.7934497489320242
+Val Accuracy: 0.7922905602192908
+Date: 9/10/25 6:30 pm
 Notes: baseline lightgbm model after adding new info
 ------------------------------------------------------------
 Model: move_clf_1.0.pkl
@@ -37,53 +37,40 @@ Hyperparams:
     objective="multiclass",
     num_class=len(np.unique(y_tr_moves_enc)),
     boosting_type="gbdt",
-    n_estimators=200,
-    learning_rate=0.01,
-    max_depth=7,
-    num_leaves=31,
+    n_estimators=3000,
+    learning_rate=0.02,
+    max_depth=8,
+    num_leaves=63,
+    min_data_in_leaf=200,
     class_weight="balanced",
-    n_jobs=4,
+    feature_fraction = 0.8,
+    bagging_fraction = 0.8,
+    bagging_freq=1,
+    lambda_l2=1.0,
+    n_jobs=5,
     verbosity=-1
-Train Accuracy: 0.49704120035654153
-Val Accuracy: 0.29993106165058103
-Date: 9/8/25 5:30 pm
-Notes: baseline lightgbm model after adding new info
+Train Accuracy: multi_logloss: 2.65406
+Val Accuracy: 0.291476
+Date: 9/11/25 1:00 am
+Notes: baseline lightgbm model after adding new info. I banished the mysterious force removing the move models from my laptop
 ------------------------------------------------------------
-Model: move_clf_1.1.pkl
+Model: switch_clf_1.0.pkl
 Algorithm: LGBMClassifier
 Hyperparams:     
     objective="multiclass",
-    num_class=len(np.unique(y_tr_moves_enc)),
-    boosting_type="gbdt",
-    n_estimators=200,
-    learning_rate=0.01,
-    max_depth=7,
-    num_leaves=31,
-    class_weight="balanced",
-    n_jobs=4,
-    verbosity=-1
-Train Accuracy: multi_logloss: 2.61409
-Val Accuracy: 0.301655
-Date: 9/8/25 10:30 pm
-Notes: a mysterious upper power banished the model from my computer despite spending 2 hours training it
-------------------------------------------------------------
-Model: switch_clf_1.2.pkl
-Algorithm: LGBMClassifier
-Hyperparams:     
-    "objective": "multiclass",
-    "num_class": n_classes,
-    "metric": ["multi_logloss", "multi_error"],
-    "learning_rate": 0.02,
-    "max_depth": 8,
-    "num_leaves": 63,
-    "min_data_in_leaf": 200,
-    "feature_fraction": 0.8,
-    "bagging_fraction": 0.8,
-    "bagging_freq": 1,
-    "lambda_l2": 1.0,
-    "verbosity": -1
+    num_class=n_classes,
+    learning_rate=0.02,
+    max_depth=8,
+    num_leaves=63,
+    min_child_samples=200,
+    feature_fraction=0.8,
+    bagging_fraction=0.8,
+    bagging_freq=1,
+    reg_lambda=1.0, 
+    verbosity=-1,
+    n_estimators=3000
 Train Accuracy: 0.37406266466701793
-Val Accuracy: 0.21215540867322263
+Val Accuracy: 0.216265
 Date: 9/9/25 1:30 am
-Notes: filled in missing row in data (vivillon)
+Notes: multi_logloss: 4.48292
 ------------------------------------------------------------

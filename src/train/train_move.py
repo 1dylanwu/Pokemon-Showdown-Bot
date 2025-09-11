@@ -13,8 +13,8 @@ move_clf = LGBMClassifier(
     objective="multiclass",
     num_class=len(np.unique(y_tr_moves_enc)),
     boosting_type="gbdt",
-    n_estimators=6000,
-    learning_rate=0.01,
+    n_estimators=3000,
+    learning_rate=0.02,
     max_depth=8,
     num_leaves=63,
     min_data_in_leaf=200,
@@ -27,8 +27,6 @@ move_clf = LGBMClassifier(
     verbosity=-1
 )
 
-print("Training Stage-2 Move model with LightGBM…")
-
 move_clf.fit(
     X_tr_moves, y_tr_moves_enc,
     eval_set=[(X_va_moves, y_va_moves_enc)],
@@ -38,7 +36,7 @@ move_clf.fit(
         log_evaluation(period=100)
     ]
 )
-joblib.dump(move_clf, "models/stage2_move/final/move_clf_1.1.pkl")
+joblib.dump(move_clf, "models/stage2_move/final/move_clf_1.0.pkl")
 """
 move_clf = RandomForestClassifier(
     n_estimators=200,

@@ -59,7 +59,7 @@ sw_clf.fit(
 #print("Best iteration:", best_iter)
 
 
-joblib.dump(sw_clf, "models/stage2_switch/final/switch_clf_1.2.pkl")
+joblib.dump(sw_clf, "models/stage2_switch/final/switch_clf_1.0.pkl")
 
 print("Stage2b sw train acc:", sw_clf.score(X_tr, y_tr))
 print("Stage2b sw val acc:", sw_clf.score(X_va,  y_va))
