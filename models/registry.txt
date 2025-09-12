@@ -49,31 +49,33 @@ Hyperparams:
     lambda_l2=1.0,
     n_jobs=5,
     verbosity=-1
-Train Accuracy: multi_logloss: 2.65406
-Val Accuracy: 0.291476
+Train Accuracy: multi_logloss: 2.56834
+Val Accuracy: 0.300696 
 With Inference:
-Top-1 Accuracy: 0.3265
-Top-3 Accuracy: 0.7100
-Date: 9/11/25 1:00 am
-Notes: baseline lightgbm model after adding new info. I banished the mysterious force removing the move models from my laptop
+Top-1 Accuracy: 
+Top-3 Accuracy: 
+Date: 9/12/25 12:30 am
+Notes: best iteration: [1958]
 ------------------------------------------------------------
 Model: switch_clf_1.0.pkl
 Algorithm: LGBMClassifier
 Hyperparams:     
     objective="multiclass",
     num_class=n_classes,
-    learning_rate=0.02,
+    learning_rate=0.01,
     max_depth=8,
     num_leaves=63,
-    min_child_samples=200,
+    min_child_samples=150,
     feature_fraction=0.8,
     bagging_fraction=0.8,
-    bagging_freq=1,
-    reg_lambda=1.0, 
+    bagging_freq=5,
     verbosity=-1,
-    n_estimators=3000
-Train Accuracy: 0.37406266466701793
-Val Accuracy: 0.216265
-Date: 9/9/25 1:30 am
-Notes: multi_logloss: 4.48292
+    n_estimators=3000,
+    min_split_gain = 0.1,
+    reg_alpha = 0.5,
+    reg_lambda= 1.5, 
+Train Accuracy: 0.39933918195283125
+Val Accuracy: 0.21980751319466005
+Date: 9/11/25 8:30 pm
+Notes: multi_logloss: 4.37967
 ------------------------------------------------------------

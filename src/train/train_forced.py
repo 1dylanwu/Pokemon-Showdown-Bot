@@ -6,7 +6,7 @@ from xgboost import XGBClassifier
 from sklearn.preprocessing import LabelEncoder
 from pathlib import Path
 
-pre = "data/processed/switch/"
+pre = "data/processed/forced/"
 X_tr = np.load(pre + "X_tr_sw.npy")
 y_tr = np.load(pre + "y_tr_sw.npy").astype(np.int32)
 X_va = np.load(pre + "X_va_sw.npy")
@@ -19,18 +19,16 @@ n_classes = len(le.classes_)
 sw_clf = LGBMClassifier(
     objective="multiclass",
     num_class=n_classes,
-    learning_rate=0.01,
+    learning_rate=0.02,
     max_depth=8,
     num_leaves=63,
-    min_child_samples=150,
+    min_child_samples=200,
     feature_fraction=0.8,
     bagging_fraction=0.8,
-    bagging_freq=5,
+    bagging_freq=1,
+    reg_lambda=1.0, 
     verbosity=-1,
-    n_estimators=3000,
-    min_split_gain = 0.1,
-    reg_alpha = 0.5,
-    reg_lambda= 1.5, 
+    n_estimators=3000
 )
 
 sw_clf.fit(
@@ -46,7 +44,7 @@ sw_clf.fit(
 #print("Best iteration:", best_iter)
 
 
-joblib.dump(sw_clf, "models/stage2_switch/switch_clf_1.0.pkl")
+joblib.dump(sw_clf, "models/stage3_forced/switch_clf_1.0.pkl")
 
 print("Stage2b sw train acc:", sw_clf.score(X_tr, y_tr))
-print("Stage2b sw val acc:", sw_clf.score(X_va,  y_va))
+print("Stage2b sw val acc:", sw_clf.score(X_va, y_va))

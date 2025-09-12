@@ -8,11 +8,13 @@ HAZARDS = {"Stealth Rock", "Spikes", "Toxic Spikes", "Sticky Web"}
 # status conditions to track
 STATUS_TOKENS = {"brn", "par", "psn", "tox", "slp", "frz", "fnt"}
 
+COSMETIC_SPECIES = {"Vivillon", "Alcremie", "Florges", "Minior", "Pikachu", "Sawsbuck", "Basculin", "Spinda", "Furfrou", "Deerling", "Gastrodon", "Sinistcha", "Poltchageist", "Squawkabilly", "Unown",
+                    "Gourgeist", "Polteageist", "Maushold", "Tatsugiri", "Dudunsparce"}
 def normalize_species(mon: str) -> str:
-    # stops treating all the different vivillon forms (vivillon-jungle, vivillon-modern etc) as different pokemon
-    key = mon.lower()
-    if key.startswith("vivillon-"):
-        return "Vivillon"
+    # normalizes irrelevant form names for various pokemon
+    for species in COSMETIC_SPECIES:
+        if mon.startswith(f"{species}-"):
+            return species
     return mon
 
 def slot_from(parts2: str) -> str:

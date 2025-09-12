@@ -9,7 +9,7 @@ CSV_FILES = [
     Path("data/parsed/val.csv"),
     Path("data/parsed/test.csv")
 ]
-OUT_PATH = Path("data/processed/move/full_movepools_from_data.pkl")
+OUT_PATH = Path("data/processed/move/full_movepool.pkl")
 JSON_PATH = Path("data/raw/gen9randombattle.json")
 
 with open(JSON_PATH) as f:

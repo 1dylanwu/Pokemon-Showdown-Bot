@@ -36,7 +36,7 @@ move_clf.fit(
         log_evaluation(period=100)
     ]
 )
-joblib.dump(move_clf, "models/stage2_move/final/move_clf_1.0.pkl")
+joblib.dump(move_clf, "models/stage2_move/move_clf_1.0.pkl")
 """
 move_clf = RandomForestClassifier(
     n_estimators=200,

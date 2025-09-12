@@ -38,5 +38,6 @@ data/**
 .vscode/
 
 #Large Models
-models/stage2_move/final
-models/stage2_switch/final
+models/stage2_move/final/
+models/stage2_switch/final/
+models/stage3_forced/final/

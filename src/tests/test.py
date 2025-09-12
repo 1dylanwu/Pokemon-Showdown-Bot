@@ -1,17 +1,26 @@
 import numpy as np
-import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+import joblib
 
-# Load the .npy file
-npy_path = "data/processed/general/X_val_SWITCH.npy"  # change this to your actual path
-csv_path = "X_val_SWITCH.csv"
+paths = [
+    "data/processed/general/y_train.npy",
+    "data/processed/general/y_val.npy",
+    "data/processed/general/y_test.npy"
+]
 
-# Load the array
-arr = np.load(npy_path)
+all_pokemon = []
+for path in paths:
+    labels = np.load(path, allow_pickle=True)
+    for label in labels:
+        if label.startswith("switch_") or label.startswith("forced_switch_"):
+            name = label.replace("forced_switch_", "switch_")
+            pokemon = name[len("switch_"):]
+            all_pokemon.append(pokemon)
 
-# Convert to DataFrame
-df = pd.DataFrame(arr)
 
-# Save to CSV
-df.to_csv(csv_path, index=False)
+le = LabelEncoder()
+le.fit(all_pokemon)
 
-print(f"Saved {df.shape[0]} rows × {df.shape[1]} columns to {csv_path}")
+
+joblib.dump(le, "models/stage2_switch/util/label_encoder.pkl")
+print(f"Saved encoder with {len(le.classes_)} Pokémon species.")

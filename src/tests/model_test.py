@@ -37,13 +37,12 @@ def predict_action(X_row, active_species, revealed_self,
 
     return classes[np.argmax(probs)]
 
-# Load everything back
-type_clf = joblib.load("models/type_clf.pkl")
-move_clf, le_moves = joblib.load("models/move_clf.pkl")
-sw_clf,   le_sw    = joblib.load("models/switch_clf.pkl")
-full_movepools      = joblib.load("data/processed/full_movepools.pkl")
+type_clf = joblib.load("models/stage1_type/type_clf_2.0.pkl")
+move_clf = joblib.load("models/stage2_move/move_clf_1.0.pkl")
+sw_clf = joblib.load("models/stage2_switch/switch_clf_1.0.pkl")
+full_movepools = joblib.load("data/processed/full_movepools.pkl")
 
-"""
+
 i = 42
 X_row = X_val[i].reshape(1, -1)
 act_true = y_val[i]
@@ -55,4 +54,3 @@ pred = predict_action(
     type_clf, move_clf, le_moves, sw_clf, le_sw, full_movepools
 )
 print("true:", act_true, "pred:", pred)
-"""
