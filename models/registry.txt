@@ -1,36 +1,3 @@
-Model: type_clf_1.0.pkl
-Algorithm: HistGradientBoostingClassifier
-Hyperparams:     
-    min_samples_leaf = 10, 
-    max_iter = 100, 
-    max_depth = 3, 
-    learning_rate = 0.05, 
-    class_weight = 'balanced'
-Train Accuracy: .7934
-Val Accuracy: 0.7919
-Date: 9/10/25 6:30 pm
-Notes: baseline histgradient model after adding new info
-------------------------------------------------------------
-Model: type_clf_2.0.pkl
-Algorithm: LGBMClassifier
-Hyperparams:     
-    objective="binary",
-    boosting_type="gbdt",
-    n_estimators=5000,
-    learning_rate=0.01,
-    max_depth=7,
-    class_weight="balanced",
-    random_state=42,
-    min_child_samples = 5,
-    n_jobs=2,
-    verbosity = -1,
-    num_leaves= 63,
-    max_bin = 252
-Train Accuracy: 0.7934497489320242
-Val Accuracy: 0.7922905602192908
-Date: 9/10/25 6:30 pm
-Notes: baseline lightgbm model after adding new info
-------------------------------------------------------------
 Model: move_clf_1.0.pkl
 Algorithm: LGBMClassifier
 Hyperparams:     
@@ -52,10 +19,44 @@ Hyperparams:
 Train Accuracy: multi_logloss: 2.56834
 Val Accuracy: 0.300696 
 With Inference:
-Top-1 Accuracy: 
-Top-3 Accuracy: 
+Top-1 Accuracy: 0.3282  
+Top-3 Accuracy: 0.7126
 Date: 9/12/25 12:30 am
 Notes: best iteration: [1958]
+------------------------------------------------------------
+Model: move_clf_2.0.pkl
+Algorithm: RandomForest
+Hyperparams:     
+    n_estimators=200,
+    max_depth=None,
+    min_samples_leaf=5,
+    class_weight="balanced",
+    n_jobs=5,
+    random_state=42
+Train Accuracy: 0.22418125471144987
+Val Accuracy: 0.12604373757455267
+Date: 9/12/25 5:00 pm
+Notes: RandomForest is on fraud watch
+------------------------------------------------------------
+Model: move_clf_3.0.pkl
+Algorithm: XGBoost
+Hyperparams:     
+    objective="multi:softprob", 
+    num_class=len(le.classes_),
+    eval_metric="mlogloss",
+    learning_rate=0.1,
+    max_depth=6,
+    n_estimators=250,
+    use_label_encoder=False,
+    random_state=42,
+    n_jobs=5
+Train Accuracy: mlogloss:2.23096
+Val Accuracy: Top 1: 0.3605. Top 3: 0.7189
+With Inference:
+Top-1 Accuracy: 0.3634
+Top-3 Accuracy: 0.7395
+Date: 9/13/25 7:00 pm
+Notes: predictions are very fast
 ------------------------------------------------------------
 Model: switch_clf_1.0.pkl
 Algorithm: LGBMClassifier

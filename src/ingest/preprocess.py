@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 import joblib
-
+from src.ingest.add_type_features import get_pokemon_types
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import (
@@ -125,7 +125,8 @@ def flatten_haz(df, col, prefix, keys):
 def build_feature_matrix(
     df: pd.DataFrame,
     mlb1: MultiLabelBinarizer = None,
-    mlb2: MultiLabelBinarizer = None
+    mlb2: MultiLabelBinarizer = None,
+    mlb_types: MultiLabelBinarizer = None
 ):
     # from the cleaned dataframe, get x(feature matrix) and y(targets)
     # multi-hot encode team species
@@ -148,10 +149,24 @@ def build_feature_matrix(
     boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
     if boost_cols:
         df[boost_cols] = df[boost_cols].apply(pd.to_numeric, errors="coerce")
+    df["p1a_types"] = df["p1a_active"].apply(get_pokemon_types)
+    df["p2a_types"] = df["p2a_active"].apply(get_pokemon_types)
+
+    # one hot encoded categories for active pokemon types
+    p1_types_ohe, mlb_types = flatten_sets(
+        df, 'p1a_types', 'p1_type_', mlb_types
+    )
+    p2_types_ohe, _ = flatten_sets(
+        df, 'p2a_types', 'p2_type_', mlb_types
+    )
+    # calculated type matchup (uses best STAB offensive type multiplier)
+    for col in ("p1_type_matchup", "p2_type_matchup"):
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.0)
 
     # raw numeric and categorical columns
     # i removed status for inactive pokemon due to too many features
-    raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted", "p1a_is_terastallized", "p2a_is_terastallized"]
+    raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted", "p1a_is_terastallized", "p2a_is_terastallized", "p1_type_matchup", "p2_type_matchup"]
     num_cols = [c for c in raw_nums + hp_cols + boost_cols if c in df.columns]
 
     raw_cats = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain", "p1a_tera_type", "p2a_tera_type"]
@@ -166,6 +181,8 @@ def build_feature_matrix(
             p2_ts,
             p1_haz,
             p2_haz,
+            p1_types_ohe,
+            p2_types_ohe,
         ],
         axis=1,
     )
@@ -189,7 +206,7 @@ def preprocess(
     # TRAIN
     df_train = load_and_clean(train_csv)
     X_train, y_train, mlb1, mlb2 = build_feature_matrix(df_train)
-
+    
     # identify numeric vs categorical for ColumnTransformer
     num_cols = X_train.select_dtypes("number").columns.tolist()
     cat_cols = X_train.select_dtypes("object").columns.tolist()
@@ -230,7 +247,7 @@ def preprocess(
     if y_test is not None:
         np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
-    # total number of features is 3398
+    # total number of features is 3196
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 

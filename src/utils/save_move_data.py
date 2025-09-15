@@ -22,11 +22,10 @@ move_idx_va = np.where(y_va_type == "move")[0]
 train_df = pd.read_csv("data/parsed/train.csv", dtype=str)
 val_df = pd.read_csv("data/parsed/val.csv",   dtype=str)
 
+# CONTAINS TURN 0
 def clean_df(df):
     df.drop(columns=["turn"], errors="ignore", inplace=True) 
     df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c, inplace=True)
-    df["turn"] = pd.to_numeric(df["turn"], errors="coerce")
-    df = df[df["turn"] > 0]
     df = df[df["action_type"] == "move"]
     return df
 
@@ -58,17 +57,6 @@ y_tr_moves = y_train[move_idx_tr]
 
 X_va_moves = X_val[move_idx_va]
 y_va_moves = y_val[move_idx_va]
-
-if np.isnan(X_tr_moves).any() or np.isnan(X_va_moves).any():
-    print("NaNs detected — fitting SimpleImputer")
-    imp = SimpleImputer(strategy="mean")
-    X_tr_moves = imp.fit_transform(X_tr_moves)
-    X_va_moves = imp.transform(X_va_moves)
-    joblib.dump(imp, "models/stage2_move/util/imputer.pkl")
-else:
-    print("No NaNs detected — skipping imputer")
-    imp = None  # or leave as-is
-
 
 # encode move labels into ints
 le_moves = LabelEncoder().fit(y_tr_moves)

@@ -28,17 +28,16 @@ def save_switch_data(type: str, out: str, le: LabelEncoder):
     X_te_sw = X_test[switch_idx_te]
     y_te_sw = y_test[switch_idx_te]
 
-    if type == "forced":
-        def extract_species(label: str) -> str:
-            if label.startswith("forced_switch_"):
-                label = label.replace("forced_switch_", "")
-            elif label.startswith("switch_"):
-                label = label.replace("switch_", "")
-            return label
+    def extract_species(label: str) -> str:
+        if label.startswith("forced_switch_"):
+            label = label.replace("forced_switch_", "")
+        elif label.startswith("switch_"):
+            label = label.replace("switch_", "")
+        return label
 
-        y_tr_sw = np.array([extract_species(l) for l in y_tr_sw])
-        y_va_sw = np.array([extract_species(l) for l in y_va_sw])
-        y_te_sw = np.array([extract_species(l) for l in y_te_sw])
+    y_tr_sw = np.array([extract_species(l) for l in y_tr_sw])
+    y_va_sw = np.array([extract_species(l) for l in y_va_sw])
+    y_te_sw = np.array([extract_species(l) for l in y_te_sw])
 
     y_te_sw_enc = le.transform(y_te_sw)
     y_tr_sw_enc = le.transform(y_tr_sw)
@@ -52,4 +51,4 @@ def save_switch_data(type: str, out: str, le: LabelEncoder):
     np.save(out + "y_te_sw.npy", y_te_sw_enc)
 
 
-save_switch_data("forced", "data/processed/forced/", joblib.load("models/stage2_switch/util/label_encoder.pkl"))
+save_switch_data("switch", "data/processed/forced/", joblib.load("models/stage2_switch/util/label_encoder.pkl"))
