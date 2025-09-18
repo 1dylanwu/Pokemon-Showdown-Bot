@@ -2,6 +2,8 @@ import asyncio
 from poke_env import RandomPlayer, SimpleHeuristicsPlayer
 from poke_env import LocalhostServerConfiguration
 from src.bot.rules_bot import RulesBot
+from src.bot.decision_model import DecisionModel
+from src.bot.bot import AIAgent
 # tests connecting to local showdown server and using poke-env/async
 # by creating 2 bots that choose random moves and battling them against each other
 # config
@@ -13,15 +15,20 @@ server_config = LocalhostServerConfiguration
 
 async def main():
     # create 2 random players
+    model = DecisionModel()
     player1 = SimpleHeuristicsPlayer(
         battle_format=BATTLE_FORMAT,
         server_configuration=server_config,
         max_concurrent_battles=1
     )
-    player2 = RulesBot(
+    player2 = AIAgent(
+        model,
+        server_configuration=server_config,
+        battle_format=BATTLE_FORMAT,
+        max_concurrent_battles=1
     )
     player1._username = "SimpleHeuristicsBot"
-    player2._username = "RulesBot"
+    player2._username = "AI"
     await player1.battle_against(player2, n_battles=N_BATTLES)
 
     print(f"\nResults after {N_BATTLES} battles:")

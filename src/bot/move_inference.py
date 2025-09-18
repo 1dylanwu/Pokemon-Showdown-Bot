@@ -5,7 +5,7 @@ from pathlib import Path
 from sklearn.metrics import accuracy_score, top_k_accuracy_score
 import random
 
-MODEL_PATH = Path("models/stage2_move/final/move_clf_2.0.pkl")
+MODEL_PATH = Path("models/stage2_move/final/move_clf_3.0.pkl")
 LABEL_ENCODER = Path("models/stage2_move/util/label_encoder.pkl")
 FULL_MOVEPOOLS = Path("data/processed/move/full_movepool.pkl")
 X_VAL_PATH = Path("data/processed/move/X_va_moves.npy")

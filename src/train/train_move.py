@@ -64,11 +64,11 @@ move_clf = XGBClassifier(
     num_class=len(le.classes_),
     eval_metric="mlogloss",
     learning_rate=0.1,
-    max_depth=6,
+    max_depth=5,
     n_estimators=150,
-    use_label_encoder=False,
     random_state=42,
-    n_jobs=5
+    n_jobs=5,
+    early_stopping_rounds = 15
 )
 move_clf.fit(
     X_tr_moves, 

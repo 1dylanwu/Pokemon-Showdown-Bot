@@ -9,11 +9,11 @@ def filter_forced(X, y):
     return X[mask], y[mask]
 
 pre = "data/processed/general/"
-X_train = np.load(pre + "X_train.npy").astype(np.float32)
-y_train = np.load(pre + "y_train.npy", allow_pickle=True)
+X_train = np.load(pre + "X_train_TEST.npy").astype(np.float32)
+y_train = np.load(pre + "y_train_TEST.npy", allow_pickle=True)
 
-X_val = np.load(pre + "X_val.npy").astype(np.float32)
-y_val = np.load(pre + "y_val.npy", allow_pickle=True)
+X_val = np.load(pre + "X_val_TEST.npy").astype(np.float32)
+y_val = np.load(pre + "y_val_TEST.npy", allow_pickle=True)
 
 X_test = np.load(pre + "X_test.npy").astype(np.float32)
 y_test = np.load(pre + "y_test.npy", allow_pickle=True)

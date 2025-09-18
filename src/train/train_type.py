@@ -37,27 +37,30 @@ y_te_type = split_action_type(y_test)
 y_tr_type = np.array([1 if act.startswith("move_") else 0 for act in y_train])
 y_va_type = np.array([1 if act.startswith("move_") else 0 for act in y_val])
 
-
+"""
 type_clf = LGBMClassifier(
     objective="binary",
     boosting_type="gbdt",
-    n_estimators=1000,
+    n_estimators=4500,
     learning_rate=0.1,
     max_depth=7,
-    min_child_samples = 5,
-    n_jobs=2,
+    min_child_samples = 50,
+    n_jobs=5,
     verbosity = -1,
     num_leaves= 63,
     max_bin = 252,
-    is_unbalance = True
+    is_unbalance = True,
+    feature_fraction=0.8,
+    bagging_fraction=0.8,
+    bagging_freq=5
 )
 
 type_clf.fit(
     X_train, y_tr_type,
     eval_set=[(X_val, y_va_type)],
-    eval_metric="binary_error",
+    eval_metric="binary_logloss",
     callbacks=[
-        early_stopping(stopping_rounds=100, verbose=True),
+        #early_stopping(stopping_rounds=500, verbose=True),
         log_evaluation(period=100)
     ]
 )
@@ -65,14 +68,17 @@ type_clf.fit(
 print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
 print("Stage1 val acc:", type_clf.score(X_val, y_va_type))
 
-#if(type_clf.score(X_val, y_va_type) > 0.7922905602192908):
-    #print("New best model! Saving...")
-joblib.dump(type_clf, "models/stage1_type/type_clf_2.1.pkl")
+joblib.dump(type_clf, "models/stage1_type/type_clf_2.3.pkl")
+
+#type_clf = joblib.load("models/stage1_type/type_clf_2.2.pkl")
 y_pred = type_clf.predict(X_val)
+frac_switches_pred = np.mean(y_pred == 0)
+print(f"Predicted switch fraction: {frac_switches_pred:.3f}")
+
 proba_move_val = type_clf.predict_proba(X_val)[:, 1]
 best_t, best_re = find_threshold_for_switch(y_va_type, proba_move_val)
 print(f"Best switch‐recall {best_re:.3f} at threshold {best_t:.3f}")
-y_pred_switch = (proba_move_val >= best_t).astype(int)
+y_pred_switch = (proba_move_val >= .38).astype(int)
 
     # 2. Frequency of predicting switch vs. move
 frac_switch_pred = np.mean(y_pred_switch == 0)
@@ -97,7 +103,7 @@ print(pd.DataFrame(cm,
 print("\nClassification Report:")
 print(report)
 
-
+"""
 """
 type_clf = HistGradientBoostingClassifier(min_samples_leaf = 10, max_iter = 1000, max_depth = 4, learning_rate = 0.03, class_weight = 'balanced', verbose = 1)
 
@@ -111,7 +117,6 @@ print(f" Val accuracy: {accuracy_score(y_va_type, y_val_pred):.4f}")
 #if(type_clf.score(X_val, y_va_type) > .7919):
     #print("New best model! Saving...")
 joblib.dump(type_clf, "models/stage1_type/type_clf_1.0.pkl")
-"""
 """
 dtrain = xgb.DMatrix(X_train, label=y_tr_type)
 dval = xgb.DMatrix(X_val, label=y_va_type)
@@ -132,17 +137,19 @@ params = {
 model = xgb.train(
     params,
     dtrain,
-    num_boost_round=500,
+    num_boost_round=750,
     evals=[(dval, "val")],
-    early_stopping_rounds=20,
-    verbose_eval=100
+    #early_stopping_rounds=500,
+    verbose_eval=50,
+    maximize = True
 )
 
-joblib.dump(model, "models/stage1_type/type_clf_3.1.pkl")
+joblib.dump(model, "models/stage1_type/type_clf_3.2.pkl")
 
+#model = joblib.load("models/stage1_type/type_clf_3.1.pkl")
 dval = xgb.DMatrix(X_val)
 y_val_proba = model.predict(dval)
-y_val_pred = (y_val_proba > 0.70).astype(int)
+y_val_pred = (y_val_proba > 0.38).astype(int)
 
 acc = accuracy_score(y_va_type, y_val_pred)
 auc = roc_auc_score(y_va_type, y_val_proba)
@@ -153,7 +160,5 @@ total_preds = len(y_val_pred)
 move_ratio = num_move_preds / total_preds
 
 print(f"Predicted 'move' actions: {num_move_preds} out of {total_preds}")
-print(f"Fraction predicted as 'move': {move_ratio:.4f}")
+print(f"Fraction predicted as 'switch': {1 - move_ratio:.4f}")
 print(classification_report(y_va_type, y_val_pred, target_names=["switch", "move"]))
-
-"""

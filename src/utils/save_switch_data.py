@@ -38,7 +38,15 @@ def save_switch_data(type: str, out: str, le: LabelEncoder):
     y_tr_sw = np.array([extract_species(l) for l in y_tr_sw])
     y_va_sw = np.array([extract_species(l) for l in y_va_sw])
     y_te_sw = np.array([extract_species(l) for l in y_te_sw])
-
+    """
+    all_species = np.unique(np.concatenate([
+        y_tr_sw, y_va_sw, y_te_sw
+        #,["zoroark", "zoroarkhisui"]
+    ]))
+    le = LabelEncoder()
+    le.fit(all_species)
+    joblib.dump(le, "models/stage2_switch/util/label_encoder.pkl")
+    """
     y_te_sw_enc = le.transform(y_te_sw)
     y_tr_sw_enc = le.transform(y_tr_sw)
     y_va_sw_enc = le.transform(y_va_sw)
@@ -50,5 +58,4 @@ def save_switch_data(type: str, out: str, le: LabelEncoder):
     np.save(out + "X_te_sw.npy", X_te_sw)
     np.save(out + "y_te_sw.npy", y_te_sw_enc)
 
-
-save_switch_data("switch", "data/processed/forced/", joblib.load("models/stage2_switch/util/label_encoder.pkl"))
+save_switch_data("forced", "data/processed/forced/", joblib.load("models/stage3_forced/util/label_encoder.pkl"))

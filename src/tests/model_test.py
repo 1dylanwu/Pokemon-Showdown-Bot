@@ -1,56 +1,71 @@
-import numpy as np
 import joblib
-from sklearn.ensemble import HistGradientBoostingClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-from pathlib import Path
-from sklearn.model_selection import RandomizedSearchCV
+import numpy as np
+from src.bot.decision_model import DecisionModel
 
+def main():
+    model = DecisionModel()
+    state = {
+        "turn": 8,
+        "side": "p1a",
+        
+        "p1a_active": "ursaring",
+        "p2a_active": "forretress", 
+        
+        "p1a_hp_pct": 0.05,
+        "p2a_hp_pct": 0.8,
+        "p1a_status": "none",
+        "p2a_status": "none",
+        "p1a_fainted": 0,
+        "p2a_fainted": 0,
+        
+        "p1a_is_terastallized": 0,
+        "p2a_is_terastallized": 0,
+        "p1a_tera_type": "none",
+        "p2a_tera_type": "none",
+        
+        "p1_team_species": ["cinderace", "ursaring", "copperajah", "primarina", "toucannon"],
+        "p2_team_species": ["alcremie", "altaria", "forretress", "keldeoresolute", "ironleaves", "screamtail"],
+        "p1_available": ["cinderace", "copperajah", "primarina", "toucannon"],
+        "p2_available": ["alcremie", "altaria", "keldeoresolute", "ironleaves", "screamtail"],
+        
+        "weather": "clear",
+        "terrain": "none",
 
-def predict_action(X_row, active_species, revealed_self,
-                   type_clf, move_clf, le_moves, sw_clf, le_sw,
-                   full_movepools):
-    # Stage 1
-    action_type = type_clf.predict(X_row)[0]  # "move" or "switch"
+        "p1_type_matchup": 1.5,
+        "p2_type_matchup": 1.5,
+        
+        "hazards_p1": {},
+        "hazards_p2": {},
 
-    if action_type == "move":
-        probs = move_clf.predict_proba(X_row)[0]
-        classes = le_moves.classes_
+        "p1a_boost_atk": 0,
+        "p1a_boost_def": 0,
+        "p1a_boost_spa": 0,
+        "p1a_boost_spd": 0,
+        "p1a_boost_spe": 0,
+        "p2a_boost_atk": 0,
+        "p2a_boost_def": 0,
+        "p2a_boost_spa": 0,
+        "p2a_boost_spd": 0,
+        "p2a_boost_spe": 0,
 
-        # mask using full_movepools[active_species]
-        legal = full_movepools.get(active_species, set())
-        mask = np.array([cls.split("_",1)[1] in legal for cls in classes])
+        "p1_known_hp_cinderace": 1.0,
+        "p1_known_hp_ursaring": 1.0,
+        "p1_known_hp_copperajah": 0.1,
+        "p1_known_hp_primarina": 1.0,
+        "p1_known_hp_toucannon": 1.0,
+        #"p1_known_hp_alakazam": 100.0,
+        
+        "p2_known_hp_alcremie": 1.0,
+        "p2_known_hp_altaria": 1.0,
+        "p2_known_hp_forretress": 1.0,
+        "p2_known_hp_keldeoresolute": 1.0,
+        "p2_known_hp_ironleaves": 1.0,
+        "p2_known_hp_screamtail": 1.0,
+    }
+    res = model.predict(state, {"bodyslam", "throatchop", "rest", "sleeptalk"}, {"cinderace", "copperajah", "primarina", "toucannon"})
+    print(res["action_type"])
+    print(res["action"])
+    print(res["confidence"])
 
-    else:  # "switch"
-        probs = sw_clf.predict_proba(X_row)[0]
-        classes = le_sw.classes_
-
-        # mask using revealed_self
-        mask = np.array([cls.split("_",1)[1] in revealed_self for cls in classes])
-
-    # zero‐out illegal, renormalize
-    probs = probs * mask
-    if probs.sum() <= 0:
-        probs = mask.astype(float) / mask.sum()
-    else:
-        probs /= probs.sum()
-
-    return classes[np.argmax(probs)]
-
-type_clf = joblib.load("models/stage1_type/type_clf_2.0.pkl")
-move_clf = joblib.load("models/stage2_move/move_clf_1.0.pkl")
-sw_clf = joblib.load("models/stage2_switch/switch_clf_1.0.pkl")
-full_movepools = joblib.load("data/processed/full_movepools.pkl")
-
-
-i = 42
-X_row = X_val[i].reshape(1, -1)
-act_true = y_val[i]
-active_sp = df_val["p1a_active"].iloc[i]
-revealed = set(df_val["p1_team_species"].iloc[i])
-
-pred = predict_action(
-    X_row, active_sp, revealed,
-    type_clf, move_clf, le_moves, sw_clf, le_sw, full_movepools
-)
-print("true:", act_true, "pred:", pred)
+if __name__ == "__main__":
+    main()

@@ -11,12 +11,10 @@ model = joblib.load("models/stage2_switch/final/switch_clf_1.0.pkl")
 le = joblib.load("models/stage2_switch/util/label_encoder.pkl")
 X_te = np.load(pre + "X_va_sw.npy")
 y_te = np.load(pre + "y_va_sw.npy").astype(int)
-# Base switch rows for the validation split
+# base switch rows for split
 df = pd.read_csv("data/parsed/val.csv")
-df = df[df["action_type"] == "switch"].reset_index(drop=True)
-df.to_csv("inspect.csv", index = False)
-# Load team availability info built by save_full_team_info.py
-# Default to validation split file; change path for other splits as needed
+df = df[(df["action_type"] == "switch") & (df["turn"] != 0)].reset_index(drop=True)
+# team availability info for mask
 team_info_path = "data/parsed/team_info/val_team_info.csv"
 team_df = pd.read_csv(
     team_info_path,
@@ -26,7 +24,7 @@ team_df = pd.read_csv(
     },
 )
 
-# Merge availability onto switch rows
+# merge availability onto switch rows
 df = df.merge(
     team_df[["replay_id", "turn", "p1_available", "p2_available"]],
     on=["replay_id", "turn"],
@@ -43,7 +41,6 @@ def switch_mask(
 
     for i, row in df.iterrows():
         side = row["side"][:2] # only p1 instead of p1a
-
         active = row[f"state_{side}a_active"]
         # Use available mons from team-info CSV (revealed minus fainted) for the correct side
         available = row[f"{side}_available"] if f"{side}_available" in row and isinstance(row[f"{side}_available"], (list, tuple)) else []
@@ -51,10 +48,8 @@ def switch_mask(
         bench = [s for s in available if s != active]
 
         for mon in bench:
-            label = f"switch_{mon}"
-
-            if label in classes:
-                idx = le_switch.transform([label])[0]
+            if mon in classes:
+                idx = le_switch.transform([mon])[0]
                 mask[i][idx] = True
 
     return mask
@@ -82,6 +77,9 @@ acc_cond = accuracy_score(
     y_pred_mask[true_in_mask]
 ) if coverage > 0 else np.nan
 
+labels = np.arange(len(le.classes_))
 print(f"True‐label coverage:  {coverage:.4%}")
 print(f"Cond’l masked acc:    {acc_cond:.4f}  " 
       "(only where true switch was legal)")
+top3_acc = top_k_accuracy_score(y_te, proba_mask, k=3, labels=labels)
+print(f"Top-3 masked accuracy: {top3_acc:.4f}")

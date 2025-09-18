@@ -1,3 +1,4 @@
+from typing import List, Tuple
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -11,6 +12,8 @@ from sklearn.preprocessing import (
     MultiLabelBinarizer,
 )
 
+def normalize(name: str) -> str:
+    return name.lower().replace(" ", "").replace("-", "")
 
 def load_and_clean(csv_path: Path) -> pd.DataFrame:
 
@@ -23,15 +26,18 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
     df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c,
               inplace=True)
     if "action_type" in df.columns and "action" in df.columns:
-        df["action_full"] = df["action_type"] + "_" + df["action"]
+        df["action_full"] = df["action_type"].str.lower() + "_" + df["action"].apply(normalize)
         
     # restore team‐species lists (they were saved as strings)
     for col in ("p1_team_species", "p2_team_species"):
         if col in df.columns:
             df[col] = df[col].apply(
-                lambda x: eval(x) if isinstance(x, str) else x
+                lambda x: [normalize(s) for s in eval(x)] if isinstance(x, str) else x
             )
-    
+    for col in ("p1a_active", "p2a_active"):
+        if col in df.columns:
+            df[col] = df[col].apply(normalize)
+
     # terastallization status to 0/1
     for col in ("p1a_is_terastallized", "p2a_is_terastallized"):
         if col in df.columns:
@@ -127,7 +133,7 @@ def build_feature_matrix(
     mlb1: MultiLabelBinarizer = None,
     mlb2: MultiLabelBinarizer = None,
     mlb_types: MultiLabelBinarizer = None
-):
+) -> Tuple[pd.DataFrame, pd.Series, MultiLabelBinarizer, MultiLabelBinarizer, MultiLabelBinarizer, List[str], List[str]]:
     # from the cleaned dataframe, get x(feature matrix) and y(targets)
     # multi-hot encode team species
     p1_ts, mlb1 = flatten_sets(df, "p1_team_species", "p1_team_", mlb1)
@@ -141,6 +147,11 @@ def build_feature_matrix(
     p2_haz = flatten_haz(df, "hazards_p2", "p2_haz_", p2_haz_keys)
 
     # for the known HP and status columns (already flattened)
+    df.rename(columns=lambda c: (
+        c[:14] + normalize(c[14:]) if c.startswith("p1_known_hp_") else
+        c[:14] + normalize(c[14:]) if c.startswith("p2_known_hp_") else c
+    ), inplace=True)
+
     hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") 
                                    or c.startswith("p2_known_hp_")]
     if hp_cols:
@@ -190,7 +201,7 @@ def build_feature_matrix(
     # target
     y = df["action_full"] if "action_full" in df.columns else None
 
-    return X, y, mlb1, mlb2
+    return X, y, mlb1, mlb2, mlb_types, p1_haz_keys, p2_haz_keys
 
 
 def preprocess(
@@ -205,15 +216,33 @@ def preprocess(
 
     # TRAIN
     df_train = load_and_clean(train_csv)
-    X_train, y_train, mlb1, mlb2 = build_feature_matrix(df_train)
-    
+    X_train, y_train, mlb1, mlb2, mlb_types, hz1_keys, hz2_keys = build_feature_matrix(df_train)
+
+    """
+    joblib.dump(mlb1, out_dir / "mlb_p1_team.pkl")
+    joblib.dump(mlb2, out_dir / "mlb_p2_team.pkl")
+    joblib.dump(mlb_types, out_dir / "mlb_types.pkl")
+    joblib.dump(hz1_keys, out_dir / "hazard_keys_p1.pkl")
+    joblib.dump(hz2_keys, out_dir / "hazard_keys_p2.pkl")
+    """
     # identify numeric vs categorical for ColumnTransformer
     num_cols = X_train.select_dtypes("number").columns.tolist()
     cat_cols = X_train.select_dtypes("object").columns.tolist()
 
+    # removed scaling for hp columns
+    hp_cols = [
+        c for c in num_cols
+        if c in ("p1a_hp_pct", "p2a_hp_pct")
+        or c.startswith("p1_known_hp_")
+        or c.startswith("p2_known_hp_")
+    ]
+
+    other_num_cols = [c for c in num_cols if c not in hp_cols]
+
     ct = ColumnTransformer(
         [
-            ("num", StandardScaler(), num_cols),
+            ("num", StandardScaler(), other_num_cols),
+            ("hp",  "passthrough",  hp_cols),
             ("cat", OneHotEncoder(handle_unknown="ignore", sparse_output=False), cat_cols),
         ]
     )

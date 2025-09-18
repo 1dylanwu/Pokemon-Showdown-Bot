@@ -15,7 +15,7 @@ y_va = np.load(pre + "y_va_sw.npy").astype(np.int32)
 le = joblib.load("models/stage2_switch/util/label_encoder.pkl")
 
 n_classes = len(le.classes_)
-
+"""
 sw_clf = LGBMClassifier(
     objective="multiclass",
     num_class=n_classes,
@@ -44,7 +44,26 @@ sw_clf.fit(
 #print("Best iteration:", best_iter)
 
 
-joblib.dump(sw_clf, "models/stage3_forced/switch_clf_1.0.pkl")
-
+joblib.dump(sw_clf, "models/stage3_forced/final/switch_clf_1.0.pkl")
+"""
+sw_clf = XGBClassifier(
+    objective="multi:softprob", 
+    num_class=len(le.classes_),
+    eval_metric="mlogloss",
+    learning_rate=0.1,
+    max_depth=6,
+    n_estimators=150,
+    use_label_encoder=False,
+    random_state=42,
+    n_jobs=5,
+    early_stopping_rounds = 10
+)
+sw_clf.fit(
+    X_tr, 
+    y_tr,
+    eval_set=[(X_va, y_va)],
+    verbose=True
+)
+joblib.dump(sw_clf, "models/stage3_forced/final/switch_clf_2.0.pkl")
 print("Stage2b sw train acc:", sw_clf.score(X_tr, y_tr))
 print("Stage2b sw val acc:", sw_clf.score(X_va, y_va))
