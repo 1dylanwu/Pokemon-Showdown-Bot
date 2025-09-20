@@ -8,11 +8,12 @@ from lightgbm import LGBMClassifier, early_stopping, log_evaluation
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, roc_auc_score, classification_report
 import xgboost as xgb
 from src.utils.utils import split_action_type
+from src.tests.accuracy_test import test
 
 pre = "data/processed/type/"
-X_train, y_train = np.load(pre + "X_train_clean.npy").astype(np.float32), np.load(pre + "y_train_clean.npy", allow_pickle=True)
-X_val, y_val = np.load(pre+"X_val_clean.npy").astype(np.float32), np.load(pre+"y_val_clean.npy", allow_pickle=True)
-X_test, y_test = np.load(pre+"X_test_clean.npy"), np.load(pre+"y_test_clean.npy", allow_pickle=True)
+X_train, y_tr_type = np.load(pre + "X_train_clean.npy").astype(np.float32), np.load(pre + "y_train_clean.npy", allow_pickle=True)
+X_val, y_va_type = np.load(pre+"X_val_clean.npy").astype(np.float32), np.load(pre+"y_val_clean.npy", allow_pickle=True)
+X_test, y_te_type = np.load(pre+"X_test_clean.npy"), np.load(pre+"y_test_clean.npy", allow_pickle=True)
 
 def find_threshold_for_switch(y_true, proba_move, thresholds=None):
     if thresholds is None:
@@ -26,16 +27,6 @@ def find_threshold_for_switch(y_true, proba_move, thresholds=None):
         if f1_s > best_f1:
             best_f1, best_t = f1_s, t
     return best_t, best_f1
-
-
-# separate out the action types
-
-y_tr_type = split_action_type(y_train)
-y_va_type = split_action_type(y_val)
-y_te_type = split_action_type(y_test)
-
-y_tr_type = np.array([1 if act.startswith("move_") else 0 for act in y_train])
-y_va_type = np.array([1 if act.startswith("move_") else 0 for act in y_val])
 
 """
 type_clf = LGBMClassifier(
@@ -65,45 +56,12 @@ type_clf.fit(
     ]
 )
 
-print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
-print("Stage1 val acc:", type_clf.score(X_val, y_va_type))
-
-joblib.dump(type_clf, "models/stage1_type/type_clf_2.3.pkl")
-
-#type_clf = joblib.load("models/stage1_type/type_clf_2.2.pkl")
-y_pred = type_clf.predict(X_val)
-frac_switches_pred = np.mean(y_pred == 0)
-print(f"Predicted switch fraction: {frac_switches_pred:.3f}")
-
-proba_move_val = type_clf.predict_proba(X_val)[:, 1]
-best_t, best_re = find_threshold_for_switch(y_va_type, proba_move_val)
-print(f"Best switch‐recall {best_re:.3f} at threshold {best_t:.3f}")
-y_pred_switch = (proba_move_val >= .38).astype(int)
-
-    # 2. Frequency of predicting switch vs. move
-frac_switch_pred = np.mean(y_pred_switch == 0)
-frac_switch_true = np.mean(y_va_type == 0)
-
-    # 3. Confusion matrix & classification report
-cm = confusion_matrix(y_va_type, y_pred_switch)
-report = classification_report(
-    y_va_type, y_pred_switch,
-    target_names=["switch", "move"],
-    digits=4
-)
-auc = roc_auc_score(y_va_type, proba_move_val)
-
-print(f"Actual switch fraction : {frac_switch_true:.3f}")
-print(f"Predicted switch fraction: {frac_switch_pred:.3f}")
-print(f"ROC AUC               : {auc:.4f}")
-print("\nConfusion Matrix:")
-print(pd.DataFrame(cm,
-                       index=["true_switch", "true_move"],
-                       columns=["pred_switch", "pred_move"]))
-print("\nClassification Report:")
-print(report)
-
+joblib.dump(type_clf, "models/type/type_2.0.pkl")
 """
+type_clf = joblib.load("models/type/type_2.0.pkl")
+print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
+test(type_clf, X_val, y_va_type, 0.38, True)
+
 """
 type_clf = HistGradientBoostingClassifier(min_samples_leaf = 10, max_iter = 1000, max_depth = 4, learning_rate = 0.03, class_weight = 'balanced', verbose = 1)
 
@@ -117,6 +75,7 @@ print(f" Val accuracy: {accuracy_score(y_va_type, y_val_pred):.4f}")
 #if(type_clf.score(X_val, y_va_type) > .7919):
     #print("New best model! Saving...")
 joblib.dump(type_clf, "models/stage1_type/type_clf_1.0.pkl")
+"""
 """
 dtrain = xgb.DMatrix(X_train, label=y_tr_type)
 dval = xgb.DMatrix(X_val, label=y_va_type)
@@ -162,3 +121,34 @@ move_ratio = num_move_preds / total_preds
 print(f"Predicted 'move' actions: {num_move_preds} out of {total_preds}")
 print(f"Fraction predicted as 'switch': {1 - move_ratio:.4f}")
 print(classification_report(y_va_type, y_val_pred, target_names=["switch", "move"]))
+"""
+"""
+rf_clf = RandomForestClassifier(
+    n_estimators=500,
+    max_depth=None,
+    min_samples_leaf=7,
+    class_weight="balanced",
+    random_state=42,
+    n_jobs= 5
+)
+
+rf_clf.fit(X_train, y_tr_type)
+joblib.dump(rf_clf, "models/stage1_type/type_clf_4.1.pkl")
+proba_move_val = rf_clf.predict_proba(X_val)[:, 1]
+
+best_t, best_f1 = find_threshold_for_switch(y_va_type, proba_move_val)
+print(f"Best threshold for switch-vs-move: {best_t:.2f} (Switch F1 = {best_f1:.3f})")
+
+y_pred_val = (proba_move_val >= best_t).astype(int)
+
+print(classification_report(
+    y_va_type, 
+    y_pred_val, 
+    target_names=["switch", "move"]
+))
+
+proba_move_test = rf_clf.predict_proba(X_test)[:, 1]
+y_pred_test = (proba_move_test >= best_t).astype(int)
+print("Test set performance:")
+print(classification_report(y_te_type, y_pred_test, target_names=["switch", "move"]))
+"""

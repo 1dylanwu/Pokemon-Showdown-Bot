@@ -67,8 +67,8 @@ if __name__ == "__main__":
     build_and_split(
         raw_log_dir = "data/raw/gen9randombattle_logs",
         out_dir = "data/parsed",
-        train_frac = 0.8,
-        val_frac = 0.1,
-        test_frac = 0.1,
+        train_frac = 0.9,
+        val_frac = 0.05,
+        test_frac = 0.05,
         random_seed = 42,
     )

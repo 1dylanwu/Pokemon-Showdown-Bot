@@ -3,17 +3,14 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 import joblib
-from src.ingest.add_type_features import get_pokemon_types
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from src.utils.utils import normalize
 from sklearn.preprocessing import (
     StandardScaler,
     OneHotEncoder,
     MultiLabelBinarizer,
 )
-
-def normalize(name: str) -> str:
-    return name.lower().replace(" ", "").replace("-", "")
 
 def load_and_clean(csv_path: Path) -> pd.DataFrame:
 
@@ -81,7 +78,7 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
     if "p2a_tera_type" in df.columns: cat_fill["p2a_tera_type"] = "none"
     if cat_fill:
         df.fillna(cat_fill, inplace=True)
-
+    df = df.copy()
     return df
 
 
@@ -160,8 +157,6 @@ def build_feature_matrix(
     boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
     if boost_cols:
         df[boost_cols] = df[boost_cols].apply(pd.to_numeric, errors="coerce")
-    df["p1a_types"] = df["p1a_active"].apply(get_pokemon_types)
-    df["p2a_types"] = df["p2a_active"].apply(get_pokemon_types)
 
     # one hot encoded categories for active pokemon types
     p1_types_ohe, mlb_types = flatten_sets(

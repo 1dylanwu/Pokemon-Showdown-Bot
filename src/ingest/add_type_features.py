@@ -4,6 +4,7 @@ from pathlib import Path
 import joblib
 from typing import Dict, List, Tuple
 import json
+from src.utils.utils import normalize
 
 # Type effectiveness chart (Gen 9)
 TYPE_EFFECTIVENESS = {
@@ -30,7 +31,7 @@ TYPE_EFFECTIVENESS = {
 POKEMON_TYPES = json.loads(Path("data/raw/poke_types.json").read_text())
 def get_pokemon_types(species: str) -> List[str]:
     # get the types of a pokemon species
-    return POKEMON_TYPES.get(species, ['Normal'])  # default to normal if not found
+    return POKEMON_TYPES.get(normalize(species), ['Normal'])  # default to normal if not found
 
 def type_effectiveness(attacking_types: List[str], defending_types: List[str], tera_type: str) -> float:
     if not attacking_types or not defending_types:
@@ -88,12 +89,11 @@ def add_type_features(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 if __name__ == "__main__":
-    master_path = Path("data/parsed/master.csv")
     train_path = Path("data/parsed/train.csv")
     val_path = Path("data/parsed/val.csv")
     test_path = Path("data/parsed/test.csv")
     
-    for path in [master_path, train_path, val_path, test_path]:
+    for path in [train_path, val_path, test_path]:
         df = pd.read_csv(path, dtype=str)
         df_plus = add_type_features(df)
         df_plus.to_csv(path, index = False)

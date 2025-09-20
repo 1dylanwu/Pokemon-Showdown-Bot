@@ -1,30 +1,28 @@
 import numpy as np
 import joblib
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, roc_auc_score, classification_report, top_k_accuracy_score
 import pandas as pd
 
-model_path = "models/stage1_type/final/type_clf_2.0.pkl"
-data_dir = "data/processed/general/"
+def test(model, X, y, threshold, binary = False):
+    if binary:
+        y_val_prob = model.predict_proba(X)[:, 1]
+        y_val_pred = (y_val_prob > threshold).astype(int)
 
-model = joblib.load(model_path)
+        acc = accuracy_score(y, y_val_pred)
+        auc = roc_auc_score(y, y_val_prob)
+        print(f"Validation Accuracy: {acc:.4f}")
+        print(f"Validation ROC AUC : {auc:.4f}")
+        num_move_preds = np.sum(y_val_pred)
+        total_preds = len(y_val_pred)
+        move_ratio = num_move_preds / total_preds
+        print(f"move ratio: {move_ratio}")
+        print(classification_report(y, y_val_pred, target_names=["switch", "move"]))
+    else:
+        y_val_pred = model.predict(X)
+        y_val_prob = model.predict_proba(X)
+        labels = np.arange(y_val_prob.shape[1])
 
-X_tr = np.load(data_dir + "X_train.npy", allow_pickle=True)
-y_tr = np.load(data_dir + "y_train.npy", allow_pickle=True)
-
-X_va = np.load(data_dir + "X_val.npy", allow_pickle=True)
-y_va = np.load(data_dir + "y_val.npy", allow_pickle=True)
-
-X_te = np.load(data_dir + "X_test.npy", allow_pickle=True)
-y_te = np.load(data_dir + "y_test.npy", allow_pickle=True)
-
-
-def evaluate(model, X, y, name):
-    y_pred = model.predict(X)
-    if y_pred.ndim == 2:  # probability output
-        y_pred = np.argmax(y_pred, axis=1)
-    acc = accuracy_score(y, y_pred)
-    print(f"{name} accuracy: {acc:.4f}")
-
-evaluate(model, X_tr, y_tr, "Train")
-evaluate(model, X_va, y_va, "Validation")
-evaluate(model, X_te, y_te, "Test")
+        acc = accuracy_score(y, y_val_pred)
+        print(f"Top-1 Accuracy: {acc:.4f}")
+        top3 = top_k_accuracy_score(y, y_val_prob, k=3, labels = labels)
+        print(f"Top-3 Accuracy: {top3:.4f}")

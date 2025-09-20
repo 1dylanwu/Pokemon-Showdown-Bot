@@ -23,7 +23,7 @@ class DecisionModel:
     4. If switch: use switch model with legal switch masking
     """
     
-    def __init__(self, model_dir: str = "models", move_threshold: float = 0.62):
+    def __init__(self, model_dir: str = "models", move_threshold: float = 0.38):
         self.move_threshold = move_threshold
         self.model_dir = Path(model_dir)
         self._load_models()

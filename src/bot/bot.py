@@ -95,7 +95,7 @@ class AIAgent(Player):
         # Count fainted (assuming team size = 6)
         team_size = 6
         p1_fainted = team_size - len(p1_team)
-        p2_fainted = team_size - len(p2_team)
+        p2_fainted = sum(mon.fainted for mon in battle.opponent_team.values())
 
         # Weather & terrain
         weather = next(iter(battle.weather), "clear")
@@ -158,8 +158,8 @@ class AIAgent(Player):
             # Teams and legal switches
             "p1_team_species": p1_team,
             "p2_team_species": p2_team,
-            "p1_available": p1_avail,
-            "p2_available": p2_avail,
+           # "p1_available": p1_avail,
+            #"p2_available": p2_avail,
 
             # Field conditions
             "weather": weather,
@@ -176,9 +176,13 @@ class AIAgent(Player):
             state[f"p2a_boost_{stat}"] = p2a.boosts.get(stat, 0)
 
         # Known HP for every species on both teams
-        for species in set(p1_team + p2_team):
+        for species in p1_team:
             hp = known_hp_map.get(species, 1.0)
             state[f"p1_known_hp_{species}"] = hp
+        for species in p2_team:
+            hp = known_hp_map.get(species, 1.0)
             state[f"p2_known_hp_{species}"] = hp
 
+        if(state["turn"] == 3):
+            print(state)
         return state
