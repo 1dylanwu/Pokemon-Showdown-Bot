@@ -15,7 +15,7 @@ def test(model, X, y, threshold, binary = False):
         num_move_preds = np.sum(y_val_pred)
         total_preds = len(y_val_pred)
         move_ratio = num_move_preds / total_preds
-        print(f"move ratio: {move_ratio}")
+        print(f"switch ratio: {1 - move_ratio}")
         print(classification_report(y, y_val_pred, target_names=["switch", "move"]))
     else:
         y_val_pred = model.predict(X)

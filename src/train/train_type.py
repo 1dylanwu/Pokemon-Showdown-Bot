@@ -2,18 +2,28 @@ import numpy as np
 import joblib
 from lightgbm import LGBMClassifier
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
+from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
 from pathlib import Path
 import pandas as pd
 from lightgbm import LGBMClassifier, early_stopping, log_evaluation
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, roc_auc_score, classification_report
+from sklearn.metrics import accuracy_score, f1_score, make_scorer, precision_score, recall_score, confusion_matrix, roc_auc_score, classification_report
+from imblearn.under_sampling import RandomUnderSampler, NearMiss, ClusterCentroids
 import xgboost as xgb
-from src.utils.utils import split_action_type
 from src.tests.accuracy_test import test
 
 pre = "data/processed/type/"
 X_train, y_tr_type = np.load(pre + "X_train_clean.npy").astype(np.float32), np.load(pre + "y_train_clean.npy", allow_pickle=True)
 X_val, y_va_type = np.load(pre+"X_val_clean.npy").astype(np.float32), np.load(pre+"y_val_clean.npy", allow_pickle=True)
 X_test, y_te_type = np.load(pre+"X_test_clean.npy"), np.load(pre+"y_test_clean.npy", allow_pickle=True)
+"""
+rus = RandomUnderSampler(
+    sampling_strategy='auto',
+    random_state=42
+)
+
+
+X_train, y_tr_type = rus.fit_resample(X_train, y_tr_type)
+"""
 
 def find_threshold_for_switch(y_true, proba_move, thresholds=None):
     if thresholds is None:
@@ -28,53 +38,74 @@ def find_threshold_for_switch(y_true, proba_move, thresholds=None):
             best_f1, best_t = f1_s, t
     return best_t, best_f1
 
-"""
+
+
 type_clf = LGBMClassifier(
     objective="binary",
     boosting_type="gbdt",
-    n_estimators=4500,
-    learning_rate=0.1,
-    max_depth=7,
-    min_child_samples = 50,
+    n_estimators=50000,
     n_jobs=5,
     verbosity = -1,
-    num_leaves= 63,
-    max_bin = 252,
-    is_unbalance = True,
-    feature_fraction=0.8,
-    bagging_fraction=0.8,
-    bagging_freq=5
+    learning_rate = 0.1,
+    class_weight = "balanced"
 )
 
+"""
+params = {"learning_rate": [0.01, 0.02, 0.03, 0.05, 0.08],
+    "num_leaves": [15, 31, 63],
+        "max_depth": [4, 6, 8, 12, -1],
+        "min_child_samples": [5, 10, 20],
+        "max_bin": [64, 128],
+        "subsample": [0.6, 0.7, 0.8, 0.9, 1.0],
+        "colsample_bytree": [0.4, 0.6, 0.8, 1.0],
+        "reg_alpha": [0.0, 0.1, 0.5, 1.0, 2.0],
+        "reg_lambda": [0.0, 0.1, 0.5, 1.0, 2.0],
+        "boosting_type": ["gbdt", "dart"],
+        "min_split_gain": [0.0, 0.01, 0.05, 0.1]}
+cv = StratifiedKFold(n_splits=3 , shuffle=True, random_state=42)
+scorer = make_scorer(f1_score, pos_label = 1)
+rs = RandomizedSearchCV(
+        estimator=type_clf,
+        param_distributions=params,
+        n_iter=12,
+        scoring=scorer,
+        cv=cv,
+        refit=True,
+        random_state=42,
+        n_jobs=5,
+        verbose=2
+)
+fit_kwargs = {
+        "eval_set": [(X_val, y_va_type)],
+        "eval_metric": "binary_logloss",
+        "early_stopping_rounds": 100,
+        "verbose": 100
+}
+
+rs.fit(X_train, y_tr_type)
+
+best = rs.best_estimator_
+print("best params:", rs.best_params_)
+print("best cv score (f1):", rs.best_score_)
+joblib.dump(best, "models/type/type_2.3.pkl")
+"""
+"""
 type_clf.fit(
     X_train, y_tr_type,
     eval_set=[(X_val, y_va_type)],
     eval_metric="binary_logloss",
     callbacks=[
-        #early_stopping(stopping_rounds=500, verbose=True),
-        log_evaluation(period=100)
+        early_stopping(stopping_rounds=100, verbose=True),
+        log_evaluation(period=1000)
     ]
 )
 
 joblib.dump(type_clf, "models/type/type_2.0.pkl")
-"""
-type_clf = joblib.load("models/type/type_2.0.pkl")
+
+#type_clf = joblib.load("models/type/type_2.0.pkl")
 print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
-test(type_clf, X_val, y_va_type, 0.38, True)
 
-"""
-type_clf = HistGradientBoostingClassifier(min_samples_leaf = 10, max_iter = 1000, max_depth = 4, learning_rate = 0.03, class_weight = 'balanced', verbose = 1)
-
-type_clf.fit(X_train, y_tr_type)
-y_train_pred = type_clf.predict(X_train)
-y_val_pred = type_clf.predict(X_val)
-
-print(f"Train accuracy: {accuracy_score(y_tr_type, y_train_pred):.4f}")
-print(f" Val accuracy: {accuracy_score(y_va_type, y_val_pred):.4f}")
-
-#if(type_clf.score(X_val, y_va_type) > .7919):
-    #print("New best model! Saving...")
-joblib.dump(type_clf, "models/stage1_type/type_clf_1.0.pkl")
+test(type_clf, X_val, y_va_type, 0.4, True)
 """
 """
 dtrain = xgb.DMatrix(X_train, label=y_tr_type)
@@ -96,14 +127,14 @@ params = {
 model = xgb.train(
     params,
     dtrain,
-    num_boost_round=750,
+    num_boost_round=2000,
     evals=[(dval, "val")],
-    #early_stopping_rounds=500,
-    verbose_eval=50,
+    #early_stopping_rounds=50,
+    verbose_eval=200,
     maximize = True
 )
 
-joblib.dump(model, "models/stage1_type/type_clf_3.2.pkl")
+joblib.dump(model, "models/type/type_3.0.pkl")
 
 #model = joblib.load("models/stage1_type/type_clf_3.1.pkl")
 dval = xgb.DMatrix(X_val)
@@ -125,30 +156,32 @@ print(classification_report(y_va_type, y_val_pred, target_names=["switch", "move
 """
 rf_clf = RandomForestClassifier(
     n_estimators=500,
-    max_depth=None,
+    max_depth=12,
     min_samples_leaf=7,
-    class_weight="balanced",
+    class_weight = "balanced_subsample",
     random_state=42,
     n_jobs= 5
 )
+params = {"n_estimators": [200, 500, 800],
+    "max_depth": [8, 12, 16, 24, None],
+    "min_samples_split": [2, 5, 10, 20, 50],
+    "min_samples_leaf": [1, 3, 5, 7, 15],
+    "max_features": [0.25, 0.4, 0.6, "sqrt"],
+    "class_weight": ["balanced", "balanced_subsample", None]
+}
+rs = RandomizedSearchCV(
+    rf_clf, params, n_iter=1, scoring="f1", cv=5, n_jobs=5, random_state=42, verbose=2
+)
 
-rf_clf.fit(X_train, y_tr_type)
-joblib.dump(rf_clf, "models/stage1_type/type_clf_4.1.pkl")
-proba_move_val = rf_clf.predict_proba(X_val)[:, 1]
+rs.fit(X_train, y_tr_type)
+print(rs.get_params, rs.best_score_)
+best_rf = rs.best_estimator_
+joblib.dump(best_rf, "models/type/type_clf_4.0.pkl")
+
+#rf_clf = joblib.load("models/type/type_clf_4.0.pkl")
+proba_move_val = best_rf.predict_proba(X_val)[:, 1]
 
 best_t, best_f1 = find_threshold_for_switch(y_va_type, proba_move_val)
-print(f"Best threshold for switch-vs-move: {best_t:.2f} (Switch F1 = {best_f1:.3f})")
 
-y_pred_val = (proba_move_val >= best_t).astype(int)
-
-print(classification_report(
-    y_va_type, 
-    y_pred_val, 
-    target_names=["switch", "move"]
-))
-
-proba_move_test = rf_clf.predict_proba(X_test)[:, 1]
-y_pred_test = (proba_move_test >= best_t).astype(int)
-print("Test set performance:")
-print(classification_report(y_te_type, y_pred_test, target_names=["switch", "move"]))
+test(best_rf, X_val, y_va_type, best_t, True)
 """
