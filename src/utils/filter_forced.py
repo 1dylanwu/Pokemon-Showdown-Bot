@@ -4,9 +4,15 @@ import numpy as np
 def is_forced(label: str) -> bool:
     return str(label).startswith("forced_switch_")
 
+def is_move(label: str) -> bool:
+    return str(label).startswith("move_")
+
 def filter_forced(X, y):
-    mask = np.array([not is_forced(label) for label in y])
-    return X[mask], y[mask]
+    mask = np.array([not str(label).startswith("forced_switch_") for label in y])
+    X_clean = X[mask]
+    y_clean = np.array([1 if is_move(label) else 0 for label in y[mask]], dtype=np.int32)
+    return X_clean, y_clean
+
 
 pre = "data/processed/general/"
 X_train = np.load(pre + "X_train.npy").astype(np.float32)

@@ -1,58 +1,97 @@
+import random
 import numpy as np
-from lightgbm import LGBMClassifier
+from lightgbm import LGBMClassifier, early_stopping
 from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
 from sklearn.metrics import make_scorer, log_loss
 from src.utils.utils import split_action_type
 import joblib
+import json
+import os
 
-pre = "data/processed/general/"
-X_train, y_train = np.load(pre + "X_train.npy").astype(np.float32), np.load(pre + "y_train.npy", allow_pickle=True)
-X_val, y_val = np.load(pre+"X_val.npy").astype(np.float32), np.load(pre+"y_val.npy", allow_pickle=True)
-
-y_tr_type = split_action_type(y_train)
-y_va_type = split_action_type(y_val)
-y_tr_type = (y_tr_type == "switch").astype(int)
+pre = "data/processed/type/"
+X_train, y_tr_type = np.load(pre + "X_train_clean.npy").astype(np.float32), np.load(pre + "y_train_clean.npy", allow_pickle=True)
+X_val, y_va_type = np.load(pre+"X_val_clean.npy").astype(np.float32), np.load(pre+"y_val_clean.npy", allow_pickle=True)
+X_test, y_te_type = np.load(pre+"X_test_clean.npy"), np.load(pre+"y_test_clean.npy", allow_pickle=True)
 
 base_clf = LGBMClassifier(
     objective="binary",
     boosting_type="gbdt",
     class_weight="balanced",
     random_state=42,
-    n_jobs=-1,
+    n_jobs=5,
     verbosity=-1
 )
+tried_path = "models/utility/type_params.json"
+if os.path.exists(tried_path):
+    with open(tried_path, "r") as f:
+        tried_params = set(tuple(sorted(p.items())) for p in json.load(f))
+else:
+    tried_params = set()
 
-param_dist = {
-    "n_estimators": [500, 750, 1000],
-    "learning_rate": [0.01, 0.03, 0.05, 0.1],
-    "max_depth": [3, 5, 7, 9, -1],
-    "num_leaves": [31, 63, 127, 255],
-    "feature_fraction": [0.6, 0.8, 1.0],
-    "bagging_fraction": [0.6, 0.8, 1.0],
-    "bagging_freq": [0, 5, 10],
-    "lambda_l1": [0.0, 0.1, 1.0],
-    "lambda_l2": [0.0, 0.1, 1.0]
+param_grid = {"learning_rate": [0.03, 0.05, 0.08, 0.1, 0.12],
+        "num_leaves": [15, 31, 63],
+        "max_depth": [8, 12, -1],
+        "min_child_samples": [1, 5, 7],
+        "max_bin": [64, 128],
+        "subsample": [0.8, 0.9, 1.0],
+        "colsample_bytree": [ 0.8, 1.0],
+        "reg_alpha": [0.0, 0.1, 0.5, 1.0, 2.0],
+        "reg_lambda": [0.0, 0.1, 0.5, 1.0, 2.0],
+        "min_split_gain": [0.0, 0.01, 0.05],
 }
 
+def sample_random(param_distributions, exclude, n_iter=15, seed=2007):
+    rng = random.Random(seed)
+    keys = list(param_distributions.keys())
+    samples = []
+    seen = set(exclude)
 
-cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-scorer = make_scorer(log_loss, greater_is_better=False)
+    while len(samples) < n_iter:
+        candidate = {k: rng.choice(param_distributions[k]) for k in keys}
+        key = tuple(sorted(candidate.items()))
+        if key not in seen:
+            samples.append(candidate)
+            seen.add(key)
+    return samples
 
-search = RandomizedSearchCV(
-    estimator=base_clf,
-    param_distributions=param_dist,
-    n_iter=50,
-    scoring=scorer,
-    cv=cv,
-    verbose=2,
-    random_state=42,
-    n_jobs= 2
-)
+best_score = float("inf")
+best_params = None
+best_model = None
+new_trials = []
 
-search.fit(X_train, y_tr_type)
-print("Best log-loss (negative):", search.best_score_)
-print("Best parameters:")
-for k, v in search.best_params_.items():
-    print(f"  {k}: {v}")
+random_trials = sample_random(param_grid, exclude=tried_params, n_iter=15, seed=2025)
 
-joblib.dump(search.best_estimator_, "models/stage1_type/final/type_clf_2.1.pkl")
+for i, params in enumerate(random_trials, 1):
+    print(f"\n🔎 Trial {i} with params: {params}")
+    
+    model = LGBMClassifier(
+        objective="binary",
+        boosting_type="gbdt",
+        n_estimators=50000,
+        n_jobs=5,
+        random_state=2007,
+        class_weight="balanced",
+        verbosity=-1,
+        **params
+    )
+    
+    model.fit(
+        X_train, y_tr_type,
+        eval_set=[(X_val, y_va_type)],
+        eval_metric="binary_logloss",
+        callbacks=[early_stopping(stopping_rounds=100)],
+    )
+    
+    val_pred = model.predict_proba(X_val)[:, 1]
+    score = log_loss(y_va_type, val_pred)
+    print(f"LogLoss: {score:.4f}")
+    
+    if score < best_score:
+        best_score = score
+        best_params = params
+        best_model = model
+        joblib.dump(best_model, "best_lgbm_model.pkl")
+        print("💾 Saved new best model!")
+    
+    tried_params.add(tuple(sorted(params.items())))
+    new_trials.append(params)

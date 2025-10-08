@@ -133,53 +133,55 @@ Val Accuracy: 0.28469945355191256
 Date: 9/15/25 5:00 pm
 Notes: multi_logloss: 4.42814. overfitting very badly
 ------------------------------------------------------------
-Model: type_clf_2.1.pkl
+Model: type_clf_2.1
 Algorithm: LightGBM
 Hyperparams:     
     objective="binary",
     boosting_type="gbdt",
-    n_estimators=5000,
-    learning_rate=0.1,
-    max_depth=7,
-    min_child_samples = 5,
+    n_estimators=50000,
     n_jobs=5,
     verbosity = -1,
-    num_leaves= 63,
-    max_bin = 252,
-    is_unbalance = True
-Val Accuracy: 
-Switch precision: 0.4774
-Switch recall: 0.3115
-Move precision: 0.8016 
-Move recall: 0.8908
-Switch frac: 0.158
-Date: 9/15/25 12:30 am
-Notes: Threshold is 0.38. Overfitting
+    learning_rate = 0.1,
+    class_weight = "balanced"
+Train Accuracy: 0.862952530389247
+Val Accuracy: 0.7666
+Validation ROC AUC : 0.7194
+Threshold: 0.4
+Switch Precision: 0.49
+Switch Recall: 0.37
+Move Precision: 0.83
+Move Recall: 0.88
+Switch Ratio: 0.17453384475533773
+Date: 10/6/25 8:00 pm
+Notes: [19968] valid_0's binary_logloss: 0.537239
 ------------------------------------------------------------
-Model: type_clf_2.2.pkl
+Model: type_clf_2.3
 Algorithm: LightGBM
 Hyperparams:     
-    objective="binary",
-    boosting_type="gbdt",
-    n_estimators=4500,
-    learning_rate=0.1,
-    max_depth=7,
-    min_child_samples = 20,
-    n_jobs=5,
-    verbosity = -1,
-    num_leaves= 63,
-    max_bin = 252,
-    is_unbalance = True
-Val Accuracy: 
-Switch precision: 0.4816
-Switch recall: 0.3114
-Move precision: 0.8019
-Move recall: 0.8927
-Switch frac: 0.157
-Date: 9/14/25 11:30 pm
-Notes: Threshold is 0.38. Still overfitting
+    'learning_rate': 0.12, 
+    'num_leaves': 63, 
+    'max_depth': -1, 
+    'min_child_samples': 7, 
+    'max_bin': 64, 
+    'subsample': 1.0, 
+    'colsample_bytree': 1.0, 
+    'reg_alpha': 0.5, 
+    'reg_lambda': 2.0, 
+    'min_split_gain': 0.0
+Train Accuracy: 0.8864119578299967
+Val Accuracy: 0.7752
+Validation ROC AUC : 0.7229
+Threshold: 0.4
+Switch Precision: 0.51
+Switch Recall: 0.35
+Move Precision: 0.82
+Move Recall: 0.90
+Switch Ratio: 0.15528900516595345
+Logloss: [14613] valid_0's binary_logloss: 0.521233
+Date: 10/7/25 4:00 pm
+Notes: Hyperparameter tune best result
 ------------------------------------------------------------
-Model: type_clf_3.1.pkl
+Model: type_clf_3.1
 Algorithm: XGBoost
 Hyperparams:     
     "objective": "binary:logistic",
@@ -191,12 +193,14 @@ Hyperparams:
     "reg_alpha": 1.0,
     "reg_lambda": 1.0,
     "scale_pos_weight" : n_neg / n_pos
-Val Accuracy: 0.7551
-Switch precision: 0.49
-Switch recall: 0.32
-Move precision: 0.80
-Move recall: 0.89
-Switch frac:  0.1569
-Date: 9/15/25 7:00 pm
-Notes: multi_logloss: 0.61698. Threshold is 0.38
-------------------------------------------------------------
+Train Accuracy:
+Val Accuracy: 0.7663
+Validation ROC AUC : 0.7282
+Threshold: 0.38
+Switch Precision: 0.49
+Switch Recall: 0.39
+Move Precision: 0.83
+Move Recall: 0.88
+Switch Ratio: 0.1850
+Date: 10/7/25 12:00 am
+Notes: 3500 rounds, val-logloss:0.58986

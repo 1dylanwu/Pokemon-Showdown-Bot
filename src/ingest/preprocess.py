@@ -22,24 +22,26 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
     # strip leading "state_" from nested-field columns
     df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c,
               inplace=True)
-    if "action_type" in df.columns and "action" in df.columns:
-        df["action_full"] = df["action_type"].str.lower() + "_" + df["action"].apply(normalize)
+    df["action_full"] = df["action_type"].str.lower() + "_" + df["action"].apply(normalize)
         
-    # restore team‐species lists (they were saved as strings)
-    for col in ("p1_team_species", "p2_team_species"):
-        if col in df.columns:
-            df[col] = df[col].apply(
-                lambda x: [normalize(s) for s in eval(x)] if isinstance(x, str) else x
-            )
+    # restore team‐species and typing lists from strings
+    for col in ("p1_team_species", "p2_team_species", "p1a_types", "p2a_types"):
+        df[col] = df[col].apply(
+            lambda x: [normalize(s) for s in eval(x)] if isinstance(x, str) else x
+        )
+
+
     for col in ("p1a_active", "p2a_active"):
-        if col in df.columns:
-            df[col] = df[col].apply(normalize)
+        df[col] = df[col].apply(normalize)
 
     # terastallization status to 0/1
     for col in ("p1a_is_terastallized", "p2a_is_terastallized"):
-        if col in df.columns:
-            # map string → 0/1
-            df[col] = df[col].map({"True": 1, "False": 0}).fillna(0).astype(int)
+        # map string → 0/1
+        df[col] = df[col].map({"True": 1, "False": 0}).fillna(0).astype(int)
+
+    # type matchup statistics
+    for col in ("p1_type_matchup", "p2_type_matchup"):
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.0)
 
     # coerce player‐HP% and fainted counts to numeric
     for num_col in (
@@ -49,20 +51,23 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
         "p1a_fainted",
         "p2a_fainted",
     ):
-        if num_col in df.columns:
-            df[num_col] = pd.to_numeric(df[num_col], errors="coerce")
+        df[num_col] = pd.to_numeric(df[num_col], errors="coerce")
 
     for col in ("hazards_p1", "hazards_p2"):
-        if col in df.columns:
-            df[col] = df[col].apply(
-                lambda x: eval(x) if isinstance(x, str) else {}
-            )
+        df[col] = df[col].apply(
+            lambda x: eval(x) if isinstance(x, str) else {}
+        )
+
+    # flags for low hp (<30%)
+    hp_threshold = 0.3
+    df["p1_low_hp"] = (pd.to_numeric(df["p1a_hp_pct"], errors="coerce") < hp_threshold).fillna(False).astype(int)
+    df["p2_low_hp"] = (pd.to_numeric(df["p2a_hp_pct"], errors="coerce") < hp_threshold).fillna(False).astype(int)
 
     boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
     known_hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") or c.startswith("p2_known_hp_")]
     # fill with 0s
     for c in boost_cols + known_hp_cols:
-            df[c] = pd.to_numeric(df[c], errors="coerce")
+        df[c] = pd.to_numeric(df[c], errors="coerce")
     if boost_cols:
         df[boost_cols] = df[boost_cols].fillna(0.0)
     if known_hp_cols:
@@ -167,12 +172,11 @@ def build_feature_matrix(
     )
     # calculated type matchup (uses best STAB offensive type multiplier)
     for col in ("p1_type_matchup", "p2_type_matchup"):
-            if col in df.columns:
-                df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.0)
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.5)
 
     # raw numeric and categorical columns
     # i removed status for inactive pokemon due to too many features
-    raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted", "p1a_is_terastallized", "p2a_is_terastallized", "p1_type_matchup", "p2_type_matchup"]
+    raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted", "p1a_is_terastallized", "p2a_is_terastallized", "p1_type_matchup", "p2_type_matchup", "p1_low_hp", "p2_low_hp"]
     num_cols = [c for c in raw_nums + hp_cols + boost_cols if c in df.columns]
 
     raw_cats = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain", "p1a_tera_type", "p2a_tera_type"]
@@ -194,7 +198,7 @@ def build_feature_matrix(
     )
 
     # target
-    y = df["action_full"] if "action_full" in df.columns else None
+    y = df["action_full"]
 
     return X, y, mlb1, mlb2, mlb_types, p1_haz_keys, p2_haz_keys
 
@@ -213,13 +217,13 @@ def preprocess(
     df_train = load_and_clean(train_csv)
     X_train, y_train, mlb1, mlb2, mlb_types, hz1_keys, hz2_keys = build_feature_matrix(df_train)
 
-    """
+    
     joblib.dump(mlb1, out_dir / "mlb_p1_team.pkl")
     joblib.dump(mlb2, out_dir / "mlb_p2_team.pkl")
     joblib.dump(mlb_types, out_dir / "mlb_types.pkl")
     joblib.dump(hz1_keys, out_dir / "hazard_keys_p1.pkl")
     joblib.dump(hz2_keys, out_dir / "hazard_keys_p2.pkl")
-    """
+    
     # identify numeric vs categorical for ColumnTransformer
     num_cols = X_train.select_dtypes("number").columns.tolist()
     cat_cols = X_train.select_dtypes("object").columns.tolist()
@@ -232,12 +236,16 @@ def preprocess(
         or c.startswith("p2_known_hp_")
     ]
 
-    other_num_cols = [c for c in num_cols if c not in hp_cols]
+    bin_prefixes = ("p1_team_", "p2_team_", "p1_type_", "p2_type_", "p1_haz_", "p2_haz_", "p1a_is_terastallized", "p2a_is_terastallized")
+    bin_cols = [c for c in num_cols if c.startswith(bin_prefixes)]
+
+    other_num_cols = [c for c in num_cols if c not in hp_cols + bin_cols]
 
     ct = ColumnTransformer(
         [
             ("num", StandardScaler(), other_num_cols),
             ("hp",  "passthrough",  hp_cols),
+            ("bin", "passthrough", bin_cols),
             ("cat", OneHotEncoder(handle_unknown="ignore", sparse_output=False), cat_cols),
         ]
     )
@@ -271,7 +279,7 @@ def preprocess(
     if y_test is not None:
         np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
-    # total number of features is 3196
+    # total number of features is 3210
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 

@@ -38,6 +38,9 @@ data/**
 .vscode/
 
 #Large Models
-models/stage2_move/final/
-models/stage2_switch/final/
-models/stage3_forced/final/
+models/move/
+models/damage/
+models/forced/
+models/switch/
+models/type/
+models/utility/

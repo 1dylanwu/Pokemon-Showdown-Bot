@@ -3,6 +3,7 @@ import numpy as np
 import json
 import time
 from pathlib import Path
+import pandas as pd
 import requests
 
 def normalize(name: str) -> str:
@@ -57,3 +58,21 @@ def save_poke_types():
             mapping[name] = types
         time.sleep(0.1)
     Path("data/raw/poke_types.json").write_text(json.dumps(mapping, indent=2))
+
+def filter_by_turn_percentile(csv_path: str,
+                              out_path: str = None,
+                              percentile: float = 99.0,
+                              turn_col: str = "turn"):
+    df = pd.read_csv(csv_path)
+
+    cutoff = df[turn_col].quantile(percentile / 100.0)
+    cutoff_int = int(cutoff) if cutoff.is_integer() else cutoff
+    print(f"{percentile}th percentile cutoff for '{turn_col}': {cutoff_int}")
+
+    filtered = df[df[turn_col] <= cutoff]
+    if out_path:
+        Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+        filtered.to_csv(out_path, index=False)
+        print(f"Filtered data saved to: {out_path}")
+
+    return filtered, cutoff
