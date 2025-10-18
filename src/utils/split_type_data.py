@@ -65,8 +65,8 @@ if __name__ == "__main__":
     X_val, y_val = np.load(pre+"X_val.npy").astype(np.float32), np.load(pre+"y_val.npy", allow_pickle=True)
     X_test, y_test = np.load(pre+"X_test.npy").astype(np.float32), np.load(pre+"y_test.npy", allow_pickle=True)
 
-    save_data(X_train, y_train, X_val, y_val, X_test, y_test, "move", joblib.load("models/move/util/label_encoder.pkl"))
-    save_data(X_train, y_train, X_val, y_val, X_test, y_test, "forced", joblib.load("models/forced/util/label_encoder.pkl"))
-    save_data(X_train, y_train, X_val, y_val, X_test, y_test, "switch", joblib.load("models/switch/util/label_encoder.pkl"))
+    save_data(X_train, y_train, X_val, y_val, X_test, y_test, "move")#, joblib.load("models/move/util/label_encoder.pkl"))
+    #save_data(X_train, y_train, X_val, y_val, X_test, y_test, "forced", joblib.load("models/forced/util/label_encoder.pkl"))
+    #save_data(X_train, y_train, X_val, y_val, X_test, y_test, "switch", joblib.load("models/switch/util/label_encoder.pkl"))
     save_data(X_train, y_train, X_val, y_val, X_test, y_test, "move_damage", joblib.load("models/move/util/label_encoder.pkl"))
     save_data(X_train, y_train, X_val, y_val, X_test, y_test, "move_utility", joblib.load("models/move/util/label_encoder.pkl"))

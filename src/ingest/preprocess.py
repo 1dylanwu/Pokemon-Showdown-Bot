@@ -198,7 +198,7 @@ def build_feature_matrix(
     )
 
     # target
-    y = df["action_full"]
+    y = df["action_full"] if "action_full" in df.columns else None
 
     return X, y, mlb1, mlb2, mlb_types, p1_haz_keys, p2_haz_keys
 

@@ -45,6 +45,11 @@ class StateProcessor:
         # 2) One-row DataFrame
         df = pd.DataFrame([state])
 
+        for col in ["p1a_types", "p2a_types"]:
+            df[col] = df[col].apply(
+                lambda types: [t.lower() for t in types] if isinstance(types, list) else types
+            )
+
         # 3) Multi-hot encode each team
         p1_ts, self.mlb_p1_team = flatten_sets(
             df, "p1_team_species", "p1_team_", mlb=self.mlb_p1_team

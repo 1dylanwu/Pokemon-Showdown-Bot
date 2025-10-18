@@ -23,7 +23,7 @@ class DecisionModel:
     4. If switch: use switch model with legal switch masking
     """
     
-    def __init__(self, model_dir: str = "models", move_threshold: float = 0.38):
+    def __init__(self, model_dir: str = "models", move_threshold: float = 0.5):
         self.move_threshold = move_threshold
         self.model_dir = Path(model_dir)
         self._load_models()
@@ -36,23 +36,23 @@ class DecisionModel:
     def _load_models(self):
         """Load all required models"""
         # Type classifier (stage 1)
-        self.type_clf = joblib.load(self.model_dir / "stage1_type/type_clf_3.1.pkl")
+        self.type_clf = joblib.load(self.model_dir / "type/type_2.3.pkl")
         
         # Move classifier (stage 2)
-        self.move_clf = joblib.load(self.model_dir / "stage2_move/final/move_clf_3.1.pkl")
+        self.move_clf = joblib.load(self.model_dir / "move/final/move_clf_1.0.pkl")
         
         # Switch classifier (stage 2) 
-        self.switch_clf = joblib.load(self.model_dir / "stage2_switch/final/switch_clf_2.0.pkl")
+        self.switch_clf = joblib.load(self.model_dir / "switch/final/switch_clf_2.0.pkl")
         
         # Forced switch classifier (stage 3)
-        self.forced_clf = joblib.load(self.model_dir / "stage3_forced/final/switch_clf_2.0.pkl")
+        self.forced_clf = joblib.load(self.model_dir / "forced/final/switch_clf_2.0.pkl")
         
     def _load_utilities(self):
         """Load label encoders and other utilities"""
         # Label encoders
-        self.le_moves = joblib.load(self.model_dir / "stage2_move/util/label_encoder.pkl")
-        self.le_switch = joblib.load(self.model_dir / "stage2_switch/util/label_encoder.pkl")
-        self.le_forced = joblib.load(self.model_dir / "stage3_forced/util/label_encoder.pkl")
+        self.le_moves = joblib.load(self.model_dir / "move/util/label_encoder.pkl")
+        self.le_switch = joblib.load(self.model_dir / "switch/util/label_encoder.pkl")
+        self.le_forced = joblib.load(self.model_dir / "forced/util/label_encoder.pkl")
 
         self.processor = StateProcessor(
             pipeline_path="data/processed/general/pipeline.pkl",
@@ -185,11 +185,16 @@ class DecisionModel:
         X_features = self.processor.process(state)
         X_df = pd.DataFrame(X_features, columns=self.processor.pipeline.named_steps["trans"].get_feature_names_out())
 
-        dX = xgb.DMatrix(X_features)
-        type_probs = self.type_clf.predict(dX)
+        #dX = xgb.DMatrix(X_features)
+        type_probs = self.type_clf.predict_proba(X_features)
         
-        move_prob = type_probs[0]  # Probability of move (class 1)
-        print(f"prob of move: {move_prob}")
+        move_prob = type_probs[0][1]  # Probability of move (class 1)
+        curr_pokemon = state.get("p1a_active", "unknown")
+        opp_pokemon  = state.get("p2a_active", "unknown")
+        turn         = state.get("turn", "?")
+
+        print(f"[Turn {turn}] {curr_pokemon} vs {opp_pokemon} → prob of move: {move_prob:.4f}")
+
         # Apply threshold
         if move_prob >= self.move_threshold:
             # Predict move

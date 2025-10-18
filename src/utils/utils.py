@@ -14,8 +14,7 @@ def split_action_type(y):
     with open("data/raw/moves.txt", "r", encoding="utf-8") as f:
         for line in f:
             if line.strip():
-                damage_moves.add(normalize(line))
-
+                damage_moves.add(normalize(line.strip()))
     types = []
     for act in y:
         if act.startswith("forced_switch_"):

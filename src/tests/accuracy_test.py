@@ -3,7 +3,7 @@ import joblib
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, roc_auc_score, classification_report, top_k_accuracy_score
 import pandas as pd
 
-def test(model, X, y, threshold, binary = False):
+def test(model, X, y, threshold = 0.5, binary = False):
     if binary:
         y_val_prob = model.predict_proba(X)[:, 1]
         y_val_pred = (y_val_prob > threshold).astype(int)

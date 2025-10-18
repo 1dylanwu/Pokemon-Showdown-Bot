@@ -4,11 +4,10 @@ Hyperparams:
     objective="multiclass",
     num_class=len(np.unique(y_tr_moves_enc)),
     boosting_type="gbdt",
-    n_estimators=3000,
-    learning_rate=0.02,
-    max_depth=8,
+    n_estimators=2000,
+    learning_rate=0.03,
+    max_depth=-1,
     num_leaves=63,
-    min_data_in_leaf=200,
     class_weight="balanced",
     feature_fraction = 0.8,
     bagging_fraction = 0.8,
@@ -16,13 +15,11 @@ Hyperparams:
     lambda_l2=1.0,
     n_jobs=5,
     verbosity=-1
-Train Accuracy: multi_logloss: 2.56834
-Val Accuracy: 0.300696 
-With Inference:
-Top-1 Accuracy: 0.3282  
-Top-3 Accuracy: 0.7126
-Date: 9/12/25 12:30 am
-Notes: best iteration: [1958]
+[614] valid_0's multi_logloss: 1.80818
+Top-1 Accuracy: 0.4067
+Top-3 Accuracy: 0.7843
+Date: 10/10/25 4:00pm
+Notes: 1.5gb
 ------------------------------------------------------------
 Model: move_clf_2.0.pkl
 Algorithm: RandomForest
@@ -110,11 +107,10 @@ Hyperparams:
     use_label_encoder=False,
     random_state=42,
     n_jobs=5
-Train Accuracy: 0.5694048839770612
-Val Accuracy: 0.31480906550760634
-Masked: 0.4143
-Date: 9/15/25 4:00 pm
-Notes: multi_logloss: 3.91506
+Train Accuracy: 0.49496835771345576
+Val Accuracy: 0.33715507190050525
+Date: 10/8/25 2:00 pm
+Notes: multi_logloss: 3.69760
 ------------------------------------------------------------
 Model: switch_clf_2.0.pkl FORCED SWITCH
 Algorithm: XGBoost
@@ -124,36 +120,16 @@ Hyperparams:
     eval_metric="mlogloss",
     learning_rate=0.1,
     max_depth=6,
-    n_estimators=58,
+    n_estimators=150,
     use_label_encoder=False,
     random_state=42,
-    n_jobs=5
-Train Accuracy: 0.6976273551988834
-Val Accuracy: 0.28469945355191256
-Date: 9/15/25 5:00 pm
-Notes: multi_logloss: 4.42814. overfitting very badly
-------------------------------------------------------------
-Model: type_clf_2.1
-Algorithm: LightGBM
-Hyperparams:     
-    objective="binary",
-    boosting_type="gbdt",
-    n_estimators=50000,
     n_jobs=5,
-    verbosity = -1,
-    learning_rate = 0.1,
-    class_weight = "balanced"
-Train Accuracy: 0.862952530389247
-Val Accuracy: 0.7666
-Validation ROC AUC : 0.7194
-Threshold: 0.4
-Switch Precision: 0.49
-Switch Recall: 0.37
-Move Precision: 0.83
-Move Recall: 0.88
-Switch Ratio: 0.17453384475533773
-Date: 10/6/25 8:00 pm
-Notes: [19968] valid_0's binary_logloss: 0.537239
+    early_stopping_rounds = 10
+Train Accuracy:
+Val Accuracy: 0.3345
+Top-3 Accuracy: 0.5102
+Date: 9/15/25 5:00 pm
+Notes: [68]    validation_0-mlogloss:3.85496
 ------------------------------------------------------------
 Model: type_clf_2.3
 Algorithm: LightGBM

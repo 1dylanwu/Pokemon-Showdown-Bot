@@ -7,21 +7,26 @@ from sklearn.metrics import accuracy_score, top_k_accuracy_score, classification
 import xgboost as xgb
 from xgboost import XGBClassifier
 
-X_tr_moves = np.load("data/processed/move/X_tr_moves.npy")
-y_tr_moves_enc = np.load("data/processed/move/y_tr_moves.npy")
-X_va_moves = np.load("data/processed/move/X_va_moves.npy")
-y_va_moves_enc = np.load("data/processed/move/y_va_moves.npy")
-le = joblib.load("models/stage2_move/util/label_encoder.pkl")
-"""
+from src.tests.accuracy_test import test
+
+X_tr_moves = np.load("data/processed/move/X_tr.npy")
+y_tr_moves_enc = np.load("data/processed/move/y_tr.npy")
+X_va_moves = np.load("data/processed/move/X_va.npy")
+y_va_moves_enc = np.load("data/processed/move/y_va.npy")
+X_te_moves = np.load("data/processed/move/X_te.npy")
+y_te_moves_enc = np.load("data/processed/move/y_te.npy")
+le = joblib.load("models/move/util/label_encoder.pkl")
+
+
+
 move_clf = LGBMClassifier(
     objective="multiclass",
     num_class=len(np.unique(y_tr_moves_enc)),
     boosting_type="gbdt",
-    n_estimators=3000,
-    learning_rate=0.02,
-    max_depth=8,
+    n_estimators=2000,
+    learning_rate=0.03,
+    max_depth=-1,
     num_leaves=63,
-    min_data_in_leaf=200,
     class_weight="balanced",
     feature_fraction = 0.8,
     bagging_fraction = 0.8,
@@ -40,8 +45,10 @@ move_clf.fit(
         log_evaluation(period=100)
     ]
 )
-joblib.dump(move_clf, "models/stage2_move/move_clf_1.0.pkl")
+joblib.dump(move_clf, "models/move/move_clf_1.0.pkl")
+test(move_clf, X_te_moves, y_te_moves_enc)
 
+"""
 move_clf = RandomForestClassifier(
     n_estimators=200,
     max_depth=None,
@@ -59,6 +66,8 @@ print("Stage2a move val acc:", va_acc)
 #if(tr_acc > 0.49704120035654153 or va_acc > 0.29993106165058103):
 joblib.dump((move_clf), "models/stage2_move/final/move_clf_2.0.pkl")
     """
+"""
+print(len(le.classes_))
 move_clf = XGBClassifier(
     objective="multi:softprob", 
     num_class=len(le.classes_),
@@ -76,12 +85,6 @@ move_clf.fit(
     eval_set=[(X_va_moves, y_va_moves_enc)],
     verbose=True
 )
-joblib.dump(move_clf, "models/stage2_move/final/move_clf_3.0.pkl")
-y_val_pred = move_clf.predict(X_va_moves)
-y_val_prob = move_clf.predict_proba(X_va_moves)
-labels = np.arange(y_val_prob.shape[1])
-
-acc = accuracy_score(y_va_moves_enc, y_val_pred)
-print(f"Top-1 Accuracy: {acc:.4f}")
-top3 = top_k_accuracy_score(y_va_moves_enc, y_val_prob, k=3, labels = labels)
-print(f"Top-3 Accuracy: {top3:.4f}")
+joblib.dump(move_clf, "models/move/final/move_clf_3.0.pkl")
+test(move_clf, X_te_moves, y_te_moves_enc)
+"""

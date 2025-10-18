@@ -39,7 +39,7 @@ class AIAgent(Player):
         if decision["action_type"] == "move" or battle.trapped:
             # find the matching Move object
             for move in battle.available_moves:
-                if move.id == decision["action"][5:]:
+                if move.id == decision["action"]:
                     return self.create_order(move)
 
             # fallback if something went wrong
@@ -65,7 +65,6 @@ class AIAgent(Player):
         Build a full feature dict from a poke-env Battle object,
         including active Pokémon, bench, hazards, boosts, types, and matchup.
         """
-        # You are always p1 in your own battle object
         side = "p1a"
         opp_side = "p2a"
 
@@ -73,7 +72,7 @@ class AIAgent(Player):
         p1a = battle.active_pokemon
         p2a = battle.opponent_active_pokemon
 
-        # Your legal switches (poke-env provides this)
+        # Your legal switches
         p1_switches = battle.available_switches
 
         # Approximate opponent’s legal switches:
@@ -183,6 +182,4 @@ class AIAgent(Player):
             hp = known_hp_map.get(species, 1.0)
             state[f"p2_known_hp_{species}"] = hp
 
-        if(state["turn"] == 3):
-            print(state)
         return state

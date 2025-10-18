@@ -21,7 +21,7 @@ base_clf = LGBMClassifier(
     n_jobs=5,
     verbosity=-1
 )
-tried_path = "models/utility/type_params.json"
+tried_path = "models/type/utils/type_params.json"
 if os.path.exists(tried_path):
     with open(tried_path, "r") as f:
         tried_params = set(tuple(sorted(p.items())) for p in json.load(f))
@@ -95,3 +95,6 @@ for i, params in enumerate(random_trials, 1):
     
     tried_params.add(tuple(sorted(params.items())))
     new_trials.append(params)
+
+with open(tried_path, "w") as f:
+    json.dump(list(new_trials), f, indent=2)
