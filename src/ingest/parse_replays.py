@@ -9,7 +9,7 @@ HAZARDS = {"Stealth Rock", "Spikes", "Toxic Spikes", "Sticky Web"}
 STATUS_TOKENS = {"brn", "par", "psn", "tox", "slp", "frz", "fnt"}
 
 COSMETIC_SPECIES = {"Vivillon", "Alcremie", "Florges", "Minior", "Pikachu", "Sawsbuck", "Basculin", "Spinda", "Furfrou", "Deerling", "Gastrodon", "Sinistcha", "Poltchageist", "Squawkabilly", "Unown",
-                    "Gourgeist", "Polteageist", "Maushold", "Tatsugiri", "Dudunsparce"}
+                    "Gourgeist", "Polteageist", "Maushold", "Tatsugiri", "Dudunsparce", "Zarude", "Magearna"}
 def normalize_species(mon: str) -> str:
     # normalizes irrelevant form names for various pokemon
     for species in COSMETIC_SPECIES:

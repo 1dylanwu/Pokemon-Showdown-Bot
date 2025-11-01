@@ -41,7 +41,7 @@ move_clf.fit(
     eval_set=[(X_va_moves, y_va_moves_enc)],
     eval_metric="multi_error",
     callbacks=[
-        early_stopping(stopping_rounds=200, verbose = True),
+        early_stopping(stopping_rounds=10, verbose = True),
         log_evaluation(period=100)
     ]
 )

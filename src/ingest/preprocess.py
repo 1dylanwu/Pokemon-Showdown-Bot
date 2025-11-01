@@ -1,4 +1,5 @@
-from typing import List, Tuple
+import json
+from typing import Dict, List, Tuple
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -6,11 +7,87 @@ import joblib
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from src.utils.utils import normalize
-from sklearn.preprocessing import (
-    StandardScaler,
-    OneHotEncoder,
-    MultiLabelBinarizer,
-)
+from sklearn.preprocessing import StandardScaler, OneHotEncoder, MultiLabelBinarizer
+from src.utils.utils import canonicalize_player_df
+
+def load_stats(p: Path) -> pd.DataFrame:
+    out = {}
+    with p.open("r", encoding="utf-8") as f:
+        doc = json.load(f)
+        for name, stats in doc.items():
+            out[name] = {
+                "hp": float(stats.get("hp", 0.0)),
+                "atk": float(stats.get("atk", 0.0)),
+                "def": float(stats.get("def", 0.0)),
+                "spa": float(stats.get("spa", 0.0)),
+                "spd": float(stats.get("spd", 0.0)),
+                "spe": float(stats.get("spe", 0.0)),
+            }
+    return out
+
+def boost_stage_to_multiplier(stage: float) -> float:
+    if stage >= 0:
+        return (2.0 + stage) / 2.0
+    else:
+        return 2.0 / (2.0 - stage)
+    
+def compute_effective_from_base(row, stats_table: Dict[str, Dict[str, float]]):
+    """
+    Given a pd.Series row and a stats_table (normalized_species -> stats),
+    return a dict of boost-aware numeric features for p1 and p2.
+    """
+
+    def calc_side(side: str) -> Dict[str, float]:
+        raw = row[f"{side}a_active"]
+
+        sp = normalize(raw)
+        base = stats_table.get(sp)
+        if base is None:
+            raise KeyError(f"Species {sp!r} not found in stats_table. Raw value: {raw!r}")
+
+        # read boost stages
+        atk_s = row.get(f"{side}a_boost_atk", 0.0)
+        def_s = row.get(f"{side}a_boost_def", 0.0)
+        spa_s = row.get(f"{side}a_boost_spa", 0.0)
+        spd_s = row.get(f"{side}a_boost_spd", 0.0)
+        spe_s = row.get(f"{side}a_boost_spe", 0.0)
+
+        # multipliers
+        m_atk = boost_stage_to_multiplier(atk_s)
+        m_def = boost_stage_to_multiplier(def_s)
+        m_spa = boost_stage_to_multiplier(spa_s)
+        m_spd = boost_stage_to_multiplier(spd_s)
+        m_spe = boost_stage_to_multiplier(spe_s)
+
+        # effective stats
+        eff_atk = base["atk"] * m_atk
+        eff_def = base["def"] * m_def
+        eff_spa = base["spa"] * m_spa
+        eff_spd = base["spd"] * m_spd
+        eff_spe = base["spe"] * m_spe
+        hp_abs = float(base["hp"])
+
+        return {
+            f"{side}a_eff_atk": eff_atk,
+            f"{side}a_eff_def": eff_def,
+            f"{side}a_eff_spa": eff_spa,
+            f"{side}a_eff_spd": eff_spd,
+            f"{side}a_eff_spe": eff_spe,
+            f"{side}a_eff_hp": hp_abs,
+            f"{side}a_boost_total_pos": sum(max(0.0, s) for s in (atk_s, spa_s, spe_s)),
+            f"{side}a_boost_total_neg": sum(min(0.0, s) for s in (def_s, spd_s)),
+        }
+
+    left = calc_side("p1")
+    right = calc_side("p2")
+    out = {}
+    out.update(left)
+    out.update(right)
+
+    out["p1_outspeed"] = int(out["p1a_eff_spe"] > out["p2a_eff_spe"])
+    out["p2_outspeed"] = int(out["p2a_eff_spe"] > out["p1a_eff_spe"])
+    return out
+
 
 def load_and_clean(csv_path: Path) -> pd.DataFrame:
 
@@ -68,10 +145,8 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
     # fill with 0s
     for c in boost_cols + known_hp_cols:
         df[c] = pd.to_numeric(df[c], errors="coerce")
-    if boost_cols:
-        df[boost_cols] = df[boost_cols].fillna(0.0)
-    if known_hp_cols:
-        df[known_hp_cols] = df[known_hp_cols].fillna(0.0)
+    df[boost_cols] = df[boost_cols].fillna(0.0)
+    df[known_hp_cols] = df[known_hp_cols].fillna(0.0)
     
     # Fill categoricals with explicit tokens so OHE can encode them
     cat_fill = {}
@@ -156,12 +231,14 @@ def build_feature_matrix(
 
     hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") 
                                    or c.startswith("p2_known_hp_")]
-    if hp_cols:
-        df[hp_cols] = df[hp_cols].apply(pd.to_numeric, errors="coerce")
+    df[hp_cols] = df[hp_cols].apply(pd.to_numeric, errors="coerce")
 
     boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
-    if boost_cols:
-        df[boost_cols] = df[boost_cols].apply(pd.to_numeric, errors="coerce")
+    df[boost_cols] = df[boost_cols].apply(pd.to_numeric, errors="coerce")
+
+    stats_table = load_stats(Path("data/raw/computed_stats.json"))
+    eff_df = df.apply(lambda row: pd.Series(compute_effective_from_base(row, stats_table)), axis=1)
+    eff_df = eff_df.fillna(0.0).astype(float)
 
     # one hot encoded categories for active pokemon types
     p1_types_ohe, mlb_types = flatten_sets(
@@ -179,8 +256,7 @@ def build_feature_matrix(
     raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted", "p1a_is_terastallized", "p2a_is_terastallized", "p1_type_matchup", "p2_type_matchup", "p1_low_hp", "p2_low_hp"]
     num_cols = [c for c in raw_nums + hp_cols + boost_cols if c in df.columns]
 
-    raw_cats = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain", "p1a_tera_type", "p2a_tera_type"]
-    cat_cols = [c for c in raw_cats if c in df.columns]
+    cat_cols = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain", "p1a_tera_type", "p2a_tera_type"]
 
     # assemble feature matrix!!!
     X = pd.concat(
@@ -193,6 +269,7 @@ def build_feature_matrix(
             p2_haz,
             p1_types_ohe,
             p2_types_ohe,
+            eff_df
         ],
         axis=1,
     )
@@ -250,11 +327,12 @@ def preprocess(
         ]
     )
     pipeline = Pipeline([("trans", ct)])
+
+    canonicalize_player_df(X_train, player_col = "side", inplace = True)
     X_train_proc = pipeline.fit_transform(X_train)
 
     np.save(out_dir / "X_train.npy", X_train_proc)
-    if y_train is not None:
-        np.save(out_dir / "y_train.npy", y_train.to_numpy())
+    np.save(out_dir / "y_train.npy", y_train.to_numpy())
     joblib.dump(pipeline, out_dir / "pipeline.pkl")
 
     print(f"[train] {len(df_train)} rows → {X_train_proc.shape[1]} features saved")
@@ -262,24 +340,26 @@ def preprocess(
     # VAL
     df_val = load_and_clean(val_csv)
     X_val, y_val, *_ = build_feature_matrix(df_val, mlb1=mlb1, mlb2=mlb2)
+
+    canonicalize_player_df(X_val, player_col = "side", inplace = True)
     X_val_proc = pipeline.transform(X_val)
 
     np.save(out_dir / "X_val.npy", X_val_proc)
-    if y_val is not None:
-        np.save(out_dir / "y_val.npy", y_val.to_numpy())
+    np.save(out_dir / "y_val.npy", y_val.to_numpy())
 
     print(f"[val]   {len(df_val)} rows → {X_val_proc.shape[1]} features saved")
 
     # TEST
     df_test = load_and_clean(test_csv)
     X_test, y_test, *_ = build_feature_matrix(df_test, mlb1=mlb1, mlb2=mlb2)
+
+    canonicalize_player_df(X_test, player_col = "side", inplace = True)
     X_test_proc = pipeline.transform(X_test)
 
     np.save(out_dir / "X_test.npy", X_test_proc)
-    if y_test is not None:
-        np.save(out_dir / "y_test.npy", y_test.to_numpy())
+    np.save(out_dir / "y_test.npy", y_test.to_numpy())
 
-    # total number of features is 3210
+    # total number of features is 3228
     print(f"[test]  {len(df_test)} rows → {X_test_proc.shape[1]} features saved")
 
 

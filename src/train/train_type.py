@@ -13,9 +13,9 @@ import xgboost as xgb
 from src.tests.accuracy_test import test
 
 pre = "data/processed/type/"
-X_train, y_tr_type = np.load(pre + "X_train_clean.npy").astype(np.float32), np.load(pre + "y_train_clean.npy", allow_pickle=True)
-X_val, y_va_type = np.load(pre+"X_val_clean.npy").astype(np.float32), np.load(pre+"y_val_clean.npy", allow_pickle=True)
-X_test, y_te_type = np.load(pre+"X_test_clean.npy"), np.load(pre+"y_test_clean.npy", allow_pickle=True)
+X_train, y_tr_type = np.load(pre + "X_train_clean.npy", mmap_mode="r").astype(np.float32), np.load(pre + "y_train_clean.npy", allow_pickle=True)
+X_val, y_va_type = np.load(pre+"X_val_clean.npy", mmap_mode="r").astype(np.float32), np.load(pre+"y_val_clean.npy", allow_pickle=True)
+X_test, y_te_type = np.load(pre+"X_test_clean.npy", mmap_mode="r"), np.load(pre+"y_test_clean.npy", allow_pickle=True)
 """
 rus = RandomUnderSampler(
     sampling_strategy='auto',
@@ -44,20 +44,20 @@ def find_threshold_for_switch(y_true, proba_move, thresholds=None):
 type_clf = LGBMClassifier(
     objective="binary",
     boosting_type="gbdt",
+    class_weight="balanced",
     n_estimators=50000,
     n_jobs=5,
     verbosity = -1,
-    learning_rate = 0.12,
-    class_weight = "balanced",
-    num_leaves=63,
-    max_depth=-1,
-    min_child_samples=1,
-    max_bin=128,
-    subsample=1.0, 
-    colsample_bytree=1.0,
-    reg_alpha=0.1,
-    reg_lambda=2.0,
-    min_split_gain=0.0,
+    learning_rate= 0.12, 
+    num_leaves= 63, 
+    max_depth= -1, 
+    min_child_samples= 7, 
+    max_bin= 64, 
+    subsample= 1.0, 
+    colsample_bytree= 1.0, 
+    reg_alpha= 0.5, 
+    reg_lambda= 2.0, 
+    min_split_gain= 0.0
 )
 
 

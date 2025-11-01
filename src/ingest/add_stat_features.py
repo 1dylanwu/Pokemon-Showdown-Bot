@@ -101,9 +101,6 @@ if __name__ == "__main__":
     base_stats_path = Path("data/raw/raw_stats.csv")
     stats_table = build_stats_table(randbat_path, base_stats_path)
 
-    for species, stats in list(stats_table.items())[:5]:
-        print(f"{species}: {stats}")
-
     df = pd.DataFrame.from_dict(stats_table, orient="index")
     df.index.name = "species"
     df.reset_index().to_csv("data/raw/computed_stats.csv", index=False)

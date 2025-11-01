@@ -5,6 +5,7 @@ import time
 from pathlib import Path
 import pandas as pd
 import requests
+from typing import Iterable, List, Tuple
 
 def normalize(name: str) -> str:
     return name.lower().replace(" ", "").replace("-", "")
@@ -75,3 +76,69 @@ def filter_by_turn_percentile(csv_path: str,
         print(f"Filtered data saved to: {out_path}")
 
     return filtered, cutoff
+
+def _pair_columns_prefix(cols: Iterable[str], prefix_a="p1", prefix_b="p2") -> List[Tuple[str, str]]:
+    cols_set = set(cols)
+    pairs = []
+    for c in cols_set:
+        if c.startswith(prefix_a):
+            counterpart = prefix_b + c[len(prefix_a):]
+            if counterpart in cols_set:
+                pairs.append((c, counterpart))
+    return pairs
+
+def _pair_columns_suffix(cols: Iterable[str], suffix_a="_p1a", suffix_b="_p2a") -> List[Tuple[str, str]]:
+    cols_set = set(cols)
+    pairs = []
+    for c in cols_set:
+        if c.endswith(suffix_a):
+            counterpart = c[:-len(suffix_a)] + suffix_b
+            if counterpart in cols_set:
+                pairs.append((c, counterpart))
+    return pairs
+
+def canonicalize_player_df(
+    df: pd.DataFrame,
+    player_col: str = "side",
+    p1_value: str = "p1a",
+    p2_value: str = "p2a",
+) -> pd.DataFrame:
+    out = df
+
+    c1 = "cat__side_p1a"
+    c2 = "cat__side_p2a"
+    # derive side marker: if p1a one-hot is 1 => p1a, elif p2a one-hot is 1 => p2a, else fallback to p1a
+    side_series = pd.Series(p1_value, index=out.index)
+    mask_p1 = out[c1].astype(bool)
+    mask_p2 = out[c2].astype(bool)
+    side_series[mask_p2] = p2_value
+    side_series[mask_p1] = p1_value
+    out[player_col] = side_series
+
+    # discover swap pairs: prefix-style and suffix-style
+    cols = out.columns.tolist()
+    pairs = _pair_columns_prefix(cols, prefix_a="p1", prefix_b="p2")
+    pairs += _pair_columns_suffix(cols, suffix_a="_p1a", suffix_b="_p2a")
+
+    need_swap = out[player_col] == p2_value
+    n_swap = int(need_swap.sum())
+    total = len(out)
+    print(f"Canonicalize: {n_swap}/{total} rows have focal player as {p2_value} (will swap side columns)")
+
+    if n_swap == 0:
+        # still set canonical marker to p1_value for consistency
+        out[player_col] = p1_value
+        return out
+
+    # perform swaps
+    for col_p1, col_p2 in pairs:
+        # skip identical columns just in case
+        if col_p1 == col_p2 or col_p1 not in out.columns or col_p2 not in out.columns:
+            continue
+        tmp = out.loc[need_swap, col_p1].copy()
+        out.loc[need_swap, col_p1] = out.loc[need_swap, col_p2].values
+        out.loc[need_swap, col_p2] = tmp.values
+
+    # mark canonical side
+    out[player_col] = p1_value
+    return out
