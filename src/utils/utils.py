@@ -87,7 +87,7 @@ def _pair_columns_prefix(cols: Iterable[str], prefix_a="p1", prefix_b="p2") -> L
                 pairs.append((c, counterpart))
     return pairs
 
-def _pair_columns_suffix(cols: Iterable[str], suffix_a="_p1a", suffix_b="_p2a") -> List[Tuple[str, str]]:
+def _pair_columns_suffix(cols: Iterable[str], suffix_a="_p1", suffix_b="_p2") -> List[Tuple[str, str]]:
     cols_set = set(cols)
     pairs = []
     for c in cols_set:
@@ -100,35 +100,20 @@ def _pair_columns_suffix(cols: Iterable[str], suffix_a="_p1a", suffix_b="_p2a") 
 def canonicalize_player_df(
     df: pd.DataFrame,
     player_col: str = "side",
-    p1_value: str = "p1a",
-    p2_value: str = "p2a",
+    p1_value: str = "p1",
+    p2_value: str = "p2",
 ) -> pd.DataFrame:
-    out = df
-
-    c1 = "cat__side_p1a"
-    c2 = "cat__side_p2a"
-    # derive side marker: if p1a one-hot is 1 => p1a, elif p2a one-hot is 1 => p2a, else fallback to p1a
-    side_series = pd.Series(p1_value, index=out.index)
-    mask_p1 = out[c1].astype(bool)
-    mask_p2 = out[c2].astype(bool)
-    side_series[mask_p2] = p2_value
-    side_series[mask_p1] = p1_value
-    out[player_col] = side_series
+    out = df.copy()
 
     # discover swap pairs: prefix-style and suffix-style
     cols = out.columns.tolist()
     pairs = _pair_columns_prefix(cols, prefix_a="p1", prefix_b="p2")
-    pairs += _pair_columns_suffix(cols, suffix_a="_p1a", suffix_b="_p2a")
+    pairs += _pair_columns_suffix(cols, suffix_a="_p1", suffix_b="_p2")
 
     need_swap = out[player_col] == p2_value
     n_swap = int(need_swap.sum())
     total = len(out)
     print(f"Canonicalize: {n_swap}/{total} rows have focal player as {p2_value} (will swap side columns)")
-
-    if n_swap == 0:
-        # still set canonical marker to p1_value for consistency
-        out[player_col] = p1_value
-        return out
 
     # perform swaps
     for col_p1, col_p2 in pairs:

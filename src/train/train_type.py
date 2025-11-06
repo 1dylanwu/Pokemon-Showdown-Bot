@@ -74,10 +74,10 @@ type_clf.fit(
 
 joblib.dump(type_clf, "models/type/type_2.2.pkl")
 
-#type_clf = joblib.load("models/type/type_2.3.pkl")
+#type_clf = joblib.load("models/type/type_2.2.pkl")
 print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
 
-test(type_clf, X_val, y_va_type, 0.4, True)
+test(type_clf, X_val, y_va_type, 0.36, True)
 
 """
 dtrain = xgb.DMatrix(X_train, label=y_tr_type)

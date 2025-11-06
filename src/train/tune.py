@@ -62,7 +62,7 @@ new_trials = []
 random_trials = sample_random(param_grid, exclude=tried_params, n_iter=15, seed=2025)
 
 for i, params in enumerate(random_trials, 1):
-    print(f"\n🔎 Trial {i} with params: {params}")
+    print(f"\nTrial {i} with params: {params}")
     
     model = LGBMClassifier(
         objective="binary",
@@ -91,7 +91,7 @@ for i, params in enumerate(random_trials, 1):
         best_params = params
         best_model = model
         joblib.dump(best_model, "best_lgbm_model.pkl")
-        print("💾 Saved new best model!")
+        print("Saved new best model!")
     
     tried_params.add(tuple(sorted(params.items())))
     new_trials.append(params)

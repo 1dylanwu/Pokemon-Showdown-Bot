@@ -148,13 +148,13 @@ Train Accuracy: 0.8864119578299967
 Val Accuracy: 0.7752
 Validation ROC AUC : 0.7229
 Threshold: 0.4
-Switch Precision: 0.51
-Switch Recall: 0.35
-Move Precision: 0.82
-Move Recall: 0.90
-Switch Ratio: 0.15528900516595345
-Logloss: [14613] valid_0's binary_logloss: 0.521233
-Date: 10/7/25 4:00 pm
+Switch Precision: 0.52
+Switch Recall: 0.43
+Move Precision: 0.84
+Move Recall: 0.88
+Switch Ratio: 0.18710921910336575
+Logloss: [8822]  valid_0's binary_logloss: 0.512141
+Date: 11/3/25 8:00 pm
 Notes: Hyperparameter tune best result
 ------------------------------------------------------------
 Model: type_clf_3.1

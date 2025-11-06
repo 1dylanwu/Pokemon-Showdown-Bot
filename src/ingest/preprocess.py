@@ -38,19 +38,19 @@ def compute_effective_from_base(row, stats_table: Dict[str, Dict[str, float]]):
     """
 
     def calc_side(side: str) -> Dict[str, float]:
-        raw = row[f"{side}a_active"]
+        raw = row[f"{side}_active"]
 
         sp = normalize(raw)
         base = stats_table.get(sp)
         if base is None:
-            raise KeyError(f"Species {sp!r} not found in stats_table. Raw value: {raw!r}")
+            raise KeyError(f"Species {sp} not found")
 
         # read boost stages
-        atk_s = row.get(f"{side}a_boost_atk", 0.0)
-        def_s = row.get(f"{side}a_boost_def", 0.0)
-        spa_s = row.get(f"{side}a_boost_spa", 0.0)
-        spd_s = row.get(f"{side}a_boost_spd", 0.0)
-        spe_s = row.get(f"{side}a_boost_spe", 0.0)
+        atk_s = row.get(f"{side}_boost_atk", 0.0)
+        def_s = row.get(f"{side}_boost_def", 0.0)
+        spa_s = row.get(f"{side}_boost_spa", 0.0)
+        spd_s = row.get(f"{side}_boost_spd", 0.0)
+        spe_s = row.get(f"{side}_boost_spe", 0.0)
 
         # multipliers
         m_atk = boost_stage_to_multiplier(atk_s)
@@ -68,14 +68,14 @@ def compute_effective_from_base(row, stats_table: Dict[str, Dict[str, float]]):
         hp_abs = float(base["hp"])
 
         return {
-            f"{side}a_eff_atk": eff_atk,
-            f"{side}a_eff_def": eff_def,
-            f"{side}a_eff_spa": eff_spa,
-            f"{side}a_eff_spd": eff_spd,
-            f"{side}a_eff_spe": eff_spe,
-            f"{side}a_eff_hp": hp_abs,
-            f"{side}a_boost_total_pos": sum(max(0.0, s) for s in (atk_s, spa_s, spe_s)),
-            f"{side}a_boost_total_neg": sum(min(0.0, s) for s in (def_s, spd_s)),
+            f"{side}_eff_atk": eff_atk,
+            f"{side}_eff_def": eff_def,
+            f"{side}_eff_spa": eff_spa,
+            f"{side}_eff_spd": eff_spd,
+            f"{side}_eff_spe": eff_spe,
+            f"{side}_eff_hp": hp_abs,
+            f"{side}_boost_total_pos": sum(max(0.0, s) for s in (atk_s, spa_s, spe_s)),
+            f"{side}_boost_total_neg": sum(min(0.0, s) for s in (def_s, spd_s)),
         }
 
     left = calc_side("p1")
@@ -84,49 +84,41 @@ def compute_effective_from_base(row, stats_table: Dict[str, Dict[str, float]]):
     out.update(left)
     out.update(right)
 
-    out["p1_outspeed"] = int(out["p1a_eff_spe"] > out["p2a_eff_spe"])
-    out["p2_outspeed"] = int(out["p2a_eff_spe"] > out["p1a_eff_spe"])
+    out["p1_outspeed"] = int(out["p1_eff_spe"] > out["p2_eff_spe"])
+    out["p2_outspeed"] = int(out["p2_eff_spe"] > out["p1_eff_spe"])
     return out
 
 
 def load_and_clean(csv_path: Path) -> pd.DataFrame:
 
     df = pd.read_csv(csv_path, dtype=str)
-
-    # drop the redudant turn column
-    df.drop(columns=["turn"], errors="ignore", inplace=True) 
-
-    # strip leading "state_" from nested-field columns
-    df.rename(columns=lambda c: c[6:] if c.startswith("state_") else c,
-              inplace=True)
     df["action_full"] = df["action_type"].str.lower() + "_" + df["action"].apply(normalize)
         
     # restore team‐species and typing lists from strings
-    for col in ("p1_team_species", "p2_team_species", "p1a_types", "p2a_types"):
+    for col in ("p1_team_species", "p2_team_species", "p1_types", "p2_types"):
         df[col] = df[col].apply(
             lambda x: [normalize(s) for s in eval(x)] if isinstance(x, str) else x
         )
 
-
-    for col in ("p1a_active", "p2a_active"):
+    for col in ("p1_active", "p2_active"):
         df[col] = df[col].apply(normalize)
 
     # terastallization status to 0/1
-    for col in ("p1a_is_terastallized", "p2a_is_terastallized"):
+    for col in ("p1_is_terastallized", "p2_is_terastallized"):
         # map string → 0/1
         df[col] = df[col].map({"True": 1, "False": 0}).fillna(0).astype(int)
 
     # type matchup statistics
     for col in ("p1_type_matchup", "p2_type_matchup"):
-        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.0)
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.5)
 
     # coerce player‐HP% and fainted counts to numeric
     for num_col in (
         "turn",
-        "p1a_hp_pct",
-        "p2a_hp_pct",
-        "p1a_fainted",
-        "p2a_fainted",
+        "p1_hp_pct",
+        "p2_hp_pct",
+        "p1_fainted",
+        "p2_fainted",
     ):
         df[num_col] = pd.to_numeric(df[num_col], errors="coerce")
 
@@ -137,10 +129,15 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
 
     # flags for low hp (<30%)
     hp_threshold = 0.3
-    df["p1_low_hp"] = (pd.to_numeric(df["p1a_hp_pct"], errors="coerce") < hp_threshold).fillna(False).astype(int)
-    df["p2_low_hp"] = (pd.to_numeric(df["p2a_hp_pct"], errors="coerce") < hp_threshold).fillna(False).astype(int)
+    df["p1_low_hp"] = (pd.to_numeric(df["p1_hp_pct"], errors="coerce") < hp_threshold).fillna(False).astype(int)
+    df["p2_low_hp"] = (pd.to_numeric(df["p2_hp_pct"], errors="coerce") < hp_threshold).fillna(False).astype(int)
 
-    boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
+    df.rename(columns=lambda c: (
+        c[:14] + normalize(c[14:]) if c.startswith("p1_known_hp_") else
+        c[:14] + normalize(c[14:]) if c.startswith("p2_known_hp_") else c
+    ), inplace=True)
+
+    boost_cols = [c for c in df.columns if c.startswith("p1_boost_") or c.startswith("p2_boost_")]
     known_hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") or c.startswith("p2_known_hp_")]
     # fill with 0s
     for c in boost_cols + known_hp_cols:
@@ -150,14 +147,13 @@ def load_and_clean(csv_path: Path) -> pd.DataFrame:
     
     # Fill categoricals with explicit tokens so OHE can encode them
     cat_fill = {}
-    if "p1a_status" in df.columns: cat_fill["p1a_status"] = "none"
-    if "p2a_status" in df.columns: cat_fill["p2a_status"] = "none"
-    if "weather" in df.columns: cat_fill["weather"] = "clear"
-    if "terrain" in df.columns: cat_fill["terrain"] = "none"
-    if "p1a_tera_type" in df.columns: cat_fill["p1a_tera_type"] = "none"
-    if "p2a_tera_type" in df.columns: cat_fill["p2a_tera_type"] = "none"
-    if cat_fill:
-        df.fillna(cat_fill, inplace=True)
+    cat_fill["p1_status"] = "none"
+    cat_fill["p2_status"] = "none"
+    cat_fill["weather"] = "clear"
+    cat_fill["terrain"] = "none"
+    cat_fill["p1_tera_type"] = "none"
+    cat_fill["p2_tera_type"] = "none"
+    df.fillna(cat_fill, inplace=True)
     df = df.copy()
     return df
 
@@ -223,40 +219,27 @@ def build_feature_matrix(
     p1_haz = flatten_haz(df, "hazards_p1", "p1_haz_", p1_haz_keys)
     p2_haz = flatten_haz(df, "hazards_p2", "p2_haz_", p2_haz_keys)
 
-    # for the known HP and status columns (already flattened)
-    df.rename(columns=lambda c: (
-        c[:14] + normalize(c[14:]) if c.startswith("p1_known_hp_") else
-        c[:14] + normalize(c[14:]) if c.startswith("p2_known_hp_") else c
-    ), inplace=True)
-
-    hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") 
-                                   or c.startswith("p2_known_hp_")]
-    df[hp_cols] = df[hp_cols].apply(pd.to_numeric, errors="coerce")
-
-    boost_cols = [c for c in df.columns if c.startswith("p1a_boost_") or c.startswith("p2a_boost_")]
-    df[boost_cols] = df[boost_cols].apply(pd.to_numeric, errors="coerce")
-
     stats_table = load_stats(Path("data/raw/computed_stats.json"))
     eff_df = df.apply(lambda row: pd.Series(compute_effective_from_base(row, stats_table)), axis=1)
     eff_df = eff_df.fillna(0.0).astype(float)
 
     # one hot encoded categories for active pokemon types
     p1_types_ohe, mlb_types = flatten_sets(
-        df, 'p1a_types', 'p1_type_', mlb_types
+        df, 'p1_types', 'p1_type_', mlb_types
     )
     p2_types_ohe, _ = flatten_sets(
-        df, 'p2a_types', 'p2_type_', mlb_types
+        df, 'p2_types', 'p2_type_', mlb_types
     )
-    # calculated type matchup (uses best STAB offensive type multiplier)
-    for col in ("p1_type_matchup", "p2_type_matchup"):
-        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(1.5)
+
+    hp_cols = [c for c in df.columns if c.startswith("p1_known_hp_") or c.startswith("p2_known_hp_")] 
+    boost_cols = [c for c in df.columns if c.startswith("p1_boost_") or c.startswith("p2_boost_")]
 
     # raw numeric and categorical columns
     # i removed status for inactive pokemon due to too many features
-    raw_nums = ["turn", "p1a_hp_pct", "p2a_hp_pct", "p1a_fainted", "p2a_fainted", "p1a_is_terastallized", "p2a_is_terastallized", "p1_type_matchup", "p2_type_matchup", "p1_low_hp", "p2_low_hp"]
+    raw_nums = ["turn", "p1_hp_pct", "p2_hp_pct", "p1_fainted", "p2_fainted", "p1_is_terastallized", "p2_is_terastallized", "p1_type_matchup", "p2_type_matchup", "p1_low_hp", "p2_low_hp"]
     num_cols = [c for c in raw_nums + hp_cols + boost_cols if c in df.columns]
 
-    cat_cols = ["side", "p1a_active", "p2a_active", "p1a_status", "p2a_status", "weather", "terrain", "p1a_tera_type", "p2a_tera_type"]
+    cat_cols = ["side", "p1_active", "p2_active", "p1_status", "p2_status", "weather", "terrain", "p1_tera_type", "p2_tera_type"]
 
     # assemble feature matrix!!!
     X = pd.concat(
@@ -275,8 +258,7 @@ def build_feature_matrix(
     )
 
     # target
-    y = df["action_full"] if "action_full" in df.columns else None
-
+    y = df["action_full"]
     return X, y, mlb1, mlb2, mlb_types, p1_haz_keys, p2_haz_keys
 
 
@@ -292,6 +274,7 @@ def preprocess(
 
     # TRAIN
     df_train = load_and_clean(train_csv)
+    canonicalize_player_df(df_train, player_col = "side")
     X_train, y_train, mlb1, mlb2, mlb_types, hz1_keys, hz2_keys = build_feature_matrix(df_train)
 
     
@@ -308,12 +291,12 @@ def preprocess(
     # removed scaling for hp columns
     hp_cols = [
         c for c in num_cols
-        if c in ("p1a_hp_pct", "p2a_hp_pct")
+        if c in ("p1_hp_pct", "p2_hp_pct")
         or c.startswith("p1_known_hp_")
         or c.startswith("p2_known_hp_")
     ]
 
-    bin_prefixes = ("p1_team_", "p2_team_", "p1_type_", "p2_type_", "p1_haz_", "p2_haz_", "p1a_is_terastallized", "p2a_is_terastallized")
+    bin_prefixes = ("p1_team_", "p2_team_", "p1_type_", "p2_type_", "p1_haz_", "p2_haz_", "p1_is_terastallized", "p2_is_terastallized")
     bin_cols = [c for c in num_cols if c.startswith(bin_prefixes)]
 
     other_num_cols = [c for c in num_cols if c not in hp_cols + bin_cols]
@@ -328,7 +311,6 @@ def preprocess(
     )
     pipeline = Pipeline([("trans", ct)])
 
-    canonicalize_player_df(X_train, player_col = "side", inplace = True)
     X_train_proc = pipeline.fit_transform(X_train)
 
     np.save(out_dir / "X_train.npy", X_train_proc)
@@ -339,9 +321,9 @@ def preprocess(
 
     # VAL
     df_val = load_and_clean(val_csv)
+    canonicalize_player_df(df_val, player_col = "side")
     X_val, y_val, *_ = build_feature_matrix(df_val, mlb1=mlb1, mlb2=mlb2)
 
-    canonicalize_player_df(X_val, player_col = "side", inplace = True)
     X_val_proc = pipeline.transform(X_val)
 
     np.save(out_dir / "X_val.npy", X_val_proc)
@@ -351,9 +333,9 @@ def preprocess(
 
     # TEST
     df_test = load_and_clean(test_csv)
+    canonicalize_player_df(df_test, player_col = "side")
     X_test, y_test, *_ = build_feature_matrix(df_test, mlb1=mlb1, mlb2=mlb2)
 
-    canonicalize_player_df(X_test, player_col = "side", inplace = True)
     X_test_proc = pipeline.transform(X_test)
 
     np.save(out_dir / "X_test.npy", X_test_proc)
