@@ -39,7 +39,7 @@ def find_threshold_for_switch(y_true, proba_move, thresholds=None):
             best_f1, best_t = f1_s, t
     return best_t, best_f1
 
-
+"""
 
 type_clf = LGBMClassifier(
     objective="binary",
@@ -74,10 +74,10 @@ type_clf.fit(
 
 joblib.dump(type_clf, "models/type/type_2.2.pkl")
 
-#type_clf = joblib.load("models/type/type_2.2.pkl")
-print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
+type_clf = joblib.load("models/type/type_2.1.pkl")
+#print("Stage1 train acc:", type_clf.score(X_train, y_tr_type))
 
-test(type_clf, X_val, y_va_type, 0.36, True)
+test(type_clf, X_val, y_va_type, 0.50, True)
 
 """
 dtrain = xgb.DMatrix(X_train, label=y_tr_type)
@@ -99,7 +99,7 @@ params = {
 model = xgb.train(
     params,
     dtrain,
-    num_boost_round=3500,
+    num_boost_round=10000,
     evals=[(dval, "val")],
     #early_stopping_rounds=50,
     verbose_eval=200,
@@ -111,7 +111,7 @@ joblib.dump(model, "models/type/type_3.1.pkl")
 #model = joblib.load("models/stage1_type/type_clf_3.1.pkl")
 dval = xgb.DMatrix(X_val)
 y_val_proba = model.predict(dval)
-y_val_pred = (y_val_proba > 0.38).astype(int)
+y_val_pred = (y_val_proba > 0.5).astype(int)
 
 acc = accuracy_score(y_va_type, y_val_pred)
 auc = roc_auc_score(y_va_type, y_val_proba)
@@ -124,7 +124,7 @@ move_ratio = num_move_preds / total_preds
 print(f"Predicted 'move' actions: {num_move_preds} out of {total_preds}")
 print(f"Fraction predicted as 'switch': {1 - move_ratio:.4f}")
 print(classification_report(y_va_type, y_val_pred, target_names=["switch", "move"]))
-"""
+
 """
 rf_clf = RandomForestClassifier(
     n_estimators=500,

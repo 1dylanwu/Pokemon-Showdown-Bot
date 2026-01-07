@@ -16,7 +16,7 @@ y_va = np.load(pre + "y_va.npy").astype(np.int32)
 le = joblib.load("models/switch/util/label_encoder.pkl")
 
 n_classes = len(le.classes_)
-
+"""
 sw_clf = LGBMClassifier(
     objective="multiclass",
     boosting_type="gbdt",
@@ -46,11 +46,11 @@ sw_clf.fit(
 )
 joblib.dump(sw_clf, "models/switch/final/switch_clf_1.1.pkl")
 test(sw_clf, X_va, y_va)
-
 """
+
 sw_clf = XGBClassifier(
     objective="multi:softprob", 
-    num_class=len(le.classes_),
+    num_class=n_classes,
     eval_metric="mlogloss",
     learning_rate=0.1,
     max_depth=6,
@@ -73,4 +73,3 @@ joblib.dump(sw_clf, "models/switch/final/switch_clf_2.0.pkl")
 print("Stage2b sw train acc:", sw_clf.score(X_tr, y_tr))
 print("Stage2b sw val acc:", sw_clf.score(X_va,  y_va))
 
-"""

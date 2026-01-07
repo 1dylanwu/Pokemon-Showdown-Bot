@@ -59,6 +59,13 @@ def compute_effective_from_base(row, stats_table: Dict[str, Dict[str, float]]):
         m_spd = boost_stage_to_multiplier(spd_s)
         m_spe = boost_stage_to_multiplier(spe_s)
 
+        # include status effects
+        status = row.get(f"{side}_status", "none").lower()
+        if status in ("par", "paralyzed"):
+            m_spe *= 0.5
+        elif status in ("brn", "burned"):
+            m_atk *= 0.5
+            
         # effective stats
         eff_atk = base["atk"] * m_atk
         eff_def = base["def"] * m_def
@@ -200,7 +207,13 @@ def flatten_haz(df, col, prefix, keys):
         data[name] = df[col].apply(lambda d: float(d.get(k, 0)) if isinstance(d, dict) else 0.0)
     return pd.DataFrame(data, index=df.index)
 
+def best_type_matchup(row):
+    p1_types = row.get("p1_types")
+    p2_types = row.get("p2_types")
+    p1_tera = row.get("p1_tera_type", None)
+    p2_tera = row.get("p2_tera_type", None)
 
+    
 def build_feature_matrix(
     df: pd.DataFrame,
     mlb1: MultiLabelBinarizer = None,

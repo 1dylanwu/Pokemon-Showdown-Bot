@@ -24,12 +24,13 @@ base_clf = LGBMClassifier(
 tried_path = "models/type/utils/type_params.json"
 if os.path.exists(tried_path):
     with open(tried_path, "r") as f:
-        tried_params = set(tuple(sorted(p.items())) for p in json.load(f))
+        tried_list = json.load(f) or []
 else:
-    tried_params = set()
-
-param_grid = {"learning_rate": [0.03, 0.05, 0.08, 0.1, 0.12],
-        "num_leaves": [15, 31, 63],
+    tried_list = []
+tried_params = set(tuple(sorted(d.items())) for d in tried_list)
+"""
+param_grid = {"learning_rate": [0.1, 0.12, 0.15],
+        "num_leaves": [31, 63],
         "max_depth": [8, 12, -1],
         "min_child_samples": [1, 5, 7],
         "max_bin": [64, 128],
@@ -39,7 +40,18 @@ param_grid = {"learning_rate": [0.03, 0.05, 0.08, 0.1, 0.12],
         "reg_lambda": [0.0, 0.1, 0.5, 1.0, 2.0],
         "min_split_gain": [0.0, 0.01, 0.05],
 }
-
+"""
+param_grid = {"learning_rate": [0.11, 0.12, 0.13],
+        "num_leaves": [31, 63],
+        "max_depth": [12, -1],
+        "min_child_samples": [1, 7],
+        "max_bin": [64, 128],
+        "subsample": [0.8, 0.9, 1.0],
+        "colsample_bytree": [ 0.8, 1.0],
+        "reg_alpha": [0.0, 0.1, 0.5, 1.0, 2.0],
+        "reg_lambda": [0.0, 0.1, 0.5, 1.0, 2.0],
+        "min_split_gain": [0.0],
+}
 def sample_random(param_distributions, exclude, n_iter=15, seed=2007):
     rng = random.Random(seed)
     keys = list(param_distributions.keys())
@@ -54,7 +66,7 @@ def sample_random(param_distributions, exclude, n_iter=15, seed=2007):
             seen.add(key)
     return samples
 
-best_score = float("inf")
+best_score = 0.5109
 best_params = None
 best_model = None
 new_trials = []
@@ -86,7 +98,7 @@ for i, params in enumerate(random_trials, 1):
     score = log_loss(y_va_type, val_pred)
     print(f"LogLoss: {score:.4f}")
     
-    if score < best_score:
+    if score < best_score and score < 0.52:
         best_score = score
         best_params = params
         best_model = model
@@ -96,5 +108,10 @@ for i, params in enumerate(random_trials, 1):
     tried_params.add(tuple(sorted(params.items())))
     new_trials.append(params)
 
+tried_dict = { tuple(sorted(p.items())): p for p in tried_list }
+for p in new_trials:
+    tried_dict[tuple(sorted(p.items()))] = p
+all_tried_list = list(tried_dict.values())
+
 with open(tried_path, "w") as f:
-    json.dump(list(new_trials), f, indent=2)
+    json.dump(all_tried_list, f, indent=2)

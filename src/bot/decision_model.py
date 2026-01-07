@@ -74,13 +74,13 @@ class DecisionModel:
         Returns:
             (is_fainted, fainted_side) where fainted_side is 'p1a' or 'p2a' or None
         """
-        p1_status = state.get("p1a_status", "").lower()
-        p2_status = state.get("p2a_status", "").lower()
+        p1_status = state.get("p1_status", "").lower()
+        p2_status = state.get("p2_status", "").lower()
         
         if p1_status == "faint":
-            return True, "p1a"
+            return True, "p1"
         elif p2_status == "faint":
-            return True, "p2a"
+            return True, "p2"
         else:
             return False, None
     
@@ -189,8 +189,8 @@ class DecisionModel:
         type_probs = self.type_clf.predict_proba(X_features)
         
         move_prob = type_probs[0][1]  # Probability of move (class 1)
-        curr_pokemon = state.get("p1a_active", "unknown")
-        opp_pokemon  = state.get("p2a_active", "unknown")
+        curr_pokemon = state.get("p1_active", "unknown")
+        opp_pokemon  = state.get("p2_active", "unknown")
         turn         = state.get("turn", "?")
 
         print(f"[Turn {turn}] {curr_pokemon} vs {opp_pokemon} → prob of move: {move_prob:.4f}")
@@ -201,7 +201,7 @@ class DecisionModel:
             move_probs = self.move_clf.predict_proba(X_features)
             
             # Apply legal move masking
-            active_species = state.get(f"{side}a_active", "")
+            active_species = state.get(f"{side}_active", "")
             masked_probs = self._apply_legal_move_mask(move_probs, legal_moves)
             
             predicted_idx = np.argmax(masked_probs[0])

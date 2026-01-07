@@ -65,12 +65,12 @@ class AIAgent(Player):
         Build a full feature dict from a poke-env Battle object,
         including active Pokémon, bench, hazards, boosts, types, and matchup.
         """
-        side = "p1a"
-        opp_side = "p2a"
+        side = "p1"
+        opp_side = "p2"
 
         # Your vs. opponent active Pokémon
-        p1a = battle.active_pokemon
-        p2a = battle.opponent_active_pokemon
+        p1 = battle.active_pokemon
+        p2 = battle.opponent_active_pokemon
 
         # Your legal switches
         p1_switches = battle.available_switches
@@ -84,8 +84,8 @@ class AIAgent(Player):
 
 
         # Team species lists
-        p1_team = [self.normalize(p1a.species)] + [self.normalize(m.species) for m in p1_switches]
-        p2_team = [self.normalize(p2a.species)] + [self.normalize(m.species) for m in p2_switches]
+        p1_team = [self.normalize(p1.species)] + [self.normalize(m.species) for m in p1_switches]
+        p2_team = [self.normalize(p2.species)] + [self.normalize(m.species) for m in p2_switches]
 
         # Available switch species
         p1_avail = [self.normalize(m.species) for m in p1_switches]
@@ -106,25 +106,25 @@ class AIAgent(Player):
 
         # Known HP map (use the same switch lists)
         known_hp_map = {}
-        for mon in [p1a] + p1_switches + [p2a] + p2_switches:
+        for mon in [p1] + p1_switches + [p2] + p2_switches:
             known_hp_map[self.normalize(mon.species)] = mon.current_hp_fraction
 
-        # Types from your JSON—or replace with p1a.type_1 / type_2 if preferred
-        p1a_types = get_pokemon_types(self.normalize(p1a.species))
-        p2a_types = get_pokemon_types(self.normalize(p2a.species))
-        p1a_tera = getattr(p1a, "tera_type", "none")
-        p2a_tera = getattr(p2a, "tera_type", "none")
+        # Types from your JSON—or replace with p1.type_1 / type_2 if preferred
+        p1_types = get_pokemon_types(self.normalize(p1.species))
+        p2_types = get_pokemon_types(self.normalize(p2.species))
+        p1_tera = getattr(p1, "tera_type", "none")
+        p2_tera = getattr(p2, "tera_type", "none")
 
         # Compute matchup scores
         p1_type_matchup = type_effectiveness(
-            attacking_types=p1a_types,
-            defending_types=p2a_types,
-            tera_type=p1a_tera,
+            attacking_types=p1_types,
+            defending_types=p2_types,
+            tera_type=p1_tera,
         )
         p2_type_matchup = type_effectiveness(
-            attacking_types=p2a_types,
-            defending_types=p1a_types,
-            tera_type=p2a_tera,
+            attacking_types=p2_types,
+            defending_types=p1_types,
+            tera_type=p2_tera,
         )
 
         # Assemble the state dict
@@ -133,24 +133,24 @@ class AIAgent(Player):
             "side": side,
 
             # Active Pokémon
-            "p1a_active": self.normalize(p1a.species),
-            "p2a_active": self.normalize(p2a.species),
-            "p1a_hp_pct": p1a.current_hp_fraction,
-            "p2a_hp_pct": p2a.current_hp_fraction,
-            "p1a_status": p1a.status.name if p1a.status else "none",
-            "p2a_status": p2a.status.name if p2a.status else "none",
-            "p1a_fainted": p1_fainted,
-            "p2a_fainted": p2_fainted,
+            "p1_active": self.normalize(p1.species),
+            "p2_active": self.normalize(p2.species),
+            "p1_hp_pct": p1.current_hp_fraction,
+            "p2_hp_pct": p2.current_hp_fraction,
+            "p1_status": p1.status.name if p1.status else "none",
+            "p2_status": p2.status.name if p2.status else "none",
+            "p1_fainted": p1_fainted,
+            "p2_fainted": p2_fainted,
 
             # Terastalization
-            "p1a_is_terastallized": int(getattr(p1a, "is_terastallized", False)),
-            "p2a_is_terastallized": int(getattr(p2a, "is_terastallized", False)),
-            "p1a_tera_type": p1a_tera,
-            "p2a_tera_type": p2a_tera,
+            "p1_is_terastallized": int(getattr(p1, "is_terastallized", False)),
+            "p2_is_terastallized": int(getattr(p2, "is_terastallized", False)),
+            "p1_tera_type": p1_tera,
+            "p2_tera_type": p2_tera,
 
             # Types & matchup
-            "p1a_types": p1a_types,
-            "p2a_types": p2a_types,
+            "p1_types": p1_types,
+            "p2_types": p2_types,
             "p1_type_matchup": p1_type_matchup,
             "p2_type_matchup": p2_type_matchup,
 
@@ -171,8 +171,8 @@ class AIAgent(Player):
 
         # Stat boosts
         for stat in ("atk", "def", "spa", "spd", "spe"):
-            state[f"p1a_boost_{stat}"] = p1a.boosts.get(stat, 0)
-            state[f"p2a_boost_{stat}"] = p2a.boosts.get(stat, 0)
+            state[f"p1_boost_{stat}"] = p1.boosts.get(stat, 0)
+            state[f"p2_boost_{stat}"] = p2.boosts.get(stat, 0)
 
         # Known HP for every species on both teams
         for species in p1_team:
